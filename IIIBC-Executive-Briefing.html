@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IIIBC — Executive Briefing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ───────────────────────────────────────────────────────────────
+     IIIBC — Beyond Cognition · Executive Briefing
+     Print stylesheet — tokens mirror /web/styles.css
+  ─────────────────────────────────────────────────────────────── */
+  :root {
+    --navy:   #0F172A;
+    --blue:   #1D4ED8;
+    --teal:   #0EA5E9;
+    --gold:   #F59E0B;
+    --ink:    #1E293B;
+    --slate:  #64748B;
+    --mist:   #94A3B8;
+    --feather:#E2E8F0;
+    --cloud:  #F8FAFC;
+    --white:  #FFFFFF;
+    --display: 'Sora', 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif;
+    --body:    'Inter', 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif;
+    --mono:    'IBM Plex Mono', 'Consolas', 'Courier New', monospace;
+  }
+
+  @page {
+    size: Letter;
+    margin: 0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { font-family: var(--body); color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-size: 11pt; line-height: 1.6; }
+
+  /* Page frame */
+  .page {
+    width: 8.5in;
+    height: 11in;
+    padding: 0.6in 0.7in;
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+  }
+  .page:last-of-type { page-break-after: auto; }
+
+  /* ── COVER PAGE ──────────────────────────────────────── */
+  .cover {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.9in 0.85in;
+    position: relative;
+  }
+  .cover::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+  }
+  .cover > * { position: relative; z-index: 1; }
+
+  .cover__top-bar {
+    height: 4px;
+    background: var(--teal);
+    margin: -0.9in -0.85in 0.45in;
+  }
+  .cover__eyebrow {
+    font-family: var(--mono);
+    font-size: 10pt;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    color: var(--teal);
+    margin-bottom: 0.3in;
+  }
+  .cover__wordmark {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    margin-bottom: 0.18in;
+  }
+  .cover__bars { display: inline-flex; align-items: flex-end; gap: 8px; }
+  .cover__bars span {
+    display: block;
+    width: 20px;
+    background: var(--white);
+    border-radius: 3px;
+  }
+  .cover__bars span:nth-child(1) { height: 78px; opacity: 0.85; }
+  .cover__bars span:nth-child(2) { height: 100px; background: var(--teal); }
+  .cover__bars span:nth-child(3) { height: 78px; opacity: 0.85; }
+  .cover__bc {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 96pt;
+    line-height: 0.88;
+    letter-spacing: 4px;
+    color: var(--white);
+  }
+
+  .cover__brand-name {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 22pt;
+    color: var(--white);
+    margin: 0.2in 0 0.08in;
+    letter-spacing: 0.5px;
+  }
+  .cover__tagline {
+    font-family: var(--body);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 13pt;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 0.45in;
+  }
+
+  .cover__teal-rule {
+    height: 2px;
+    background: var(--teal);
+    width: 80%;
+    margin-bottom: 0.5in;
+    opacity: 0.6;
+  }
+
+  .cover__doc-eyebrow {
+    font-family: var(--mono);
+    font-size: 9pt;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    margin-bottom: 0.1in;
+  }
+  .cover__doc-title {
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: 44pt;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 0.18in;
+    letter-spacing: -0.5px;
+  }
+  .cover__doc-sub {
+    font-family: var(--body);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 13pt;
+    color: rgba(255,255,255,0.55);
+    max-width: 5in;
+  }
+
+  .cover__footer {
+    position: absolute;
+    bottom: 0.7in;
+    left: 0.85in;
+    right: 0.85in;
+    padding-top: 0.18in;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cover__pillars {
+    font-family: var(--mono);
+    font-size: 9pt;
+    letter-spacing: 0.22em;
+    color: var(--teal);
+    font-weight: 600;
+  }
+  .cover__date {
+    font-family: var(--mono);
+    font-size: 9pt;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.45);
+  }
+
+  /* ── INTERIOR PAGE HEADER / FOOTER ────────────────────── */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--feather);
+    margin-bottom: 0.4in;
+  }
+  .header__brand {
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .header__bars { display: inline-flex; align-items: flex-end; gap: 4px; }
+  .header__bars span {
+    display: block;
+    width: 5px;
+    border-radius: 1px;
+    background: var(--navy);
+  }
+  .header__bars span:nth-child(1) { height: 18px; }
+  .header__bars span:nth-child(2) { height: 24px; background: var(--teal); }
+  .header__bars span:nth-child(3) { height: 18px; }
+  .header__name {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 12pt;
+    color: var(--navy);
+    letter-spacing: 1px;
+  }
+  .header__meta {
+    font-family: var(--mono);
+    font-size: 8pt;
+    color: var(--slate);
+    letter-spacing: 0.12em;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 0.4in;
+    left: 0.7in;
+    right: 0.7in;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid var(--feather);
+    font-family: var(--body);
+    font-size: 8.5pt;
+    color: var(--slate);
+  }
+  .footer__tag { font-style: italic; }
+  .footer__page { font-family: var(--mono); letter-spacing: 0.1em; }
+
+  /* ── SECTION HEADERS ─────────────────────────────────── */
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 9pt;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 0.08in;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 30pt;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 0.1in;
+    letter-spacing: -0.4px;
+  }
+  h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 17pt;
+    color: var(--navy);
+    margin: 0.32in 0 0.12in;
+    letter-spacing: -0.2px;
+  }
+  .accent-rule {
+    height: 3px;
+    background: var(--teal);
+    width: 80px;
+    margin-bottom: 0.24in;
+  }
+
+  /* Body */
+  p {
+    font-family: var(--body);
+    font-size: 11pt;
+    line-height: 1.7;
+    color: var(--ink);
+    margin-bottom: 0.16in;
+  }
+  p strong { color: var(--navy); font-weight: 600; }
+  em { color: var(--navy); }
+
+  /* Lists */
+  ul.bullets { list-style: none; padding-left: 0; margin-bottom: 0.2in; }
+  ul.bullets li {
+    position: relative;
+    padding-left: 1.2em;
+    margin-bottom: 0.1in;
+    font-size: 10.5pt;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  ul.bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.45em;
+    width: 8px;
+    height: 8px;
+    background: var(--teal);
+    border-radius: 2px;
+  }
+  ul.bullets li strong { color: var(--navy); }
+
+  /* ── THREE PILLARS ───────────────────────────────────── */
+  .pillars { display: flex; flex-direction: column; gap: 0.18in; }
+  .pillar {
+    display: flex;
+    gap: 0.25in;
+    padding: 0.22in 0.3in;
+    background: var(--cloud);
+    border-left: 4px solid var(--blue);
+    border-radius: 0 6px 6px 0;
+  }
+  .pillar--accent { border-left-color: var(--teal); background: rgba(14,165,233,0.06); }
+  .pillar__num {
+    flex-shrink: 0;
+    font-family: var(--mono);
+    font-weight: 700;
+    font-size: 16pt;
+    color: var(--blue);
+    width: 40px;
+    line-height: 1.2;
+    padding-top: 4px;
+  }
+  .pillar--accent .pillar__num { color: var(--teal); }
+  .pillar__body { flex: 1; }
+  .pillar__name {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 14pt;
+    color: var(--navy);
+    margin-bottom: 0.05in;
+    letter-spacing: -0.2px;
+  }
+  .pillar__desc {
+    font-family: var(--body);
+    font-size: 11pt;
+    line-height: 1.55;
+    color: var(--ink);
+    margin: 0;
+  }
+
+  /* Equation strip */
+  .equation {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.2in 0.3in;
+    border-radius: 6px;
+    margin-top: 0.3in;
+    font-family: var(--mono);
+    font-size: 11pt;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  .equation .x { color: var(--teal); font-weight: 700; margin: 0 8px; }
+  .equation .eq { color: var(--mist); margin: 0 10px; }
+  .equation .result {
+    color: var(--gold);
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 13pt;
+    letter-spacing: 0.5px;
+  }
+
+  /* ── PULL QUOTE ──────────────────────────────────────── */
+  .pull-quote {
+    background: var(--cloud);
+    border-left: 4px solid var(--gold);
+    padding: 0.25in 0.35in;
+    margin: 0.25in 0;
+    border-radius: 0 6px 6px 0;
+  }
+  .pull-quote p {
+    font-family: var(--display);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 13.5pt;
+    line-height: 1.45;
+    color: var(--navy);
+    margin: 0;
+  }
+
+  /* ── PROBLEM TABLE ───────────────────────────────────── */
+  .problem-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.2in;
+    font-size: 10.5pt;
+  }
+  .problem-table thead th {
+    background: var(--navy);
+    color: var(--white);
+    text-align: left;
+    padding: 12px 16px;
+    font-family: var(--body);
+    font-weight: 600;
+    font-size: 10pt;
+    letter-spacing: 0.05em;
+  }
+  .problem-table thead th:last-child { background: rgba(14,165,233,0.18); color: var(--teal); }
+  .problem-table tbody tr { border-bottom: 1px solid var(--feather); }
+  .problem-table tbody tr:nth-child(even) { background: var(--cloud); }
+  .problem-table tbody td {
+    padding: 13px 16px;
+    vertical-align: top;
+    line-height: 1.55;
+  }
+  .problem-table tbody td:first-child {
+    font-family: var(--body);
+    font-weight: 600;
+    color: var(--navy);
+    width: 32%;
+    border-left: 2px solid transparent;
+  }
+  .problem-table tbody tr:hover td:first-child { border-left-color: var(--blue); }
+  .problem-table tbody td:last-child {
+    color: var(--ink);
+    border-left: 2px solid rgba(14,165,233,0.18);
+  }
+
+  /* ── VISION / MISSION CARDS ──────────────────────────── */
+  .vm-card {
+    background: var(--cloud);
+    padding: 0.3in 0.35in;
+    border-radius: 6px;
+    margin-bottom: 0.22in;
+    border-left: 4px solid var(--teal);
+  }
+  .vm-card--mission { border-left-color: var(--gold); }
+  .vm-card__label {
+    font-family: var(--mono);
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    margin-bottom: 0.08in;
+  }
+  .vm-card--mission .vm-card__label { color: var(--gold); }
+  .vm-card__text {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 16pt;
+    line-height: 1.35;
+    color: var(--navy);
+    margin: 0;
+    letter-spacing: -0.2px;
+  }
+
+  /* ── PRACTITIONER PAGE ───────────────────────────────── */
+  .practitioner-hero {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.35in 0.4in;
+    border-radius: 6px;
+    margin-bottom: 0.28in;
+    position: relative;
+    overflow: hidden;
+  }
+  .practitioner-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+    pointer-events: none;
+  }
+  .practitioner-hero > * { position: relative; z-index: 1; }
+  .practitioner-hero__label {
+    font-family: var(--mono);
+    font-size: 9pt;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    margin-bottom: 0.1in;
+  }
+  .practitioner-hero__quote {
+    font-family: var(--display);
+    font-weight: 700;
+    font-style: italic;
+    font-size: 18pt;
+    line-height: 1.35;
+    color: var(--white);
+    border-left: 4px solid var(--gold);
+    padding-left: 0.22in;
+    margin: 0;
+    letter-spacing: -0.2px;
+  }
+  .credentials {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.18in;
+    margin: 0.3in 0;
+  }
+  .credential {
+    background: var(--cloud);
+    border: 1px solid var(--feather);
+    border-radius: 6px;
+    padding: 0.2in 0.22in;
+  }
+  .credential__num {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 16pt;
+    color: var(--blue);
+    margin-bottom: 0.06in;
+    letter-spacing: -0.3px;
+  }
+  .credential__label {
+    font-family: var(--body);
+    font-size: 9.5pt;
+    color: var(--slate);
+    line-height: 1.45;
+  }
+
+  /* Closing sign-off bar */
+  .signoff {
+    margin-top: 0.4in;
+    padding-top: 0.2in;
+    border-top: 2px solid var(--navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--body);
+    font-size: 10pt;
+  }
+  .signoff__name { color: var(--navy); font-weight: 700; }
+  .signoff__tag { color: var(--slate); font-style: italic; }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════ COVER ════════════════════════════ -->
+<section class="page cover">
+  <div class="cover__top-bar"></div>
+
+  <div class="cover__eyebrow">IIIBC · BEYOND COGNITION</div>
+
+  <div class="cover__wordmark">
+    <div class="cover__bars"><span></span><span></span><span></span></div>
+    <div class="cover__bc">BC</div>
+  </div>
+
+  <div class="cover__brand-name">IIIBC — Beyond Cognition</div>
+  <div class="cover__tagline">Beyond Cognition. Built for Business.</div>
+
+  <div class="cover__teal-rule"></div>
+
+  <div class="cover__doc-eyebrow">FOR LEADERSHIP CIRCULATION</div>
+  <h1 class="cover__doc-title">Executive<br>Briefing</h1>
+  <div class="cover__doc-sub">AI strategy, governance, and the operating model for the era of human–AI collaboration.</div>
+
+  <div class="cover__footer">
+    <div class="cover__pillars">INTELLIGENT &nbsp;·&nbsp; INNOVATION &nbsp;·&nbsp; INTERCONNECT</div>
+    <div class="cover__date">2026</div>
+  </div>
+</section>
+
+<!-- ═════════════════════════ THREE PILLARS ═════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand">
+      <span class="header__bars"><span></span><span></span><span></span></span>
+      <span class="header__name">IIIBC</span>
+    </div>
+    <div class="header__meta">EXECUTIVE BRIEFING · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Authoritative Framework</div>
+  <h1>The Three Pillars</h1>
+  <div class="accent-rule"></div>
+
+  <p>These three pillars are the authoritative meanings carried into every framework, diagnostic, and engagement IIIBC delivers. They are not branding decoration — they are the operating principles by which our deliverables are judged.</p>
+
+  <div class="pillars">
+    <div class="pillar">
+      <div class="pillar__num">I</div>
+      <div class="pillar__body">
+        <div class="pillar__name">Intelligent</div>
+        <p class="pillar__desc">Signal over noise. Every recommendation is grounded in evidence, not vendor pitch.</p>
+      </div>
+    </div>
+
+    <div class="pillar pillar--accent">
+      <div class="pillar__num">II</div>
+      <div class="pillar__body">
+        <div class="pillar__name">Innovation</div>
+        <p class="pillar__desc">We do not catalogue what exists. We design the operating components that should.</p>
+      </div>
+    </div>
+
+    <div class="pillar">
+      <div class="pillar__num">III</div>
+      <div class="pillar__body">
+        <div class="pillar__name">Interconnect</div>
+        <p class="pillar__desc">Humans and machines, leadership and engineering, strategy and code — connected, never isolated.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="equation">
+    Intelligent <span class="x">×</span> Innovation <span class="x">×</span> Interconnect <span class="eq">=</span> <span class="result">Beyond Cognition</span>
+  </div>
+
+  <p style="margin-top: 0.3in;">The three I&rsquo;s in IIIBC are not addition — they are multiplication. Three pillars working as one compounding system. Each amplifies the others.</p>
+
+  <div class="footer">
+    <div class="footer__tag">Beyond Cognition. Built for Business.</div>
+    <div class="footer__page">PAGE 02</div>
+  </div>
+</section>
+
+<!-- ════════════════════════ EXECUTIVE SUMMARY ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand">
+      <span class="header__bars"><span></span><span></span><span></span></span>
+      <span class="header__name">IIIBC</span>
+    </div>
+    <div class="header__meta">EXECUTIVE BRIEFING · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 1</div>
+  <h1>Executive Summary</h1>
+  <div class="accent-rule"></div>
+
+  <p>The AI revolution is creating enormous pressure on corporate leadership — every board wants an AI strategy, yet most organizations lack the internal clarity, frameworks, or talent to act decisively. The market is flooded with hype, vendor agendas, and high-cost advisory that produces reports rather than results.</p>
+
+  <p><strong>IIIBC — Beyond Cognition</strong> is an AI-native strategy consultancy that serves companies at the critical threshold: those ready to establish an <strong>AI department</strong> or <strong>Chief AI Officer (CAIO) function</strong>, and those that need a structured, defensible AI adoption roadmap. We deliver opinionated, battle-tested strategy components, workable frameworks, and a continuous intelligence platform — not slide decks.</p>
+
+  <p>Our brand thesis is captured in a single line: <strong><em>Beyond Cognition. Built for Business.</em></strong> Human cognition has a ceiling. Cognitive AI by itself produces hallucinations and noise. The frontier — <em>Beyond Cognition</em> — is the disciplined design of how humans and machines decide together. That is the operating model IIIBC builds for its clients.</p>
+
+  <h2>Target Clients</h2>
+  <ul class="bullets">
+    <li><strong>C-suite leaders</strong> (CEO, CTO, CDO, CAIO) commissioning AI department design.</li>
+    <li><strong>Beachhead segment 1:</strong> B2B SaaS companies at growth stage ($10M–$100M ARR, Series B–D) with AI tool sprawl and no governance strategy.</li>
+    <li><strong>Beachhead segment 2 (geographic):</strong> Washington DC-area non-profits, trade associations, think tanks, and government relations / lobbying firms — where unmanaged ChatGPT use creates existential compliance, reputational, and donor-trust risk.</li>
+    <li><strong>Mid-market enterprises</strong> (500–10,000 employees) establishing their first AI governance and operating model.</li>
+    <li>Organizations that have purchased AI tools but lack a coherent strategy to extract value.</li>
+    <li>Companies facing regulatory or compliance pressure to demonstrate AI governance maturity.</li>
+  </ul>
+
+  <div class="footer">
+    <div class="footer__tag">Beyond Cognition. Built for Business.</div>
+    <div class="footer__page">PAGE 03</div>
+  </div>
+</section>
+
+<!-- ════════════════════════ THE PRACTITIONER DIFFERENCE ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand">
+      <span class="header__bars"><span></span><span></span><span></span></span>
+      <span class="header__name">IIIBC</span>
+    </div>
+    <div class="header__meta">EXECUTIVE BRIEFING · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 2</div>
+  <h1>The Practitioner Difference</h1>
+  <div class="accent-rule"></div>
+
+  <div class="practitioner-hero">
+    <div class="practitioner-hero__label">PRACTITIONER-LED FIRM</div>
+    <p class="practitioner-hero__quote">&ldquo;We have been where your engineers are. We know exactly why AI strategies fail in production — and we translate that into decisions your leadership can act on before you waste the budget.&rdquo;</p>
+  </div>
+
+  <p>IIIBC is a <strong>practitioner-led firm</strong> — built by people who have built and deployed AI systems inside production environments, not consultants who learned AI from a textbook. This practitioner-to-strategist perspective means IIIBC can speak to both the engineering reality and the board-level decision in the same conversation.</p>
+
+  <p>That practitioner background is the differentiation. IIIBC&rsquo;s frameworks are not abstractions assembled from public reports — they are the operating model we would have wanted on day one of every AI initiative we have worked on.</p>
+
+  <div class="credentials">
+    <div class="credential">
+      <div class="credential__num">10+ yrs</div>
+      <div class="credential__label">Engineering &amp; AI systems experience</div>
+    </div>
+    <div class="credential">
+      <div class="credential__num">Production</div>
+      <div class="credential__label">LLM and ML deployments shipped</div>
+    </div>
+    <div class="credential">
+      <div class="credential__num">Both sides</div>
+      <div class="credential__label">Engineer&rsquo;s reality + Board&rsquo;s question</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer__tag">Beyond Cognition. Built for Business.</div>
+    <div class="footer__page">PAGE 04</div>
+  </div>
+</section>
+
+<!-- ════════════════════════ THE PROBLEM WE SOLVE ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand">
+      <span class="header__bars"><span></span><span></span><span></span></span>
+      <span class="header__name">IIIBC</span>
+    </div>
+    <div class="header__meta">EXECUTIVE BRIEFING · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 3</div>
+  <h1>The Problem We Solve</h1>
+  <div class="accent-rule"></div>
+
+  <p>Six structural failure modes recur across every organization that approaches us. They are the conditions IIIBC was built to address — and the reason "more advisory" is not the answer.</p>
+
+  <table class="problem-table">
+    <thead>
+      <tr>
+        <th>Challenge</th>
+        <th>Reality</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>AI hype overload</td>
+        <td>Boards cannot distinguish signal from noise; decisions are made on vendor marketing.</td>
+      </tr>
+      <tr>
+        <td>No structured adoption path</td>
+        <td>Most companies jump to tools before establishing principles, governance, or capability.</td>
+      </tr>
+      <tr>
+        <td>Legacy consultancies are catching up</td>
+        <td>McKinsey, Deloitte, and Accenture are adding AI practices <em>on top of</em> traditional advisory — still slow, expensive, and generalist.</td>
+      </tr>
+      <tr>
+        <td>Human–AI collaboration is poorly designed</td>
+        <td>Productivity gains are lost because workflows, roles, and accountability are not re-engineered.</td>
+      </tr>
+      <tr>
+        <td>Risk is underweighted</td>
+        <td>Safety, bias, compliance, and security are afterthoughts rather than design inputs.</td>
+      </tr>
+      <tr>
+        <td>AI talent is concentrated</td>
+        <td>Few companies can afford a full CAIO + team; they need an &ldquo;AI department in a box.&rdquo;</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    <div class="footer__tag">Beyond Cognition. Built for Business.</div>
+    <div class="footer__page">PAGE 05</div>
+  </div>
+</section>
+
+<!-- ════════════════════════ VISION & MISSION ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand">
+      <span class="header__bars"><span></span><span></span><span></span></span>
+      <span class="header__name">IIIBC</span>
+    </div>
+    <div class="header__meta">EXECUTIVE BRIEFING · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 4</div>
+  <h1>Vision &amp; Mission</h1>
+  <div class="accent-rule"></div>
+
+  <div class="vm-card">
+    <div class="vm-card__label">VISION</div>
+    <p class="vm-card__text">Filter the noise of AI and focus on the real competitiveness and productivity of humanity.</p>
+  </div>
+
+  <div class="vm-card vm-card--mission">
+    <div class="vm-card__label">MISSION</div>
+    <p class="vm-card__text">Provide structured AI strategy components, success kits for different use cases, and promote best practices that optimize human–AI collaboration.</p>
+  </div>
+
+  <p style="margin-top: 0.3in;">These two pillars differentiate IIIBC from generalist firms: <strong>we are not neutral advisors</strong> — we hold a position on what good AI adoption looks like, and we build the artifacts to prove it.</p>
+
+  <h2>What This Means for You</h2>
+  <p>Whether you are building your first AI department, recovering from a stalled adoption, or governing tools your team is already using, IIIBC delivers operating components — not slide decks. Begin with the 30-minute Diagnostic. Five questions. One named gap. One specific action.</p>
+
+  <div class="signoff">
+    <div class="signoff__name">IIIBC — Beyond Cognition</div>
+    <div class="signoff__tag">Beyond Cognition. Built for Business.</div>
+  </div>
+
+  <div class="footer">
+    <div class="footer__tag">© 2026 IIIBC — Beyond Cognition. All rights reserved.</div>
+    <div class="footer__page">PAGE 06</div>
+  </div>
+</section>
+
+</body>
+</html>
