@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="IIIBC — Beyond Cognition. Built for Business.">
+  <title>IIIBC Social Preview Card</title>
+  <!-- Background: Deep Navy -->
+  <rect width="1200" height="630" fill="#0F172A"/>
+
+  <!-- Dot grid background texture -->
+  <defs>
+    <pattern id="og-dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="white" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#og-dots)"/>
+
+  <!-- Signal teal accent bar — top -->
+  <rect x="0" y="0" width="1200" height="4" fill="#0EA5E9"/>
+
+  <!-- Three-bar mark, large, right side background decoration -->
+  <rect x="900"  y="80"  width="44" height="310" rx="4" fill="#1D4ED8" opacity="0.10"/>
+  <rect x="960"  y="40"  width="44" height="390" rx="4" fill="#0EA5E9" opacity="0.18"/>
+  <rect x="1020" y="80"  width="44" height="310" rx="4" fill="#1D4ED8" opacity="0.10"/>
+
+  <!-- Eyebrow -->
+  <text x="100" y="170"
+        font-family="'IBM Plex Mono', 'Courier New', monospace"
+        font-weight="500"
+        font-size="20"
+        fill="#0EA5E9"
+        letter-spacing="3">IIIBC · BEYOND COGNITION</text>
+
+  <!-- Wordmark: three pillars + BC -->
+  <!-- Pillars -->
+  <rect x="100" y="220" width="22" height="110" rx="3" fill="white" opacity="0.85"/>
+  <rect x="135" y="200" width="22" height="130" rx="3" fill="#0EA5E9"/>
+  <rect x="170" y="220" width="22" height="110" rx="3" fill="white" opacity="0.85"/>
+  <!-- BC text -->
+  <text x="210" y="320"
+        font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="800"
+        font-size="110"
+        fill="#FFFFFF"
+        letter-spacing="4">BC</text>
+
+  <!-- Teal separator line -->
+  <rect x="100" y="370" width="440" height="2" rx="1" fill="#0EA5E9"/>
+
+  <!-- Primary tagline -->
+  <text x="100" y="430"
+        font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700"
+        font-size="40"
+        fill="#FFFFFF"
+        letter-spacing="0.5">Beyond Cognition.</text>
+  <text x="100" y="478"
+        font-family="'Sora', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700"
+        font-size="40"
+        fill="#F59E0B"
+        letter-spacing="0.5">Built for Business.</text>
+
+  <!-- Three-pillar line -->
+  <text x="100" y="540"
+        font-family="'Inter', 'Helvetica Neue', Arial, sans-serif"
+        font-weight="500"
+        font-size="18"
+        fill="#94A3B8"
+        letter-spacing="1.5">INTELLIGENT  ·  INNOVATION  ·  INTERCONNECT</text>
+
+  <!-- URL -->
+  <text x="100" y="594"
+        font-family="'IBM Plex Mono', 'Courier New', monospace"
+        font-weight="500"
+        font-size="16"
+        fill="#64748B"
+        letter-spacing="1">iiibc.com</text>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="626" width="1200" height="4" fill="#1D4ED8"/>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="48" viewBox="0 0 32 48" fill="none" aria-hidden="true" role="img">
+  <title>IIIBC Three-Pillar Mark</title>
+  <!-- Three pillars: Intelligent · Innovation · Interconnect -->
+  <!-- Center bar teal accent as focal point -->
+  <rect x="0" y="4" width="8" height="40" rx="2" fill="#1D4ED8"/>
+  <rect x="12" y="0" width="8" height="48" rx="2" fill="#0EA5E9"/>
+  <rect x="24" y="4" width="8" height="40" rx="2" fill="#1D4ED8"/>
+</svg>

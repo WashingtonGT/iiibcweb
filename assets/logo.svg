@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 48" fill="none" role="img" aria-label="IIIBC — Beyond Cognition">
+  <title>IIIBC Logo</title>
+  <!-- Three-bar mark: three pillars (Intelligent · Innovation · Interconnect) -->
+  <!-- Middle bar slightly taller in teal as focal point -->
+  <rect x="0"  y="6"  width="7" height="36" rx="1.5" fill="#1D4ED8"/>
+  <rect x="11" y="0"  width="7" height="42" rx="1.5" fill="#0EA5E9"/>
+  <rect x="22" y="6"  width="7" height="36" rx="1.5" fill="#1D4ED8"/>
+  <!-- BC wordmark -->
+  <text x="44" y="33"
+        font-family="'Sora', -apple-system, 'Helvetica Neue', sans-serif"
+        font-weight="800"
+        font-size="32"
+        fill="#0F172A"
+        letter-spacing="2">BC</text>
+</svg>

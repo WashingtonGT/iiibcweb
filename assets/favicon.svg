@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img">
+  <title>IIIBC Favicon</title>
+  <!-- Dark rounded square background -->
+  <rect width="48" height="48" rx="10" fill="#0F172A"/>
+  <!-- Three-pillar mark: Intelligent · Innovation · Interconnect -->
+  <!-- Center bar in teal as focal point -->
+  <rect x="7"  y="14" width="8" height="26" rx="1.5" fill="#1D4ED8"/>
+  <rect x="20" y="8"  width="8" height="32" rx="1.5" fill="#0EA5E9"/>
+  <rect x="33" y="14" width="8" height="26" rx="1.5" fill="#1D4ED8"/>
+</svg>
