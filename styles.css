@@ -1042,9 +1042,7 @@ code, .mono {
   .grid-4        { grid-template-columns: repeat(2, 1fr); }
   .footer__inner { grid-template-columns: 1fr 1fr; gap: var(--space-5); }
   .digest__inner { grid-template-columns: 1fr; }
-  .founder__inner { grid-template-columns: 1fr; gap: var(--space-4); }
-  .founder__portrait { position: relative; top: 0; max-width: 220px; }
-  .cta-section__inner--split { grid-template-columns: 1fr; }
+  .cta-section__inner--split { grid-template-columns: 1fr; gap: var(--space-5); }
   .cta-section__right { position: relative; top: 0; }
 }
 
@@ -1061,12 +1059,97 @@ code, .mono {
   .segments__grid          { grid-template-columns: 1fr; }
   .footer__inner           { grid-template-columns: 1fr; }
   .footer__bottom          { flex-direction: column; gap: var(--space-3); text-align: center; }
-  .comparison-table        { font-size: 12px; }
-  .comparison-table th,
-  .comparison-table td     { padding: var(--space-2) var(--space-3); }
+  /* ─── Comparison table: stack each row as a card on mobile ─── */
+  .comparison-table          { display: block; border: none; margin-top: var(--space-4); }
+  .comparison-table thead    { position: absolute; left: -9999px; top: -9999px; }
+  .comparison-table tbody    { display: block; }
+  .comparison-table tbody tr {
+    display: block;
+    background: white;
+    border: 1px solid var(--color-feather);
+    border-radius: var(--radius-md);
+    padding: var(--space-3) var(--space-4);
+    margin-bottom: var(--space-3);
+    box-shadow: 0 1px 2px rgba(15,23,42,0.04);
+  }
+  .comparison-table tbody tr:nth-child(even) { background: white; }
+  .comparison-table tbody tr:hover           { background: white; }
+  .comparison-table tbody td {
+    display: block;
+    width: 100%;
+    padding: var(--space-2) 0;
+    border: none;
+    border-bottom: 1px solid var(--color-feather);
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--color-ink);
+  }
+  .comparison-table tbody td:last-child {
+    border-bottom: none;
+    border-left: none;
+    padding-bottom: 0;
+  }
+  .comparison-table tbody td::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-slate);
+    margin-bottom: 4px;
+  }
+  .comparison-table tbody td:first-child {
+    width: 100%;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--color-navy);
+    padding-top: 0;
+  }
+  .comparison-table tbody td:first-child::before { display: none; }
+  .comparison-table tbody td:last-child::before {
+    color: var(--color-teal);
+  }
   .cta-section__actions    { flex-direction: column; align-items: center; }
   .hero__actions           { flex-direction: column; }
   .hero__actions .btn      { width: 100%; justify-content: center; }
+
+  /* ─── CTA section: single column, tightened spacing on mobile ─── */
+  .cta-section                  { padding: var(--space-6) 0; }
+  .cta-section__inner--split    {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    text-align: left;
+  }
+  .cta-section__left,
+  .cta-section__right           { width: 100%; }
+  .cta-section h2               {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: var(--space-3);
+  }
+  .cta-section__left p          {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+  }
+  .cta-section__qlist           { gap: var(--space-2); }
+  .cta-section__qlist li        {
+    padding: var(--space-3);
+    font-size: 14px;
+    line-height: 1.45;
+    gap: var(--space-2);
+  }
+  .cta-section__qnum            { font-size: 12px; }
+  .cta-section__booking         { padding: var(--space-4); }
+  .cta-section__steps-list      { margin: var(--space-3) 0 var(--space-4); gap: var(--space-2); }
+  .cta-section__steps-list li   { font-size: 14px; line-height: 1.45; }
+  .cta-section__step-num        { width: 26px; height: 26px; font-size: 12px; }
+  .cta-section__booking .btn    { width: 100%; justify-content: center; }
+  .cta-section__fine            { font-size: 11.5px; }
 
   .urgency-ticker__inner   { flex-wrap: wrap; gap: var(--space-2); }
   .urgency-ticker__cta     { width: 100%; }
@@ -1076,31 +1159,11 @@ code, .mono {
 
   /* ─── Practitioner section: compact mobile layout ─── */
   .founder                  { padding: var(--space-6) 0; }
-  .founder__inner           { gap: var(--space-3); }
-
-  /* Portrait converts from large square to a horizontal banner chip */
-  .founder__portrait        { max-width: 100%; }
-  .founder__avatar          {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    padding: var(--space-3) var(--space-4);
-    background: var(--color-navy);
-    border-radius: var(--radius-md);
-  }
-  .founder__avatar svg      {
-    width: 56px;
-    height: 56px;
-    flex-shrink: 0;
-    border-radius: var(--radius-sm);
-  }
-  .founder__avatar-tag      {
-    position: static;
-    background: transparent;
-    color: var(--color-gold);
-    padding: 0;
-    font-size: 11px;
-    letter-spacing: 0.14em;
+  .founder__tag             {
+    font-size: 10.5px;
+    letter-spacing: 0.12em;
+    padding: 5px 10px;
+    margin-bottom: var(--space-3);
   }
 
   /* Tighten the pull quote so it stops dominating the viewport */
@@ -1110,11 +1173,13 @@ code, .mono {
     border-left-width: 3px;
     padding-left: var(--space-3);
     margin: var(--space-3) 0;
+    max-width: 100%;
   }
   .founder__bio             {
     font-size: 15px;
     line-height: 1.65;
     margin-bottom: var(--space-3);
+    max-width: 100%;
   }
 
   /* Credentials: stack as horizontal rows — number left, label right */
@@ -1122,6 +1187,7 @@ code, .mono {
     grid-template-columns: 1fr;
     gap: var(--space-2);
     margin: var(--space-4) 0;
+    max-width: 100%;
   }
   .founder__credential      {
     display: flex;
@@ -1132,7 +1198,7 @@ code, .mono {
   .founder__credential-num  {
     font-size: 15px;
     margin-bottom: 0;
-    min-width: 78px;
+    min-width: 72px;
     flex-shrink: 0;
   }
   .founder__credential-label {
@@ -1140,7 +1206,7 @@ code, .mono {
     line-height: 1.4;
   }
   .founder__actions         { flex-direction: column; }
-  .founder__actions .btn    { width: 100%; }
+  .founder__actions .btn    { width: 100%; justify-content: center; }
 
   /* Brand-stands-for callout: compact padding, smaller mark and pillars */
   .brand-stands-for         {
@@ -1174,10 +1240,23 @@ code, .mono {
 @media (max-width: 480px) {
   .container { padding: 0 var(--space-3); }
 
-  /* Pull quote and mark scale down further on the smallest devices */
-  .founder__avatar svg      { width: 48px; height: 48px; }
-  .founder__avatar-tag      { font-size: 10px; }
-  .founder__content h2      { font-size: 17px; }
+  /* Pull quote and section scale down on the smallest devices */
+  .founder__tag             { font-size: 10px; letter-spacing: 0.1em; padding: 4px 9px; }
+  .founder__content h2      { font-size: 17px; padding-left: var(--space-3); }
+  .founder__credential-num  { min-width: 64px; font-size: 14px; }
+  .founder__credential-label { font-size: 12.5px; }
+
+  /* CTA section compresses further on the smallest devices */
+  .cta-section h2               { font-size: 24px; }
+  .cta-section__qlist li        { font-size: 13.5px; padding: var(--space-2) var(--space-3); }
+  .cta-section__steps-list li   { font-size: 13.5px; }
+  .cta-section__booking         { padding: var(--space-3); }
+
+  /* Comparison table cards compress slightly */
+  .comparison-table tbody tr   { padding: var(--space-3); }
+  .comparison-table tbody td   { font-size: 13.5px; }
+  .comparison-table tbody td:first-child { font-size: 15px; }
+  .comparison-table tbody td::before     { font-size: 10px; }
 
   /* Brand equation stacks vertically — easier to read on narrow screens */
   .brand-stands-for__equation {
@@ -1397,37 +1476,20 @@ code, .mono {
   padding: var(--space-8) 0;
 }
 .founder__inner {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: var(--space-7);
-  align-items: start;
-}
-.founder__portrait {
-  position: sticky;
-  top: calc(var(--nav-height) + var(--space-4));
-}
-.founder__avatar {
-  position: relative;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-.founder__avatar svg {
-  width: 100%;
-  height: auto;
   display: block;
+  max-width: 820px;
+  margin: 0 auto;
 }
-.founder__avatar-tag {
-  position: absolute;
-  bottom: var(--space-3);
-  left: var(--space-3);
-  background: var(--color-gold);
-  color: var(--color-navy);
-  font-size: 10px;
+.founder__tag {
+  display: inline-block;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  padding: 6px 10px;
+  letter-spacing: 0.14em;
+  padding: 6px 12px;
   border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
 }
 .founder__content h2 {
   font-family: var(--font-display);
