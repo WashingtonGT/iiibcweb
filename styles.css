@@ -1904,3 +1904,160 @@ code, .mono {
 .mb-2 { margin-bottom: var(--space-2); }
 .mb-3 { margin-bottom: var(--space-3); }
 .mb-4 { margin-bottom: var(--space-4); }
+
+/* ── 19. RESPONSIVE OVERRIDES (must come after late base rules) ─ */
+/* These rules live at the end of the file because some of their
+   base counterparts (e.g. .brand-stands-for__*) are declared after
+   the main @media blocks above and would otherwise override them. */
+
+@media (max-width: 1024px) {
+  /* Three pillars stack vertically on tablet and below */
+  .brand-stands-for__pillars {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-stands-for__pillars { gap: var(--space-2); }
+  .brand-stands-for__pillar  { padding: var(--space-3); }
+  .brand-stands-for__pillar-num { font-size: 14px; margin-bottom: var(--space-2); }
+  .brand-stands-for__pillar h4  { font-size: 14px; margin-bottom: 4px; }
+  .brand-stands-for__pillar p   { font-size: 12px; line-height: 1.5; }
+}
+
+/* CTA section — force vertical stack from tablet down.
+   The base rules for .cta-section__inner--split, __left, __right,
+   __qlist, __booking, __steps-list, __step-num, __fine are declared
+   later in the file than the main @media blocks above, so these
+   overrides must live here to actually take effect. */
+
+@media (max-width: 1024px) {
+  /* PARENT GRID: stack left and right columns */
+  .cta-section__inner--split {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    text-align: left;
+    max-width: var(--max-width);
+  }
+  .cta-section__left,
+  .cta-section__right {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  /* Headline + lead text */
+  .cta-section h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: var(--space-3);
+  }
+  .cta-section__left p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+  }
+
+  /* Five questions list */
+  .cta-section__qlist {
+    gap: var(--space-2);
+  }
+  .cta-section__qlist li {
+    padding: var(--space-3);
+    font-size: 14px;
+    line-height: 1.45;
+    gap: var(--space-2);
+  }
+  .cta-section__qnum { font-size: 12px; }
+
+  /* Booking card */
+  .cta-section__booking {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+  .cta-section__booking .btn {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+  }
+
+  /* "What happens next" steps */
+  .cta-section__steps-list {
+    gap: var(--space-3);
+    margin: var(--space-3) 0 0;
+  }
+  .cta-section__steps-list li {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .cta-section__step-num {
+    width: 26px;
+    height: 26px;
+    font-size: 12px;
+  }
+  .cta-section__fine { margin: 0; }
+}
+
+@media (max-width: 480px) {
+  .cta-section h2                { font-size: 24px; }
+  .cta-section__qlist li         { font-size: 13.5px; padding: var(--space-2) var(--space-3); }
+  .cta-section__booking          { padding: var(--space-3); gap: var(--space-3); }
+  .cta-section__steps-list       { gap: var(--space-2); }
+  .cta-section__steps-list li    { font-size: 13.5px; }
+  .cta-section__step-num         { width: 24px; height: 24px; font-size: 11px; }
+}
+
+/* ── GLOBAL HORIZONTAL OVERFLOW GUARD ─────────────────────── */
+/* Prevent any rogue wide element (long button text, table, etc.)
+   from causing horizontal page scroll on mobile. */
+html, body { overflow-x: hidden; max-width: 100%; }
+
+/* ── SEGMENTS SECTION — MOBILE FIXES ──────────────────────── */
+/* The base .segment-card padding is 48px and .btn has white-space:
+   nowrap — together those cause the segment card to overflow on
+   narrow viewports. Tighten card padding and allow CTAs to wrap. */
+
+@media (max-width: 768px) {
+  .segment-card {
+    padding: var(--space-4);
+  }
+  .segment-card h3 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  .segment-card__desc {
+    font-size: 14px;
+    line-height: 1.6;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  .segment-card__risks { margin-bottom: var(--space-4); }
+  .risk-item {
+    font-size: 13.5px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+  /* Long CTA text inside the card needs to wrap, not push width */
+  .segment-card .btn {
+    white-space: normal;
+    line-height: 1.3;
+    height: auto;
+    min-height: 44px;
+    padding: 12px var(--space-3);
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .segment-card           { padding: var(--space-3); }
+  .segment-card__badge    { font-size: 10.5px; padding: 4px 10px; margin-bottom: var(--space-3); }
+  .segment-card h3        { font-size: 18px; }
+  .segment-card__desc     { font-size: 13.5px; }
+  .risk-item              { font-size: 13px; }
+}
