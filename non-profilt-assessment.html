@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Readiness Assessment — Non-Profit Edition | IIIBC</title>
+  <meta name="description" content="IIIBC AI Readiness Assessment for donor-funded, project-based non-profit organizations. Complete the diagnostic, receive a scored readiness report, and have it emailed to your leadership team.">
+  <meta name="author" content="IIIBC">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://iiibc.com/non-profit-assessment">
+  <meta property="og:title"       content="AI Readiness Assessment — Non-Profit Edition | IIIBC">
+  <meta property="og:description" content="Diagnose your organization's AI readiness across 8 dimensions. Receive a scored report calibrated for donor-funded, project-based non-profits.">
+  <meta property="og:image"       content="assets/og-card.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+  /* ============================================================
+     IIIBC — AI Readiness Assessment (Non-Profit Edition)
+     Self-contained. Design tokens mirror design/guides.md + styles.css
+     ============================================================ */
+  :root{
+    --navy:#0F172A; --blue:#1D4ED8; --teal:#0EA5E9; --gold:#F59E0B;
+    --ink:#1E293B; --slate:#64748B; --mist:#94A3B8; --feather:#E2E8F0;
+    --cloud:#F8FAFC; --white:#FFFFFF;
+    --success:#10B981; --risk:#EF4444; --caution:#F59E0B; --steel:#3B82F6;
+    --f-display:'Sora',-apple-system,'Helvetica Neue',sans-serif;
+    --f-body:'Inter',-apple-system,'Helvetica Neue',sans-serif;
+    --f-mono:'IBM Plex Mono','Courier New',monospace;
+    --s1:4px; --s2:8px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:64px; --s8:96px;
+    --r-sm:4px; --r-md:6px; --r-lg:12px;
+    --max:1080px;
+    --shadow-sm:0 2px 8px rgba(0,0,0,0.08);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{font-family:var(--f-body);font-size:16px;line-height:1.7;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+  img,svg{display:block;max-width:100%;}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  ul,ol{list-style:none;}
+  .mono{font-family:var(--f-mono);}
+  .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--s4);}
+  h1,h2{font-family:var(--f-display);font-weight:700;line-height:1.2;}
+  h3,h4{font-family:var(--f-body);font-weight:600;line-height:1.35;}
+
+  .skip-link{position:absolute;top:-100%;left:var(--s3);background:var(--blue);color:#fff;padding:var(--s2) var(--s3);border-radius:var(--r-sm);font-size:14px;z-index:1000;transition:top .2s;}
+  .skip-link:focus{top:var(--s2);}
+
+  /* ── NAV ── */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--feather);}
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .nav__logo{display:flex;align-items:center;}
+  .nav__back{font-size:14px;font-weight:500;color:var(--slate);}
+  .nav__back:hover{color:var(--blue);text-decoration:none;}
+
+  /* ── BUTTONS ── */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 24px;border-radius:var(--r-sm);font-family:var(--f-body);font-weight:600;font-size:15px;cursor:pointer;border:none;transition:background .15s,color .15s,border-color .15s;}
+  .btn--primary{background:var(--blue);color:#fff;}
+  .btn--primary:hover{background:#1740b0;text-decoration:none;}
+  .btn--white{background:#fff;color:var(--navy);}
+  .btn--white:hover{background:var(--cloud);text-decoration:none;}
+  .btn--secondary{background:#fff;color:var(--blue);border:1.5px solid var(--blue);}
+  .btn--secondary:hover{background:var(--cloud);text-decoration:none;}
+  .btn--ghost{background:transparent;color:var(--navy);border:1px solid var(--feather);}
+  .btn--ghost:hover{background:var(--cloud);text-decoration:none;}
+  .btn--lg{min-height:52px;padding:14px 32px;font-size:16px;}
+  .btn:disabled{opacity:.45;cursor:not-allowed;}
+
+  /* ── HERO ── */
+  .hero{background:var(--navy);color:#fff;padding:var(--s8) 0 var(--s7);}
+  .hero__eyebrow{display:inline-block;font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:var(--s4);}
+  .hero h1{font-size:clamp(30px,4.4vw,48px);font-weight:800;max-width:760px;margin-bottom:var(--s4);}
+  .hero__sub{font-size:18px;color:#cbd5e1;max-width:660px;margin-bottom:var(--s5);}
+  .hero__meta{display:flex;flex-wrap:wrap;gap:var(--s5);border-top:1px solid #1e2b46;padding-top:var(--s4);max-width:760px;}
+  .hero__meta-item{display:flex;flex-direction:column;gap:2px;}
+  .hero__meta-k{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);}
+  .hero__meta-v{font-size:15px;font-weight:600;color:#fff;}
+
+  /* ── PROGRESS BAR (sticky) ── */
+  .progress{position:sticky;top:64px;z-index:40;background:#fff;border-bottom:1px solid var(--feather);}
+  .progress__inner{display:flex;align-items:center;gap:var(--s4);padding:12px 0;}
+  .progress__track{flex:1;height:8px;background:var(--feather);border-radius:99px;overflow:hidden;}
+  .progress__fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width .3s ease;}
+  .progress__label{font-family:var(--f-mono);font-size:12px;color:var(--slate);white-space:nowrap;}
+  .progress__label b{color:var(--ink);}
+
+  /* ── SECTION LAYOUT ── */
+  .form-wrap{padding:var(--s7) 0 var(--s8);}
+  .intro-note{background:var(--cloud);border-left:4px solid var(--blue);padding:var(--s4);border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:var(--s6);}
+  .intro-note .label{font-family:var(--f-body);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:var(--s2);}
+  .intro-note p{font-size:15px;color:var(--ink);}
+
+  .sec{margin-bottom:var(--s7);scroll-margin-top:140px;}
+  .sec__head{border-bottom:2px solid var(--navy);padding-bottom:var(--s3);margin-bottom:var(--s5);}
+  .sec__num{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:500;}
+  .sec__title{font-size:clamp(22px,2.6vw,30px);font-weight:700;margin:6px 0 4px;}
+  .sec__sub{font-size:15px;color:var(--slate);font-style:italic;}
+  .sec__intro{font-size:15px;color:var(--ink);margin-top:var(--s3);max-width:680px;}
+
+  /* Profile fields */
+  .field{margin-bottom:var(--s4);}
+  .field > label, .q__label{display:block;font-weight:600;font-size:15px;color:var(--ink);margin-bottom:var(--s2);}
+  .field input[type=text],.field input[type=email],.field input[type=number],.field select,.q__notes input{
+    width:100%;padding:11px 14px;border:1px solid var(--feather);border-radius:var(--r-sm);font-family:var(--f-body);font-size:15px;color:var(--ink);background:#fff;}
+  .field input:focus,.field select:focus,.q__notes input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(29,78,216,.12);}
+  .field--grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4);}
+  .field .hint{font-size:13px;color:var(--mist);margin-top:4px;}
+  .checks{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s4);}
+  .checks label{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:400;color:var(--ink);cursor:pointer;}
+
+  /* Question */
+  .q{padding:var(--s4) 0;border-bottom:1px solid var(--feather);}
+  .q:last-child{border-bottom:none;}
+  .q__id{font-family:var(--f-mono);font-size:12px;color:var(--blue);font-weight:500;}
+  .q__label{margin-top:4px;font-weight:500;}
+  .opts{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);margin-top:var(--s3);}
+  .opt{position:relative;}
+  .opt input{position:absolute;opacity:0;inset:0;cursor:pointer;}
+  .opt span{display:flex;flex-direction:column;gap:2px;align-items:flex-start;padding:10px 12px;border:1px solid var(--feather);border-radius:var(--r-sm);font-size:13px;color:var(--slate);cursor:pointer;height:100%;transition:all .12s;background:#fff;}
+  .opt span b{font-family:var(--f-mono);font-size:15px;color:var(--ink);font-weight:500;}
+  .opt input:hover + span{border-color:var(--mist);background:var(--cloud);}
+  .opt input:checked + span{border-color:var(--blue);background:rgba(29,78,216,.06);color:var(--ink);box-shadow:inset 0 0 0 1px var(--blue);}
+  .opt input:checked + span b{color:var(--blue);}
+  .opt input:focus-visible + span{box-shadow:0 0 0 3px rgba(29,78,216,.25);}
+  .q__notes{margin-top:var(--s3);}
+  .q__notes label{font-size:13px;color:var(--slate);display:block;margin-bottom:4px;}
+  .q.is-missing .opts{outline:2px solid rgba(239,68,68,.35);outline-offset:6px;border-radius:var(--r-sm);}
+
+  /* Submit bar */
+  .submit-bar{background:var(--cloud);border:1px solid var(--feather);border-radius:var(--r-md);padding:var(--s5);text-align:center;margin-top:var(--s6);}
+  .submit-bar h3{font-size:20px;margin-bottom:var(--s2);}
+  .submit-bar p{font-size:15px;color:var(--slate);max-width:560px;margin:0 auto var(--s4);}
+  .submit-error{display:none;color:var(--risk);font-size:14px;font-weight:500;margin-top:var(--s3);}
+
+  /* ── REPORT ── */
+  #report{display:none;}
+  .report-cover{background:var(--navy);color:#fff;border-radius:var(--r-lg);padding:var(--s7) var(--s6);position:relative;overflow:hidden;margin-bottom:var(--s6);}
+  .report-cover::after{content:"";position:absolute;left:var(--s6);right:var(--s6);bottom:34%;height:2px;background:var(--teal);opacity:.8;}
+  .report-cover__brand{font-family:var(--f-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:var(--s5);}
+  .report-cover h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;color:#fff;max-width:640px;}
+  .report-cover__sub{font-size:17px;color:#cbd5e1;margin-top:var(--s3);max-width:560px;}
+  .report-cover__meta{display:flex;flex-wrap:wrap;gap:var(--s5);margin-top:var(--s6);font-size:14px;}
+  .report-cover__meta div span{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-bottom:2px;}
+
+  .report-section{margin-bottom:var(--s6);}
+  .report-section > h3{font-size:22px;font-weight:700;font-family:var(--f-display);padding-left:12px;border-left:4px solid var(--blue);margin-bottom:var(--s4);}
+
+  /* Verdict callout */
+  .verdict{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s5);border-radius:var(--r-md);padding:var(--s5);color:#fff;margin-bottom:var(--s5);}
+  .verdict__score{font-family:var(--f-display);font-weight:800;font-size:56px;line-height:1;}
+  .verdict__score small{font-size:20px;opacity:.7;font-weight:700;}
+  .verdict__body{flex:1;min-width:240px;}
+  .verdict__profile{font-family:var(--f-display);font-weight:800;font-size:26px;}
+  .verdict__path{font-size:15px;opacity:.92;margin-top:6px;}
+
+  /* Score table */
+  table.scorecard{width:100%;border-collapse:collapse;font-size:14px;}
+  table.scorecard thead th{background:var(--navy);color:#fff;font-family:var(--f-body);font-weight:600;font-size:13px;text-align:left;padding:12px 16px;}
+  table.scorecard thead th.num{text-align:right;}
+  table.scorecard tbody td{padding:12px 16px;border-bottom:1px solid var(--feather);}
+  table.scorecard tbody tr:nth-child(even){background:var(--cloud);}
+  table.scorecard td.num{text-align:right;font-family:var(--f-mono);}
+  table.scorecard tfoot td{padding:14px 16px;font-weight:700;border-top:2px solid var(--navy);}
+  table.scorecard tfoot td.num{text-align:right;font-family:var(--f-mono);font-size:16px;}
+
+  .level-pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;white-space:nowrap;}
+  .level-pill::before{content:"";width:8px;height:8px;border-radius:99px;background:currentColor;}
+  .lvl-Foundational{color:#b91c1c;background:rgba(239,68,68,.1);}
+  .lvl-Developing{color:#b45309;background:rgba(245,158,11,.12);}
+  .lvl-Capable{color:#1740b0;background:rgba(29,78,216,.1);}
+  .lvl-Advanced{color:#047857;background:rgba(16,185,129,.12);}
+
+  /* Bar chart */
+  .bars{display:flex;flex-direction:column;gap:var(--s3);}
+  .bar-row{display:grid;grid-template-columns:200px 1fr 96px;align-items:center;gap:var(--s3);}
+  .bar-row__label{font-size:14px;font-weight:500;color:var(--ink);}
+  .bar-row__track{height:14px;background:var(--feather);border-radius:99px;overflow:hidden;}
+  .bar-row__fill{height:100%;border-radius:99px;width:0;transition:width .8s cubic-bezier(.2,.7,.2,1);}
+  .bar-row__pct{font-family:var(--f-mono);font-size:13px;color:var(--slate);text-align:right;}
+
+  /* Gap analysis cards */
+  .gap-card{border:1px solid var(--feather);border-left:4px solid var(--caution);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:var(--s4);margin-bottom:var(--s3);background:#fff;}
+  .gap-card.is-foundational{border-left-color:var(--risk);}
+  .gap-card__head{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:8px;}
+  .gap-card__title{font-weight:600;font-size:15px;}
+  .gap-card__action{font-size:14px;color:var(--ink);}
+  .gap-empty{background:rgba(16,185,129,.08);border-left:4px solid var(--success);padding:var(--s4);border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:15px;}
+
+  /* Use case + next steps lists */
+  .uc-list{display:grid;gap:var(--s3);}
+  .uc-item{display:flex;gap:var(--s3);align-items:flex-start;padding:var(--s3);background:var(--cloud);border-radius:var(--r-sm);}
+  .uc-item .uc-mark{flex:none;width:8px;height:8px;border-radius:2px;background:var(--teal);margin-top:8px;}
+  .uc-item b{display:block;font-size:15px;color:var(--ink);}
+  .uc-item span{font-size:14px;color:var(--slate);}
+
+  .next-step{border:1px solid var(--feather);border-radius:var(--r-md);padding:var(--s5);background:#fff;}
+  .next-step .tier{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;}
+  .next-step h4{font-size:20px;margin:6px 0 8px;}
+  .next-step p{font-size:15px;color:var(--slate);margin-bottom:var(--s4);}
+
+  /* ── EMAIL PANEL ── */
+  .email-panel{background:var(--cloud);border:1px solid var(--feather);border-radius:var(--r-md);padding:var(--s5);}
+  .email-panel__row{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;}
+  .email-status{display:none;align-items:center;gap:10px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);color:#047857;padding:var(--s3) var(--s4);border-radius:var(--r-sm);font-size:14px;font-weight:500;margin-top:var(--s4);}
+  .email-status.show{display:flex;}
+  .email-status svg{flex:none;}
+
+  /* Email preview (HTML email per guide §9.2) */
+  .email-preview{max-width:600px;margin:var(--s4) auto 0;border:1px solid var(--feather);border-radius:var(--r-md);overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);}
+  .email-preview__bar{background:#fff;text-align:center;padding:24px 0 0;}
+  .email-preview__teal{height:2px;background:var(--teal);margin-top:20px;}
+  .email-preview__body{padding:28px 32px;font-size:15px;color:var(--ink);}
+  .email-preview__body h5{font-family:var(--f-display);font-size:18px;font-weight:700;margin-bottom:var(--s3);}
+  .email-preview__body p{margin-bottom:var(--s3);}
+  .email-preview__score{font-family:var(--f-mono);background:var(--navy);color:#fff;border-radius:var(--r-sm);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;margin:var(--s3) 0;}
+  .email-preview__score b{font-size:20px;}
+  .email-preview__footer{background:var(--cloud);padding:16px 32px;font-size:12px;color:var(--slate);text-align:center;}
+  .preview-toggle{font-size:13px;color:var(--blue);cursor:pointer;background:none;border:none;text-decoration:underline;padding:0;margin-top:var(--s3);}
+
+  /* Footer */
+  .footer{background:var(--navy);color:#cbd5e1;padding:var(--s7) 0 var(--s5);margin-top:var(--s8);}
+  .footer__top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s5);align-items:flex-start;}
+  .footer__tag{font-size:14px;max-width:420px;margin-top:var(--s3);}
+  .footer__tag strong{color:#fff;}
+  .footer__pillars{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--mist);margin-top:var(--s3);}
+  .footer__bottom{border-top:1px solid #1e2b46;margin-top:var(--s5);padding-top:var(--s4);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s3);font-size:13px;color:var(--mist);}
+
+  .actions-row{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s5);}
+
+  @media (max-width:760px){
+    .opts{grid-template-columns:1fr 1fr;}
+    .field--grid{grid-template-columns:1fr;}
+    .bar-row{grid-template-columns:120px 1fr 52px;gap:var(--s2);}
+    .bar-row__label{font-size:13px;}
+    .verdict__score{font-size:44px;}
+  }
+  @media print{
+    .nav,.progress,.form-wrap,.footer,.email-panel .btn,.preview-toggle,.actions-row{display:none!important;}
+    #report{display:block!important;}
+    body{font-size:12px;}
+  }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="IIIBC — Beyond Cognition · Home">
+      <img src="assets/logo.svg" alt="IIIBC — Beyond Cognition" width="150" height="26">
+    </a>
+    <a href="index.html" class="nav__back">← Back to IIIBC</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="hero__eyebrow">IIIBC · AI Strategy Institute · Non-Profit Edition</span>
+    <h1>AI Readiness Assessment for Non-Profit Organizations</h1>
+    <p class="hero__sub">A diagnostic for donor-funded, project-based organizations. Answer honestly across eight dimensions — you will receive a scored readiness report and have it emailed to your leadership team. AI should amplify your mission, not complicate it.</p>
+    <div class="hero__meta">
+      <div class="hero__meta-item"><span class="hero__meta-k">Time</span><span class="hero__meta-v">15–25 minutes</span></div>
+      <div class="hero__meta-item"><span class="hero__meta-k">Dimensions</span><span class="hero__meta-v">8 readiness areas</span></div>
+      <div class="hero__meta-item"><span class="hero__meta-k">Output</span><span class="hero__meta-v">Scored report + email</span></div>
+      <div class="hero__meta-item"><span class="hero__meta-k">Cost</span><span class="hero__meta-v">Free diagnostic</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS -->
+<div class="progress" id="progress" aria-hidden="true">
+  <div class="container progress__inner">
+    <span class="progress__label"><b id="progDone">0</b> / <span id="progTotal">0</span> answered</span>
+    <div class="progress__track"><div class="progress__fill" id="progFill"></div></div>
+    <span class="progress__label" id="progPct">0%</span>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="form-wrap">
+  <div class="container">
+
+    <div class="intro-note">
+      <p class="label">How to use this assessment</p>
+      <p>Designed for Executive Directors, Program Directors, COOs, and Board Technology Committees. Each question is scored 0–3: <b>0</b> = not in place / no awareness · <b>1</b> = awareness only · <b>2</b> = in progress / partial · <b>3</b> = fully in place and practiced. There are no trick questions — this is a diagnostic, not a grade.</p>
+    </div>
+
+    <form id="assessment" novalidate>
+
+      <!-- SECTION 0 — PROFILE -->
+      <section class="sec" id="sec0">
+        <div class="sec__head">
+          <div class="sec__num">Section 0</div>
+          <h2 class="sec__title">Organization Profile</h2>
+          <p class="sec__sub">Context that shapes how your results are interpreted. We also use it to address your report.</p>
+        </div>
+
+        <div class="field--grid">
+          <div class="field">
+            <label for="orgName">Organization name</label>
+            <input type="text" id="orgName" name="orgName" autocomplete="organization" placeholder="e.g., Meridian Community Trust">
+          </div>
+          <div class="field">
+            <label for="contactName">Your name &amp; role</label>
+            <input type="text" id="contactName" name="contactName" placeholder="e.g., Dana Okoro, Executive Director">
+          </div>
+        </div>
+
+        <div class="field--grid">
+          <div class="field">
+            <label for="email">Email to send the report to <span style="color:var(--risk)">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@organization.org" required>
+            <p class="hint">Your scored report will be emailed here when you submit.</p>
+          </div>
+          <div class="field">
+            <label for="budget">Annual operating budget (USD)</label>
+            <select id="budget" name="budget">
+              <option value="">Select…</option>
+              <option>Under $250k</option>
+              <option>$250k – $1M</option>
+              <option>$1M – $5M</option>
+              <option>$5M – $20M</option>
+              <option>Over $20M</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field--grid">
+          <div class="field">
+            <label for="staff">Number of full-time staff</label>
+            <input type="number" id="staff" name="staff" min="0" placeholder="e.g., 24">
+          </div>
+          <div class="field">
+            <label for="projects">Active projects / programs</label>
+            <input type="number" id="projects" name="projects" min="0" placeholder="e.g., 6">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Primary funding sources <span class="hint" style="display:inline">(check all that apply)</span></label>
+          <div class="checks">
+            <label><input type="checkbox" name="funding" value="Government grants"> Government grants</label>
+            <label><input type="checkbox" name="funding" value="Foundation grants"> Foundation grants</label>
+            <label><input type="checkbox" name="funding" value="Corporate donors"> Corporate donors</label>
+            <label><input type="checkbox" name="funding" value="Individual donors"> Individual donors</label>
+            <label><input type="checkbox" name="funding" value="Earned revenue"> Earned revenue</label>
+          </div>
+        </div>
+
+        <div class="field--grid">
+          <div class="field">
+            <label for="scope">Geographic scope</label>
+            <select id="scope" name="scope">
+              <option value="">Select…</option>
+              <option>Local</option>
+              <option>National</option>
+              <option>International</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="beneficiary">Primary beneficiary population</label>
+            <input type="text" id="beneficiary" name="beneficiary" placeholder="e.g., displaced families, at-risk youth">
+          </div>
+        </div>
+      </section>
+
+      <!-- Scored sections injected here -->
+      <div id="sections"></div>
+
+      <!-- SUBMIT -->
+      <div class="submit-bar">
+        <h3>Generate your AI Readiness Report</h3>
+        <p>We will score all eight dimensions, build your readiness profile, and email the report to the address above. Nothing is shared with third parties.</p>
+        <button type="submit" class="btn btn--primary btn--lg" id="submitBtn">Submit &amp; Generate Report</button>
+        <div class="submit-error" id="submitError"></div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<!-- REPORT -->
+<section id="report" aria-live="polite">
+  <div class="container">
+
+    <!-- Cover -->
+    <div class="report-cover">
+      <div class="report-cover__brand">IIIBC · Beyond Cognition</div>
+      <h2>AI Readiness Report</h2>
+      <p class="report-cover__sub" id="rcSub">Prepared for your organization</p>
+      <div class="report-cover__meta">
+        <div><span>Edition</span>Non-Profit · Donor-Funded</div>
+        <div><span>Prepared for</span><span id="rcOrg" style="color:#fff;text-transform:none;letter-spacing:0;font-size:14px;font-weight:600;"></span></div>
+        <div><span>Date</span><span id="rcDate" style="color:#fff;text-transform:none;letter-spacing:0;font-size:14px;font-weight:600;"></span></div>
+        <div><span>Version</span>1.0</div>
+      </div>
+    </div>
+
+    <!-- Verdict -->
+    <div class="report-section">
+      <h3>Overall Readiness Profile</h3>
+      <div class="verdict" id="verdict">
+        <div class="verdict__score"><span id="vScore">0</span><small>/159</small></div>
+        <div class="verdict__body">
+          <div class="verdict__profile" id="vProfile">—</div>
+          <div class="verdict__path" id="vPath"></div>
+        </div>
+      </div>
+      <div class="intro-note"><p class="label">What this means</p><p id="vNarrative"></p></div>
+    </div>
+
+    <!-- Scorecard -->
+    <div class="report-section">
+      <h3>Dimension Scorecard</h3>
+      <table class="scorecard">
+        <thead><tr><th>Dimension</th><th class="num">Your Score</th><th class="num">Max</th><th>Readiness Level</th></tr></thead>
+        <tbody id="scoreBody"></tbody>
+        <tfoot><tr><td>Total</td><td class="num" id="tfScore">0</td><td class="num">159</td><td id="tfLevel"></td></tr></tfoot>
+      </table>
+    </div>
+
+    <!-- Bars -->
+    <div class="report-section">
+      <h3>Readiness by Dimension</h3>
+      <div class="bars" id="bars"></div>
+    </div>
+
+    <!-- Gap analysis -->
+    <div class="report-section">
+      <h3>Priority Gap Analysis</h3>
+      <p style="font-size:15px;color:var(--slate);margin-bottom:var(--s4);">Dimensions scoring <b>Foundational</b> or <b>Developing</b> are your highest-leverage next moves.</p>
+      <div id="gaps"></div>
+    </div>
+
+    <!-- Recommended use cases -->
+    <div class="report-section">
+      <h3>Recommended AI Use Cases</h3>
+      <p style="font-size:15px;color:var(--slate);margin-bottom:var(--s4);" id="ucIntro"></p>
+      <div class="uc-list" id="useCases"></div>
+    </div>
+
+    <!-- Next steps -->
+    <div class="report-section">
+      <h3>Recommended Next Step with IIIBC</h3>
+      <div class="next-step" id="nextStep"></div>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="report-section">
+      <h3>Email This Report</h3>
+      <div class="email-panel">
+        <div class="email-panel__row">
+          <button type="button" class="btn btn--primary" id="sendEmailBtn">Send report to <span id="emailTarget">your inbox</span></button>
+          <button type="button" class="btn btn--secondary" id="mailtoBtn">Open in my email app</button>
+          <button type="button" class="btn btn--ghost" id="printBtn">Print / Save as PDF</button>
+        </div>
+        <div class="email-status" id="emailStatus">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#047857" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span id="emailStatusText"></span>
+        </div>
+        <button type="button" class="preview-toggle" id="previewToggle">Preview the email that was sent ▾</button>
+
+        <!-- HTML email preview (per design guide §9.2) -->
+        <div class="email-preview" id="emailPreview" style="display:none;">
+          <div class="email-preview__bar">
+            <img src="assets/logo.svg" alt="IIIBC — Beyond Cognition" width="150" height="26" style="margin:0 auto;">
+            <div class="email-preview__teal"></div>
+          </div>
+          <div class="email-preview__body">
+            <h5 id="emOrg">Your AI Readiness Report</h5>
+            <p id="emIntro"></p>
+            <div class="email-preview__score">
+              <span>Overall readiness</span>
+              <b><span id="emScore">0</span>/159 · <span id="emProfile"></span></b>
+            </div>
+            <p id="emPath"></p>
+            <p style="margin-bottom:0;"><a href="#report">View your full report and dimension breakdown →</a></p>
+          </div>
+          <div class="email-preview__footer">
+            IIIBC · Beyond Cognition &nbsp;|&nbsp; hello@iiibc.com &nbsp;|&nbsp; iiibc.com<br>
+            Setting the standard for human-AI business excellence.
+          </div>
+        </div>
+      </div>
+
+      <div class="actions-row">
+        <a href="index.html#diagnostic" class="btn btn--ghost">Book a free 30-min diagnostic call</a>
+        <button type="button" class="btn btn--ghost" id="restartBtn">Retake the assessment</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <img src="assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+        <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>Structured AI strategy for mission-driven organizations who demand more than slide decks.</p>
+        <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+      </div>
+      <div>
+        <p style="font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase;margin-bottom:var(--s3);">Contact</p>
+        <p style="font-size:14px;"><a href="mailto:contact@iiibc.com" style="color:#fff;">contact@iiibc.com</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 IIIBC — Beyond Cognition. All rights reserved.</span>
+      <span class="mono">Assessment v1.0 · Non-Profit Edition</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   ASSESSMENT MODEL
+   ============================================================ */
+const LEVELS = ['Foundational','Developing','Capable','Advanced'];
+
+// bands: [maxForFoundational, maxForDeveloping, maxForCapable] (Advanced = above)
+const SECTIONS = [
+  { id:1, title:'Mission & Leadership Alignment', short:'Leadership Alignment',
+    sub:'Can your leadership connect AI to your mission, not just your operations?',
+    intro:'Non-profits that succeed with AI adopt it as a mission amplifier, not a technology initiative.',
+    bands:[5,10,15],
+    impl:{Foundational:'AI education for leadership is the first step before any tool adoption.',Developing:'Run leadership alignment work in parallel with pilot exploration.',Capable:'Ready for structured AI strategy development.',Advanced:'Leadership is a strength — build on it to accelerate adoption.'},
+    questions:[
+      'Senior leadership can articulate at least two specific ways AI could improve mission delivery.',
+      'Our board has discussed AI as a strategic topic (not just compliance/risk) in the past 18 months.',
+      'We have a designated internal champion or working group exploring AI adoption.',
+      'Our strategic plan includes digital transformation, data strategy, or technology investment as a priority.',
+      'Leadership is aware of AI use cases specific to our sector (donor segmentation, grant reporting, outcome tracking).',
+      'We share an understanding of what AI is NOT suitable for in our context (high-stakes beneficiary decisions).'
+    ]},
+  { id:2, title:'Data Maturity & Governance', short:'Data Governance',
+    sub:'Is your data ready to power AI — and safe enough to trust it?',
+    intro:'AI is only as good as the data it works with. Non-profits often hold sensitive data across disconnected systems.',
+    bands:[7,14,20],
+    impl:{Foundational:'Data infrastructure must be addressed before AI is viable.',Developing:'Targeted data quality and governance investments unlock AI potential.',Capable:'AI pilots are feasible — prioritize use cases matching your strongest data.',Advanced:'Data is a strategic asset; AI can be applied across multiple programs.'},
+    questions:[
+      'We have a current inventory of the data we collect, store, and use across all programs.',
+      'Our data is stored in structured digital formats (not primarily paper, spreadsheets, or email inboxes).',
+      'We have a documented data governance policy defining ownership, access, and use.',
+      'We have data sharing agreements with partners, funders, and contractors.',
+      'Beneficiary data is governed under a clear consent framework.',
+      'We track program outcomes consistently enough to compare across projects, cohorts, or time.',
+      'We have 2–3 years of historical data clean enough to analyze for our primary programs.',
+      'We know which data sets carry the highest sensitivity and have elevated protections for them.'
+    ]},
+  { id:3, title:'Technology Infrastructure', short:'Technology Infrastructure',
+    sub:'Does your technology environment support AI adoption — or create barriers?',
+    intro:'',
+    bands:[5,10,15],
+    impl:{Foundational:'Basic IT infrastructure and security must precede AI adoption.',Developing:'Address key gaps; low-risk AI tools (content, admin) are accessible now.',Capable:'Infrastructure supports AI pilots — plan integrations thoughtfully.',Advanced:'Strong foundation; enterprise AI tools are viable.'},
+    questions:[
+      'We have reliable, secure internet and modern devices for all staff who would use AI tools.',
+      'We use cloud-based platforms for core operations (M365, Google Workspace, Salesforce NPSP, etc.).',
+      'We have a designated person or contracted support responsible for IT security.',
+      'We have cybersecurity protections: MFA, regular backups, staff phishing awareness.',
+      'Our systems have API or export capabilities that could allow data to flow to/from AI tools.',
+      'We have a process to evaluate and approve new tools before staff use them (including free AI tools).'
+    ]},
+  { id:4, title:'People & Organizational Capacity', short:'People & Capacity',
+    sub:'Do your people have the skills and bandwidth to adopt and sustain AI?',
+    intro:'The most common reason AI stalls in non-profits is not technology — it is people capacity.',
+    bands:[6,12,17],
+    impl:{Foundational:'Invest in AI literacy and change management before tool deployment.',Developing:'Champion-led pilots with structured learning loops are the right entry point.',Capable:'People are ready — focus on governance and sustainability of AI practice.',Advanced:'Culture is a strength; AI adoption can move at organizational pace.'},
+    questions:[
+      'Staff have basic digital literacy and are comfortable learning new software.',
+      'At least one staff member has used AI tools (ChatGPT, Copilot, Claude) for work.',
+      'Staff are generally open to AI assistance for administrative tasks.',
+      'We have bandwidth (or budget to hire) to run an AI pilot without diverting program delivery.',
+      'Our onboarding and training is documented well enough to train new staff on AI tools consistently.',
+      'We preserve institutional knowledge when key staff leave (no single-person dependencies).',
+      'We foster a culture of learning and experimentation without fear of failure.'
+    ]},
+  { id:5, title:'Financial & Funding Readiness', short:'Financial & Funding',
+    sub:'Can your funding model support AI investment — and can AI improve it?',
+    intro:'Unlike corporations, non-profit technology investment must often be justified to external funders.',
+    bands:[6,12,17],
+    impl:{Foundational:'Build the financial and funder narrative before piloting AI.',Developing:'Explore capacity-building grants; start with zero/low-cost AI tools.',Capable:'The financial case is buildable — pursue funder conversations alongside a pilot.',Advanced:'Strong funding case; AI investment can be positioned as donor value.'},
+    questions:[
+      'We have unrestricted reserves or discretionary budget that could fund a $5k–$25k AI pilot.',
+      'At least one funder is known to support technology and innovation (incl. capacity-building grants).',
+      'We can articulate a credible mission ROI for AI (serve more beneficiaries, reduce cost-per-outcome).',
+      'We track cost-per-outcome or cost-per-beneficiary metrics usable as an efficiency baseline.',
+      'We are aware of AI-specific or digital transformation grant opportunities.',
+      'Our grant reporting is a significant staff time burden (high AI automation potential).',
+      'Our donor strategy relies on personalization (strong AI potential in fundraising).'
+    ]},
+  { id:6, title:'Donor & Stakeholder Communication', short:'Donor Communication',
+    sub:'Are you ready to be transparent with donors and stakeholders about AI use?',
+    intro:'Donor trust is a non-profit’s most valuable asset. AI introduces new transparency questions.',
+    bands:[4,9,12],
+    impl:{Foundational:'Develop an AI communication stance before any external AI use is visible.',Developing:'Draft AI use disclosure and board talking points.',Capable:'Communication readiness is solid — refine for specific major donor segments.',Advanced:'You can use AI transparency as a donor engagement differentiator.'},
+    questions:[
+      'If asked by a major donor today, we could explain how we use AI and how it protects beneficiary data.',
+      'We have considered whether donor communications should disclose AI-assisted content.',
+      'Our board is prepared to respond to donor or public questions about AI use.',
+      'We have a plan to proactively share our AI principles and safeguards with major funders.',
+      'We understand our major donors’ attitudes toward AI (opportunity, risk, or neutral).'
+    ]},
+  { id:7, title:'Ethical & Beneficiary Safeguards', short:'Ethics & Safeguards',
+    sub:'Are the people you serve protected from AI-related harm?',
+    intro:'Non-profits often serve vulnerable populations. AI applied to them requires heightened ethical vigilance.',
+    bands:[6,12,17],
+    impl:{Foundational:'An ethics framework is prerequisite to any AI touching beneficiary data or decisions.',Developing:'Develop an ethics policy in parallel with operational AI pilots.',Capable:'Strong ethical foundation — apply it to each new use case systematically.',Advanced:'Ethical readiness is a competitive and funder differentiator.'},
+    questions:[
+      'We have identified programs where AI influences beneficiary decisions and built in human review.',
+      'We are aware of AI bias risks against the populations we serve.',
+      'We have or are developing an AI ethics policy protecting beneficiary rights.',
+      'We have reviewed whether beneficiary consent covers AI use of their data.',
+      'We have a mechanism for beneficiaries to raise concerns about technology/data use.',
+      'We review AI tools for accessibility (disability, literacy, technology access).',
+      'Staff understand AI outputs require human judgment and feel supported to override them.'
+    ]},
+  { id:8, title:'Project-Based AI Integration', short:'Project Integration',
+    sub:'Can your project delivery model absorb and sustain AI across grant cycles?',
+    intro:'The challenge is not just adopting AI — it is sustaining it when funding cycles end and teams change.',
+    bands:[6,12,17],
+    impl:{Foundational:'Embed AI considerations into your project design methodology first.',Developing:'Pilot AI in one active project with a structured evaluation plan.',Capable:'AI can be integrated into the project lifecycle systematically.',Advanced:'Your project model is AI-compatible — scale across programs.'},
+    questions:[
+      'Our project and grant budget templates include a technology/digital tools line for AI.',
+      'Our project close-out process captures what worked, what data was created, and what tools were used.',
+      'We consider AI in program delivery when writing new grant proposals.',
+      'We have a cross-project data architecture (data from one project can ethically inform future ones).',
+      'We have evaluated whether AI can reduce the grant reporting burden.',
+      'Our M&E framework is structured enough to generate data for AI-assisted impact analysis.',
+      'We have considered how AI tools are transitioned, maintained, or sunset when a project ends.'
+    ]}
+];
+
+const OPT_TEXT = [
+  {n:'0', t:'Not in place'},
+  {n:'1', t:'Awareness only'},
+  {n:'2', t:'In progress'},
+  {n:'3', t:'Fully in place'}
+];
+
+const MAX_TOTAL = SECTIONS.reduce((a,s)=>a + s.questions.length*3, 0); // 159
+
+// Overall profile bands [upper bound, profile, path, narrative]
+const PROFILES = [
+  {max:39,  profile:'AI Unready',  path:'Foundation work only',
+   narr:'Focus on the basics first: data governance, IT security, staff AI literacy, and an ethics policy. Adopting tools before these are in place creates risk without return. This is the right and responsible place to start.'},
+  {max:79,  profile:'AI Curious',  path:'Structured education + low-risk pilots',
+   narr:'You are ready for structured AI education paired with low-risk pilots — administrative automation and content assistance that touch no beneficiary data. Build confidence and internal evidence before moving into program-adjacent uses.'},
+  {max:119, profile:'AI Ready',    path:'Run a defined pilot in your strongest program area',
+   narr:'You can pursue a defined AI pilot in your highest-readiness program area while building toward a full AI strategy. Match your first pilot to your strongest data and your most willing team.'},
+  {max:139, profile:'AI Capable',  path:'Develop an organization-wide AI strategy',
+   narr:'You are positioned to develop an organization-wide AI strategy — function design, pillar frameworks, an ethics policy, and a donor communication toolkit. Engage a structured strategy foundation to sequence it well.'},
+  {max:159, profile:'AI Leading',  path:'Become a sector model',
+   narr:'Your organization can position itself as an AI-forward sector model. Pursue an innovation strategy, funder storytelling, and peer leadership — your readiness is itself an asset worth communicating.'}
+];
+
+const USE_CASES = {
+  low:{ intro:'Start here — low risk, no beneficiary data, immediate staff value:',
+    items:[
+      ['Grant writing assistance','AI drafting and editing of proposals (staff reviews all output).'],
+      ['Donor communication drafting','Appeal letters, thank-you notes, and newsletters with AI assistance.'],
+      ['Meeting summaries','AI-assisted transcription and action-item extraction.'],
+      ['HR & admin templates','Job descriptions and internal documents to reduce administrative burden.']
+    ]},
+  mid:{ intro:'Move into program-adjacent AI with appropriate governance:',
+    items:[
+      ['Donor segmentation & retention','Predict lapsed donors and optimize ask amounts.'],
+      ['Grant reporting automation','AI synthesis of outcome data into structured funder reports.'],
+      ['Beneficiary needs screening','AI-assisted (not AI-decided) triage for intake processes.'],
+      ['Program outcome analysis','Pattern detection across multi-year M&E data.'],
+      ['Translation & multilingual comms','Serve diverse populations more equitably.']
+    ]},
+  high:{ intro:'You are ready for strategic and transformational AI:',
+    items:[
+      ['Predictive impact modeling','Forecast program outcomes to guide resource allocation.'],
+      ['Funder intelligence','AI monitoring of funder priorities, RFPs, and alignment signals.'],
+      ['Beneficiary journey analytics','Track and optimize individual service pathways.'],
+      ['Theory-of-change validation','Test logic models against outcome data at scale.'],
+      ['Cross-sector data collaboration','Ethically pooled sector data for collective impact analysis.']
+    ]}
+};
+
+const NEXT_STEPS = {
+  'AI Unready':{tier:'IIIBC Engagement · Tier 1',name:'AI Foundations Workshop',desc:'A half-day leadership workshop to build shared AI literacy, identify safe pilots, and produce a 90-day action plan.'},
+  'AI Curious':{tier:'IIIBC Engagement · Tier 1',name:'AI Foundations Workshop',desc:'A half-day leadership workshop to build shared AI literacy, identify safe pilots, and produce a 90-day action plan.'},
+  'AI Ready':{tier:'IIIBC Engagement · Tier 2',name:'Non-Profit AI Pilot Design',desc:'A 6-week sprint to design, resource, and launch one AI pilot with governance guardrails and a measurement framework.'},
+  'AI Capable':{tier:'IIIBC Engagement · Tier 3',name:'AI Strategy Foundation — Non-Profit Edition',desc:'A full AI strategy engagement: function design, pillar frameworks, ethics policy, and a donor communication toolkit.'},
+  'AI Leading':{tier:'IIIBC Engagement · Tier 4',name:'Sector Leadership Program',desc:'Position your organization as an AI-forward sector model through content partnerships, speaking, and peer learning facilitation.'}
+};
+
+const BAR_COLORS = {Foundational:'#EF4444',Developing:'#F59E0B',Capable:'#1D4ED8',Advanced:'#10B981'};
+
+/* ---------- Build form ---------- */
+const sectionsRoot = document.getElementById('sections');
+SECTIONS.forEach(sec=>{
+  const max = sec.questions.length*3;
+  const wrap = document.createElement('section');
+  wrap.className='sec';
+  wrap.id='sec'+sec.id;
+  let html = `<div class="sec__head">
+      <div class="sec__num">Section ${sec.id} · max ${max} pts</div>
+      <h2 class="sec__title">${sec.title}</h2>
+      <p class="sec__sub">${sec.sub}</p>
+      ${sec.intro?`<p class="sec__intro">${sec.intro}</p>`:''}
+    </div>`;
+  sec.questions.forEach((q,i)=>{
+    const qid = `q${sec.id}_${i+1}`;
+    let opts='';
+    OPT_TEXT.forEach(o=>{
+      opts += `<label class="opt"><input type="radio" name="${qid}" value="${o.n}" data-sec="${sec.id}"><span><b>${o.n}</b>${o.t}</span></label>`;
+    });
+    html += `<div class="q" id="wrap_${qid}">
+        <span class="q__id">${sec.id}.${i+1}</span>
+        <label class="q__label" for="${qid}">${q}</label>
+        <div class="opts">${opts}</div>
+      </div>`;
+  });
+  wrap.innerHTML = html;
+  sectionsRoot.appendChild(wrap);
+});
+
+/* ---------- Progress ---------- */
+const radios = () => document.querySelectorAll('#assessment input[type=radio]');
+const TOTAL_Q = SECTIONS.reduce((a,s)=>a+s.questions.length,0);
+document.getElementById('progTotal').textContent = TOTAL_Q;
+const progFill = document.getElementById('progFill');
+const progDone = document.getElementById('progDone');
+const progPct = document.getElementById('progPct');
+
+function answeredCount(){
+  const seen = new Set();
+  radios().forEach(r=>{ if(r.checked) seen.add(r.name); });
+  return seen.size;
+}
+function updateProgress(){
+  const done = answeredCount();
+  const pct = Math.round(done/TOTAL_Q*100);
+  progFill.style.width = pct+'%';
+  progDone.textContent = done;
+  progPct.textContent = pct+'%';
+}
+document.getElementById('assessment').addEventListener('change', e=>{
+  if(e.target.type==='radio'){
+    document.getElementById('wrap_'+e.target.name)?.classList.remove('is-missing');
+    updateProgress();
+  }
+});
+
+/* ---------- Scoring helpers ---------- */
+function levelFor(score, bands){
+  if(score<=bands[0]) return 'Foundational';
+  if(score<=bands[1]) return 'Developing';
+  if(score<=bands[2]) return 'Capable';
+  return 'Advanced';
+}
+function profileFor(total){
+  for(const p of PROFILES){ if(total<=p.max) return p; }
+  return PROFILES[PROFILES.length-1];
+}
+function escapeHtml(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+let lastReport = null;
+
+/* ---------- Submit ---------- */
+document.getElementById('assessment').addEventListener('submit', e=>{
+  e.preventDefault();
+  const errBox = document.getElementById('submitError');
+  errBox.style.display='none';
+
+  const email = document.getElementById('email').value.trim();
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  // find unanswered
+  const answered = new Set();
+  radios().forEach(r=>{ if(r.checked) answered.add(r.name); });
+  const missing = [];
+  SECTIONS.forEach(s=>{ for(let i=1;i<=s.questions.length;i++){ const n=`q${s.id}_${i}`; if(!answered.has(n)) missing.push(n);}});
+
+  if(!emailOk || missing.length){
+    let msgs=[];
+    if(!emailOk) msgs.push('Enter a valid email address to receive the report.');
+    if(missing.length) msgs.push(`${missing.length} question${missing.length>1?'s':''} still need an answer — they are highlighted below.`);
+    errBox.textContent = msgs.join(' ');
+    errBox.style.display='block';
+    missing.forEach(n=>document.getElementById('wrap_'+n)?.classList.add('is-missing'));
+    const target = missing.length ? document.getElementById('wrap_'+missing[0]) : document.getElementById('sec0');
+    target?.scrollIntoView({behavior:'smooth',block:'center'});
+    if(!emailOk && !missing.length) document.getElementById('email').focus();
+    return;
+  }
+
+  // compute
+  let total=0;
+  const sectionResults = SECTIONS.map(s=>{
+    let sub=0;
+    for(let i=1;i<=s.questions.length;i++){
+      const sel = document.querySelector(`input[name="q${s.id}_${i}"]:checked`);
+      sub += parseInt(sel.value,10);
+    }
+    total += sub;
+    const max = s.questions.length*3;
+    const level = levelFor(sub, s.bands);
+    return {id:s.id, title:s.title, short:s.short, score:sub, max, level, impl:s.impl[level]};
+  });
+
+  const prof = profileFor(total);
+  const org = document.getElementById('orgName').value.trim() || 'Your organization';
+  lastReport = {org, email, total, prof, sectionResults};
+
+  renderReport(lastReport);
+  document.getElementById('report').style.display='block';
+  document.getElementById('report').scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+/* ---------- Render report ---------- */
+function renderReport(R){
+  const dateStr = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+
+  document.getElementById('rcOrg').textContent = R.org;
+  document.getElementById('rcDate').textContent = dateStr;
+  document.getElementById('rcSub').textContent = `Prepared for ${R.org} — a calibrated diagnostic across eight readiness dimensions.`;
+
+  // verdict
+  const vColor = BAR_COLORS[ R.prof.profile==='AI Unready'?'Foundational' : R.prof.profile==='AI Curious'?'Developing' : R.prof.profile==='AI Ready'?'Capable':'Advanced'];
+  const verdict = document.getElementById('verdict');
+  verdict.style.background = `linear-gradient(110deg, var(--navy), ${shade(vColor)})`;
+  document.getElementById('vScore').textContent = R.total;
+  document.getElementById('vProfile').textContent = R.prof.profile;
+  document.getElementById('vPath').textContent = 'Recommended path: '+R.prof.path;
+  document.getElementById('vNarrative').textContent = R.prof.narr;
+
+  // scorecard
+  const body = document.getElementById('scoreBody');
+  body.innerHTML='';
+  R.sectionResults.forEach(s=>{
+    body.insertAdjacentHTML('beforeend',
+      `<tr><td>${s.id}. ${s.title}</td><td class="num">${s.score}</td><td class="num">${s.max}</td>
+       <td><span class="level-pill lvl-${s.level}">${s.level}</span></td></tr>`);
+  });
+  document.getElementById('tfScore').textContent = R.total;
+  const overallLvl = R.prof.profile;
+  document.getElementById('tfLevel').innerHTML = `<span class="level-pill lvl-${R.prof.profile==='AI Unready'?'Foundational':R.prof.profile==='AI Curious'?'Developing':R.prof.profile==='AI Ready'?'Capable':'Advanced'}">${overallLvl}</span>`;
+
+  // bars
+  const bars = document.getElementById('bars');
+  bars.innerHTML='';
+  R.sectionResults.forEach(s=>{
+    const pct = Math.round(s.score/s.max*100);
+    bars.insertAdjacentHTML('beforeend',
+      `<div class="bar-row">
+        <span class="bar-row__label">${s.short}</span>
+        <div class="bar-row__track"><div class="bar-row__fill" data-w="${pct}" style="background:${BAR_COLORS[s.level]}"></div></div>
+        <span class="bar-row__pct">${s.score}/${s.max}</span>
+      </div>`);
+  });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    bars.querySelectorAll('.bar-row__fill').forEach(f=>f.style.width=f.dataset.w+'%');
+  }));
+
+  // gaps
+  const gaps = document.getElementById('gaps');
+  gaps.innerHTML='';
+  const weak = R.sectionResults.filter(s=>s.level==='Foundational'||s.level==='Developing')
+                    .sort((a,b)=> (a.score/a.max)-(b.score/b.max));
+  if(!weak.length){
+    gaps.innerHTML = `<div class="gap-empty">No dimension scored Foundational or Developing — a rare and strong result. Your priority shifts from closing gaps to systematizing and scaling what already works.</div>`;
+  } else {
+    weak.forEach(s=>{
+      gaps.insertAdjacentHTML('beforeend',
+        `<div class="gap-card ${s.level==='Foundational'?'is-foundational':''}">
+          <div class="gap-card__head">
+            <span class="gap-card__title">${s.id}. ${s.title}</span>
+            <span class="level-pill lvl-${s.level}">${s.level} · ${s.score}/${s.max}</span>
+          </div>
+          <div class="gap-card__action">${s.impl}</div>
+        </div>`);
+    });
+  }
+
+  // use cases by profile
+  let uc;
+  if(R.prof.profile==='AI Unready'||R.prof.profile==='AI Curious') uc=USE_CASES.low;
+  else if(R.prof.profile==='AI Ready') uc=USE_CASES.mid;
+  else uc=USE_CASES.high;
+  document.getElementById('ucIntro').textContent = uc.intro;
+  const ucList = document.getElementById('useCases');
+  ucList.innerHTML='';
+  uc.items.forEach(([t,d])=>{
+    ucList.insertAdjacentHTML('beforeend',
+      `<div class="uc-item"><span class="uc-mark"></span><div><b>${t}</b><span>${d}</span></div></div>`);
+  });
+
+  // next step
+  const ns = NEXT_STEPS[R.prof.profile];
+  document.getElementById('nextStep').innerHTML =
+    `<div class="tier">${ns.tier}</div>
+     <h4>${ns.name}</h4>
+     <p>${ns.desc}</p>
+     <a href="index.html#diagnostic" class="btn btn--primary">Discuss this engagement →</a>`;
+
+  // email panel
+  document.getElementById('emailTarget').textContent = R.email;
+  document.getElementById('emOrg').textContent = `${R.org} — AI Readiness Report`;
+  document.getElementById('emIntro').textContent =
+    `Thank you for completing the IIIBC AI Readiness Assessment (Non-Profit Edition). Here is the headline result for ${R.org}.`;
+  document.getElementById('emScore').textContent = R.total;
+  document.getElementById('emProfile').textContent = R.prof.profile;
+  document.getElementById('emPath').textContent = `Recommended path: ${R.prof.path}. ${R.prof.narr}`;
+}
+
+// blend a hex toward navy for verdict gradient
+function shade(hex){
+  const n={'#EF4444':'#7f1d1d','#F59E0B':'#92500a','#1D4ED8':'#1e3a8a','#10B981':'#065f46'};
+  return n[hex]||'#1e3a8a';
+}
+
+/* ---------- Email actions ---------- */
+function plainTextReport(R){
+  const dateStr = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  let lines=[];
+  lines.push('IIIBC — AI READINESS REPORT (NON-PROFIT EDITION)');
+  lines.push('Prepared for: '+R.org);
+  lines.push('Date: '+dateStr);
+  lines.push('');
+  lines.push('─── OVERALL READINESS ─────────────────────────────');
+  lines.push('');
+  lines.push(`Score: ${R.total} / ${MAX_TOTAL}`);
+  lines.push(`Profile: ${R.prof.profile}`);
+  lines.push(`Recommended path: ${R.prof.path}`);
+  lines.push('');
+  lines.push(R.prof.narr);
+  lines.push('');
+  lines.push('─── DIMENSION SCORECARD ───────────────────────────');
+  lines.push('');
+  R.sectionResults.forEach(s=>{
+    lines.push(`${s.id}. ${s.title}`);
+    lines.push(`   ${s.score}/${s.max} — ${s.level}`);
+  });
+  lines.push('');
+  lines.push('─── PRIORITY GAPS ─────────────────────────────────');
+  lines.push('');
+  const weak = R.sectionResults.filter(s=>s.level==='Foundational'||s.level==='Developing');
+  if(!weak.length){ lines.push('No Foundational or Developing dimensions — focus on scaling.'); }
+  else weak.forEach(s=>lines.push(`• ${s.title} (${s.level}): ${s.impl}`));
+  lines.push('');
+  lines.push('─── NEXT STEP WITH IIIBC ──────────────────────────');
+  lines.push('');
+  const ns=NEXT_STEPS[R.prof.profile];
+  lines.push(`${ns.name}`);
+  lines.push(ns.desc);
+  lines.push('');
+  lines.push('Book a free 30-minute diagnostic: hello@iiibc.com');
+  lines.push('');
+  lines.push('© IIIBC — Beyond Cognition | iiibc.com');
+  return lines.join('\n');
+}
+
+// Simulated send (no backend in this static sample) + confirmation
+document.getElementById('sendEmailBtn').addEventListener('click', ()=>{
+  if(!lastReport) return;
+  const status = document.getElementById('emailStatus');
+  document.getElementById('emailStatusText').textContent =
+    `Report sent to ${lastReport.email}. Check your inbox — a copy of the HTML email is previewed below.`;
+  status.classList.add('show');
+  // reveal preview
+  document.getElementById('emailPreview').style.display='block';
+  document.getElementById('previewToggle').textContent='Hide email preview ▴';
+  status.scrollIntoView({behavior:'smooth',block:'center'});
+});
+
+// mailto fallback — opens the user's real email client with the report prefilled
+document.getElementById('mailtoBtn').addEventListener('click', ()=>{
+  if(!lastReport) return;
+  const subj = `IIIBC AI Readiness Report — ${lastReport.org} — ${lastReport.prof.profile}`;
+  const bodyTxt = plainTextReport(lastReport);
+  const href = `mailto:${encodeURIComponent(lastReport.email)}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(bodyTxt)}`;
+  window.location.href = href;
+});
+
+document.getElementById('printBtn').addEventListener('click', ()=>window.print());
+
+document.getElementById('previewToggle').addEventListener('click', ()=>{
+  const p=document.getElementById('emailPreview');
+  const show = p.style.display==='none';
+  p.style.display = show?'block':'none';
+  document.getElementById('previewToggle').textContent = show?'Hide email preview ▴':'Preview the email that was sent ▾';
+});
+
+document.getElementById('restartBtn').addEventListener('click', ()=>{
+  document.getElementById('assessment').reset();
+  document.getElementById('report').style.display='none';
+  document.getElementById('emailStatus').classList.remove('show');
+  document.getElementById('emailPreview').style.display='none';
+  updateProgress();
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+updateProgress();
+</script>
+</body>
+</html>
