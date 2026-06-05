@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 3: Your AI Toolkit: Safe Tools &amp; Setup — IIIBC Non-Profit AI Training</title>
+  <meta name="description" content="Pick the right AI tools for the right data, set them up safely, and give your lean team one short, repeatable way to say yes to new tools without putting the mission at risk.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../non-profit-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../non-profit-training.html">All Modules</a>
+    <a href="../non-profilt-assessment.html">Assessment</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Non-Profit AI Training · Module 3</div>
+  <h1>Your AI Toolkit: Safe Tools &amp; Setup</h1>
+  <p class="page-header__purpose">Pick the right AI tools for the right data, set them up safely, and give your lean team one short, repeatable way to say "yes" to new tools without putting the mission at risk.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Aware → Practicing</span>
+    <span class="badge badge--section">Assessment §3 — Technology Infrastructure</span>
+    <span class="badge badge--audience">A6 IT/Data Lead · A5 Operations · A3 all staff</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content</a></li>
+    <li><a href="#exercises">Hands-On Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module number</dt><dd>3 of 8</dd>
+          <dt>Maps to assessment section</dt><dd>Section 3 — Technology Infrastructure (Q 3.1–3.6)</dd>
+          <dt>Primary audience</dt><dd>A6 IT/Data Lead (often outsourced or none) · A5 Operations/Finance/Admin · A3 all staff (the setup + hygiene parts)</dd>
+          <dt>Competency level</dt><dd>Aware → Practicing</dd>
+          <dt>Duration</dt><dd>Half-day (≈3.5 hrs), or two 90-minute sessions</dd>
+          <dt>Format</dt><dd>Practical setup session + tool-selection guidance; hands-on with real accounts</dd>
+          <dt>Prerequisites</dt><dd>Module 4 (Tier-0 4D fluency) recommended; Module 2 (data classification) strongly recommended — you cannot match tools to data without it</dd>
+          <dt>Cost note</dt><dd>Deliverable with free/low-cost resources: TechSoup account (free), Microsoft / Google nonprofit programs, NTEN cybersecurity hub, CISA free guidance</dd>
+          <dt>Related modules</dt><dd>M2 (Data Foundations) · M4 (4D Fluency) · M5 (Funding) · M7 (Beneficiary Safeguards)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>Most non-profits already use AI — they just don't <em>manage</em> it. Staff quietly paste a grant report into a free chatbot, drop a donor list into a "summarize this" tool, or sign up for whatever was free that week. None of it is malicious. It is people trying to get the work done with the tools in front of them. But "whatever's free, signed up under a personal Gmail" is exactly how beneficiary data ends up training someone else's model, and how a lean team ends up with twelve tools, zero owners, and no idea which ones touch sensitive data.</p>
+      <p>This pattern has a name now: <strong>shadow AI</strong> — unsanctioned AI tools used without any review. Industry surveys in 2025 put unauthorized AI use very high (one widely cited IDC figure: ~56% of employees use unapproved AI tools, while only ~23% use tools their organization provides and governs — <em>directional</em>). For a non-profit, the stakes are not abstract: the data at risk is often about people experiencing poverty, displacement, trauma, or illness.</p>
+      <p>The good news is that the safer path is usually the <em>cheaper</em> path. The major vendors now give non-profits enterprise-grade AI at free or steep-discount rates — the same tiers that contractually promise <strong>not to train on your data</strong>. The job of this module is not to lock staff down. It is to make the safe tool the easy, obvious, already-set-up tool — and to give the org one lightweight way to evaluate the next one.</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The biggest AI risk for most non-profits isn't a sci-fi failure. It's a well-meaning staff member pasting sensitive data into a free consumer tool because no one set up a safe alternative.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this module, participants will be able to:</p>
+      <ol>
+        <li>Explain, in plain language, the difference between a <strong>consumer</strong> AI tier and an <strong>enterprise/managed</strong> tier — and why "no training on your data," admin controls, and SSO matter.</li>
+        <li>Read and use the organization's <strong>approved-tool catalog</strong>: which tool is allowed for which class of data, and who owns it.</li>
+        <li>Match an AI task to the right tool using the org's data classification (public / internal / sensitive-beneficiary-or-donor).</li>
+        <li>Claim and set up the major nonprofit AI offers (Microsoft, Google, TechSoup, plus ChatGPT/Claude tiers) and know what each free/discounted offer actually includes.</li>
+        <li>Apply the <strong>baseline security hygiene</strong> checklist — MFA, backups, phishing awareness, access controls — and explain why these matter <em>more</em> once AI is in the building.</li>
+        <li>Describe what API / export capability means in plain terms, and check whether the org's current systems have it.</li>
+        <li>Submit and triage a <strong>new-tool request</strong> through a fast, lightweight approval process.</li>
+        <li>Name the sector resources (TechSoup, NTEN, NetHope, Microsoft/Google nonprofit programs) the org can lean on instead of paying consultants.</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>0:00–0:15</td><td>Welcome; "what tools are we <em>actually</em> using?" live inventory (sticky notes / shared doc)</td><td>Whole group</td></tr>
+          <tr><td>0:15–0:45</td><td>Part 1 — Consumer vs. enterprise/managed tiers: the data-training question</td><td>Teach + discussion</td></tr>
+          <tr><td>0:45–1:15</td><td>Part 2 — The nonprofit offers: Microsoft, Google, TechSoup, ChatGPT, Claude</td><td>Teach + claim accounts</td></tr>
+          <tr><td>1:15–1:25</td><td>Break</td><td>—</td></tr>
+          <tr><td>1:25–1:55</td><td>Part 3 — The approved-tool catalog: matching tools to data classes</td><td>Teach + build the catalog together</td></tr>
+          <tr><td>1:55–2:35</td><td>Part 4 — Baseline security hygiene: MFA, backups, phishing, access</td><td>Teach + hands-on MFA setup</td></tr>
+          <tr><td>2:35–2:55</td><td>Part 5 — API / export &amp; integration in plain language</td><td>Teach + check our systems</td></tr>
+          <tr><td>2:55–3:20</td><td>Part 6 — The new-tool request process</td><td>Teach + walk one request through</td></tr>
+          <tr><td>3:20–3:35</td><td>Knowledge check + assign owners + close</td><td>Whole group</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="content">
+      <h2>Core Content</h2>
+
+      <h3>Part 1 — Consumer vs. Enterprise/Managed Tiers (the one distinction that matters most)</h3>
+      <p>Every major AI tool comes in two broad flavors. They can look almost identical on screen. The difference is in the contract and the controls behind them.</p>
+      <p><strong>Consumer tier</strong> (free or cheap personal plans — e.g., free ChatGPT, the Gemini app on a personal account, Claude Free/Pro on a personal login):</p>
+      <ul>
+        <li>By default the vendor <em>may use your conversations to train its models</em>. On free ChatGPT, for example, chats may be used for training unless you manually opt out (<em>directional, per OpenAI's stated policy</em>).</li>
+        <li>No central admin. If a staff member leaves, no one can see or revoke their account.</li>
+        <li>No organization-wide data-processing agreement, no audit trail, no single sign-on.</li>
+      </ul>
+      <p><strong>Enterprise / managed tier</strong> (business and nonprofit plans tied to your org's accounts):</p>
+      <ul>
+        <li>A <strong>contractual commitment not to train on your content</strong>. This is the headline. Microsoft 365 Copilot Chat's "Enterprise Data Protection" states prompts and responses aren't used to train the foundation models, and aren't shared with or used to train OpenAI's models. OpenAI's Business/Enterprise and Anthropic's Claude Team/Enterprise tiers carry the same no-training-by-default commitment.</li>
+        <li><strong>Admin controls + SSO (single sign-on):</strong> IT can provision and de-provision accounts, enforce login through your existing identity, and offboard a departing staff member in one place — which matters enormously in a high-turnover sector.</li>
+        <li><strong>Audit + retention controls:</strong> visibility into use and the ability to set how long data is kept.</li>
+      </ul>
+      <pre><code>   CONSUMER TIER                         ENTERPRISE / MANAGED TIER
+   ┌───────────────────────┐             ┌───────────────────────────┐
+   │ personal login        │             │ org account + SSO         │
+   │ may train on your data │   ──vs──▶   │ contractual: NO training  │
+   │ no admin / no offboard │             │ admin controls, audit     │
+   │ fine for PUBLIC data   │             │ ok for INTERNAL data;     │
+   │ only                   │             │ sensitive only if vetted  │
+   └───────────────────────┘             └───────────────────────────┘
+</code></pre>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>A confusing trap — a plan can be priced like a business plan and still be a consumer tier. Don't buy on price or name; confirm the actual data-training term and whether there's an admin console. (Some "Team"-labeled plans have been flagged as consumer-tier with training on by default — <em>verify the current terms for any tool before approving it</em>.)</p></div>
+      <p><strong>Do / Don't</strong></p>
+      <ul>
+        <li>✅ Do route everyone to the org's managed tier for anything beyond public information.</li>
+        <li>✅ Do confirm the no-training term in writing for each approved tool.</li>
+        <li>❌ Don't let staff use personal AI logins for work.</li>
+        <li>❌ Don't assume "paid" means "safe" — the Plus/Pro personal plans usually have the <em>same</em> data relationship as free.</li>
+      </ul>
+      <p><strong>How to actually verify "no training on our data" (a 4-step check the owner runs before a tool goes in the catalog):</strong></p>
+      <pre><code>1. Find the tier's terms / trust page (search: "&lt;tool&gt; business data not used for training")
+2. Confirm it says NO training BY DEFAULT — not "you can opt out" (opt-out = consumer signal)
+3. Confirm there's an admin console (you can add/remove users) and SSO support
+4. Confirm a Data Processing Agreement (DPA) is available — required before sensitive data
+</code></pre>
+      <p>If you can't tick all four, the tool is Public-data-only until you can.</p>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>Tie this directly to Module 2's cardinal rule — <em>never paste sensitive beneficiary or donor data into a consumer AI tool</em>. The managed tier is what makes that rule livable instead of just restrictive.</p></div>
+
+      <h3>Part 2 — The Nonprofit Offers (free and discounted, claim them now)</h3>
+      <p>You almost certainly qualify for enterprise-grade AI at little or no cost. Eligibility generally requires recognized nonprofit/charity status (501(c)(3) equivalent). Here is what's on the table as of mid-2026 (<em>pricing and inclusions change — verify at the source links before budgeting</em>):</p>
+      <ul>
+        <li><strong>Microsoft for Nonprofits.</strong> Discounted/granted Microsoft 365. <strong>Microsoft 365 Copilot Chat is included free with nonprofit M365 plans</strong> and carries Enterprise Data Protection automatically (look for the green shield). The full <strong>Microsoft 365 Copilot</strong> add-on (the one embedded in Word/Excel/Outlook/Teams) is discounted ~15% for nonprofits — about <strong>$25.50/user/month</strong> billed yearly vs. ~$36 commercial (<em>directional</em>) — and requires an underlying M365 license.</li>
+        <li><strong>Google for Nonprofits.</strong> <strong>Google Workspace for Nonprofits is free for up to ~2,000 users</strong> and now includes the Gemini app, NotebookLM, and 10+ AI features with enterprise security and data protections. Paid upgrades for advanced Gemini are discounted up to ~75% (starting around <strong>$3.50/user/month</strong>, <em>directional</em>), managed in the Workspace Admin console.</li>
+        <li><strong>TechSoup.</strong> A free account gives access to donated/discounted software and services from 100+ partners (Microsoft, Adobe, Zoom, Dropbox, Intuit, AWS, and AI tools such as Otter.ai and Notion AI at nonprofit rates) — discounts commonly cited up to ~90% (<em>directional</em>). TechSoup is also the validation path many vendors use to confirm your nonprofit status.</li>
+        <li><strong>ChatGPT (OpenAI).</strong> Free/Plus are consumer tiers; <strong>Business and Enterprise</strong> carry the no-training-on-your-data commitment and admin controls. No broad public nonprofit discount as standard — negotiate or access vetted AI tools via TechSoup.</li>
+        <li><strong>Claude (Anthropic).</strong> <strong>Team and Enterprise</strong> include a contractual no-model-training commitment and admin features; consumer Pro does not provide a data-processing agreement. Anthropic also sponsors the NTEN nonprofit AI cohort (a capability resource, separate from licensing).</li>
+      </ul>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>For many lean orgs the right starting stack is <em>already free</em>: Microsoft 365 Copilot Chat (or Google Workspace + Gemini) gives you a managed, no-training assistant at zero extra cost. Set that up before you pay for anything.</p></div>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>"We need a special nonprofit AI platform." Usually you don't. Start with the managed assistant inside the office suite you already run, then add a specialized tool only when a real task demands it.</p></div>
+      <p><strong>A "good starter stack" most lean orgs can stand up this month (all free or near-free):</strong></p>
+      <pre><code>1. Managed assistant  → M365 Copilot Chat  OR  Google Gemini in Workspace for Nonprofits
+2. Identity + MFA      → the same Microsoft/Google account, MFA enforced
+3. Validation + extras → a free TechSoup account for discounted add-ons (transcription, etc.)
+4. The two artifacts   → the approved-tool catalog + the new-tool intake form
+</code></pre>
+      <p>Notice what's <em>not</em> on the list: a separate paid chatbot, a custom build, or a consultant. You add those only when the catalog and a real task justify them — which is also the story Module 5 helps you tell a funder.</p>
+
+      <h3>Part 3 — The Approved-Tool Catalog (the heart of this module)</h3>
+      <p>The catalog is one short living table that answers three questions for every tool: <em>What is it allowed to touch? Is it the safe tier? Who owns it?</em> It turns "is this OK?" from a debate into a lookup.</p>
+      <p>It depends on your <strong>data classes</strong> from Module 2. Use three simple classes:</p>
+      <pre><code>PUBLIC            → already on your website / press release; no harm if seen
+INTERNAL          → org operations: drafts, budgets, internal memos; not for public
+SENSITIVE         → beneficiary or donor personal data; the people you serve
+                    cannot absorb a leak — highest protection
+</code></pre>
+      <p>The rule of thumb that staff can memorize:</p>
+      <pre><code>PUBLIC      → any approved tool is fine
+INTERNAL    → managed/enterprise tier only
+SENSITIVE   → managed tier AND explicitly vetted for that data class,
+              with a data-processing agreement — when in doubt, don't
+</code></pre>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>Default beneficiary data to "no AI" unless a specific tool has been explicitly approved for sensitive data with a signed agreement. "Not yet approved" is a safe, acceptable answer.</p></div>
+      <p>(The starter catalog table is in <em>Templates &amp; Takeaway Artifacts</em> below — you'll fill it in during the session.)</p>
+      <p><strong>Do / Don't</strong></p>
+      <ul>
+        <li>✅ Do keep the catalog to one page; long policies don't get read.</li>
+        <li>✅ Do name a single <strong>owner</strong> per tool (license, renewal, who to ask).</li>
+        <li>❌ Don't list a tool you haven't confirmed the data-training terms for.</li>
+        <li>❌ Don't let the catalog go stale — review it at the 90-day mark and each grant cycle.</li>
+      </ul>
+
+      <h3>Part 4 — Baseline Security Hygiene (this matters <em>more</em> with AI)</h3>
+      <p>AI raises the value of your accounts: an assistant connected to your email and files is a bigger prize for an attacker, and a phished login now exposes more. Non-profits are already prime targets — email attacks on nonprofits rose ~35% in a recent year, and most breaches start with a phished credential (<em>directional; sources below</em>). Four basics block the overwhelming majority of attacks. None require a big budget.</p>
+      <ol>
+        <li><strong>MFA (multi-factor authentication) — the single highest-value control.</strong> Requires a second factor (app code or key) beyond a password. Microsoft and others report MFA blocks <strong>&gt;99% of automated account-compromise attempts</strong> (<em>directional</em>). Turn it on for <em>all</em> email, finance, admin, and AI/cloud accounts. Prefer an authenticator app over SMS.</li>
+        <li><strong>Backups — and test a restore.</strong> Keep recent backups of your core data, ideally with one copy offline/separate (the "3-2-1" idea: 3 copies, 2 media, 1 off-site). The only proof a backup works is restoring a small file from it. This is your ransomware insurance.</li>
+        <li><strong>Phishing awareness.</strong> Most intrusions start with a convincing email. Teach staff to slow down on urgency, hover links, verify money/data requests on a second channel, and report suspicious mail without blame. Note: AI now makes phishing emails cleaner and more personalized — "bad grammar" is no longer a reliable tell.</li>
+        <li><strong>Access controls (least privilege) + device basics.</strong> People get access to only what their role needs; shared logins are eliminated; accounts are removed <em>the day</em> someone leaves (high turnover makes this critical). Keep devices updated and screen-locked.</li>
+      </ol>
+      <pre><code>   PASSWORD ALONE         ──────────▶   easily phished / reused / leaked
+   PASSWORD + MFA         ──────────▶   blocks &gt;99% of automated attacks
+   + tested BACKUPS       ──────────▶   you survive ransomware
+   + PHISHING-AWARE STAFF ──────────▶   you stop the #1 entry point
+   + LEAST PRIVILEGE      ──────────▶   one breach ≠ everything breached
+</code></pre>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>If you have no IT lead (common), assign these as named tasks anyway — "MFA owner," "backup-restore tester." NTEN's Nonprofit Cybersecurity Readiness program and CISA's free guidance can stand in for staff you don't have.</p></div>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>Before you connect any AI assistant to your email or document store, confirm MFA is on for those accounts. Connecting AI to an unprotected account multiplies the blast radius of one stolen password.</p></div>
+
+      <h3>Part 5 — API / Export &amp; Integration, in Plain Language</h3>
+      <p>You don't need to be technical to make good integration decisions. Two plain ideas:</p>
+      <ul>
+        <li><strong>Export</strong> = can you get your data <em>out</em> in a usable file (CSV/Excel)? If yes, you're never trapped, and you can move data to where it's useful. Check this for every system <em>before</em> you adopt it.</li>
+        <li><strong>API (application programming interface)</strong> = a doorway that lets two systems talk <em>automatically</em>, so data flows without manual copy-paste. Tools like Zapier connect common nonprofit apps (e.g., a donation form to Salesforce) using these doorways.</li>
+      </ul>
+      <p>Why it matters for AI: integration is what turns AI from a clever toy into time saved — but every new connection is also a new place data can flow, so it must respect the same data-class rules.</p>
+      <p>A quick way to check any tool you already use:</p>
+      <pre><code>Settings / Account  →  look for "Export," "Download data," or "API / Integrations"
+   Has CSV/Excel export?      → good, you're not locked in
+   Has an API / Zapier app?   → automation is possible (review it like a new tool)
+   Has neither?               → flag it; manual copy-paste is your only path, and
+                                that's where sensitive data gets pasted into the wrong place
+</code></pre>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Newer platforms (e.g., Salesforce Nonprofit Cloud) sometimes outrun their connectors — not all data objects sync yet, and teams use staging objects or scheduled flows as workarounds (<em>directional</em>). Translation: confirm a real working connection exists for <em>your</em> systems before you promise leadership "it'll just sync."</p></div>
+      <p><strong>Do / Don't</strong></p>
+      <ul>
+        <li>✅ Do prefer tools with clean export — it protects you against lock-in and dead grants.</li>
+        <li>✅ Do treat each integration as a data flow that needs the same approval as a new tool.</li>
+        <li>❌ Don't wire sensitive data into an automation just because the connector exists.</li>
+      </ul>
+
+      <h3>Part 6 — The New-Tool Request Process (fast on purpose)</h3>
+      <p>If approval takes a month, staff will route around it — that's how shadow AI is born. The goal is a process that says "yes" to low-risk tools in days, and asks harder questions only when sensitive data or money is involved. A practical three-tier triage (adapted from common 2025 governance guidance):</p>
+      <pre><code>TIER A — fast-track (decide in ~2 days)
+   Managed-tier tool · PUBLIC or INTERNAL data only · no sensitive data, no payments
+   → Owner + one reviewer approve; add to catalog.
+
+TIER B — standard review (~1–2 weeks)
+   Touches SENSITIVE data OR connects to a core system OR has a cost
+   → Confirm no-training terms, data-processing agreement, MFA/admin support,
+     export capability; ED or data lead sign-off.
+
+TIER C — escalate
+   AI influencing beneficiary eligibility/decisions, crisis comms, or health/legal data
+   → Goes to leadership + Module 7 safeguards review; often the answer is "not yet."
+</code></pre>
+      <p>The intake form (in Templates below) is deliberately five questions. The reviewer's job is to slot it into A/B/C and respond fast.</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>A fast, predictable "yes-path" for safe tools is your best defense against shadow AI. Make the right way the <em>easy</em> way.</p></div>
+    </section>
+
+    <section id="exercises">
+      <h2>Hands-On Exercises</h2>
+
+      <h3>Exercise 1 — Match the Task to the Right Tool (15 min)</h3>
+      <p>For each scenario, decide: which data class, and which tier/tool is appropriate?</p>
+      <ol>
+        <li>Draft a public social-media post announcing an event.</li>
+        <li>Summarize an internal staff-meeting transcript.</li>
+        <li>"Clean up" a spreadsheet of beneficiary names, addresses, and case notes.</li>
+        <li>Rewrite a grant report (contains program outcomes, no personal data) more concisely.</li>
+        <li>Triage which beneficiaries qualify for an emergency-rent program.</li>
+      </ol>
+      <p><strong>Facilitator answer key:</strong></p>
+      <ol>
+        <li>PUBLIC → any approved tool, including the managed assistant. ✅</li>
+        <li>INTERNAL → managed/enterprise tier only (no-training). ✅</li>
+        <li>SENSITIVE → stop. Not in a general tool. Requires a tool explicitly vetted for sensitive data with an agreement; default answer today is "no." 🚫</li>
+        <li>INTERNAL → managed tier; human reviews output before it goes to the funder (Diligence). ✅</li>
+        <li>SENSITIVE + high-stakes beneficiary decision → Tier C / Module 7. AI does <strong>not</strong> decide eligibility; at most it organizes information for a human decision, with consent and review. 🚫 as described.</li>
+      </ol>
+
+      <h3>Exercise 2 — Turn MFA On (15 min, hands-on)</h3>
+      <p>Walk participants through enabling MFA via an authenticator app on their primary email/M365 or Google account, live in the room. Confirm each person completes a test login. <strong>Answer key / facilitator note:</strong> if anyone manages a shared or service account, flag it for the access-controls follow-up (shared logins should be eliminated or vaulted). Success = every attendee leaves with MFA on at least one critical account.</p>
+
+      <h3>Exercise 3 — Run One Real Request Through (10 min)</h3>
+      <p>Have a staff member submit one tool they <em>actually</em> want using the intake form. As a group, triage it A/B/C and decide. <strong>Answer key:</strong> the "right" outcome is a <em>clear, fast decision with a named owner</em> — not necessarily approval. If it's Tier B/C, name exactly what's needed to clear it.</p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>Artifact 1 — Approved-Tool Catalog (starter; one page, living)</h3>
+      <table>
+        <thead><tr><th>Tool</th><th>Data class allowed</th><th>Enterprise/managed tier? (no training on data)</th><th>Cost / nonprofit discount</th><th>Owner</th></tr></thead>
+        <tbody>
+          <tr><td>Microsoft 365 Copilot Chat</td><td>Public, Internal</td><td>Yes — Enterprise Data Protection, automatic</td><td>Free with nonprofit M365</td><td>_______</td></tr>
+          <tr><td>Microsoft 365 Copilot (in apps)</td><td>Public, Internal</td><td>Yes</td><td>~$25.50/user/mo (≈15% off), <em>verify</em></td><td>_______</td></tr>
+          <tr><td>Google Gemini (Workspace for Nonprofits)</td><td>Public, Internal</td><td>Yes — enterprise data protections</td><td>Free up to ~2,000 users; advanced ~$3.50/user/mo, <em>verify</em></td><td>_______</td></tr>
+          <tr><td>ChatGPT Business/Enterprise</td><td>Public, Internal</td><td>Yes — no training, admin controls</td><td>Via TechSoup/negotiated; <em>verify</em></td><td>_______</td></tr>
+          <tr><td>Claude Team/Enterprise</td><td>Public, Internal</td><td>Yes — no model-training commitment</td><td><em>Verify current terms</em></td><td>_______</td></tr>
+          <tr><td>Free ChatGPT / personal Gemini / Claude Free</td><td><strong>Public only</strong></td><td>No — consumer tier</td><td>Free</td><td>(not for work data)</td></tr>
+          <tr><td>Otter.ai / Notion AI (via TechSoup)</td><td>Public, Internal</td><td><em>Confirm tier per tool</em></td><td>Nonprofit rates via TechSoup</td><td>_______</td></tr>
+          <tr><td><em>[tool approved for SENSITIVE data]</em></td><td>Sensitive (with DPA)</td><td>Yes + explicitly vetted + signed agreement</td><td>_______</td><td>_______</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p>Rules of the catalog: (1) no tool is listed until its data-training term is confirmed; (2) every row has an owner; (3) review at day 90 and each grant cycle.</p></div>
+
+      <h3>Artifact 2 — New-Tool Request (intake form)</h3>
+      <pre><code>NEW AI / TECH TOOL REQUEST
+1. Tool name + link:
+2. What task will it do, and who will use it?
+3. What data class will it touch?   [ ] Public  [ ] Internal  [ ] Sensitive (beneficiary/donor)
+4. Is there a managed/enterprise tier with "no training on our data"?  [ ] Yes  [ ] No  [ ] Unsure
+5. Cost? Does it connect to (integrate with) any of our systems?  [ ] No cost  [ ] Cost: ____  [ ] Integrates with: ____
+
+— Reviewer use —
+Triage:  [ ] A fast-track   [ ] B standard review   [ ] C escalate (sensitive/high-stakes → Module 7)
+Decision + date:                         Owner if approved:
+Conditions to clear (B/C):
+</code></pre>
+
+      <h3>Artifact 3 — Baseline Security Hygiene Checklist (one page, print it)</h3>
+      <pre><code>□ MFA is ON for ALL email, finance, admin, cloud, and AI accounts (authenticator app, not SMS)
+□ No shared logins; each person has their own account
+□ Departing-staff offboarding: accounts removed the SAME DAY (named owner: ____)
+□ Backups exist for core data; one copy is off-site/offline (3-2-1)
+□ A test restore was completed in the last 90 days (date: ____)
+□ Staff have had phishing awareness in the last 12 months; "report suspicious email" path is known
+□ Money/data requests are verified on a SECOND channel before action
+□ Devices are updated and screen-lock/auto-lock is on
+□ Least privilege: people can access only what their role needs
+□ MFA confirmed on the accounts BEFORE connecting any AI assistant to email/files
+Owners assigned: MFA ___  Backups/restore ___  Phishing training ___  Offboarding ___
+</code></pre>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> The single most important difference between a consumer and an enterprise/managed AI tier is:<br>a) speed&nbsp;&nbsp;b) a contractual commitment not to train on your data + admin controls&nbsp;&nbsp;c) the price&nbsp;&nbsp;d) the logo</li>
+        <li><strong>(MCQ)</strong> A staff member wants to summarize an internal budget memo. Which is appropriate?<br>a) free personal ChatGPT&nbsp;&nbsp;b) the org's managed assistant (no-training tier)&nbsp;&nbsp;c) any tool, it's just a memo&nbsp;&nbsp;d) no AI ever</li>
+        <li><strong>(Short answer)</strong> Why does "paid" not automatically mean "safe" for ChatGPT or Claude?</li>
+        <li><strong>(MCQ)</strong> Which control reportedly blocks &gt;99% of automated account-compromise attempts?<br>a) antivirus&nbsp;&nbsp;b) a strong password alone&nbsp;&nbsp;c) MFA&nbsp;&nbsp;d) a firewall</li>
+        <li><strong>(Short answer)</strong> In one sentence, what is "shadow AI" and why is a <em>fast</em> approval process the best defense?</li>
+        <li><strong>(MCQ)</strong> Beneficiary case notes should go into:<br>a) whatever's quickest&nbsp;&nbsp;b) the managed assistant&nbsp;&nbsp;c) only a tool explicitly vetted for sensitive data with a signed agreement — otherwise no AI&nbsp;&nbsp;d) a personal account</li>
+        <li><strong>(Short answer)</strong> What does "export capability" protect you against?</li>
+        <li><strong>(MCQ)</strong> Microsoft 365 Copilot Chat for an eligible nonprofit is:<br>a) $36/user/month&nbsp;&nbsp;b) free with the nonprofit M365 plan, with Enterprise Data Protection&nbsp;&nbsp;c) consumer-tier&nbsp;&nbsp;d) unavailable to nonprofits</li>
+      </ol>
+      <h3>Answer key</h3>
+      <p>1-b · 2-b · 3: Plus/Pro personal plans usually carry the <em>same</em> data relationship as free (data may be used/retained); only Business/Enterprise/Team tiers add the no-training commitment and admin controls. · 4-c · 5: Shadow AI = unsanctioned AI tool use with no review; a fast "yes-path" for low-risk tools removes the incentive to route around IT. · 6-c · 7: Vendor lock-in and being stranded when a grant/tool ends — you can always take your data with you. · 8-b.</p>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist</strong></p>
+      <ul>
+        <li>Confirm the org's data classes from Module 2 are defined; if not, define the three classes (public/internal/sensitive) first — the catalog depends on it.</li>
+        <li>Have admin access ready to demo claiming the Microsoft and/or Google nonprofit offer, or have screenshots if not yet provisioned.</li>
+        <li>Pre-create a blank approved-tool catalog and intake form in a shared doc.</li>
+        <li>Print the security hygiene checklist for every attendee.</li>
+      </ul>
+      <p><strong>Free/low-cost materials needed:</strong> a TechSoup account (free), the Microsoft/Google nonprofit offer pages, an authenticator app on phones, NTEN cybersecurity hub and CISA free guidance as references. No paid tooling required to run the session.</p>
+      <p><strong>Timing:</strong> the live MFA exercise (Part 4) always runs long — protect it; it's the highest-value 15 minutes in the room.</p>
+      <p><strong>Common pitfalls</strong></p>
+      <ul>
+        <li>Treating this as "lock everything down." Reframe: we're making the <em>safe</em> tool the <em>easy</em> tool.</li>
+        <li>Naming a tool nobody owns. Every catalog row gets an owner before the session ends.</li>
+        <li>Skipping the "test restore" — an untested backup is a guess, not a safeguard.</li>
+        <li>Approving by price/name instead of confirming the data-training term.</li>
+      </ul>
+      <p><strong>Discussion prompts</strong></p>
+      <ul>
+        <li>"What are we already using under personal logins?" (surface shadow AI without blame)</li>
+        <li>"What's the one tool people keep asking for? Let's run it through the process now."</li>
+      </ul>
+      <p><strong>Tailoring by audience</strong></p>
+      <ul>
+        <li><strong>A6 IT/Data lead:</strong> lead the catalog, tiers, integration, and approval triage. If IT is outsourced/absent, this module assigns the basics as named human tasks.</li>
+        <li><strong>A5 Operations:</strong> owns the catalog and intake as a living process; the renewal/owner column is theirs.</li>
+        <li><strong>A3 all staff:</strong> focus on Parts 1, 4, and 6 — what's allowed, MFA, and how to request a tool. They don't need the integration depth.</li>
+      </ul>
+      <p><strong>Addressing fear/resistance:</strong> staff resistance is real. Frame security and approval as <em>protecting the people we serve and the staff personally</em> (MFA protects your own accounts too), and emphasize that the managed tools are usually free upgrades, not restrictions. Celebrate the first staff-requested tool that gets approved fast — it proves the process is an ally, not a gate.</p>
+      <p><strong>Common objections and the honest response:</strong></p>
+      <table>
+        <thead><tr><th>You'll hear…</th><th>Respond with…</th></tr></thead>
+        <tbody>
+          <tr><td>"MFA slows me down every login."</td><td>It's seconds, and it blocks the attack that would shut us down for weeks. Use an authenticator app so it's one tap.</td></tr>
+          <tr><td>"The free tool I already use is fine."</td><td>For public content, sometimes. For anything internal or about the people we serve, the managed tier is <em>also free</em> — so let's just use the safe one.</td></tr>
+          <tr><td>"Approval will take forever."</td><td>Tier-A tools clear in about two days. The form is five questions. Try it now with your tool.</td></tr>
+          <tr><td>"We're too small to be a target."</td><td>Attackers automate; they don't check your size. Most hits are opportunistic phishing, and small orgs get hit <em>because</em> defenses are thin.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <table>
+        <thead><tr><th>#</th><th>Indicator</th><th>Target</th><th>Kirkpatrick</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Approved-tool catalog exists, with an owner on every row</td><td>100% of rows owned</td><td>L3 Behavior</td></tr>
+          <tr><td>2</td><td>MFA enabled on all critical accounts (email/finance/admin/AI)</td><td>≥95% of accounts</td><td>L3 Behavior</td></tr>
+          <tr><td>3</td><td>Documented test-restore of a backup completed</td><td>≥1 in last 90 days</td><td>L3 Behavior</td></tr>
+          <tr><td>4</td><td>Staff can correctly match a task to the right data class/tier (post-quiz)</td><td>≥80% correct; confidence +1 pt</td><td>L2 Learning</td></tr>
+          <tr><td>5</td><td>New-tool requests routed through the intake form (not ad-hoc)</td><td>≥80% of new tools</td><td>L3 Behavior</td></tr>
+          <tr><td>6</td><td>Reduction in personal-login / shadow AI use for work data</td><td>Trend down (self-report)</td><td>L4 Impact</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <p><strong>Sector resources to lean on (free/low-cost):</strong></p>
+      <ul>
+        <li>TechSoup — discounted/donated software + nonprofit-status validation: <a href="https://www.techsoup.org/">https://www.techsoup.org/</a> ; AI services: <a href="https://page.techsoup.org/ai-services-for-nonprofits">https://page.techsoup.org/ai-services-for-nonprofits</a></li>
+        <li>NTEN — Nonprofit Cybersecurity Readiness program + AI resource hub: <a href="https://www.nten.org/learn/nonprofit-cybersecurity-readiness">https://www.nten.org/learn/nonprofit-cybersecurity-readiness</a> ; <a href="https://www.nten.org/learn/nonprofit-tech-readiness/ai-for-nonprofits">https://www.nten.org/learn/nonprofit-tech-readiness/ai-for-nonprofits</a></li>
+        <li>NetHope — humanitarian/development cybersecurity + AI governance: <a href="https://nethope.org/digital_dimension/cybersecurity/">https://nethope.org/digital_dimension/cybersecurity/</a></li>
+        <li>CISA — Cross-Sector Cybersecurity Performance Goals (free baseline controls): <a href="https://www.cisa.gov/">https://www.cisa.gov/</a></li>
+      </ul>
+      <p><strong>Vendor nonprofit programs &amp; tiers:</strong></p>
+      <ul>
+        <li>Microsoft for Nonprofits — offers/eligibility/AI: <a href="https://www.microsoft.com/en-us/nonprofits/offers-for-nonprofits">https://www.microsoft.com/en-us/nonprofits/offers-for-nonprofits</a> ; <a href="https://www.microsoft.com/en-us/nonprofits/eligibility">https://www.microsoft.com/en-us/nonprofits/eligibility</a></li>
+        <li>Microsoft 365 Copilot Chat Enterprise Data Protection (no training on data): <a href="https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection">https://learn.microsoft.com/en-us/microsoft-365/copilot/enterprise-data-protection</a></li>
+        <li>Google for Nonprofits / Workspace + Gemini: <a href="https://workspace.google.com/learning/google-workspace-for-nonprofits-with-gemini">https://workspace.google.com/learning/google-workspace-for-nonprofits-with-gemini</a> ; <a href="https://support.google.com/nonprofits/answer/15873832">https://support.google.com/nonprofits/answer/15873832</a></li>
+        <li>OpenAI ChatGPT plans (Business/Enterprise no-training): <a href="https://chatgpt.com/pricing/">https://chatgpt.com/pricing/</a></li>
+        <li>Anthropic — is my data used for training (Team/Enterprise): <a href="https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training">https://privacy.claude.com/en/articles/7996868-is-my-data-used-for-model-training</a></li>
+      </ul>
+      <p><strong>Risk / governance context (mark stats directional):</strong></p>
+      <ul>
+        <li>Shadow AI scope (IDC/IBM 2025 figures): <a href="https://www.isaca.org/resources/news-and-trends/industry-news/2025/the-rise-of-shadow-ai-auditing-unauthorized-ai-tools-in-the-enterprise">https://www.isaca.org/resources/news-and-trends/industry-news/2025/the-rise-of-shadow-ai-auditing-unauthorized-ai-tools-in-the-enterprise</a> ; <a href="https://www.cio.com/article/4107318/shedding-light-on-shadow-ai.html">https://www.cio.com/article/4107318/shedding-light-on-shadow-ai.html</a></li>
+        <li>Nonprofit cybersecurity basics + phishing/MFA stats: <a href="https://keystonecorp.com/nonprofits/essential-cybersecurity-practices-every-nonprofit-needs/">https://keystonecorp.com/nonprofits/essential-cybersecurity-practices-every-nonprofit-needs/</a> ; <a href="https://www.brightdefense.com/resources/phishing-statistics/">https://www.brightdefense.com/resources/phishing-statistics/</a></li>
+        <li>TechSoup/Tapp 2025 AI Benchmark (76% lack an AI strategy — directional): <a href="https://blog.techsoup.org/posts/what-ai-means-for-nonprofits-in-2025-insights-from-the-ai-benchmark-report">https://blog.techsoup.org/posts/what-ai-means-for-nonprofits-in-2025-insights-from-the-ai-benchmark-report</a></li>
+      </ul>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Calibration note.</strong> Adoption, breach, and MFA-effectiveness figures here are vendor- or survey-reported and vary by methodology — treat them as <em>directional</em> for planning, not precise facts. Vendor pricing, free-tier inclusions, and data-training terms change frequently; <strong>verify each tool's current terms at the source before adding it to your catalog.</strong></p></div>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-2-data-foundations-governance.html"><span class="dir">← Previous</span><span class="ttl">Data Foundations &amp; Governance</span></a>
+      <a class="next" href="module-4-ai-fluency-4d-champions.html"><span class="dir">Next →</span><span class="ttl">AI Fluency: The 4D Method &amp; Champions</span></a>
+    </nav>
+
+  </div>
+</div>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that amplifies your mission — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../non-profit-training.html">All Modules</a>
+      <a href="../non-profilt-assessment.html">Readiness Assessment</a>
+      <a href="mailto:contact@iiibc.com">contact@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — AI Strategy Institute. All rights reserved.</span>
+    <span class="mono">Module 3 · Non-Profit Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>

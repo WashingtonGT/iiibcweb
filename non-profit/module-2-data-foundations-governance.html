@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 2: Data Foundations &amp; Responsible Data Handling — IIIBC Non-Profit AI Training</title>
+  <meta name="description" content="Get your data organized, classified, and safe — so AI helps your mission instead of putting the people you serve at risk.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../non-profit-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../non-profit-training.html">All Modules</a>
+    <a href="../non-profilt-assessment.html">Assessment</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Non-Profit AI Training · Module 2</div>
+  <h1>Data Foundations &amp; Responsible Data Handling</h1>
+  <p class="page-header__purpose">Get your data organized, classified, and safe — so AI helps your mission instead of putting the people you serve at risk.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Practicing</span>
+    <span class="badge badge--section">Assessment §2 — Data Maturity &amp; Governance</span>
+    <span class="badge badge--audience">A6 IT / Data lead · A5 Operations · A3 all-staff</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content — Parts 1–4</a></li>
+    <li><a href="#exercises">Hands-On Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module number</dt><dd>2 of 8</dd>
+          <dt>Maps to assessment</dt><dd>Section 2 — Data Maturity &amp; Governance (questions 2.1–2.8)</dd>
+          <dt>Primary audience</dt><dd>A6 IT / Data lead (often outsourced or none) · A5 Operations / Finance / Admin · A3 all-staff basics</dd>
+          <dt>Competency level</dt><dd>Practicing</dd>
+          <dt>Duration</dt><dd>Half-day (3.5 hrs) for leads + a 45-minute all-staff segment</dd>
+          <dt>Format</dt><dd>Workshop + hands-on data-hygiene clinic + a stand-alone 45-min all-staff session</dd>
+          <dt>Prerequisites</dt><dd>Tier 0 foundational fluency (Module 4). Helpful: a recent export or screenshot of your main data systems.</dd>
+          <dt>Cost note</dt><dd>Deliverable with free/low-cost resources: NTEN AI resource hub, Candid responsible-AI policy guide, ASU Lodestar privacy tips, Vera Solutions principles, TechSoup. No paid tooling required.</dd>
+          <dt>Related modules</dt><dd>Module 3 (Safe Tools &amp; Setup) · Module 7 (Beneficiary Safeguards) · Module 8 (Grant Lifecycle &amp; M&amp;E)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>Most non-profits are sitting on data they do not fully understand. Beneficiary records live in a case-management tool, donor history lives in a separate fundraising database, intake forms live in a filing cabinet or a shared inbox, and outcome numbers live in a spreadsheet that only one staff member knows how to update. None of it is labeled by how sensitive it is. When AI arrives, this is the soil it grows in — and bad soil grows bad outcomes.</p>
+      <p>The risk is not theoretical. The fastest-growing data risk for non-profits right now is <strong>"shadow AI"</strong> — staff and volunteers quietly pasting internal documents, case notes, or donor lists into free public AI tools to save time, with no approval and no record. The organization loses visibility, control, and the ability to audit what happened (ASU Lodestar, 2026). Public AI tools can retain what you type and use it to train future models. Real organizations have already leaked confidential material this way: Samsung engineers pasted source code into ChatGPT; the interim chief of the U.S. cyber-defense agency (CISA) uploaded sensitive documents to a public version of ChatGPT despite it being blocked for colleagues (IT Pro, 2025). For a non-profit, the equivalent mistake is an immigration status, a mental-health note, or a donor's financial details — and the people harmed are the people you exist to protect.</p>
+      <p>There is also an opportunity cost. AI can only help analyze outcomes, draft reports, or spot patterns if your data is "AI-ready" — meaning organized, consistent, and complete enough to trust. Most non-profit data is not there yet. The work in this module is the unglamorous foundation that makes everything in Modules 6, 7, and 8 actually possible.</p>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>Research note (directional):</em> Roughly <strong>92%</strong> of non-profits already use AI-enabled tools in some form, yet an estimated <strong>70–76%</strong> have <strong>no formal AI policy</strong> — and AI-enabled cyberattacks rose nearly <strong>89%</strong> year-over-year in 2025 (ASU Lodestar, 2026). Treat these as directional, but the gap is real: usage has outrun governance.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this module, participants will be able to:</p>
+      <ol>
+        <li><strong>Build a simple data inventory</strong> that lists every place the organization holds data (beneficiary, donor, operational) and who owns each one.</li>
+        <li><strong>Classify each data set by sensitivity</strong> (Public / Internal / Confidential / Highly Sensitive) and explain what "Highly Sensitive" means for the populations they serve.</li>
+        <li><strong>State and apply the cardinal rule</strong> — never paste sensitive beneficiary or donor data into public AI tools — and recognize on sight what counts as sensitive.</li>
+        <li><strong>Explain when consent, data-sharing agreements, and retention rules apply</strong> to AI use, and whether existing consent language covers AI.</li>
+        <li><strong>Judge whether a data set is "AI-ready"</strong> (structured, consistent, complete, single source of truth) or not — and name the one fix that would help most.</li>
+        <li><strong>Run a basic data-hygiene pass</strong> on a real system (deduplicate, standardize fields, agree on metric definitions) using their CRM or spreadsheet.</li>
+        <li><strong>Recognize whether GDPR or HIPAA applies</strong> to their organization, in plain terms, without needing a lawyer in the room.</li>
+        <li><strong>Use the three takeaway artifacts</strong> — the inventory &amp; classification template, the "what data can/can't go into AI" rule card, and the consent &amp; data-sharing checklist.</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <p><strong>Part A — Leads workshop + clinic (half-day, ~3.5 hrs): A6 IT/Data lead + A5 Operations</strong></p>
+      <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>0:00–0:15</td><td>Welcome, why data foundations come before AI, the shadow-AI story</td><td>Talk + discussion</td></tr>
+          <tr><td>0:15–0:55</td><td>Part 1: Data inventory &amp; mapping — build the inventory live</td><td>Workshop + Exercise 1</td></tr>
+          <tr><td>0:55–1:35</td><td>Part 2: Sensitivity classification, ownership, access, retention</td><td>Workshop + Exercise 1 (cont.)</td></tr>
+          <tr><td>1:35–1:45</td><td>Break</td><td>—</td></tr>
+          <tr><td>1:45–2:20</td><td>Part 3: The cardinal rule, consent, GDPR/HIPAA, data-sharing agreements</td><td>Workshop</td></tr>
+          <tr><td>2:20–3:05</td><td>Part 4: "AI-ready data" + hands-on data-hygiene clinic (CRM/spreadsheet)</td><td>Hands-on clinic + Exercise 2</td></tr>
+          <tr><td>3:05–3:25</td><td>Templates walk-through; assign owners and dates</td><td>Working session</td></tr>
+          <tr><td>3:25–3:30</td><td>Knowledge check + close</td><td>Quiz</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Part B — All-staff segment (45 min): A3 program staff + everyone</strong></p>
+      <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>0:00–0:10</td><td>Why your data is precious; the shadow-AI risk in plain terms</td><td>Story + talk</td></tr>
+          <tr><td>0:10–0:30</td><td>The "what can/can't go into AI" rule card — walk through every line</td><td>Rule-card walkthrough + Exercise 3</td></tr>
+          <tr><td>0:30–0:42</td><td>Sort-the-data game (sensitivity, live)</td><td>Group exercise</td></tr>
+          <tr><td>0:42–0:45</td><td>The one rule to remember + where to ask when unsure</td><td>Close</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="content">
+      <h2>Core Content — Parts 1–4</h2>
+
+      <h3>Part 1 — Know What You Hold: Data Inventory &amp; Mapping</h3>
+      <p>You cannot protect, classify, or feed to AI what you cannot see. A <strong>data inventory</strong> is simply a written list of every place your organization holds data, what kind it is, who owns it, where it lives, and how long you keep it. It is the single most useful document this module produces — and most non-profits have never made one.</p>
+      <p>Walk your organization function by function and write down every data source: intake forms, case notes, the donor database, the email newsletter list, the volunteer roster, grant-reporting spreadsheets, the shared inbox, paper files in a cabinet. For each, capture <em>where it lives</em> (which system, cloud or on-premises or paper), <em>who owns it</em> (a named person, not "the team"), <em>what's in it</em>, and <em>how sensitive it is</em>. This is exactly the practice enterprise data teams call an "AI-ready data inventory" — you are doing the same thing, just lean (BigID, 2025; NonProfit PRO, 2025).</p>
+      <pre><code>   DATA INVENTORY — what feeds the map
+   ┌─────────────┬──────────────┬──────────────┬───────────────┐
+   │ Source      │ Where it     │ Owner         │ Sensitivity   │
+   │ (what)      │ lives        │ (named)       │ (P/I/C/HS)    │
+   ├─────────────┼──────────────┼──────────────┼───────────────┤
+   │ Case notes  │ Apricot      │ Program Dir.  │ Highly Sens.  │
+   │ Donor gifts │ Raiser's Edge│ Dev. Director │ Confidential  │
+   │ Newsletter  │ Mailchimp    │ Comms lead    │ Internal      │
+   │ Annual rpt  │ Website      │ Comms lead    │ Public        │
+   └─────────────┴──────────────┴──────────────┴───────────────┘</code></pre>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>A one-page inventory that names a human owner for every data set. Ownership is what makes a rule enforceable — "everyone is responsible" means no one is.</p></div>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>An expensive data-governance platform bought before anyone has written down what data the organization actually holds. Tools do not create the inventory; people do. Start with a spreadsheet.</p></div>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Don't aim for perfect on day one. A first inventory listing your top 10–15 data sources, made in 45 minutes, is worth more than a "complete" one that never gets finished. Mark gaps as "unknown — to investigate" and move on.</p></div>
+      <p><strong>4D tie-in — Delegation:</strong> You cannot decide what to safely hand to AI (Delegation) until you know what each data set contains and how sensitive it is. The inventory is the precondition for every other decision in the kit.</p>
+
+      <h3>Part 2 — Label the Risk: Sensitivity Classification, Ownership, Access &amp; Retention</h3>
+      <p>Once you can see your data, sort it by <strong>how much harm a leak would cause</strong>. A simple four-level scale is enough for almost every non-profit:</p>
+      <table>
+        <thead><tr><th>Level</th><th>Meaning</th><th>Non-profit examples</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Public</strong></td><td>Already published; no harm if seen</td><td>Annual report, public program descriptions, press releases</td></tr>
+          <tr><td><strong>Internal</strong></td><td>Routine internal data; mild embarrassment if leaked</td><td>Staff rosters, meeting notes, general newsletter list</td></tr>
+          <tr><td><strong>Confidential</strong></td><td>Real harm if leaked; donor/financial trust</td><td>Donor giving history, board minutes, budgets, contracts</td></tr>
+          <tr><td><strong>Highly Sensitive</strong></td><td>Could endanger a person; legal/ethical duty</td><td>Immigration status, health/mental-health records, financial distress, abuse/safety details, children's data, biometric or legal data</td></tr>
+        </tbody>
+      </table>
+      <p>The "Highly Sensitive" row is the heart of this module. These are the categories that, if exposed, can cost someone their housing, their safety, their immigration case, or their dignity. Vera Solutions' responsible-AI principles put <strong>Privacy &amp; Data Protection</strong> at the center: collect only what you need, anonymize or encrypt sensitive data, and follow the regulations that apply to you (Vera Solutions, 2024). Data minimization — collecting only what is absolutely necessary — is the cheapest protection you have (ASU Lodestar, 2025).</p>
+      <p>For each data set, also write down two more things:</p>
+      <ul>
+        <li><strong>Access</strong> — who can see it, on a strict <em>need-to-know</em> basis with role-based permissions, reviewed periodically (ASU Lodestar, 2025).</li>
+        <li><strong>Retention</strong> — how long you keep it before secure deletion. AI-ready organizations enforce retention and keep only what is necessary, accurate, and current (Transcend, 2025; Striim, 2025).</li>
+      </ul>
+      <pre><code>   CLASSIFY → then apply the right protection
+   Public ───────► share freely
+   Internal ─────► internal access; default-deny external
+   Confidential ─► role-based access · encryption · NEVER public AI
+   Highly Sens. ─► strict need-to-know · consent check · NEVER any
+                    external AI · elevated protection · audit</code></pre>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>Any data set classified <strong>Confidential</strong> or <strong>Highly Sensitive</strong> is automatically off-limits to public/consumer AI tools — no exceptions, no "just this once." Classification and the cardinal rule (Part 3) are the same decision viewed from two angles.</p></div>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>When in doubt, classify <em>up</em>, not down. It costs nothing to over-protect an internal memo; it can cost someone everything to under-protect a case note. The default for anything about a beneficiary's situation is Highly Sensitive until proven otherwise.</p></div>
+      <p><strong>Do / Don't</strong></p>
+      <table>
+        <thead><tr><th>Do</th><th>Don't</th></tr></thead>
+        <tbody>
+          <tr><td>Tag every data set with one of four levels</td><td>Invent fifteen levels nobody will remember</td></tr>
+          <tr><td>Name a human owner per data set</td><td>Leave ownership as "IT" or "the team"</td></tr>
+          <tr><td>Set a retention date and stick to it</td><td>Keep everything forever "just in case"</td></tr>
+          <tr><td>Review access when staff leave (high turnover!)</td><td>Leave a departed staffer's login active</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Part 3 — The Cardinal Rule, Consent, and the Agreements Around Your Data</h3>
+      <p><strong>The cardinal rule, stated plainly:</strong> <em>Never paste sensitive beneficiary or donor data into public AI tools.</em> Candid frames it as the test that anyone can apply: do not enter personally identifying or confidential information, legal documents, passwords, or <strong>anything you wouldn't paste into a public website</strong> (Candid, 2025). Public AI tools can store your input and use it to train future models, which means you can lose ownership and control of that data the moment you hit send (ASU Lodestar, 2026). This is the one rule every staff member must know cold — it is the spine of the all-staff rule card (Part B and the Templates section).</p>
+      <p><strong>Consent — does your existing language cover AI?</strong> Most non-profit consent forms were written before generative AI existed, so they almost never mention it. Good consent is <em>freely given, informed, specific, documented, and obtained in advance</em> — and you should explain in plain terms what data you collect, why, and how it is used, offer opt-outs for non-essential collection, and renew consent periodically (GDPR principles; ASU Lodestar, 2025). Before any AI touches beneficiary data, check: does the consent the person signed actually cover this use? If not, you need new language or you do not proceed. (Module 7 covers trauma-informed, culturally appropriate consent in depth.)</p>
+      <p><strong>Does GDPR or HIPAA apply to you? (plain-language version)</strong></p>
+      <ul>
+        <li><strong>GDPR</strong> applies to <em>any</em> organization that holds personal data about people in the EU/EEA — regardless of where your office is. International programs, EU donors, or EU beneficiaries pull you in (Usercentrics, 2024; Foundation Group, 2025).</li>
+        <li><strong>HIPAA</strong> applies only if you are a "covered entity" — a health-care provider, health plan, or their business associate handling protected health information. A health clinic or hospital foundation is covered; a general social-services charity usually is not — but if you hold health data, treat it as Highly Sensitive regardless (Foundation Group, 2025).</li>
+        <li><strong>U.S. state laws</strong> are multiplying fast: by mid-2025, <strong>13 states</strong> had comprehensive privacy laws, with more taking effect through 2025 (501c3.org, 2025). You do not need to memorize them — you need a named person responsible for staying informed (ASU Lodestar, 2025).</li>
+      </ul>
+      <p><strong>Data-sharing agreements with funders, partners, and contractors.</strong> Whenever data leaves your walls — to a government funder, a partner agency, a contractor, or an AI vendor — there should be a written agreement that spells out: who plays which role (data "controller" vs. "processor"), the exact purpose and the exact data shared, security requirements (encryption, access controls), breach-notification timelines, sub-processing rules, audit rights, and what happens to the data at the end (deletion or return) (ContractsCounsel, 2024; GDPR.eu DPA template). Vet every third-party provider's own data practices and put protective clauses in the contract (ASU Lodestar, 2025). For AI vendors specifically, the make-or-break clause is <strong>"this vendor will not train on our data"</strong> — that single line is what separates an enterprise tool from a consumer one (covered in depth in Module 3).</p>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>Before sharing any beneficiary data with a partner or contractor, confirm two things: (1) a signed data-sharing agreement exists, and (2) the beneficiary's consent actually covers that sharing. Missing either one means stop.</p></div>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>"It's fine, we trust them." Trust is not a control. A two-page agreement and a consent check protect the relationship <em>and</em> the people in the data — and they protect you if something goes wrong.</p></div>
+      <p><strong>4D tie-in — Diligence:</strong> Consent checks, signed agreements, and the cardinal rule are Diligence in practice — verifying and taking ownership before data moves, not apologizing after.</p>
+
+      <h3>Part 4 — "AI-Ready Data" and the Data-Hygiene Clinic</h3>
+      <p><strong>What "AI-ready" actually means.</strong> Data is AI-ready when it is <strong>structured</strong> (in fields, not buried in free-text or paper), <strong>consistent</strong> (the same thing is recorded the same way every time), <strong>complete</strong> (few blanks, minimal duplicates), and pulled toward a <strong>single source of truth</strong> rather than scattered across disconnected systems (Alteryx; Transcend; NonProfit PRO, 2025). For a non-profit, the practical version is: <em>one place where each fact lives, recorded the same way each time.</em></p>
+      <p>NonProfit PRO's five practical steps to an AI-ready data foundation map cleanly onto lean teams (NonProfit PRO, 2025):</p>
+      <pre><code>   1. ASSESS      → where does data live? siloed or unified? who owns quality?
+   2. PRIORITIZE  → pick ONE use case / pilot, not everything at once
+   3. CONSOLIDATE → reduce silos toward a single source of truth
+   4. STANDARDIZE → clean: dedupe, fix fields, agree shared metric definitions
+   5. GOVERN      → access controls, privacy rules, named ownership</code></pre>
+      <p><strong>The clinic — data hygiene on a real system.</strong> Whatever you use — Salesforce Nonprofit Cloud / NPSP, Blackbaud Raiser's Edge NXT, Bonterra Apricot, or just spreadsheets — the same problems show up: duplicate records, names in ALL CAPS, misspellings, inconsistent field values, and the same metric defined three different ways by three teams (Omatic, 2024). Apricot is built around the operational case record (intake, case notes, service history); NPSP organizes data into accounts, contacts, opportunities, and campaigns; Raiser's Edge NXT includes built-in validation tools. In every one, a basic hygiene pass means: <strong>merge duplicates, standardize key fields, fill or flag critical blanks, and write down one agreed definition for each outcome metric</strong> so "served" means the same thing across every project (Omatic, 2024; PairSoft).</p>
+      <p>Why this matters for M&amp;E: AI-assisted impact analysis (Module 8) only works if your outcome data is tracked consistently across cohorts and time. Vera Solutions built Salesforce-based M&amp;E tracking outcomes for millions of beneficiaries precisely because consistent, structured outcome data is the prerequisite for any analysis — by hand or by AI (Vera Solutions). A clean data catalog with shared metric definitions is what lets every team "reference the same shared understanding" (NonProfit PRO, 2025).</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>Your team can answer "how many people did we serve last quarter?" the same way no matter who you ask, because the metric has one written definition. That consistency is worth more to AI-readiness than any new tool.</p></div>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Cleaning is not a one-time event. Schedule a recurring hygiene pass (quarterly is realistic for lean teams) and assign it to the data owner. A little maintenance beats a heroic annual cleanup nobody has time for.</p></div>
+      <p><strong>4D tie-in — Description:</strong> Clean, consistently-labeled data is what lets you <em>describe</em> a task to AI precisely. Garbage in, confident-garbage out — Discernment can only catch so much if the underlying data is a mess.</p>
+    </section>
+
+    <section id="exercises">
+      <h2>Hands-On Exercises</h2>
+
+      <h3>Exercise 1 — Build Your Data Inventory &amp; Classification (Leads, ~35 min)</h3>
+      <p><strong>Instructions:</strong></p>
+      <ol>
+        <li>Using the template in the next section, list every place your organization holds data. Aim for 10–15 sources in the first pass.</li>
+        <li>For each, fill in: where it lives, named owner, what's in it, sensitivity level (P/I/C/HS), who can access it, and retention period.</li>
+        <li>Flag anything you can't answer as "unknown — to investigate."</li>
+        <li>Circle every row marked <strong>Confidential</strong> or <strong>Highly Sensitive</strong>. These are your "never goes near public AI" rows.</li>
+      </ol>
+      <p><strong>Facilitator answer key (sample):</strong></p>
+      <table>
+        <thead><tr><th>Source</th><th>Where it lives</th><th>Owner</th><th>Sensitivity</th><th>Access</th><th>Retention</th></tr></thead>
+        <tbody>
+          <tr><td>Beneficiary case notes</td><td>Apricot</td><td>Program Director</td><td>Highly Sensitive</td><td>Case staff only</td><td>7 yrs then purge</td></tr>
+          <tr><td>Intake forms (paper)</td><td>Locked cabinet</td><td>Intake Coordinator</td><td>Highly Sensitive</td><td>Intake staff</td><td>Digitize + shred</td></tr>
+          <tr><td>Donor giving history</td><td>Raiser's Edge NXT</td><td>Development Director</td><td>Confidential</td><td>Dev. team</td><td>Per gift policy</td></tr>
+          <tr><td>Newsletter list</td><td>Mailchimp</td><td>Comms Lead</td><td>Internal</td><td>Comms team</td><td>Until unsubscribe</td></tr>
+          <tr><td>Annual report</td><td>Website</td><td>Comms Lead</td><td>Public</td><td>Everyone</td><td>Indefinite</td></tr>
+          <tr><td>Grant outcome data</td><td>Shared spreadsheet</td><td>M&amp;E Lead</td><td>Confidential</td><td>M&amp;E + PD</td><td>Grant + 3 yrs</td></tr>
+        </tbody>
+      </table>
+      <p><em>Look-fors:</em> every row has a named human owner; beneficiary data defaults to Highly Sensitive; at least one "unknown" is honestly flagged.</p>
+
+      <h3>Exercise 2 — Data-Hygiene Clinic on a Live System (Leads, ~30 min)</h3>
+      <p><strong>Instructions:</strong></p>
+      <ol>
+        <li>Open your CRM or main outcome spreadsheet (a copy/sandbox, never production for a first pass).</li>
+        <li>Find and merge <strong>duplicate records</strong> for at least 3 contacts.</li>
+        <li>Standardize one messy field (e.g., fix ALL-CAPS names, or make "State" consistent: "AZ" everywhere, not "Arizona/Ariz./AZ").</li>
+        <li>Pick one outcome metric (e.g., "people served") and write <strong>one</strong> agreed definition. Note where teams currently disagree.</li>
+        <li>List the single biggest data-hygiene problem you found and assign an owner + date to fix it.</li>
+      </ol>
+      <p><strong>Facilitator sample solution:</strong> Common findings include the same donor entered twice with different spellings, "people served" counted as <em>enrollments</em> by one team and <em>unique individuals</em> by another, and date fields in three formats. The win is not finishing — it's that the team now sees the problem clearly and has agreed one definition and one owner.</p>
+
+      <h3>Exercise 3 — The Sort-the-Data Game (All-staff, ~12 min)</h3>
+      <p><strong>Instructions:</strong> Read each item aloud; participants call out the sensitivity level and whether it can go into a public AI tool.</p>
+      <table>
+        <thead><tr><th>Item</th><th>Answer</th></tr></thead>
+        <tbody>
+          <tr><td>The text of your published annual report</td><td>Public — fine to use with AI</td></tr>
+          <tr><td>A draft thank-you letter with no donor specifics</td><td>Internal — fine for AI drafting</td></tr>
+          <tr><td>A client's case note mentioning their immigration status</td><td><strong>Highly Sensitive — never</strong></td></tr>
+          <tr><td>A donor's giving history and home address</td><td><strong>Confidential — never in public AI</strong></td></tr>
+          <tr><td>A generic job description you're writing</td><td>Internal — fine for AI</td></tr>
+          <tr><td>A spreadsheet of beneficiaries' mental-health intake scores</td><td><strong>Highly Sensitive — never</strong></td></tr>
+        </tbody>
+      </table>
+      <p><em>Facilitator note:</em> The teaching moment is the easy ones (annual report) versus the hard ones (case notes). Reinforce: <em>if it's about a real person we serve or a real donor, assume it cannot go into a public AI tool.</em></p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>Artifact 1 — Data Inventory &amp; Sensitivity Classification Template</h3>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p>Copy into a spreadsheet. One row per data source. Review quarterly and whenever staff change.</p></div>
+      <table>
+        <thead><tr><th>Data source</th><th>What's in it</th><th>Where it lives (system)</th><th>Owner (named)</th><th>Sensitivity (Public / Internal / Confidential / Highly Sensitive)</th><th>Who can access</th><th>Retention period</th><th>Consent on file? (Y/N/NA)</th><th>Can it go into public AI?</th></tr></thead>
+        <tbody>
+          <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <p><em>Rule of thumb baked into the last column:</em> Public/Internal = usually yes (still no personal data about real people). Confidential/Highly Sensitive = <strong>no</strong>.</p>
+
+      <h3>Artifact 2 — One-Page Rule Card: What Data Can &amp; Can't Go Into AI Tools</h3>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p>Print it. Post it by every desk. This is the all-staff takeaway.</p></div>
+      <pre><code> ┌─────────────────────────────────────────────────────────────┐
+ │  THE ONE RULE: If you wouldn't paste it onto a public        │
+ │  website, don't paste it into a public AI tool.              │
+ ├─────────────────────────────────────────────────────────────┤
+ │  ✅ OK TO USE WITH AI (low-risk, verify the output)          │
+ │   • Already-public text (annual report, web copy)            │
+ │   • General drafts with NO real names or personal details    │
+ │   • Brainstorming, summarizing public/internal docs          │
+ │   • Generic templates: job descriptions, policies, agendas   │
+ ├─────────────────────────────────────────────────────────────┤
+ │  ⛔ NEVER PUT INTO A PUBLIC AI TOOL                          │
+ │   • Beneficiary case notes or anything about a real client   │
+ │   • Immigration status · health/mental-health data           │
+ │   • Financial distress, abuse, or safety details             │
+ │   • Children's / minors' data                                │
+ │   • Donor giving history, contact details, financials        │
+ │   • Passwords, legal documents, contracts, board minutes     │
+ ├─────────────────────────────────────────────────────────────┤
+ │  WHEN UNSURE → don't paste it. Ask: __________ (data lead)   │
+ │  Approved AI tools list lives at: ___________________________│
+ └─────────────────────────────────────────────────────────────┘</code></pre>
+      <p><em>(Sources: Candid 2025; ASU Lodestar 2026. Note: an approved enterprise tool with a "no training on our data" contract changes what's allowed — see Module 3.)</em></p>
+
+      <h3>Artifact 3 — Consent &amp; Data-Sharing Checklist</h3>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p>Run through this before any new data collection, any AI use on personal data, or any data leaving your walls.</p></div>
+      <p><strong>Consent</strong></p>
+      <ul>
+        <li>Beneficiaries are told, in plain language, what we collect, why, and how it's used.</li>
+        <li>Consent was freely given, specific, and documented (not buried in fine print).</li>
+        <li>Existing consent <strong>explicitly covers AI use</strong> of the data — or we have new language.</li>
+        <li>There is an opt-out for any non-essential collection.</li>
+        <li>We collect only what we actually need (data minimization).</li>
+      </ul>
+      <p><strong>Data-sharing with funders / partners / contractors / AI vendors</strong></p>
+      <ul>
+        <li>A written data-sharing or data-processing agreement is signed before data moves.</li>
+        <li>It names roles (controller / processor), the exact purpose, and the exact data.</li>
+        <li>It requires encryption, access controls, and a breach-notification timeline.</li>
+        <li>It covers sub-processing, audit rights, and deletion/return at the end.</li>
+        <li>For AI vendors: the contract says <strong>they will not train on our data</strong>.</li>
+        <li>We have vetted the third party's own data-protection practices.</li>
+      </ul>
+      <p><strong>Regulation check (plain)</strong></p>
+      <ul>
+        <li>We've noted whether GDPR applies (any EU donors/beneficiaries/staff).</li>
+        <li>We've noted whether HIPAA applies (are we a health "covered entity"?).</li>
+        <li>One named person is responsible for tracking changing state/national privacy laws.</li>
+      </ul>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> A staff member wants to use ChatGPT to tidy up a client case note that mentions immigration status. What's the correct action?
+          <ol type="a">
+            <li>Remove the client's name first, then paste it</li>
+            <li>Paste it — it's just grammar help</li>
+            <li>Do not paste it into any public AI tool at all</li>
+            <li>Ask the client for permission, then paste it</li>
+          </ol>
+        </li>
+        <li><strong>(Short answer)</strong> State the cardinal rule of this module in one sentence.</li>
+        <li><strong>(MCQ)</strong> Which of these is correctly classified as <strong>Highly Sensitive</strong>?
+          <ol type="a">
+            <li>The published annual report</li>
+            <li>A beneficiary's mental-health intake scores</li>
+            <li>The staff meeting agenda</li>
+            <li>A generic volunteer sign-up form</li>
+          </ol>
+        </li>
+        <li><strong>(Short answer)</strong> Name three things that make a data set "AI-ready."</li>
+        <li><strong>(MCQ)</strong> Your organization runs an international program with beneficiaries in the EU. Which is true?
+          <ol type="a">
+            <li>GDPR doesn't apply because you're not based in the EU</li>
+            <li>GDPR applies because you hold data about people in the EU</li>
+            <li>Only HIPAA applies</li>
+            <li>No privacy law applies to charities</li>
+          </ol>
+        </li>
+        <li><strong>(Short answer)</strong> Before sharing beneficiary data with a partner agency, what two things must you confirm?</li>
+        <li><strong>(MCQ)</strong> What is "shadow AI"?
+          <ol type="a">
+            <li>An AI that runs only at night to save energy</li>
+            <li>Staff using unapproved AI tools without oversight, often with sensitive data</li>
+            <li>A backup copy of your AI tool</li>
+            <li>AI used by competitors</li>
+          </ol>
+        </li>
+        <li><strong>(Short answer)</strong> In a data inventory, why does every data set need a <em>named</em> owner rather than "the team"?</li>
+      </ol>
+      <h3>Answer key</h3>
+      <ol>
+        <li><strong>c</strong> — Confidential/Highly Sensitive data never goes into public AI tools; removing the name doesn't make it safe.</li>
+        <li><em>"Never paste sensitive beneficiary or donor data into public AI tools — if you wouldn't post it on a public website, don't paste it into AI."</em></li>
+        <li><strong>b</strong> — health/mental-health data is Highly Sensitive.</li>
+        <li>Any three of: structured (in fields), consistent (recorded the same way), complete (few blanks/duplicates), single source of truth, properly labeled.</li>
+        <li><strong>b</strong> — GDPR applies based on whose data you hold, not where you're based.</li>
+        <li>(1) A signed data-sharing agreement exists; (2) the beneficiary's consent covers that sharing.</li>
+        <li><strong>b</strong></li>
+        <li>Because ownership is what makes a rule enforceable and auditable; "the team" means no one is actually accountable, and access can't be reviewed when staff leave.</li>
+      </ol>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist</strong></p>
+      <ul>
+        <li>Print the rule card (Artifact 2) for every all-staff participant.</li>
+        <li>Ask leads to bring a <em>copy/export</em> of their main systems (CRM, outcome sheet) — never live production for the clinic.</li>
+        <li>Have the inventory template open in a shared spreadsheet the group can edit together.</li>
+        <li>Pre-fill one or two inventory rows as worked examples.</li>
+        <li>Confirm who your "ask-when-unsure" data lead is, and fill it on the rule card.</li>
+      </ul>
+      <p><strong>Free/low-cost materials needed:</strong> A shared spreadsheet (Google Sheets / Excel), a printer for the rule card, and the open sector resources in Further Resources. No paid tooling required.</p>
+      <p><strong>Timing:</strong> The leads workshop runs tight at 3.5 hrs — protect the clinic (Part 4); it's where behavior change happens. The all-staff segment must stay at 45 minutes; resist turning it into a lecture on regulation.</p>
+      <p><strong>Common pitfalls:</strong></p>
+      <ul>
+        <li><em>Over-engineering the inventory.</em> Stop the group at "good enough, 10–15 rows." Perfection kills completion.</li>
+        <li><em>Buying a tool to avoid doing the work.</em> Redirect: the spreadsheet first, the platform later (if ever).</li>
+        <li><em>Treating classification as IT's job.</em> Program staff know best what's sensitive about beneficiary data — keep them in the room.</li>
+        <li><em>Skipping the consent-covers-AI check</em> because "we already have consent forms." Old forms rarely mention AI.</li>
+      </ul>
+      <p><strong>Discussion prompts:</strong></p>
+      <ul>
+        <li>"Name one data set where you genuinely don't know who owns it." (Surfaces gaps fast.)</li>
+        <li>"What's one thing a colleague might paste into AI without realizing the risk?"</li>
+        <li>"Where do our teams define the same metric differently?"</li>
+      </ul>
+      <p><strong>Tailoring by audience:</strong></p>
+      <ul>
+        <li><strong>A6 IT/Data lead (or outsourced):</strong> Lead the clinic, own access/retention and vendor agreements. If support is outsourced, invite the contractor to this session and assign them the agreement-review actions.</li>
+        <li><strong>A5 Operations:</strong> Own the inventory upkeep and the quarterly hygiene pass.</li>
+        <li><strong>A3 program staff (all-staff segment):</strong> Focus only on the rule card and the sort-the-data game. They do not need the full governance detail — they need the one rule, cold.</li>
+      </ul>
+      <p><strong>Addressing fear and resistance (a real non-profit barrier):</strong> Two fears show up here. First, <em>"I'll get in trouble for using AI wrong."</em> Reframe: the rule card exists so no one has to guess — following it protects <em>you</em> as much as the people you serve. Co-create the "ask-when-unsure" path so staff feel supported, not policed. Second, <em>"this is a lot of work we don't have time for."</em> Reframe: a 45-minute inventory and a clear rule card prevent the kind of incident that costs days of cleanup and donor trust. Frame governance as the thing that lets the org safely <em>use</em> AI — not a barrier to it.</p>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <p>Measure with Kirkpatrick, weighting L2–L4 (knowing &gt; feeling; doing &gt; knowing):</p>
+      <table>
+        <thead><tr><th>Level</th><th>Indicator</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td><strong>L1 — Reaction</strong></td><td>Participants rate the rule card as clear and usable</td><td>≥ 80% agree/strongly agree</td></tr>
+          <tr><td><strong>L2 — Learning</strong></td><td>Pre/post quiz score gain + confidence self-rating on "I know what data can't go into AI"</td><td>≥ 25-pt knowledge gain; confidence up ≥ 1 point</td></tr>
+          <tr><td><strong>L3 — Behavior</strong></td><td>A completed data inventory with sensitivity classification exists and names an owner per source</td><td>Inventory exists within 2 weeks; ≥ 90% of sources classified + owned</td></tr>
+          <tr><td><strong>L3 — Behavior</strong></td><td>Rule card posted; "ask-when-unsure" path used at least once instead of a risky paste</td><td>Card visible at every workstation; ≥ 1 logged check-in within 30 days</td></tr>
+          <tr><td><strong>L4 — Impact</strong></td><td>At least one outcome metric has a single written definition; a recurring hygiene pass is scheduled</td><td>1+ metric defined; quarterly hygiene pass on the calendar with an owner</td></tr>
+          <tr><td><strong>L4 — Impact</strong></td><td>Zero incidents of sensitive data entered into public AI tools (shadow-AI baseline)</td><td>0 incidents; trend tracked alongside Module 3 tool rollout</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <p><strong>Named sector frameworks &amp; resources</strong></p>
+      <ul>
+        <li><strong>Candid — <em>Getting started on a responsible AI use policy for nonprofits</em></strong> (the "when NOT to use AI" list; "don't paste anything you wouldn't put on a public website"): <a href="https://candid.org/blogs/how-to-create-responsible-ai-use-policy-for-nonprofits/">https://candid.org/blogs/how-to-create-responsible-ai-use-policy-for-nonprofits/</a></li>
+        <li><strong>ASU Lodestar Center — <em>Responsible AI: Security and privacy tips for nonprofits</em></strong> (2026; shadow AI, approved-tool policy, don't enter confidential data): <a href="https://lodestar.asu.edu/blog/2026/04/responsible-ai-security-and-privacy-tips-nonprofits">https://lodestar.asu.edu/blog/2026/04/responsible-ai-security-and-privacy-tips-nonprofits</a></li>
+        <li><strong>ASU Lodestar Center — <em>10 Ways to Safeguard Data in the Nonprofit Sector</em></strong> (2025; data policy, minimization, consent, access controls, vendor vetting): <a href="https://lodestar.asu.edu/blog/2025/01/10-ways-safeguard-data-nonprofit-sector">https://lodestar.asu.edu/blog/2025/01/10-ways-safeguard-data-nonprofit-sector</a></li>
+        <li><strong>Vera Solutions — <em>Nine Principles of Responsible AI for Nonprofits</em></strong> (privacy &amp; data protection, fairness/bias, human oversight): <a href="https://verasolutions.org/blog-nine-principles-of-responsible-ai-for-nonprofits/">https://verasolutions.org/blog-nine-principles-of-responsible-ai-for-nonprofits/</a></li>
+        <li><strong>NTEN — AI for Nonprofits Resource Hub &amp; courses</strong> (data governance, data culture, responsible AI policy): <a href="https://www.nten.org/learn/resource-hubs/artificial-intelligence">https://www.nten.org/learn/resource-hubs/artificial-intelligence</a></li>
+        <li><strong>NonProfit PRO — <em>5 Practical Steps to Build an AI-Ready Data Foundation</em></strong> (assess, prioritize, consolidate, standardize, govern): <a href="https://www.nonprofitpro.com/post/5-practical-steps-to-build-an-ai-ready-data-foundation-for-your-nonprofit/">https://www.nonprofitpro.com/post/5-practical-steps-to-build-an-ai-ready-data-foundation-for-your-nonprofit/</a></li>
+      </ul>
+      <p><strong>Data hygiene &amp; CRM</strong></p>
+      <ul>
+        <li><strong>Omatic — <em>Database Cleanup Guide / Data Hygiene Best Practices</em></strong> (duplicates, standardization across NPSP, Raiser's Edge, Apricot): <a href="https://omaticsoftware.com/blog/start-cleanup-process-messy-nonprofit-database/">https://omaticsoftware.com/blog/start-cleanup-process-messy-nonprofit-database/</a> · <a href="https://omaticsoftware.com/blog/data-hygiene-best-practices-for-beginners/">https://omaticsoftware.com/blog/data-hygiene-best-practices-for-beginners/</a></li>
+        <li><strong>Vera Solutions — Salesforce-based M&amp;E / outcome tracking at scale</strong>: <a href="https://verasolutions.org/">https://verasolutions.org/</a></li>
+      </ul>
+      <p><strong>Privacy law (plain-language)</strong></p>
+      <ul>
+        <li><strong>Foundation Group — <em>Navigating Donor Data Compliance: GDPR and Beyond</em></strong> (GDPR/HIPAA applicability to nonprofits): <a href="https://www.501c3.org/donor-data-compliance/">https://www.501c3.org/donor-data-compliance/</a></li>
+        <li><strong>Usercentrics — <em>Why the GDPR Matters for Charities and Nonprofits</em></strong>: <a href="https://usercentrics.com/knowledge-hub/gdpr-for-charities/">https://usercentrics.com/knowledge-hub/gdpr-for-charities/</a></li>
+      </ul>
+      <p><strong>Data-sharing &amp; processing agreements</strong></p>
+      <ul>
+        <li><strong>ContractsCounsel — Data Sharing Agreement template/guide</strong>: <a href="https://www.contractscounsel.com/t/us/data-sharing-agreement-template">https://www.contractscounsel.com/t/us/data-sharing-agreement-template</a></li>
+        <li><strong>GDPR.eu — Data Processing Agreement template</strong> (controller/processor clauses): <a href="https://gdpr.eu/data-processing-agreement/">https://gdpr.eu/data-processing-agreement/</a></li>
+      </ul>
+      <p><strong>AI-ready data &amp; the "never paste" rule (with incidents)</strong></p>
+      <ul>
+        <li><strong>NonProfit PRO / Transcend / Alteryx / Striim — what "AI-ready data" means</strong> (structured, consistent, complete, single source of truth, retention): <a href="https://transcend.io/blog/what-is-ai-ready-data-the-complete-guide-for-enterprise-leaders">https://transcend.io/blog/what-is-ai-ready-data-the-complete-guide-for-enterprise-leaders</a> · <a href="https://www.alteryx.com/glossary/ai-ready-data">https://www.alteryx.com/glossary/ai-ready-data</a></li>
+        <li><strong>BigID — <em>Why You Need an AI-Ready Data Inventory</em></strong>: <a href="https://bigid.com/blog/ai-data-inventory/">https://bigid.com/blog/ai-data-inventory/</a></li>
+        <li><strong>IT Pro — CISA chief uploaded sensitive docs to public ChatGPT</strong> (real incident; why never to do it): <a href="https://www.itpro.com/security/data-protection/cisas-interim-chief-uploaded-sensitive-documents-to-a-public-version-of-chatgpt-security-experts-explain-why-you-should-never-do-that">https://www.itpro.com/security/data-protection/cisas-interim-chief-uploaded-sensitive-documents-to-a-public-version-of-chatgpt-security-experts-explain-why-you-should-never-do-that</a></li>
+        <li><strong>Wald.ai — <em>ChatGPT Data Leaks and Security Incidents (2023–2026)</em></strong> (Samsung source-code leak, employee data-sharing stats): <a href="https://wald.ai/blog/chatgpt-data-leaks-and-security-incidents-20232024-a-comprehensive-overview">https://wald.ai/blog/chatgpt-data-leaks-and-security-incidents-20232024-a-comprehensive-overview</a></li>
+      </ul>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Calibration note.</strong> Adoption and breach statistics (92% AI usage, 70–76% without a policy, 89% rise in AI-enabled attacks, 13 state privacy laws, employee data-sharing rates) are vendor- or survey-reported and vary by methodology — treat them as <strong>directional</strong> for target-setting, not precise figures. Privacy laws and sector resources change quickly; verify current applicability before relying on any specific rule.</p></div>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-1-mission-leadership-board.html"><span class="dir">← Previous</span><span class="ttl">Mission, Leadership &amp; Board</span></a>
+      <a class="next" href="module-3-ai-toolkit-safe-tools.html"><span class="dir">Next →</span><span class="ttl">AI Toolkit &amp; Safe Tools</span></a>
+    </nav>
+
+  </div>
+</div>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that amplifies your mission — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../non-profit-training.html">All Modules</a>
+      <a href="../non-profilt-assessment.html">Readiness Assessment</a>
+      <a href="mailto:contact@iiibc.com">contact@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — AI Strategy Institute. All rights reserved.</span>
+    <span class="mono">Module 2 · Non-Profit Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>

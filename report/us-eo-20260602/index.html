@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Order Analysis: Promoting AI Innovation and Security — June 2, 2026</title>
+  <meta name="description" content="Deep analysis of the June 2, 2026 Executive Order on AI Innovation and Security. Overview of the four operational pillars, business opportunities, policy context, and strategic implications for AI developers, infrastructure operators, and federal agencies.">
+  <meta name="author" content="IIIBC">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="article">
+  <meta property="og:url"         content="https://iiibc.com/report/us-eo-20260602/">
+  <meta property="og:title"       content="Executive Order Analysis: Promoting AI Innovation and Security">
+  <meta property="og:description" content="Deep analysis of the June 2, 2026 Executive Order. Four operational pillars, eight business opportunities, policy context, and strategic implications.">
+  <meta property="og:image"       content="../../assets/og-card.svg">
+
+  <link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../styles.css">
+
+  <style>
+    /* ── Report page — tokens inherited from styles.css ── */
+    .report-cover {
+      background: var(--color-navy);
+      color: var(--color-white);
+      padding: var(--space-8) 0 var(--space-7);
+    }
+    .report-cover__eyebrow {
+      font-family: var(--font-mono);
+      font-size: var(--text-label);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-teal);
+      margin-bottom: var(--space-4);
+    }
+    .report-cover h1 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: var(--text-display);
+      line-height: 1.1;
+      margin: 0 0 var(--space-4);
+      max-width: 22ch;
+    }
+    .report-cover__lede {
+      font-size: var(--text-body-lg);
+      line-height: 1.6;
+      color: rgba(255,255,255,0.78);
+      max-width: 62ch;
+      margin-bottom: var(--space-5);
+    }
+    .report-cover__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2) var(--space-5);
+      font-family: var(--font-mono);
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.6);
+      padding-top: var(--space-4);
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .report-cover__meta strong { color: var(--color-teal); font-weight: 500; }
+
+    /* Article body */
+    .report-body { padding: var(--space-7) 0 var(--space-8); }
+    .report-body__inner { max-width: 760px; }
+    .report-sec { margin-bottom: var(--space-6); }
+    .report-sec__marker {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: var(--text-label);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-teal);
+      margin-bottom: var(--space-2);
+    }
+    .report-sec h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-h2);
+      color: var(--color-navy);
+      margin: 0 0 var(--space-3);
+    }
+    .report-sec h3 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-h3);
+      color: var(--color-navy);
+      margin: var(--space-4) 0 var(--space-2);
+    }
+    .report-sec p {
+      font-size: var(--text-body);
+      line-height: 1.75;
+      color: var(--color-ink);
+      margin: 0 0 var(--space-3);
+    }
+    .report-sec a { color: var(--color-blue); text-decoration: none; }
+    .report-sec a:hover { text-decoration: underline; }
+    .report-divider { height: 1px; background: var(--color-feather); border: 0; margin: var(--space-6) 0; }
+
+    /* Table styling */
+    .report-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-4) 0 var(--space-6);
+      font-size: var(--text-body);
+    }
+    .report-table thead { background: var(--color-cloud); }
+    .report-table th {
+      text-align: left;
+      padding: var(--space-3) var(--space-4);
+      font-weight: 600;
+      color: var(--color-navy);
+      border-bottom: 2px solid var(--color-slate);
+    }
+    .report-table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-feather);
+      color: var(--color-ink);
+    }
+    .report-table tr:hover { background: rgba(0,0,0,0.01); }
+
+    /* Callout variants */
+    .callout {
+      background: var(--color-cloud);
+      border-left: 4px solid var(--color-blue);
+      padding: var(--space-4) var(--space-5);
+      margin: 0 0 var(--space-6);
+    }
+    .callout--opportunity { border-left-color: var(--color-gold); }
+    .callout--insight  { border-left-color: var(--color-blue); }
+    .callout--tension  { border-left-color: #f59e0b; }
+    .callout__label {
+      display: block;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: var(--text-label);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-slate);
+      margin-bottom: var(--space-2);
+    }
+    .callout h2 {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-h3);
+      color: var(--color-navy);
+      margin: 0 0 var(--space-3);
+    }
+    .callout p { font-size: var(--text-body); line-height: 1.75; color: var(--color-ink); margin: 0 0 var(--space-2); }
+    .callout a { color: var(--color-blue); text-decoration: none; }
+    .callout a:hover { text-decoration: underline; }
+
+    /* Subsection list */
+    .report-list {
+      margin: var(--space-3) 0 var(--space-4);
+      padding-left: var(--space-5);
+    }
+    .report-list li {
+      margin-bottom: var(--space-2);
+      color: var(--color-ink);
+      line-height: 1.75;
+    }
+    .report-list strong { font-weight: 600; color: var(--color-navy); }
+
+    .report-foot-note {
+      font-size: var(--text-sm);
+      color: var(--color-slate);
+      border-top: 1px solid var(--color-feather);
+      padding-top: var(--space-4);
+      margin-top: var(--space-6);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav__inner">
+      <a href="../../index.html" class="nav__logo" aria-label="IIIBC — Beyond Cognition · Home">
+        <img src="../../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="160" height="28">
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="../../index.html#services">Services</a></li>
+        <li><a href="../../index.html#segments">Who We Serve</a></li>
+        <li><a href="../../index.html#why-iiibc">Why IIIBC</a></li>
+        <li><a href="../../index.html#digest">Digest</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a href="../../index.html#diagnostic" class="btn btn--primary">Book Free Diagnostic</a>
+      </div>
+      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobile-nav" role="menu">
+      <a href="../../index.html#services"  role="menuitem">Services</a>
+      <a href="../../index.html#segments"  role="menuitem">Who We Serve</a>
+      <a href="../../index.html#why-iiibc" role="menuitem">Why IIIBC</a>
+      <a href="../../index.html#digest"    role="menuitem">Digest</a>
+      <a href="../../index.html#diagnostic" class="btn btn--primary" style="margin-top:8px;justify-content:center;">Book Free Diagnostic</a>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- REPORT COVER -->
+<section class="report-cover" aria-labelledby="report-title">
+  <div class="container">
+    <div class="report-cover__eyebrow">Executive Order Analysis</div>
+    <h1 id="report-title">AI Innovation &amp; Security</h1>
+    <p class="report-cover__lede">The June 2, 2026 Executive Order operationalizes a coherent policy stack: remove barriers, export the American AI stack, defend it militarily, and criminalize adversarial misuse. Analysis of the four operational pillars, eight private-sector opportunities, and policy tensions that will shape AI governance through 2026.</p>
+    <div class="report-cover__meta">
+      <span><strong>Signed:</strong> June 2, 2026</span>
+      <span><strong>Issued by:</strong> President Donald J. Trump</span>
+      <span><strong>Analysis date:</strong> June 4, 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- REPORT BODY -->
+<article class="report-body">
+  <div class="container report-body__inner">
+
+    <!-- OFFICIAL SOURCE -->
+    <div class="callout callout--insight" style="margin-bottom: var(--space-6);">
+      <span class="callout__label">▌ Official Executive Order</span>
+      <p>Read the full executive order text: <a href="https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/" target="_blank" rel="noopener noreferrer"><strong>Promoting Advanced Artificial Intelligence Innovation and Security</strong></a> — whitehouse.gov (June 2, 2026)</p>
+    </div>
+
+    <!-- OVERVIEW -->
+    <section class="report-sec" id="overview">
+      <span class="report-sec__marker">─── Context ───</span>
+      <h2>Overview</h2>
+      <p>This executive order focuses on three interlocking goals: hardening federal and critical infrastructure cybersecurity using AI-enabled tools, creating a voluntary framework for government early access to the most powerful frontier AI models, and criminalizing AI-enabled cyberattacks. Crucially, the order explicitly prohibits any mandatory licensing or pre-clearance regime for AI model development or release — drawing a sharp contrast with EU-style ex-ante regulation.</p>
+      <p><strong>Policy tags:</strong> AI Policy · Cybersecurity · Critical Infrastructure · Law Enforcement · National Security · Voluntary Framework</p>
+    </section>
+
+    <!-- KEY METRICS -->
+    <section class="report-sec" id="metrics">
+      <h2>Key Metrics &amp; Deadlines</h2>
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Metric</th>
+            <th>Detail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Primary action window</td>
+            <td>30 days (by ~July 2, 2026)</td>
+          </tr>
+          <tr>
+            <td>Secondary action window</td>
+            <td>60 days (by ~August 1, 2026)</td>
+          </tr>
+          <tr>
+            <td>Agencies directly tasked</td>
+            <td>8+</td>
+          </tr>
+          <tr>
+            <td>Frontier model pre-access window</td>
+            <td>Up to 30 days before public release</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr class="report-divider">
+
+    <!-- OPERATIONAL PILLARS -->
+    <section class="report-sec" id="pillars">
+      <span class="report-sec__marker">─── The Four Operational Pillars ───</span>
+
+      <h2>Section 2: Upgrading Federal Systems for AI</h2>
+      <p>The broadest section of the EO, directing action across national security systems, civilian federal government, and down into critical infrastructure.</p>
+      <ul class="report-list">
+        <li><strong>National Security Systems:</strong> The Committee on NSS must prioritize cyber defense within 30 days.</li>
+        <li><strong>Department of War information systems:</strong> The Secretary of War (DoD) takes expeditious cyber defense action within 30 days.</li>
+        <li><strong>Civilian federal systems:</strong> CISA issues Binding Operational Directives to fast-track AI-enabled defensive tools; extends access programs to state and local authorities.</li>
+        <li><strong>Critical infrastructure access:</strong> Rural hospitals, community banks, and local utilities gain explicit access to frontier-model cybersecurity tools via CISA programs.</li>
+        <li><strong>Grant funding:</strong> OMB identifies existing grant programs within 30 days that can be redirected toward advanced AI vulnerability detection.</li>
+        <li><strong>Cyber workforce:</strong> OPM expands US Tech Force Information Cybersecurity Specialist hiring and placement pathways within 60 days.</li>
+      </ul>
+
+      <h3>Section 2(d): AI Cybersecurity Clearinghouse</h3>
+      <p>A new public-private coordination body chaired by Treasury, with NSA and CISA as core participants, operating in voluntary collaboration with the AI industry and critical infrastructure operators.</p>
+      <p><strong>Core functions:</strong></p>
+      <ul class="report-list">
+        <li>Coordinates and deconflicts vulnerability scanning operations across public and private entities</li>
+        <li>Discovers and validates software vulnerabilities at scale using AI tools</li>
+        <li>Prioritizes remediation and coordinates distribution of vulnerability patches</li>
+        <li>Serves as a deconfliction layer preventing competing scanners from missing gaps or duplicating effort</li>
+      </ul>
+      <p>This is the closest analog to financial sector information-sharing bodies (e.g., FS-ISAC) applied to AI-era cyber threats — a genuine structural novelty in US cybersecurity governance.</p>
+
+      <h3>Section 3: Secure Frontier Model Deployment</h3>
+      <p>Within 60 days, Treasury, NSA, and CISA — in consultation with the National Cyber Director, the APST, and NIST — must:</p>
+      <p><strong>3(a) — Classified benchmarking process:</strong> NSA leads a classified process to assess frontier AI models for advanced cyber capabilities and determine which models qualify as "covered frontier models." Results are shared with developers as appropriate.</p>
+      <p><strong>3(b) — Voluntary developer framework:</strong> Developers may voluntarily engage the government to determine if their model qualifies as "covered," provide government access for up to 30 days before public release, and collaborate on early-access partnerships with trusted vendors.</p>
+      <p><strong>3(c) — Explicit prohibition on mandatory licensing:</strong> Nothing in Section 3 may be construed to authorize mandatory governmental licensing, pre-clearance, or permitting for AI model development, publication, release, or distribution. This clause is unusually explicit and functions as a legal floor protecting open release.</p>
+
+      <h3>Section 4: Criminal Enforcement</h3>
+      <p>The Attorney General must prioritize prosecution under:</p>
+      <ul class="report-list">
+        <li><strong>18 U.S.C. 1028</strong> — Identity fraud</li>
+        <li><strong>18 U.S.C. 1030</strong> — Computer Fraud and Abuse Act (CFAA)</li>
+        <li><strong>18 U.S.C. 1343</strong> — Wire fraud</li>
+      </ul>
+      <p>This applies to anyone who uses AI to illegally access or damage computer systems, and — significantly — to AI agents that autonomously access data unlawfully and subsequently use it for criminal purposes. The inclusion of agentic AI behavior is legally novel and will require courts to extend statutes written for human actors.</p>
+    </section>
+
+    <hr class="report-divider">
+
+    <!-- ACTION TIMELINE -->
+    <section class="report-sec" id="timeline">
+      <h2>Action Timeline</h2>
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Deadline</th>
+            <th>Action</th>
+            <th>Lead Agency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>30 days (~July 2)</td>
+            <td>NSS and DoW cyber defense actions</td>
+            <td>Committee on NSS, Secretary of War</td>
+          </tr>
+          <tr>
+            <td>30 days</td>
+            <td>CISA Binding Operational Directives issued</td>
+            <td>CISA / DHS</td>
+          </tr>
+          <tr>
+            <td>30 days</td>
+            <td>AI Cybersecurity Clearinghouse formed</td>
+            <td>Treasury, NSA, CISA</td>
+          </tr>
+          <tr>
+            <td>30 days</td>
+            <td>OMB grant funding review completed</td>
+            <td>OMB</td>
+          </tr>
+          <tr>
+            <td>60 days (~Aug. 1)</td>
+            <td>Frontier model benchmarking process developed</td>
+            <td>Treasury, NSA, CISA, NIST</td>
+          </tr>
+          <tr>
+            <td>60 days</td>
+            <td>Voluntary developer framework designed</td>
+            <td>Treasury, NSA, CISA</td>
+          </tr>
+          <tr>
+            <td>60 days</td>
+            <td>OPM cybersecurity hiring expansion</td>
+            <td>OPM</td>
+          </tr>
+          <tr>
+            <td>Ongoing (immediate)</td>
+            <td>DOJ criminal enforcement prioritization</td>
+            <td>DOJ / AG</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- KEY ACTORS -->
+    <section class="report-sec" id="actors">
+      <h2>Key Actors &amp; Mandates</h2>
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Agency</th>
+            <th>Role</th>
+            <th>Mandate</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Treasury Dept.</td>
+            <td>Lead — Clearinghouse</td>
+            <td>Chairs the AI cybersecurity clearinghouse; coordinates vuln scanning and patch distribution</td>
+          </tr>
+          <tr>
+            <td>CISA / DHS</td>
+            <td>Cyber Defense</td>
+            <td>Issues Binding Operational Directives; operates access programs for infrastructure operators</td>
+          </tr>
+          <tr>
+            <td>NSA / Dept. of War</td>
+            <td>Model Benchmarking</td>
+            <td>Runs classified benchmarking of frontier AI cyber capabilities; designates covered models</td>
+          </tr>
+          <tr>
+            <td>NIST / Commerce</td>
+            <td>Standards</td>
+            <td>Consults on framework design and frontier model evaluation criteria</td>
+          </tr>
+          <tr>
+            <td>OPM</td>
+            <td>Workforce</td>
+            <td>Expands US Tech Force cybersecurity specialist hiring within 60 days</td>
+          </tr>
+          <tr>
+            <td>OMB</td>
+            <td>Budget</td>
+            <td>Identifies grant funding for AI vulnerability detection; coordinates with CISA</td>
+          </tr>
+          <tr>
+            <td>DOJ / AG</td>
+            <td>Enforcement</td>
+            <td>Prioritizes prosecution of AI-enabled computer crimes under federal law</td>
+          </tr>
+          <tr>
+            <td>National Cyber Director</td>
+            <td>Coordination</td>
+            <td>Cross-agency coordination across all sections; advises on model designation</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr class="report-divider">
+
+    <!-- KEY INTERPRETATIONS -->
+    <section class="report-sec" id="interpretations">
+      <span class="report-sec__marker">─── Key Interpretations ───</span>
+      <h2>New Structures &amp; Regulatory Signals</h2>
+
+      <div class="callout callout--insight">
+        <span class="callout__label">▌ New Capability</span>
+        <h2>"Covered Frontier Model" Designation</h2>
+        <p>This EO introduces the first formal (if classified) government framework for categorizing AI models by their offensive cyber potential. NSA, in consultation with the National Cyber Director and APST, determines which models meet the threshold. Even without mandatory regulation, this creates an informal tiering system for advanced AI — and creates commercial and legal implications for developers whose models cross the threshold.</p>
+      </div>
+
+      <div class="callout callout--insight">
+        <span class="callout__label">▌ New Structure</span>
+        <h2>AI Cybersecurity Clearinghouse</h2>
+        <p>The clearinghouse is a genuinely novel public-private coordination body. Its job — deconflicting who is scanning what, validating vulnerabilities, and coordinating patches — fills a real gap where competing scanners created noise and missed coordination. This mirrors financial sector information-sharing bodies applied to AI-era cyber threats. Treasury's leadership role is notable, suggesting this is viewed as a systemic-risk coordination function analogous to financial stability oversight.</p>
+      </div>
+
+      <div class="callout callout--insight">
+        <span class="callout__label">▌ Regulatory Signal</span>
+        <h2>No Mandatory Licensing — Deliberately Stated</h2>
+        <p>Section 3(c) is unusually explicit: nothing in the order authorizes mandatory licensing, pre-clearance, or permitting for AI model development or release. This is a direct policy signal distinguishing the Trump approach from EU AI Act-style ex-ante regulation. It also preemptively constrains future executive branch overreach using this order as a vehicle. For AI developers, this is a legal floor protecting open release.</p>
+      </div>
+
+      <div class="callout callout--insight">
+        <span class="callout__label">▌ Value Stream</span>
+        <h2>Critical Infrastructure Operators</h2>
+        <p>Rural hospitals, community banks, and local utilities are called out by name as beneficiaries of frontier-model cybersecurity tools. This extends AI security capabilities well beyond the federal perimeter into sectors that historically lack sophisticated cyber defenses — representing a meaningful democratization of advanced AI-powered security tooling, contingent on implementation follow-through.</p>
+      </div>
+
+      <div class="callout callout--tension">
+        <span class="callout__label">▌ Legal Novelty</span>
+        <h2>Enforcement Expansion: AI Agent Crimes Now Explicitly Covered</h2>
+        <p>The AG's mandate covers not just humans using AI to hack, but AI agents that autonomously access data unlawfully and use it for criminal purposes. This attempts to extend 18 U.S.C. 1030 (CFAA) to agentic AI behavior — a legal novelty that will require courts to resolve whether autonomous AI systems can be the "person" who "knowingly" accesses a system without authorization. Early cases will set binding precedent.</p>
+      </div>
+    </section>
+
+    <hr class="report-divider">
+
+    <!-- TENSIONS & OPEN QUESTIONS -->
+    <section class="report-sec" id="tensions">
+      <span class="report-sec__marker">─── Tensions &amp; Open Questions ───</span>
+      <h2>Notable Gaps &amp; Risks</h2>
+
+      <h3>Voluntary vs. Effective</h3>
+      <p>Both the clearinghouse and the frontier model framework are voluntary. Whether leading AI labs will participate in early government access — and share model weights — without legal compulsion remains uncertain, especially given IP sensitivity and foreign competitor dynamics. The EO provides no enforcement mechanism for participation.</p>
+
+      <h3>Classified Benchmarks and Developer Trust</h3>
+      <p>NSA's classified benchmarking process requires developers to engage a black-box determination to know if their model is "covered." Developers cannot independently verify or challenge the designation criteria, raising questions about due process and commercial predictability — particularly for models near a capability threshold.</p>
+
+      <h3>AI Agent Liability Gap</h3>
+      <p>Directing the AG to apply 18 U.S.C. 1030 to AI agents is aspirational without statutory update. The CFAA was written for human actors; courts will need to determine whether autonomous AI systems can be the legal subject of "knowing" unauthorized access, and who bears liability — the operator, developer, or the deploying organization.</p>
+
+      <h3>No Appropriations</h3>
+      <p>The EO contains no funding provisions. All action items are subject to "availability of appropriations," which means agency bandwidth, budget cycles, and Congressional action gate actual implementation.</p>
+    </section>
+
+    <hr class="report-divider">
+
+    <!-- BUSINESS OPPORTUNITIES -->
+    <section class="report-sec" id="opportunities">
+      <span class="report-sec__marker">─── Business Opportunities ───</span>
+      <h2>Eight Private-Sector Value Streams</h2>
+
+      <div class="callout callout--opportunity">
+        <span class="callout__label">▌ Near-term · High readiness</span>
+        <h2>1. AI-native Cybersecurity Products</h2>
+        <p>The EO's mandate for CISA to deploy "AI-enabled defensive tools" across federal civilian systems, state/local authorities, and critical infrastructure creates a direct procurement pipeline. Specific opportunities: vulnerability scanning and patch prioritization for the clearinghouse, threat detection in federal SOCs, lightweight tools for rural hospitals and utilities, FedRAMP-ready platforms. Vendors with existing FedRAMP authorizations and CISA relationships are best positioned — clearinghouse stand-up is within 30 days, making procurement conversations time-sensitive.</p>
+      </div>
+
+      <div class="callout callout--opportunity">
+        <span class="callout__label">▌ Near-term · High readiness</span>
+        <h2>2. Critical Infrastructure AI Security Services</h2>
+        <p>Rural hospitals, community banks, and local utilities are explicitly named beneficiaries but lack in-house capability to onboard AI security tools independently. Demand for managed services, integration, and training. Specific opportunities: MSSPs offering AI security under CISA programs, healthcare IT adapting to HIPAA constraints, FinTech community bank platforms, OT/ICS providers for utilities. MSSPs and integrators with right-sized, compliant, affordable offerings can own this segment before larger primes notice.</p>
+      </div>
+
+      <div class="callout callout--opportunity">
+        <span class="callout__label">▌ Near-term · High readiness</span>
+        <h2>3. Vulnerability Intelligence Platforms</h2>
+        <p>The clearinghouse needs purpose-built infrastructure: orchestration for scanning, validation, deduplication, and patch distribution. Opportunities: shared scanning orchestration, AI-powered deduplication for triage at scale, patch distribution software with government-grade security, threat intel APIs to private SIEMs. Treasury chairs the clearinghouse — vendors with existing Treasury or financial sector relationships have a warm entry. Deconfliction is a specific capability gap few products address well.</p>
+      </div>
+
+      <div class="callout callout--opportunity">
+        <span class="callout__label">▌ Near-term · High readiness</span>
+        <h2>4. Cybersecurity Workforce &amp; Training</h2>
+        <p>OPM's 60-day mandate to expand US Tech Force hiring pathways signals government demand for cybersecurity talent with AI skills. Opportunities: AI training programs for Tech Force placement, staffing firms with cleared cyber+AI pipelines, EdTech platforms with AI-augmented certifications, apprenticeships and bootcamps with federal placement agreements. The 60-day deadline creates immediate contracting opportunity for firms with existing federal HR or workforce vehicles (e.g., GSA schedules).</p>
+      </div>
+
+      <div class="callout callout--opportunity">
+        <span class="callout__label">▌ Near-term · High readiness</span>
+        <h2>5. AI Grant &amp; Funding Intermediaries</h2>
+        <p>OMB's 30-day mandate to identify grant programs redirectable toward AI vulnerability detection creates an immediate application window. Opportunities: grant consultancies targeting newly redirected funding, research organizations applying for federal AI cybersecurity grants, state/local government consultancies pursuing CISA pass-through funding. This creates an unusual short-cycle funding opportunity — organizations with existing DHS, DARPA, or NSF relationships are positioned to capture funds quickly.</p>
+      </div>
+
+      <div class="callout callout--opportunity">
+        <span class="callout__label">▌ 6–12 months · Medium readiness</span>
+        <h2>6. Frontier Model Evaluation &amp; Red-Teaming</h2>
+        <p>The classified benchmarking process for "covered frontier models" requires technical expertise to assess AI systems for offensive cyber capabilities. This creates a professional services market similar to financial stress testing. Opportunities: AI red-teaming firms probing models for cyber capabilities, security consultancies advising on designation, national labs running classified assessments, compliance advisory for framework engagement. Labs that develop methodology now will own market definition as benchmarking matures — the classified nature creates barriers to entry favoring incumbents with clearances.</p>
+      </div>
+
+      <div class="callout callout--opportunity">
+        <span class="callout__label">▌ 6–18 months · Medium readiness</span>
+        <h2>7. AI Export &amp; Trusted Partner Programs</h2>
+        <p>The EO's "trusted partner" mechanism creates a new channel for international AI deployment under US national security oversight. Combined with the July 2025 AI export EO, this enables vetted allied-nation access to frontier models. Opportunities: systems integrators helping allied governments access and deploy models safely, export compliance advisory, AI labs gaining preferential government procurement, international consulting on US AI stack adoption. Labs that voluntarily engage early-access programs build structural advantage: government familiarity, trusted-partner networks, and IP protections baked in.</p>
+      </div>
+
+      <div class="callout callout--opportunity">
+        <span class="callout__label">▌ 12–24 months · Emerging readiness</span>
+        <h2>8. AI Legal, Compliance &amp; Forensics</h2>
+        <p>Section 4's directive extending computer crime statutes to AI agents will generate complex litigation and evidentiary challenges. Law firms, digital forensics companies, and GRC vendors are positioned to serve prosecution and defense. Opportunities: forensics firms developing attribution methodology for AI agent actions, law firms building AI crime practices, GRC platforms adding AI agent audit trails, cyber insurance modeling AI agent liability. Firms that develop methodology now — how to attribute AI agent actions and preserve agentic workflow logs — will own market definition as prosecutions emerge in 12–24 months.</p>
+      </div>
+    </section>
+
+    <!-- OPPORTUNITY SUMMARY TABLE -->
+    <section class="report-sec" id="opportunity-summary">
+      <h2>Opportunity Horizon &amp; Readiness Summary</h2>
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Opportunity</th>
+            <th>Market Readiness</th>
+            <th>Horizon</th>
+            <th>Signal Strength</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI cyber products (federal)</td>
+            <td>High</td>
+            <td>Now</td>
+            <td>Direct mandate</td>
+          </tr>
+          <tr>
+            <td>Critical infrastructure services</td>
+            <td>High</td>
+            <td>Now</td>
+            <td>Explicit in EO</td>
+          </tr>
+          <tr>
+            <td>Vulnerability intelligence platforms</td>
+            <td>High</td>
+            <td>Now</td>
+            <td>Clearinghouse need</td>
+          </tr>
+          <tr>
+            <td>Cyber workforce / training</td>
+            <td>High</td>
+            <td>Now</td>
+            <td>OPM directive</td>
+          </tr>
+          <tr>
+            <td>Grant intermediaries</td>
+            <td>High</td>
+            <td>Now</td>
+            <td>OMB review open</td>
+          </tr>
+          <tr>
+            <td>Frontier model evaluation / red-team</td>
+            <td>Medium</td>
+            <td>6–12 months</td>
+            <td>Benchmark TBD</td>
+          </tr>
+          <tr>
+            <td>AI export / trusted partners</td>
+            <td>Medium</td>
+            <td>6–18 months</td>
+            <td>Framework pending</td>
+          </tr>
+          <tr>
+            <td>AI legal &amp; forensics</td>
+            <td>Low-emerging</td>
+            <td>12–24 months</td>
+            <td>Case law forming</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <hr class="report-divider">
+
+    <!-- POLICY CONTEXT -->
+    <section class="report-sec" id="policy-context">
+      <span class="report-sec__marker">─── Policy Context ───</span>
+      <h2>The Broader EO Stack: A Coherent Policy Sequence</h2>
+      <p>This EO fits into a sequence of AI/cyber actions building since January 2025, implementing a coherent logic:</p>
+      <p style="text-align: center; margin: var(--space-4) 0; font-weight: 600; color: var(--color-navy);">Remove barriers → Export the American AI stack → Defend it militarily → Criminalize adversarial misuse</p>
+      <table class="report-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Action</th>
+            <th>Significance</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Jan. 2025</td>
+            <td>Revoked Biden EO 14110</td>
+            <td>Eliminated mandatory AI safety reporting and red-team requirements</td>
+          </tr>
+          <tr>
+            <td>July 2025</td>
+            <td>AI Action Plan &amp; Export EO</td>
+            <td>Removed AI technology export restrictions; positioned US models for global adoption</td>
+          </tr>
+          <tr>
+            <td>July 2025</td>
+            <td>Anti-ideological AI EO</td>
+            <td>Prevented federal use of AI models with "ideological biases or social agendas"</td>
+          </tr>
+          <tr>
+            <td>Dec. 2025</td>
+            <td>State AI preemption framework</td>
+            <td>Prevented state-level AI compliance fragmentation</td>
+          </tr>
+          <tr>
+            <td>Mar. 2026</td>
+            <td>National Cyber Strategy</td>
+            <td>Established offensive and defensive cyber priorities; emphasized public-private coordination</td>
+          </tr>
+          <tr>
+            <td>Mar. 2026</td>
+            <td>National AI legislative framework</td>
+            <td>Released comprehensive AI policy framework for Congress</td>
+          </tr>
+          <tr>
+            <td><strong>June 2, 2026</strong></td>
+            <td><strong>This EO — AI Innovation &amp; Security</strong></td>
+            <td><strong>Operationalizes the cyber strategy for AI: clearinghouse, frontier model access, criminal enforcement</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <p class="report-foot-note">Analysis prepared June 4, 2026. Based on the full text of the Executive Order and accompanying White House Fact Sheet published June 2, 2026. For questions or strategic briefings on implementation implications, contact <a href="mailto:hello@iiibc.com">hello@iiibc.com</a>.</p>
+
+  </div>
+</article>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="../../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="160" height="24">
+        <p class="footer__tagline">
+          <strong>Beyond Cognition. Built for Business.</strong><br>
+          Setting the standard for human-AI business excellence. Structured AI strategy for enterprise leaders who demand more than slide decks.
+        </p>
+        <p class="footer__pillars mono">
+          INTELLIGENT  ·  INNOVATION  ·  INTERCONNECT
+        </p>
+      </div>
+      <div>
+        <p class="footer__col-title">Institute</p>
+        <ul class="footer__links" role="list">
+          <li><a href="../../index.html#why-iiibc">About IIIBC</a></li>
+          <li><a href="../../index.html#digest">IIIBC Digest</a></li>
+          <li><a href="mailto:hello@iiibc.com">Contact</a></li>
+          <li><a href="mailto:hello@iiibc.com">Partnerships</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__col-title">This Report</p>
+        <ul class="footer__links" role="list">
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#pillars">Four Pillars</a></li>
+          <li><a href="#interpretations">Key Interpretations</a></li>
+          <li><a href="#opportunities">Business Opportunities</a></li>
+          <li><a href="#policy-context">Policy Context</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 IIIBC — Beyond Cognition. All rights reserved.</p>
+      <nav class="footer__legal" aria-label="Legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script src="../../script.js"></script>
+</body>
+</html>

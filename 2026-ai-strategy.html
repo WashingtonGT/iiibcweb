@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IIIBC — Defining AI-Strategy (2026)</title>
+<meta name="description" content="The IIIBC working definition of AI-Strategy: how AI is acquired, embedded, governed, and compounded across the value chain — turned into decisions, measures, and a navigation cadence leadership can act on.">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ───────────────────────────────────────────────────────────────
+     IIIBC — Beyond Cognition · White Paper: Defining AI-Strategy
+     Print stylesheet — tokens mirror /web/styles.css & IIIBC-Executive-Briefing.html
+  ─────────────────────────────────────────────────────────────── */
+  :root {
+    --navy:   #0F172A;
+    --blue:   #1D4ED8;
+    --teal:   #0EA5E9;
+    --gold:   #F59E0B;
+    --ink:    #1E293B;
+    --slate:  #64748B;
+    --mist:   #94A3B8;
+    --feather:#E2E8F0;
+    --cloud:  #F8FAFC;
+    --white:  #FFFFFF;
+    --success:#10B981;
+    --risk:   #EF4444;
+    --display: 'Sora', 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif;
+    --body:    'Inter', 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif;
+    --mono:    'IBM Plex Mono', 'Consolas', 'Courier New', monospace;
+  }
+
+  @page { size: Letter; margin: 0; }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { font-family: var(--body); color: var(--ink); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-size: 11pt; line-height: 1.6; background: var(--mist); }
+
+  /* On-screen: center pages on a neutral backdrop with subtle separation.
+     In print: backdrop disappears, pages tile cleanly. */
+  .page {
+    width: 8.5in;
+    min-height: 11in;
+    padding: 0.6in 0.7in;
+    position: relative;
+    page-break-after: always;
+    overflow: hidden;
+    background: var(--white);
+    margin: 0 auto;
+  }
+  .page:last-of-type { page-break-after: auto; }
+  @media screen {
+    body { padding: 28px 0; }
+    .page { margin: 0 auto 28px; box-shadow: 0 6px 24px rgba(15,23,42,0.18); }
+  }
+
+  /* ── COVER PAGE ──────────────────────────────────────── */
+  .cover { background: var(--navy); color: var(--white); padding: 0.9in 0.85in; }
+  .cover::before {
+    content: ''; position: absolute; inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.07) 1px, transparent 1px);
+    background-size: 28px 28px; pointer-events: none;
+  }
+  .cover > * { position: relative; z-index: 1; }
+  .cover__top-bar { height: 4px; background: var(--teal); margin: -0.9in -0.85in 0.45in; }
+  .cover__eyebrow { font-family: var(--mono); font-size: 10pt; font-weight: 600; letter-spacing: 0.18em; color: var(--teal); margin-bottom: 0.3in; }
+  .cover__wordmark { display: flex; align-items: flex-end; gap: 14px; margin-bottom: 0.18in; }
+  .cover__bars { display: inline-flex; align-items: flex-end; gap: 8px; }
+  .cover__bars span { display: block; width: 20px; background: var(--white); border-radius: 3px; }
+  .cover__bars span:nth-child(1) { height: 78px; opacity: 0.85; }
+  .cover__bars span:nth-child(2) { height: 100px; background: var(--teal); }
+  .cover__bars span:nth-child(3) { height: 78px; opacity: 0.85; }
+  .cover__bc { font-family: var(--display); font-weight: 800; font-size: 96pt; line-height: 0.88; letter-spacing: 4px; color: var(--white); }
+  .cover__brand-name { font-family: var(--display); font-weight: 700; font-size: 22pt; color: var(--white); margin: 0.2in 0 0.08in; letter-spacing: 0.5px; }
+  .cover__tagline { font-family: var(--body); font-weight: 400; font-style: italic; font-size: 13pt; color: rgba(255,255,255,0.65); margin-bottom: 0.45in; }
+  .cover__teal-rule { height: 2px; background: var(--teal); width: 80%; margin-bottom: 0.5in; opacity: 0.6; }
+  .cover__doc-eyebrow { font-family: var(--mono); font-size: 9pt; font-weight: 600; letter-spacing: 0.2em; color: var(--gold); margin-bottom: 0.1in; }
+  .cover__doc-title { font-family: var(--display); font-weight: 800; font-size: 44pt; line-height: 1.05; color: var(--white); margin-bottom: 0.18in; letter-spacing: -0.5px; }
+  .cover__doc-sub { font-family: var(--body); font-weight: 400; font-style: italic; font-size: 13pt; color: rgba(255,255,255,0.6); max-width: 5.4in; }
+  .cover__footer { position: absolute; bottom: 0.7in; left: 0.85in; right: 0.85in; padding-top: 0.18in; border-top: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; align-items: center; }
+  .cover__pillars { font-family: var(--mono); font-size: 9pt; letter-spacing: 0.22em; color: var(--teal); font-weight: 600; }
+  .cover__date { font-family: var(--mono); font-size: 9pt; letter-spacing: 0.12em; color: rgba(255,255,255,0.45); }
+
+  /* ── INTERIOR HEADER / FOOTER ─────────────────────────── */
+  .header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--feather); margin-bottom: 0.34in; }
+  .header__brand { display: inline-flex; align-items: flex-end; gap: 10px; }
+  .header__bars { display: inline-flex; align-items: flex-end; gap: 4px; }
+  .header__bars span { display: block; width: 5px; border-radius: 1px; background: var(--navy); }
+  .header__bars span:nth-child(1) { height: 18px; }
+  .header__bars span:nth-child(2) { height: 24px; background: var(--teal); }
+  .header__bars span:nth-child(3) { height: 18px; }
+  .header__name { font-family: var(--display); font-weight: 700; font-size: 12pt; color: var(--navy); letter-spacing: 1px; }
+  .header__meta { font-family: var(--mono); font-size: 8pt; color: var(--slate); letter-spacing: 0.12em; }
+
+  .footer { position: absolute; bottom: 0.4in; left: 0.7in; right: 0.7in; display: flex; justify-content: space-between; align-items: center; padding-top: 10px; border-top: 1px solid var(--feather); font-family: var(--body); font-size: 8.5pt; color: var(--slate); }
+  .footer__tag { font-style: italic; }
+  .footer__page { font-family: var(--mono); letter-spacing: 0.1em; }
+
+  /* ── SECTION HEADINGS ─────────────────────────────────── */
+  .eyebrow { font-family: var(--mono); font-size: 9pt; font-weight: 600; color: var(--teal); letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.08in; }
+  h1 { font-family: var(--display); font-weight: 700; font-size: 28pt; color: var(--navy); line-height: 1.1; margin-bottom: 0.1in; letter-spacing: -0.4px; }
+  h2 { font-family: var(--display); font-weight: 700; font-size: 15pt; color: var(--navy); margin: 0.3in 0 0.1in; letter-spacing: -0.2px; }
+  .accent-rule { height: 3px; background: var(--teal); width: 80px; margin-bottom: 0.22in; }
+
+  p { font-family: var(--body); font-size: 10.5pt; line-height: 1.65; color: var(--ink); margin-bottom: 0.14in; }
+  p strong { color: var(--navy); font-weight: 600; }
+  em { color: var(--navy); font-style: italic; }
+
+  /* Bullets */
+  ul.bullets { list-style: none; padding-left: 0; margin-bottom: 0.16in; }
+  ul.bullets li { position: relative; padding-left: 1.2em; margin-bottom: 0.08in; font-size: 10.5pt; line-height: 1.55; color: var(--ink); }
+  ul.bullets li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 8px; height: 8px; background: var(--teal); border-radius: 2px; }
+  ul.bullets li strong { color: var(--navy); }
+
+  /* ── DEFINITION: IS / IS-NOT ──────────────────────────── */
+  .def-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.22in; margin: 0.22in 0; }
+  .def-col { border-radius: 0 6px 6px 0; padding: 0.22in 0.26in; background: var(--cloud); }
+  .def-col--no { border-left: 4px solid var(--risk); }
+  .def-col--yes { border-left: 4px solid var(--blue); background: rgba(29,78,216,0.05); }
+  .def-col__label { font-family: var(--mono); font-size: 9pt; font-weight: 700; letter-spacing: 0.18em; margin-bottom: 0.12in; }
+  .def-col--no .def-col__label { color: var(--risk); }
+  .def-col--yes .def-col__label { color: var(--blue); }
+  .def-col ul { list-style: none; }
+  .def-col li { position: relative; padding-left: 1.1em; margin-bottom: 0.09in; font-size: 10pt; line-height: 1.5; color: var(--ink); }
+  .def-col--no li::before { content: '\00D7'; position: absolute; left: 0; top: -1px; color: var(--risk); font-weight: 700; }
+  .def-col--yes li::before { content: '\2713'; position: absolute; left: 0; top: 0; color: var(--blue); font-weight: 700; font-size: 9pt; }
+  .def-col li strong { color: var(--navy); }
+
+  /* ── PULL QUOTE / CALLOUT ─────────────────────────────── */
+  .pull-quote { background: var(--cloud); border-left: 4px solid var(--gold); padding: 0.22in 0.32in; margin: 0.22in 0; border-radius: 0 6px 6px 0; }
+  .pull-quote p { font-family: var(--display); font-weight: 600; font-style: italic; font-size: 13pt; line-height: 1.45; color: var(--navy); margin: 0; }
+
+  .callout { background: var(--cloud); border-left: 4px solid var(--blue); padding: 0.18in 0.28in; margin: 0.2in 0; border-radius: 0 6px 6px 0; }
+  .callout--teal { border-left-color: var(--teal); background: rgba(14,165,233,0.06); }
+  .callout--risk { border-left-color: var(--risk); }
+  .callout__label { font-family: var(--mono); font-size: 8.5pt; font-weight: 700; letter-spacing: 0.16em; color: var(--slate); text-transform: uppercase; margin-bottom: 0.06in; }
+  .callout p { margin: 0; font-size: 10.5pt; line-height: 1.55; }
+  .callout p strong { color: var(--navy); }
+
+  /* ── DATA TABLES (generic) ────────────────────────────── */
+  .data-table { width: 100%; border-collapse: collapse; margin: 0.18in 0; font-size: 9.5pt; }
+  .data-table thead th { background: var(--navy); color: var(--white); text-align: left; padding: 10px 13px; font-family: var(--body); font-weight: 600; font-size: 9pt; letter-spacing: 0.04em; vertical-align: top; }
+  .data-table thead th.accent { background: rgba(14,165,233,0.2); color: var(--teal); }
+  .data-table tbody tr { border-bottom: 1px solid var(--feather); }
+  .data-table tbody tr:nth-child(even) { background: var(--cloud); }
+  .data-table tbody td { padding: 10px 13px; vertical-align: top; line-height: 1.5; color: var(--ink); }
+  .data-table tbody td.lead { font-family: var(--body); font-weight: 600; color: var(--navy); border-left: 2px solid transparent; white-space: nowrap; }
+  .data-table tbody td.lead-wrap { font-family: var(--body); font-weight: 600; color: var(--navy); }
+  .data-table .idx { font-family: var(--mono); color: var(--blue); font-weight: 600; }
+
+  /* Intent badges in value-chain table */
+  .intent { display: inline-block; font-family: var(--mono); font-weight: 600; font-size: 8.5pt; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 4px; color: var(--white); }
+  .intent--augment { background: var(--blue); }
+  .intent--automate { background: var(--teal); }
+  .intent--redesign { background: var(--gold); }
+  .intent--retire  { background: var(--slate); }
+  .intent--protect { background: var(--risk); }
+
+  /* ── ARTIFACT CHECKLIST (§4) ──────────────────────────── */
+  .artifacts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.14in 0.26in; margin-top: 0.18in; }
+  .artifact { display: flex; gap: 0.14in; align-items: flex-start; }
+  .artifact__num { flex-shrink: 0; width: 24px; height: 24px; border-radius: 5px; background: var(--navy); color: var(--white); font-family: var(--mono); font-weight: 600; font-size: 9.5pt; display: flex; align-items: center; justify-content: center; }
+  .artifact__body { flex: 1; }
+  .artifact__name { font-family: var(--display); font-weight: 700; font-size: 10.5pt; color: var(--navy); line-height: 1.25; }
+  .artifact__desc { font-family: var(--body); font-size: 9pt; line-height: 1.4; color: var(--slate); margin-top: 2px; }
+
+  /* ── MEASUREMENT TIERS (§5) ───────────────────────────── */
+  .tiers { display: flex; flex-direction: column; gap: 0.16in; margin-top: 0.16in; }
+  .tier-card { border: 1px solid var(--feather); border-left: 5px solid var(--blue); border-radius: 0 6px 6px 0; padding: 0.18in 0.26in; }
+  .tier-card--1 { border-left-color: var(--blue); }
+  .tier-card--2 { border-left-color: var(--teal); }
+  .tier-card--3 { border-left-color: var(--gold); }
+  .tier-card--4 { border-left-color: var(--navy); }
+  .tier-card__head { display: flex; align-items: baseline; gap: 0.14in; margin-bottom: 0.08in; }
+  .tier-card__tag { font-family: var(--mono); font-size: 8.5pt; font-weight: 700; letter-spacing: 0.12em; color: var(--blue); }
+  .tier-card--2 .tier-card__tag { color: var(--teal); }
+  .tier-card--3 .tier-card__tag { color: var(--gold); }
+  .tier-card--4 .tier-card__tag { color: var(--navy); }
+  .tier-card__name { font-family: var(--display); font-weight: 700; font-size: 12pt; color: var(--navy); }
+  .tier-card__q { font-family: var(--body); font-style: italic; font-size: 9.5pt; color: var(--slate); }
+  .tier-card__metrics { list-style: none; padding-left: 0; columns: 2; column-gap: 0.3in; }
+  .tier-card__metrics li { position: relative; padding-left: 1em; margin-bottom: 0.05in; font-size: 9pt; line-height: 1.4; color: var(--ink); break-inside: avoid; }
+  .tier-card__metrics li::before { content: ''; position: absolute; left: 0; top: 0.5em; width: 5px; height: 5px; background: var(--teal); border-radius: 1px; }
+
+  /* ── NAVIGATION LOOP (§5.2 feedback / iteration) ──────── */
+  .nav-loop { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.16in; margin: 0.2in 0 0.1in; }
+  .nav-step { background: var(--cloud); border: 1px solid var(--feather); border-top: 4px solid var(--teal); border-radius: 6px; padding: 0.2in 0.22in; position: relative; }
+  .nav-step__num { font-family: var(--mono); font-weight: 600; font-size: 9pt; color: var(--teal); margin-bottom: 0.06in; }
+  .nav-step__q { font-family: var(--display); font-weight: 700; font-size: 11.5pt; color: var(--navy); line-height: 1.25; margin-bottom: 0.06in; }
+  .nav-step__src { font-family: var(--mono); font-size: 8pt; color: var(--slate); letter-spacing: 0.04em; }
+  .reroute { display: flex; align-items: center; gap: 0.16in; background: var(--navy); color: var(--white); border-radius: 6px; padding: 0.16in 0.26in; margin-top: 0.16in; }
+  .reroute__icon { font-family: var(--mono); color: var(--gold); font-size: 16pt; font-weight: 700; flex-shrink: 0; }
+  .reroute p { color: rgba(255,255,255,0.85); margin: 0; font-size: 10pt; }
+  .reroute p strong { color: var(--white); }
+
+  /* ── SIGN-OFF ─────────────────────────────────────────── */
+  .signoff { margin-top: 0.34in; padding-top: 0.18in; border-top: 2px solid var(--navy); display: flex; justify-content: space-between; align-items: center; font-family: var(--body); font-size: 10pt; }
+  .signoff__name { color: var(--navy); font-weight: 700; }
+  .signoff__tag { color: var(--slate); font-style: italic; }
+
+  /* Screen-only print prompt */
+  .print-hint { position: fixed; top: 14px; right: 14px; z-index: 99; background: var(--navy); color: #fff; border: none; font-family: var(--body); font-weight: 600; font-size: 13px; padding: 10px 16px; border-radius: 6px; cursor: pointer; box-shadow: 0 4px 14px rgba(15,23,42,0.3); }
+  .print-hint:hover { background: #1740b0; }
+  @media print { .print-hint { display: none; } body { background: #fff; padding: 0; } .page { box-shadow: none; margin: 0 auto; } }
+</style>
+</head>
+<body>
+
+<button class="print-hint" onclick="window.print()">⎙ Print / Save as PDF</button>
+
+<!-- ════════════════════════════ COVER ════════════════════════════ -->
+<section class="page cover">
+  <div class="cover__top-bar"></div>
+
+  <div class="cover__eyebrow">IIIBC · BEYOND COGNITION</div>
+
+  <div class="cover__wordmark">
+    <div class="cover__bars"><span></span><span></span><span></span></div>
+    <div class="cover__bc">BC</div>
+  </div>
+
+  <div class="cover__brand-name">IIIBC — Beyond Cognition</div>
+  <div class="cover__tagline">Beyond Cognition. Built for Business.</div>
+
+  <div class="cover__teal-rule"></div>
+
+  <div class="cover__doc-eyebrow">WORKING DEFINITION · FOR LEADERSHIP CIRCULATION</div>
+  <h1 class="cover__doc-title">Defining<br>AI-Strategy</h1>
+  <div class="cover__doc-sub">How AI is acquired, embedded, governed, and compounded across the value chain — turned into decisions, measures, and a navigation cadence leadership can act on.</div>
+
+  <div class="cover__footer">
+    <div class="cover__pillars">INTELLIGENT &nbsp;·&nbsp; INNOVATION &nbsp;·&nbsp; INTERCONNECT</div>
+    <div class="cover__date">EDITION 2026 · v1.0</div>
+  </div>
+</section>
+
+<!-- ════════════════════════ 1 · FORMAL DEFINITION ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand"><span class="header__bars"><span></span><span></span><span></span></span><span class="header__name">IIIBC</span></div>
+    <div class="header__meta">DEFINING AI-STRATEGY · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 1</div>
+  <h1>The Formal Definition</h1>
+  <div class="accent-rule"></div>
+
+  <p><strong>AI-Strategy</strong> is the subset of an organization&rsquo;s enterprise strategy that governs <strong>how artificial intelligence is acquired, embedded, governed, and compounded across the value chain</strong> to advance the organization&rsquo;s purpose, protect its license to operate, and produce a durable competitive position.</p>
+
+  <div class="def-grid">
+    <div class="def-col def-col--no">
+      <div class="def-col__label">IT IS NOT</div>
+      <ul>
+        <li>A tooling plan (&ldquo;which copilots do we buy&rdquo;).</li>
+        <li>An IT initiative.</li>
+        <li>A department roadmap.</li>
+        <li>A one-off transformation program.</li>
+      </ul>
+    </div>
+    <div class="def-col def-col--yes">
+      <div class="def-col__label">IT IS</div>
+      <ul>
+        <li>A <strong>board-level position</strong> on where AI changes the business, where it must not, and at what pace.</li>
+        <li>Expressed as decisions, principles, and capability commitments.</li>
+        <li>Measured by <strong>enterprise outcomes</strong>, not model outputs.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <p>AI-Strategy is the disciplined alignment of AI capability with purpose, value creation, culture, and risk appetite — turned into decisions an organization can act on.</p>
+  </div>
+
+  <p>This is the IIIBC canonical reference — used across every engagement, framework, and deliverable that uses the term &ldquo;AI strategy.&rdquo; The sections that follow translate the definition into the parts a leadership team can build, measure, and steer.</p>
+
+  <div class="footer"><div class="footer__tag">Beyond Cognition. Built for Business.</div><div class="footer__page">PAGE 02</div></div>
+</section>
+
+<!-- ════════════════════════ 2 · ORGANIZATIONAL FUNDAMENTALS ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand"><span class="header__bars"><span></span><span></span><span></span></span><span class="header__name">IIIBC</span></div>
+    <div class="header__meta">DEFINING AI-STRATEGY · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 2</div>
+  <h1>Anchoring in the Fundamentals</h1>
+  <div class="accent-rule"></div>
+
+  <p>Any strategy — AI or otherwise — must answer for the same five fundamentals. AI-Strategy reframes each through the AI lens. A document that does not take a position on all five is not a strategy.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th style="width:22%">Fundamental</th><th style="width:30%">Classical Question</th><th class="accent">AI-Strategy Reframe</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="lead-wrap"><span class="idx">01</span> Purpose / Mission</td><td><em>Why do we exist?</em></td><td>Where does AI extend, accelerate, or threaten the reason we exist? Which uses are mission-aligned, which are mission-eroding?</td></tr>
+      <tr><td class="lead-wrap"><span class="idx">02</span> Value Chain</td><td><em>How do we create value, link by link?</em></td><td>Which links are augmented, automated, disintermediated, and which must remain human-owned by design?</td></tr>
+      <tr><td class="lead-wrap"><span class="idx">03</span> Competitiveness</td><td><em>Why do customers choose us — and keep choosing us?</em></td><td>Does AI deepen our moat (data, distribution, expertise, switching cost), commoditize it, or expose it to faster entrants?</td></tr>
+      <tr><td class="lead-wrap"><span class="idx">04</span> Culture &amp; People</td><td><em>How do we work, decide, and grow talent?</em></td><td>What does human-AI collaboration look like in our operating model? How are roles, accountability, and judgement redistributed?</td></tr>
+      <tr><td class="lead-wrap"><span class="idx">05</span> Governance &amp; License to Operate</td><td><em>What promises do we keep to regulators, customers, employees, society?</em></td><td>How do we keep those promises when decisions are partly or fully machine-generated?</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout--risk">
+    <div class="callout__label">The line that disqualifies most documents</div>
+    <p>A document that does not take a position on all five fundamentals is <strong>not a strategy — it is a wishlist.</strong></p>
+  </div>
+
+  <div class="footer"><div class="footer__tag">Beyond Cognition. Built for Business.</div><div class="footer__page">PAGE 03</div></div>
+</section>
+
+<!-- ════════════════════════ 2.1 · VALUE CHAIN LENS ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand"><span class="header__bars"><span></span><span></span><span></span></span><span class="header__name">IIIBC</span></div>
+    <div class="header__meta">DEFINING AI-STRATEGY · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 2.1 · The Actionable Core</div>
+  <h1>The Value-Chain Lens</h1>
+  <div class="accent-rule"></div>
+
+  <p>This is where strategy becomes action. For each primary and support activity, AI-Strategy must classify the <strong>intent</strong> — a single, deliberate decision per link. Without this classification, &ldquo;AI adoption&rdquo; is theater.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th style="width:18%">Intent</th><th style="width:42%">Meaning</th><th class="accent">Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="intent intent--augment">AUGMENT</span></td><td>Human stays in the loop; AI raises throughput or quality.</td><td>Sales rep + research agent.</td></tr>
+      <tr><td><span class="intent intent--automate">AUTOMATE</span></td><td>Machine owns the task end-to-end within guardrails.</td><td>Invoice matching, tier-1 ticket triage.</td></tr>
+      <tr><td><span class="intent intent--redesign">RE-DESIGN</span></td><td>The activity itself changes shape.</td><td>Product discovery becomes continuous, not quarterly.</td></tr>
+      <tr><td><span class="intent intent--retire">RETIRE</span></td><td>The activity disappears.</td><td>Manual data entry, routine summarization.</td></tr>
+      <tr><td><span class="intent intent--protect">PROTECT</span></td><td>Explicitly off-limits to AI.</td><td>Final hiring decision, clinical sign-off, fiduciary judgement.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout callout--teal">
+    <div class="callout__label">How to apply it</div>
+    <p>Tag every link in your value chain with exactly one intent. The output is a single artifact — the <strong>Value-Chain AI Map</strong> (Section 4, item 3) — that makes the strategy auditable: anyone can ask &ldquo;what did we decide for this activity, and why?&rdquo;</p>
+  </div>
+
+  <div class="footer"><div class="footer__tag">Beyond Cognition. Built for Business.</div><div class="footer__page">PAGE 04</div></div>
+</section>
+
+<!-- ════════════════════════ 3.1 · OPPORTUNITY SCOPE ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand"><span class="header__bars"><span></span><span></span><span></span></span><span class="header__name">IIIBC</span></div>
+    <div class="header__meta">DEFINING AI-STRATEGY · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 3.1 · Scope</div>
+  <h1>Opportunity Surface</h1>
+  <div class="accent-rule"></div>
+
+  <p>AI-Strategy operates on <strong>two surfaces simultaneously</strong>: opportunities (where value is created) and risks (where value, trust, or license is destroyed). This page is the first surface — where AI-Strategy decides where value comes from.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th style="width:30%">Domain</th><th class="accent">What AI-Strategy Decides</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="lead-wrap">Revenue &amp; Growth</td><td>New AI-enabled products, pricing power, market expansion, distribution leverage.</td></tr>
+      <tr><td class="lead-wrap">Productivity &amp; Cost</td><td>Cycle-time compression, labor leverage, unit-cost reduction, span-of-control expansion.</td></tr>
+      <tr><td class="lead-wrap">Customer Experience</td><td>Personalization, response latency, self-service depth, lifetime value.</td></tr>
+      <tr><td class="lead-wrap">Decision Quality &amp; Speed</td><td>Better forecasts, faster signal-to-action, reduced decision latency at the edges.</td></tr>
+      <tr><td class="lead-wrap">Innovation Capacity</td><td>Research throughput, design exploration, simulation, hypothesis testing.</td></tr>
+      <tr><td class="lead-wrap">Talent Leverage</td><td>Expertise amplification, faster onboarding, retention of institutional knowledge.</td></tr>
+      <tr><td class="lead-wrap">Operating Model</td><td>Org design, span of control, the role of middle management, the location of judgement.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout__label">Pair it with the next page</div>
+    <p>Each opportunity above carries a matching risk. IIIBC reviews both surfaces as <strong>one document</strong> — turn the page for the risk register that travels with it.</p>
+  </div>
+
+  <div class="footer"><div class="footer__tag">Beyond Cognition. Built for Business.</div><div class="footer__page">PAGE 05</div></div>
+</section>
+
+<!-- ════════════════════════ 3.2 · RISK SCOPE ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand"><span class="header__bars"><span></span><span></span><span></span></span><span class="header__name">IIIBC</span></div>
+    <div class="header__meta">DEFINING AI-STRATEGY · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 3.2 · Scope</div>
+  <h1>Risk Surface</h1>
+  <div class="accent-rule"></div>
+
+  <table class="data-table">
+    <thead>
+      <tr><th style="width:26%">Domain</th><th class="accent">What AI-Strategy Must Govern</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="lead-wrap">Strategic</td><td>Disintermediation by AI-native entrants; over-investment in commoditizing capabilities; betting on the wrong abstraction layer.</td></tr>
+      <tr><td class="lead-wrap">Operational</td><td>Hallucination, drift, silent failure, automation bias, brittle pipelines.</td></tr>
+      <tr><td class="lead-wrap">Compliance &amp; Legal</td><td>Sectoral regulation, EU AI Act, data laws, IP and training-data provenance.</td></tr>
+      <tr><td class="lead-wrap">Security</td><td>Model exfiltration, prompt injection, data leakage to third-party APIs, supply-chain attacks on model artifacts.</td></tr>
+      <tr><td class="lead-wrap">Reputational &amp; Trust</td><td>Brand-damaging outputs, customer-visible errors, donor / voter / employee trust erosion.</td></tr>
+      <tr><td class="lead-wrap">Workforce</td><td>Skill atrophy, displacement anxiety, two-track culture (AI users vs. non-users), morale and retention.</td></tr>
+      <tr><td class="lead-wrap">Ethical</td><td>Bias, fairness, explainability, surveillance creep, dignity of work.</td></tr>
+      <tr><td class="lead-wrap">Concentration &amp; Dependency</td><td>Vendor lock-in, foundation-model dependency, geopolitical exposure.</td></tr>
+      <tr><td class="lead-wrap">Existential / Fiduciary</td><td>Decisions delegated to AI that the board cannot defend to regulators, shareholders, or courts.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="pull-quote">
+    <p>The opportunity register and the risk register are the same document, reviewed together. Treating them separately is the single most common cause of failed AI strategies.</p>
+  </div>
+
+  <div class="footer"><div class="footer__tag">Beyond Cognition. Built for Business.</div><div class="footer__page">PAGE 06</div></div>
+</section>
+
+<!-- ════════════════════════ 4 · COMPONENTS / DELIVERABLE SHAPE ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand"><span class="header__bars"><span></span><span></span><span></span></span><span class="header__name">IIIBC</span></div>
+    <div class="header__meta">DEFINING AI-STRATEGY · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 4 · Deliverable Shape</div>
+  <h1>What a Complete Strategy Contains</h1>
+  <div class="accent-rule"></div>
+
+  <p>A complete AI-Strategy is not a narrative — it is a set of artifacts. This is the IIIBC reference structure: ten components, each one a deliverable you can point to and a thing you can be held to.</p>
+
+  <div class="artifacts">
+    <div class="artifact"><div class="artifact__num">1</div><div class="artifact__body"><div class="artifact__name">AI Position Statement</div><div class="artifact__desc">One page, board-signed: aggressive adopter, fast follower, fortified incumbent, or regulated conservative.</div></div></div>
+    <div class="artifact"><div class="artifact__num">2</div><div class="artifact__body"><div class="artifact__name">Purpose-Alignment Test</div><div class="artifact__desc">Explicit criteria for whether a proposed use case is consistent with the mission.</div></div></div>
+    <div class="artifact"><div class="artifact__num">3</div><div class="artifact__body"><div class="artifact__name">Value-Chain AI Map</div><div class="artifact__desc">Every activity tagged Augment / Automate / Re-design / Retire / Protect.</div></div></div>
+    <div class="artifact"><div class="artifact__num">4</div><div class="artifact__body"><div class="artifact__name">Competitive Thesis</div><div class="artifact__desc">Where AI widens, narrows, or changes the moat; named threats from AI-native competitors.</div></div></div>
+    <div class="artifact"><div class="artifact__num">5</div><div class="artifact__body"><div class="artifact__name">Capability Commitments</div><div class="artifact__desc">Data, platform, talent, partnerships — what we build, buy, borrow, or refuse.</div></div></div>
+    <div class="artifact"><div class="artifact__num">6</div><div class="artifact__body"><div class="artifact__name">Operating Model &amp; Governance</div><div class="artifact__desc">CAIO / AI council, decision rights, model lifecycle, escalation, human-in-the-loop rules.</div></div></div>
+    <div class="artifact"><div class="artifact__num">7</div><div class="artifact__body"><div class="artifact__name">Risk Appetite Statement</div><div class="artifact__desc">Acceptable level of error, bias, opacity, and automation — by domain.</div></div></div>
+    <div class="artifact"><div class="artifact__num">8</div><div class="artifact__body"><div class="artifact__name">Portfolio of Initiatives</div><div class="artifact__desc">Sequenced; each one traceable to a fundamental (purpose / value / competitiveness / culture / license).</div></div></div>
+    <div class="artifact"><div class="artifact__num">9</div><div class="artifact__body"><div class="artifact__name">Measurement System</div><div class="artifact__desc">Four tiers of metrics — Outcome, Adoption, Capability, Trust &amp; Risk (Section 5).</div></div></div>
+    <div class="artifact"><div class="artifact__num">10</div><div class="artifact__body"><div class="artifact__name">Cadence</div><div class="artifact__desc">Review rhythm, trigger conditions for re-strategy, and sunset rules.</div></div></div>
+  </div>
+
+  <div class="callout callout--teal">
+    <div class="callout__label">Use as a checklist</div>
+    <p>If any of the ten is missing, the strategy is incomplete. Items 9 and 10 are what make it <strong>navigable</strong> — they are the subject of the next two pages.</p>
+  </div>
+
+  <div class="footer"><div class="footer__tag">Beyond Cognition. Built for Business.</div><div class="footer__page">PAGE 07</div></div>
+</section>
+
+<!-- ════════════════════════ 5 · MEASUREMENT — FOUR TIERS ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand"><span class="header__bars"><span></span><span></span><span></span></span><span class="header__name">IIIBC</span></div>
+    <div class="header__meta">DEFINING AI-STRATEGY · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 5 · The Measurable Core</div>
+  <h1>Four Tiers of Metrics</h1>
+  <div class="accent-rule"></div>
+
+  <p>A strategy you cannot measure is a slogan. AI-Strategy is navigated through four tiers — each answering a different question, each instrumented and reviewed on its own cadence.</p>
+
+  <div class="tiers">
+    <div class="tier-card tier-card--1">
+      <div class="tier-card__head"><span class="tier-card__tag">TIER 1 · OUTCOME</span><span class="tier-card__q">Is the business better?</span></div>
+      <ul class="tier-card__metrics">
+        <li>Revenue per employee, gross margin, cycle time.</li>
+        <li>NPS, time-to-market, cost-to-serve.</li>
+        <li>Market position vs. AI-native competitors.</li>
+        <li>Enterprise results attributed to AI initiatives.</li>
+      </ul>
+    </div>
+    <div class="tier-card tier-card--2">
+      <div class="tier-card__head"><span class="tier-card__tag">TIER 2 · ADOPTION &amp; LEVERAGE</span><span class="tier-card__q">Is AI actually being used well?</span></div>
+      <ul class="tier-card__metrics">
+        <li>% of in-scope workflows with AI in production (vs. pilots).</li>
+        <li>Active-use rate per seat; depth-of-use per week.</li>
+        <li>Human-AI collaboration ratio (joint vs. solo tasks).</li>
+        <li>Cycle-time delta on instrumented workflows.</li>
+      </ul>
+    </div>
+    <div class="tier-card tier-card--3">
+      <div class="tier-card__head"><span class="tier-card__tag">TIER 3 · CAPABILITY</span><span class="tier-card__q">Are we building the muscle, not renting it?</span></div>
+      <ul class="tier-card__metrics">
+        <li>Data readiness per domain (quality, access, lineage).</li>
+        <li>Internal AI talent density (builders / headcount).</li>
+        <li>% of critical capability owned vs. vendor-dependent.</li>
+        <li>Mean time from idea to production AI feature.</li>
+      </ul>
+    </div>
+    <div class="tier-card tier-card--4">
+      <div class="tier-card__head"><span class="tier-card__tag">TIER 4 · TRUST &amp; RISK</span><span class="tier-card__q">Can we defend what we&rsquo;re doing?</span></div>
+      <ul class="tier-card__metrics">
+        <li>Incidents per 1,000 AI-mediated decisions.</li>
+        <li>% of systems with current risk assessment, model card, owner.</li>
+        <li>Audit pass rate; regulator-readiness score.</li>
+        <li>Employee &amp; customer trust indices where AI is visible.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer"><div class="footer__tag">Beyond Cognition. Built for Business.</div><div class="footer__page">PAGE 08</div></div>
+</section>
+
+<!-- ════════════════════════ 5.1 / 5.2 · NAVIGATION — CADENCE, FEEDBACK, ITERATION ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand"><span class="header__bars"><span></span><span></span><span></span></span><span class="header__name">IIIBC</span></div>
+    <div class="header__meta">DEFINING AI-STRATEGY · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 5.1 – 5.2 · Feedback &amp; Iteration</div>
+  <h1>Navigating the Strategy</h1>
+  <div class="accent-rule"></div>
+
+  <p>Strategy is <strong>navigated, not executed.</strong> AI moves faster than annual planning. Leadership holds the <em>position</em> steady — purpose, risk appetite, competitive thesis — while continuously re-routing the <em>portfolio</em>. The cadence below is the feedback loop that makes that possible.</p>
+
+  <table class="data-table">
+    <thead>
+      <tr><th style="width:18%">Cadence</th><th style="width:32%">Forum</th><th class="accent">Focus</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="lead">Weekly</td><td>AI ops review</td><td>Tier 2 + Tier 4 incidents.</td></tr>
+      <tr><td class="lead">Monthly</td><td>CAIO / AI council</td><td>Tier 2 + Tier 3 progress; portfolio health.</td></tr>
+      <tr><td class="lead">Quarterly</td><td>Executive committee</td><td>Tier 1 outcomes; reallocation between initiatives.</td></tr>
+      <tr><td class="lead">Annually</td><td>Board</td><td>Position statement, risk appetite, capability commitments — re-confirmed or re-written.</td></tr>
+      <tr><td class="lead">Event-driven</td><td>Any</td><td>Triggers: major regulatory change, foundation-model shift, competitive shock, material incident.</td></tr>
+    </tbody>
+  </table>
+
+  <h2>The measurement system tells leadership three things — and only three</h2>
+  <div class="nav-loop">
+    <div class="nav-step"><div class="nav-step__num">01</div><div class="nav-step__q">Are we still on the right map?</div><div class="nav-step__src">TIER 1 + COMPETITIVE THESIS</div></div>
+    <div class="nav-step"><div class="nav-step__num">02</div><div class="nav-step__q">Are we moving on it?</div><div class="nav-step__src">TIER 2 + TIER 3</div></div>
+    <div class="nav-step"><div class="nav-step__num">03</div><div class="nav-step__q">Is the vehicle safe?</div><div class="nav-step__src">TIER 4</div></div>
+  </div>
+  <div class="reroute">
+    <div class="reroute__icon">&#8635;</div>
+    <p>If any answer is <strong>&ldquo;no&rdquo;</strong> or <strong>&ldquo;don&rsquo;t know,&rdquo;</strong> the strategy is not being navigated — it is drifting. Re-route the portfolio, hold the position, and run the loop again.</p>
+  </div>
+
+  <div class="footer"><div class="footer__tag">Beyond Cognition. Built for Business.</div><div class="footer__page">PAGE 09</div></div>
+</section>
+
+<!-- ════════════════════════ 6 / 7 · EXCLUSIONS & SUMMARY ════════════════════════ -->
+<section class="page">
+  <header class="header">
+    <div class="header__brand"><span class="header__bars"><span></span><span></span><span></span></span><span class="header__name">IIIBC</span></div>
+    <div class="header__meta">DEFINING AI-STRATEGY · BEYOND COGNITION</div>
+  </header>
+
+  <div class="eyebrow">Section 6 &amp; 7</div>
+  <h1>Boundaries &amp; Summary</h1>
+  <div class="accent-rule"></div>
+
+  <h2>What this definition excludes — on purpose</h2>
+  <p>To keep the term sharp, AI-Strategy explicitly does <em>not</em> include the following. Conflating these with strategy is how organizations end up with a slide deck instead of a position.</p>
+  <ul class="bullets">
+    <li><strong>Vendor selection</strong> — that is procurement, executed <em>under</em> the strategy.</li>
+    <li><strong>Individual model choice</strong> — that is engineering, executed under the strategy.</li>
+    <li><strong>Prompt libraries, copilots, and tool rollouts</strong> — these are <em>instruments</em> of the strategy.</li>
+    <li><strong>General digital transformation</strong> — AI-Strategy is one strand of it, not the whole.</li>
+  </ul>
+
+  <h2>Summary</h2>
+  <table class="data-table">
+    <thead><tr><th style="width:26%">Question</th><th class="accent">Answer</th></tr></thead>
+    <tbody>
+      <tr><td class="lead-wrap">What is it?</td><td>The board-level position on how AI advances purpose, value, competitiveness, culture, and license to operate.</td></tr>
+      <tr><td class="lead-wrap">What does it cover?</td><td>Opportunities <em>and</em> risks, on the same page, across the entire value chain.</td></tr>
+      <tr><td class="lead-wrap">How is it expressed?</td><td>Position statement + value-chain map + risk appetite + capability commitments + portfolio + measurement.</td></tr>
+      <tr><td class="lead-wrap">How is it measured?</td><td>Four tiers: Outcome, Adoption, Capability, Trust &amp; Risk.</td></tr>
+      <tr><td class="lead-wrap">How is it navigated?</td><td>Steady position, fluid portfolio, fixed cadence, event-driven re-routing.</td></tr>
+      <tr><td class="lead-wrap">Who owns it?</td><td>The board sets it; the CAIO (or equivalent) navigates it; every executive executes their slice.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="signoff">
+    <div class="signoff__name">IIIBC — Beyond Cognition</div>
+    <div class="signoff__tag">Beyond Cognition. Built for Business.</div>
+  </div>
+
+  <div class="footer"><div class="footer__tag">© 2026 IIIBC — Beyond Cognition. All rights reserved.</div><div class="footer__page">PAGE 10</div></div>
+</section>
+
+</body>
+</html>

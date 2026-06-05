@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Readiness Assessment — Technology-Driven Business Edition | IIIBC</title>
+  <meta name="description" content="IIIBC AI Readiness Assessment for growth-stage technology operators (SaaS, fintech, healthtech, legaltech, marketplaces). Complete the diagnostic, receive a scored readiness report, and have it emailed to your leadership team.">
+  <meta name="author" content="IIIBC">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://iiibc.com/tech-driven-assessment">
+  <meta property="og:title"       content="AI Readiness Assessment — Technology-Driven Business Edition | IIIBC">
+  <meta property="og:description" content="Diagnose your company's AI readiness across 8 dimensions. Receive a scored report calibrated for growth-stage technology operators.">
+  <meta property="og:image"       content="assets/og-card.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+  /* ============================================================
+     IIIBC — AI Readiness Assessment (Technology-Driven Business Edition)
+     Self-contained. Design tokens mirror design/guides.md + styles.css
+     ============================================================ */
+  :root{
+    --navy:#0F172A; --blue:#1D4ED8; --teal:#0EA5E9; --gold:#F59E0B;
+    --ink:#1E293B; --slate:#64748B; --mist:#94A3B8; --feather:#E2E8F0;
+    --cloud:#F8FAFC; --white:#FFFFFF;
+    --success:#10B981; --risk:#EF4444; --caution:#F59E0B; --steel:#3B82F6;
+    --f-display:'Sora',-apple-system,'Helvetica Neue',sans-serif;
+    --f-body:'Inter',-apple-system,'Helvetica Neue',sans-serif;
+    --f-mono:'IBM Plex Mono','Courier New',monospace;
+    --s1:4px; --s2:8px; --s3:16px; --s4:24px; --s5:32px; --s6:48px; --s7:64px; --s8:96px;
+    --r-sm:4px; --r-md:6px; --r-lg:12px;
+    --max:1080px;
+    --shadow-sm:0 2px 8px rgba(0,0,0,0.08);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+  body{font-family:var(--f-body);font-size:16px;line-height:1.7;color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;}
+  img,svg{display:block;max-width:100%;}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  ul,ol{list-style:none;}
+  .mono{font-family:var(--f-mono);}
+  .container{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--s4);}
+  h1,h2{font-family:var(--f-display);font-weight:700;line-height:1.2;}
+  h3,h4{font-family:var(--f-body);font-weight:600;line-height:1.35;}
+
+  .skip-link{position:absolute;top:-100%;left:var(--s3);background:var(--blue);color:#fff;padding:var(--s2) var(--s3);border-radius:var(--r-sm);font-size:14px;z-index:1000;transition:top .2s;}
+  .skip-link:focus{top:var(--s2);}
+
+  /* ── NAV ── */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--feather);}
+  .nav__inner{display:flex;align-items:center;justify-content:space-between;height:64px;}
+  .nav__logo{display:flex;align-items:center;}
+  .nav__back{font-size:14px;font-weight:500;color:var(--slate);}
+  .nav__back:hover{color:var(--blue);text-decoration:none;}
+
+  /* ── BUTTONS ── */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:12px 24px;border-radius:var(--r-sm);font-family:var(--f-body);font-weight:600;font-size:15px;cursor:pointer;border:none;transition:background .15s,color .15s,border-color .15s;}
+  .btn--primary{background:var(--blue);color:#fff;}
+  .btn--primary:hover{background:#1740b0;text-decoration:none;}
+  .btn--white{background:#fff;color:var(--navy);}
+  .btn--white:hover{background:var(--cloud);text-decoration:none;}
+  .btn--secondary{background:#fff;color:var(--blue);border:1.5px solid var(--blue);}
+  .btn--secondary:hover{background:var(--cloud);text-decoration:none;}
+  .btn--ghost{background:transparent;color:var(--navy);border:1px solid var(--feather);}
+  .btn--ghost:hover{background:var(--cloud);text-decoration:none;}
+  .btn--lg{min-height:52px;padding:14px 32px;font-size:16px;}
+  .btn:disabled{opacity:.45;cursor:not-allowed;}
+
+  /* ── HERO ── */
+  .hero{background:var(--navy);color:#fff;padding:var(--s8) 0 var(--s7);}
+  .hero__eyebrow{display:inline-block;font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal);margin-bottom:var(--s4);}
+  .hero h1{font-size:clamp(30px,4.4vw,48px);font-weight:800;max-width:760px;margin-bottom:var(--s4);}
+  .hero__sub{font-size:18px;color:#cbd5e1;max-width:660px;margin-bottom:var(--s5);}
+  .hero__meta{display:flex;flex-wrap:wrap;gap:var(--s5);border-top:1px solid #1e2b46;padding-top:var(--s4);max-width:760px;}
+  .hero__meta-item{display:flex;flex-direction:column;gap:2px;}
+  .hero__meta-k{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);}
+  .hero__meta-v{font-size:15px;font-weight:600;color:#fff;}
+
+  /* ── PROGRESS BAR (sticky) ── */
+  .progress{position:sticky;top:64px;z-index:40;background:#fff;border-bottom:1px solid var(--feather);}
+  .progress__inner{display:flex;align-items:center;gap:var(--s4);padding:12px 0;}
+  .progress__track{flex:1;height:8px;background:var(--feather);border-radius:99px;overflow:hidden;}
+  .progress__fill{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width .3s ease;}
+  .progress__label{font-family:var(--f-mono);font-size:12px;color:var(--slate);white-space:nowrap;}
+  .progress__label b{color:var(--ink);}
+
+  /* ── SECTION LAYOUT ── */
+  .form-wrap{padding:var(--s7) 0 var(--s8);}
+  .intro-note{background:var(--cloud);border-left:4px solid var(--blue);padding:var(--s4);border-radius:0 var(--r-sm) var(--r-sm) 0;margin-bottom:var(--s6);}
+  .intro-note .label{font-family:var(--f-body);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:var(--s2);}
+  .intro-note p{font-size:15px;color:var(--ink);}
+
+  .sec{margin-bottom:var(--s7);scroll-margin-top:140px;}
+  .sec__head{border-bottom:2px solid var(--navy);padding-bottom:var(--s3);margin-bottom:var(--s5);}
+  .sec__num{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:500;}
+  .sec__title{font-size:clamp(22px,2.6vw,30px);font-weight:700;margin:6px 0 4px;}
+  .sec__sub{font-size:15px;color:var(--slate);font-style:italic;}
+  .sec__intro{font-size:15px;color:var(--ink);margin-top:var(--s3);max-width:680px;}
+
+  /* Profile fields */
+  .field{margin-bottom:var(--s4);}
+  .field > label, .q__label{display:block;font-weight:600;font-size:15px;color:var(--ink);margin-bottom:var(--s2);}
+  .field input[type=text],.field input[type=email],.field input[type=number],.field select,.q__notes input{
+    width:100%;padding:11px 14px;border:1px solid var(--feather);border-radius:var(--r-sm);font-family:var(--f-body);font-size:15px;color:var(--ink);background:#fff;}
+  .field input:focus,.field select:focus,.q__notes input:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(29,78,216,.12);}
+  .field--grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--s4);}
+  .field .hint{font-size:13px;color:var(--mist);margin-top:4px;}
+  .checks{display:flex;flex-wrap:wrap;gap:var(--s3) var(--s4);}
+  .checks label{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:400;color:var(--ink);cursor:pointer;}
+
+  /* Question */
+  .q{padding:var(--s4) 0;border-bottom:1px solid var(--feather);}
+  .q:last-child{border-bottom:none;}
+  .q__id{font-family:var(--f-mono);font-size:12px;color:var(--blue);font-weight:500;}
+  .q__label{margin-top:4px;font-weight:500;}
+  .opts{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s2);margin-top:var(--s3);}
+  .opt{position:relative;}
+  .opt input{position:absolute;opacity:0;inset:0;cursor:pointer;}
+  .opt span{display:flex;flex-direction:column;gap:2px;align-items:flex-start;padding:10px 12px;border:1px solid var(--feather);border-radius:var(--r-sm);font-size:13px;color:var(--slate);cursor:pointer;height:100%;transition:all .12s;background:#fff;}
+  .opt span b{font-family:var(--f-mono);font-size:15px;color:var(--ink);font-weight:500;}
+  .opt input:hover + span{border-color:var(--mist);background:var(--cloud);}
+  .opt input:checked + span{border-color:var(--blue);background:rgba(29,78,216,.06);color:var(--ink);box-shadow:inset 0 0 0 1px var(--blue);}
+  .opt input:checked + span b{color:var(--blue);}
+  .opt input:focus-visible + span{box-shadow:0 0 0 3px rgba(29,78,216,.25);}
+  .q__notes{margin-top:var(--s3);}
+  .q__notes label{font-size:13px;color:var(--slate);display:block;margin-bottom:4px;}
+  .q.is-missing .opts{outline:2px solid rgba(239,68,68,.35);outline-offset:6px;border-radius:var(--r-sm);}
+
+  /* Submit bar */
+  .submit-bar{background:var(--cloud);border:1px solid var(--feather);border-radius:var(--r-md);padding:var(--s5);text-align:center;margin-top:var(--s6);}
+  .submit-bar h3{font-size:20px;margin-bottom:var(--s2);}
+  .submit-bar p{font-size:15px;color:var(--slate);max-width:560px;margin:0 auto var(--s4);}
+  .submit-error{display:none;color:var(--risk);font-size:14px;font-weight:500;margin-top:var(--s3);}
+
+  /* ── REPORT ── */
+  #report{display:none;}
+  .report-cover{background:var(--navy);color:#fff;border-radius:var(--r-lg);padding:var(--s7) var(--s6);position:relative;overflow:hidden;margin-bottom:var(--s6);}
+  .report-cover::after{content:"";position:absolute;left:var(--s6);right:var(--s6);bottom:34%;height:2px;background:var(--teal);opacity:.8;}
+  .report-cover__brand{font-family:var(--f-mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);margin-bottom:var(--s5);}
+  .report-cover h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;color:#fff;max-width:640px;}
+  .report-cover__sub{font-size:17px;color:#cbd5e1;margin-top:var(--s3);max-width:560px;}
+  .report-cover__meta{display:flex;flex-wrap:wrap;gap:var(--s5);margin-top:var(--s6);font-size:14px;}
+  .report-cover__meta div span{display:block;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mist);margin-bottom:2px;}
+
+  .report-section{margin-bottom:var(--s6);}
+  .report-section > h3{font-size:22px;font-weight:700;font-family:var(--f-display);padding-left:12px;border-left:4px solid var(--blue);margin-bottom:var(--s4);}
+
+  /* Verdict callout */
+  .verdict{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s5);border-radius:var(--r-md);padding:var(--s5);color:#fff;margin-bottom:var(--s5);}
+  .verdict__score{font-family:var(--f-display);font-weight:800;font-size:56px;line-height:1;}
+  .verdict__score small{font-size:20px;opacity:.7;font-weight:700;}
+  .verdict__body{flex:1;min-width:240px;}
+  .verdict__profile{font-family:var(--f-display);font-weight:800;font-size:26px;}
+  .verdict__path{font-size:15px;opacity:.92;margin-top:6px;}
+
+  /* Score table */
+  table.scorecard{width:100%;border-collapse:collapse;font-size:14px;}
+  table.scorecard thead th{background:var(--navy);color:#fff;font-family:var(--f-body);font-weight:600;font-size:13px;text-align:left;padding:12px 16px;}
+  table.scorecard thead th.num{text-align:right;}
+  table.scorecard tbody td{padding:12px 16px;border-bottom:1px solid var(--feather);}
+  table.scorecard tbody tr:nth-child(even){background:var(--cloud);}
+  table.scorecard td.num{text-align:right;font-family:var(--f-mono);}
+  table.scorecard tfoot td{padding:14px 16px;font-weight:700;border-top:2px solid var(--navy);}
+  table.scorecard tfoot td.num{text-align:right;font-family:var(--f-mono);font-size:16px;}
+
+  .level-pill{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;white-space:nowrap;}
+  .level-pill::before{content:"";width:8px;height:8px;border-radius:99px;background:currentColor;}
+  .lvl-Foundational{color:#b91c1c;background:rgba(239,68,68,.1);}
+  .lvl-Developing{color:#b45309;background:rgba(245,158,11,.12);}
+  .lvl-Capable{color:#1740b0;background:rgba(29,78,216,.1);}
+  .lvl-Advanced{color:#047857;background:rgba(16,185,129,.12);}
+
+  /* Bar chart */
+  .bars{display:flex;flex-direction:column;gap:var(--s3);}
+  .bar-row{display:grid;grid-template-columns:220px 1fr 96px;align-items:center;gap:var(--s3);}
+  .bar-row__label{font-size:14px;font-weight:500;color:var(--ink);}
+  .bar-row__track{height:14px;background:var(--feather);border-radius:99px;overflow:hidden;}
+  .bar-row__fill{height:100%;border-radius:99px;width:0;transition:width .8s cubic-bezier(.2,.7,.2,1);}
+  .bar-row__pct{font-family:var(--f-mono);font-size:13px;color:var(--slate);text-align:right;}
+
+  /* Gap analysis cards */
+  .gap-card{border:1px solid var(--feather);border-left:4px solid var(--caution);border-radius:0 var(--r-sm) var(--r-sm) 0;padding:var(--s4);margin-bottom:var(--s3);background:#fff;}
+  .gap-card.is-foundational{border-left-color:var(--risk);}
+  .gap-card__head{display:flex;justify-content:space-between;align-items:center;gap:var(--s3);flex-wrap:wrap;margin-bottom:8px;}
+  .gap-card__title{font-weight:600;font-size:15px;}
+  .gap-card__action{font-size:14px;color:var(--ink);}
+  .gap-empty{background:rgba(16,185,129,.08);border-left:4px solid var(--success);padding:var(--s4);border-radius:0 var(--r-sm) var(--r-sm) 0;font-size:15px;}
+
+  /* Use case + next steps lists */
+  .uc-list{display:grid;gap:var(--s3);}
+  .uc-item{display:flex;gap:var(--s3);align-items:flex-start;padding:var(--s3);background:var(--cloud);border-radius:var(--r-sm);}
+  .uc-item .uc-mark{flex:none;width:8px;height:8px;border-radius:2px;background:var(--teal);margin-top:8px;}
+  .uc-item b{display:block;font-size:15px;color:var(--ink);}
+  .uc-item span{font-size:14px;color:var(--slate);}
+
+  .next-step{border:1px solid var(--feather);border-radius:var(--r-md);padding:var(--s5);background:#fff;}
+  .next-step .tier{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);font-weight:500;}
+  .next-step h4{font-size:20px;margin:6px 0 8px;}
+  .next-step p{font-size:15px;color:var(--slate);margin-bottom:var(--s4);}
+
+  /* ── EMAIL PANEL ── */
+  .email-panel{background:var(--cloud);border:1px solid var(--feather);border-radius:var(--r-md);padding:var(--s5);}
+  .email-panel__row{display:flex;flex-wrap:wrap;gap:var(--s3);align-items:center;}
+  .email-status{display:none;align-items:center;gap:10px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.3);color:#047857;padding:var(--s3) var(--s4);border-radius:var(--r-sm);font-size:14px;font-weight:500;margin-top:var(--s4);}
+  .email-status.show{display:flex;}
+  .email-status svg{flex:none;}
+
+  /* Email preview (HTML email per guide §9.2) */
+  .email-preview{max-width:600px;margin:var(--s4) auto 0;border:1px solid var(--feather);border-radius:var(--r-md);overflow:hidden;background:#fff;box-shadow:var(--shadow-sm);}
+  .email-preview__bar{background:#fff;text-align:center;padding:24px 0 0;}
+  .email-preview__teal{height:2px;background:var(--teal);margin-top:20px;}
+  .email-preview__body{padding:28px 32px;font-size:15px;color:var(--ink);}
+  .email-preview__body h5{font-family:var(--f-display);font-size:18px;font-weight:700;margin-bottom:var(--s3);}
+  .email-preview__body p{margin-bottom:var(--s3);}
+  .email-preview__score{font-family:var(--f-mono);background:var(--navy);color:#fff;border-radius:var(--r-sm);padding:14px 18px;display:flex;justify-content:space-between;align-items:center;margin:var(--s3) 0;}
+  .email-preview__score b{font-size:20px;}
+  .email-preview__footer{background:var(--cloud);padding:16px 32px;font-size:12px;color:var(--slate);text-align:center;}
+  .preview-toggle{font-size:13px;color:var(--blue);cursor:pointer;background:none;border:none;text-decoration:underline;padding:0;margin-top:var(--s3);}
+
+  /* Footer */
+  .footer{background:var(--navy);color:#cbd5e1;padding:var(--s7) 0 var(--s5);margin-top:var(--s8);}
+  .footer__top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s5);align-items:flex-start;}
+  .footer__tag{font-size:14px;max-width:420px;margin-top:var(--s3);}
+  .footer__tag strong{color:#fff;}
+  .footer__pillars{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--mist);margin-top:var(--s3);}
+  .footer__bottom{border-top:1px solid #1e2b46;margin-top:var(--s5);padding-top:var(--s4);display:flex;flex-wrap:wrap;justify-content:space-between;gap:var(--s3);font-size:13px;color:var(--mist);}
+
+  .actions-row{display:flex;flex-wrap:wrap;gap:var(--s3);margin-top:var(--s5);}
+
+  /* ── INLINE CODE ── */
+  code{font-family:var(--f-mono);font-size:.9em;background:var(--feather);padding:1px 5px;border-radius:3px;color:var(--ink);}
+
+  /* ── QUICK PRE-CHECK ── */
+  .precheck{border:1px solid var(--feather);border-radius:var(--r-md);padding:var(--s4) var(--s5);margin-bottom:var(--s6);background:#fff;}
+  .precheck .label{font-family:var(--f-body);font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--blue);margin-bottom:4px;}
+  .precheck__hint{font-size:14px;color:var(--slate);font-style:italic;margin-bottom:var(--s3);}
+  .precheck__list{list-style:decimal;padding-left:var(--s4);display:grid;gap:8px;}
+  .precheck__list li{font-size:14.5px;color:var(--ink);padding-left:4px;}
+
+  /* ── REFERENCE TABLES (in-section + standalone) ── */
+  .sec__ref{margin-top:var(--s5);background:var(--cloud);border:1px solid var(--feather);border-radius:var(--r-md);padding:var(--s5);}
+  .sec__ref-label{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);font-weight:500;margin-bottom:var(--s2);}
+  .sec__ref h4{font-size:17px;font-weight:600;margin-bottom:var(--s2);}
+  .sec__ref p{font-size:14px;color:var(--slate);margin-bottom:var(--s3);}
+  .ref-table{width:100%;border-collapse:collapse;font-size:13.5px;background:#fff;border:1px solid var(--feather);border-radius:var(--r-sm);overflow:hidden;}
+  .ref-table thead th{background:var(--navy);color:#fff;font-family:var(--f-body);font-weight:600;font-size:12.5px;text-align:left;padding:10px 14px;}
+  .ref-table tbody td{padding:10px 14px;border-bottom:1px solid var(--feather);vertical-align:top;}
+  .ref-table tbody tr:last-child td{border-bottom:none;}
+  .ref-table tbody tr:nth-child(even){background:rgba(15,23,42,.025);}
+  .ref-table tbody td:first-child{font-weight:600;color:var(--ink);}
+  .ref-note{font-size:13px;color:var(--slate);margin-top:var(--s3);}
+
+  /* ── STANDALONE REFERENCE ZONE (board guide + appendix) ── */
+  .ref-zone{padding:var(--s7) 0;border-top:1px solid var(--feather);}
+  .ref-zone__head{border-bottom:2px solid var(--navy);padding-bottom:var(--s3);margin-bottom:var(--s5);}
+  .ref-zone__title{font-size:clamp(22px,2.6vw,28px);font-weight:700;}
+  .ref-zone__sub{font-size:15px;color:var(--slate);font-style:italic;margin-top:6px;}
+  .ref-table--guide td:first-child{color:var(--navy);width:34%;}
+  .appendix{border:1px solid var(--feather);border-radius:var(--r-md);background:var(--cloud);overflow:hidden;margin-top:var(--s7);}
+  .appendix>summary{cursor:pointer;padding:var(--s4) var(--s5);font-family:var(--f-display);font-weight:700;font-size:18px;list-style:none;}
+  .appendix>summary::-webkit-details-marker{display:none;}
+  .appendix>summary::after{content:"▾";float:right;color:var(--slate);font-weight:400;}
+  .appendix[open]>summary::after{content:"▴";}
+  .appendix__body{padding:0 var(--s5) var(--s5);font-size:14px;color:var(--ink);}
+  .appendix__body h4{font-size:14px;font-weight:600;color:var(--blue);margin:var(--s4) 0 6px;}
+  .appendix__body ul{list-style:disc;padding-left:var(--s4);display:grid;gap:6px;}
+  .appendix__body ul li{font-size:13.5px;color:var(--slate);}
+  .appendix__body p{margin-bottom:var(--s3);}
+  .appendix__caveat{background:#fff;border-left:4px solid var(--caution);padding:var(--s3) var(--s4);border-radius:0 var(--r-sm) var(--r-sm) 0;margin-top:var(--s4);font-size:13.5px;color:var(--ink);}
+
+  @media (max-width:760px){
+    .opts{grid-template-columns:1fr 1fr;}
+    .field--grid{grid-template-columns:1fr;}
+    .bar-row{grid-template-columns:120px 1fr 52px;gap:var(--s2);}
+    .bar-row__label{font-size:13px;}
+    .verdict__score{font-size:44px;}
+  }
+  @media print{
+    .nav,.progress,.form-wrap,.ref-zone,.footer,.email-panel .btn,.preview-toggle,.actions-row{display:none!important;}
+    #report{display:block!important;}
+    body{font-size:12px;}
+  }
+  </style>
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="IIIBC — Beyond Cognition · Home">
+      <img src="assets/logo.svg" alt="IIIBC — Beyond Cognition" width="150" height="26">
+    </a>
+    <a href="index.html" class="nav__back">← Back to IIIBC</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="hero__eyebrow">IIIBC · AI Strategy Institute · Technology-Driven Business Edition</span>
+    <h1>AI Readiness Assessment for Technology-Driven Businesses</h1>
+    <p class="hero__sub">A diagnostic for growth-stage technology operators — SaaS, fintech, healthtech, legaltech, marketplaces, and AI-enabled platforms. Answer honestly across eight dimensions; you will receive a scored readiness report and have it emailed to your leadership team. AI should compound your advantage, not your risk.</p>
+    <div class="hero__meta">
+      <div class="hero__meta-item"><span class="hero__meta-k">Time</span><span class="hero__meta-v">20–30 minutes</span></div>
+      <div class="hero__meta-item"><span class="hero__meta-k">Dimensions</span><span class="hero__meta-v">8 readiness areas</span></div>
+      <div class="hero__meta-item"><span class="hero__meta-k">Output</span><span class="hero__meta-v">Scored report + email</span></div>
+      <div class="hero__meta-item"><span class="hero__meta-k">Cost</span><span class="hero__meta-v">Free diagnostic</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRESS -->
+<div class="progress" id="progress" aria-hidden="true">
+  <div class="container progress__inner">
+    <span class="progress__label"><b id="progDone">0</b> / <span id="progTotal">0</span> answered</span>
+    <div class="progress__track"><div class="progress__fill" id="progFill"></div></div>
+    <span class="progress__label" id="progPct">0%</span>
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="form-wrap">
+  <div class="container">
+
+    <div class="intro-note">
+      <p class="label">How to use this assessment</p>
+      <p>Designed for CTOs, CEOs, VPs of Engineering, Chief Data/AI Officers, and board technology committees. Each question is scored 0–3: <b>0</b> = not in place / no awareness · <b>1</b> = awareness only · <b>2</b> = in progress / partial · <b>3</b> = fully in place and practiced. There are no trick questions — this is a diagnostic, not a grade.</p>
+    </div>
+
+    <div class="precheck">
+      <p class="label">Quick pre-check — the 5 questions every technology leader should be able to answer</p>
+      <p class="precheck__hint">If your team cannot answer these confidently, this assessment will tell you exactly why.</p>
+      <ol class="precheck__list">
+        <li>What AI tools are currently in use across the organization — and who approved them?</li>
+        <li>When an AI system produces a wrong or unexpected output, what is the escalation path?</li>
+        <li>Has leadership defined what AI is <em>not</em> allowed to decide without human review?</li>
+        <li>Can you name the one AI initiative in the next 12 months that would most change your competitive position?</li>
+        <li>Who owns AI strategy accountability today?</li>
+      </ol>
+    </div>
+
+    <form id="assessment" novalidate>
+
+      <!-- SECTION 0 — PROFILE -->
+      <section class="sec" id="sec0">
+        <div class="sec__head">
+          <div class="sec__num">Section 0</div>
+          <h2 class="sec__title">Company Profile</h2>
+          <p class="sec__sub">Context that shapes how your results are interpreted. We also use it to address your report.</p>
+        </div>
+
+        <div class="field--grid">
+          <div class="field">
+            <label for="orgName">Company name</label>
+            <input type="text" id="orgName" name="orgName" autocomplete="organization" placeholder="e.g., Meridian Labs">
+          </div>
+          <div class="field">
+            <label for="contactName">Your name &amp; role</label>
+            <input type="text" id="contactName" name="contactName" placeholder="e.g., Dana Okoro, CTO">
+          </div>
+        </div>
+
+        <div class="field--grid">
+          <div class="field">
+            <label for="email">Email to send the report to <span style="color:var(--risk)">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+            <p class="hint">Your scored report will be emailed here when you submit.</p>
+          </div>
+          <div class="field">
+            <label for="sector">Sector</label>
+            <select id="sector" name="sector">
+              <option value="">Select…</option>
+              <option>SaaS / B2B software</option>
+              <option>Fintech</option>
+              <option>Healthtech</option>
+              <option>Legaltech</option>
+              <option>Marketplace / platform</option>
+              <option>AI-native / AI platform</option>
+              <option>Other technology</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field--grid">
+          <div class="field">
+            <label for="revenue">Annual revenue / ARR (USD)</label>
+            <select id="revenue" name="revenue">
+              <option value="">Select…</option>
+              <option>Under $10M</option>
+              <option>$10M – $25M</option>
+              <option>$25M – $50M</option>
+              <option>$50M – $100M</option>
+              <option>Over $100M</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="stage">Funding stage</label>
+            <select id="stage" name="stage">
+              <option value="">Select…</option>
+              <option>Bootstrapped</option>
+              <option>Seed</option>
+              <option>Series A</option>
+              <option>Series B</option>
+              <option>Series C</option>
+              <option>Series D+</option>
+              <option>PE-backed</option>
+              <option>Public</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field--grid">
+          <div class="field">
+            <label for="employees">Number of employees</label>
+            <input type="number" id="employees" name="employees" min="0" placeholder="e.g., 180">
+          </div>
+          <div class="field">
+            <label for="engineers">Number of engineers / technical staff</label>
+            <input type="number" id="engineers" name="engineers" min="0" placeholder="e.g., 70">
+          </div>
+        </div>
+
+        <div class="field--grid">
+          <div class="field">
+            <label for="aiUse">Where is AI used today?</label>
+            <select id="aiUse" name="aiUse">
+              <option value="">Select…</option>
+              <option>In our product (customer-facing)</option>
+              <option>Internal operations only</option>
+              <option>Both product and internal</option>
+              <option>Not yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="regulated">Do you process regulated / sensitive data?</label>
+            <select id="regulated" name="regulated">
+              <option value="">Select…</option>
+              <option>Yes (PII, PHI, financial, biometric, privileged)</option>
+              <option>No</option>
+              <option>Unsure</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Primary markets <span class="hint" style="display:inline">(check all that apply)</span></label>
+          <div class="checks">
+            <label><input type="checkbox" name="markets" value="US"> United States</label>
+            <label><input type="checkbox" name="markets" value="UK"> United Kingdom</label>
+            <label><input type="checkbox" name="markets" value="EU"> EU</label>
+            <label><input type="checkbox" name="markets" value="Canada"> Canada</label>
+            <label><input type="checkbox" name="markets" value="Australia"> Australia</label>
+            <label><input type="checkbox" name="markets" value="Other"> Other</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="aiOwner">Who owns AI strategy accountability today?</label>
+          <input type="text" id="aiOwner" name="aiOwner" placeholder="e.g., VP Engineering — or 'no one yet'">
+        </div>
+      </section>
+
+      <!-- Scored sections injected here -->
+      <div id="sections"></div>
+
+      <!-- SUBMIT -->
+      <div class="submit-bar">
+        <h3>Generate your AI Readiness Report</h3>
+        <p>We will score all eight dimensions, build your readiness profile, and email the report to the address above. Nothing is shared with third parties.</p>
+        <button type="submit" class="btn btn--primary btn--lg" id="submitBtn">Submit &amp; Generate Report</button>
+        <div class="submit-error" id="submitError"></div>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+<!-- REPORT -->
+<section id="report" aria-live="polite">
+  <div class="container">
+
+    <!-- Cover -->
+    <div class="report-cover">
+      <div class="report-cover__brand">IIIBC · Beyond Cognition</div>
+      <h2>AI Readiness Report</h2>
+      <p class="report-cover__sub" id="rcSub">Prepared for your company</p>
+      <div class="report-cover__meta">
+        <div><span>Edition</span>Technology-Driven · Growth-Stage</div>
+        <div><span>Prepared for</span><span id="rcOrg" style="color:#fff;text-transform:none;letter-spacing:0;font-size:14px;font-weight:600;"></span></div>
+        <div><span>Date</span><span id="rcDate" style="color:#fff;text-transform:none;letter-spacing:0;font-size:14px;font-weight:600;"></span></div>
+        <div><span>Version</span>1.1</div>
+      </div>
+    </div>
+
+    <!-- Verdict -->
+    <div class="report-section">
+      <h3>Overall Readiness Profile</h3>
+      <div class="verdict" id="verdict">
+        <div class="verdict__score"><span id="vScore">0</span><small>/159</small></div>
+        <div class="verdict__body">
+          <div class="verdict__profile" id="vProfile">—</div>
+          <div class="verdict__path" id="vPath"></div>
+        </div>
+      </div>
+      <div class="intro-note"><p class="label">What this means</p><p id="vNarrative"></p></div>
+    </div>
+
+    <!-- Scorecard -->
+    <div class="report-section">
+      <h3>Dimension Scorecard</h3>
+      <table class="scorecard">
+        <thead><tr><th>Dimension</th><th class="num">Your Score</th><th class="num">Max</th><th>Readiness Level</th></tr></thead>
+        <tbody id="scoreBody"></tbody>
+        <tfoot><tr><td>Total</td><td class="num" id="tfScore">0</td><td class="num">159</td><td id="tfLevel"></td></tr></tfoot>
+      </table>
+    </div>
+
+    <!-- Bars -->
+    <div class="report-section">
+      <h3>Readiness by Dimension</h3>
+      <div class="bars" id="bars"></div>
+    </div>
+
+    <!-- Gap analysis -->
+    <div class="report-section">
+      <h3>Priority Gap Analysis</h3>
+      <p style="font-size:15px;color:var(--slate);margin-bottom:var(--s4);">Dimensions scoring <b>Foundational</b> or <b>Developing</b> are your highest-leverage next moves.</p>
+      <div id="gaps"></div>
+    </div>
+
+    <!-- Recommended use cases -->
+    <div class="report-section">
+      <h3>Recommended AI Use Cases</h3>
+      <p style="font-size:15px;color:var(--slate);margin-bottom:var(--s4);" id="ucIntro"></p>
+      <div class="uc-list" id="useCases"></div>
+    </div>
+
+    <!-- Next steps -->
+    <div class="report-section">
+      <h3>Recommended Next Step with IIIBC</h3>
+      <div class="next-step" id="nextStep"></div>
+    </div>
+
+    <!-- EMAIL -->
+    <div class="report-section">
+      <h3>Email This Report</h3>
+      <div class="email-panel">
+        <div class="email-panel__row">
+          <button type="button" class="btn btn--primary" id="sendEmailBtn">Send report to <span id="emailTarget">your inbox</span></button>
+          <button type="button" class="btn btn--secondary" id="mailtoBtn">Open in my email app</button>
+          <button type="button" class="btn btn--ghost" id="printBtn">Print / Save as PDF</button>
+        </div>
+        <div class="email-status" id="emailStatus">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="#047857" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span id="emailStatusText"></span>
+        </div>
+        <button type="button" class="preview-toggle" id="previewToggle">Preview the email that was sent ▾</button>
+
+        <!-- HTML email preview (per design guide §9.2) -->
+        <div class="email-preview" id="emailPreview" style="display:none;">
+          <div class="email-preview__bar">
+            <img src="assets/logo.svg" alt="IIIBC — Beyond Cognition" width="150" height="26" style="margin:0 auto;">
+            <div class="email-preview__teal"></div>
+          </div>
+          <div class="email-preview__body">
+            <h5 id="emOrg">Your AI Readiness Report</h5>
+            <p id="emIntro"></p>
+            <div class="email-preview__score">
+              <span>Overall readiness</span>
+              <b><span id="emScore">0</span>/159 · <span id="emProfile"></span></b>
+            </div>
+            <p id="emPath"></p>
+            <p style="margin-bottom:0;"><a href="#report">View your full report and dimension breakdown →</a></p>
+          </div>
+          <div class="email-preview__footer">
+            IIIBC · Beyond Cognition &nbsp;|&nbsp; hello@iiibc.com &nbsp;|&nbsp; iiibc.com<br>
+            Setting the standard for human-AI business excellence.
+          </div>
+        </div>
+      </div>
+
+      <div class="actions-row">
+        <a href="index.html#diagnostic" class="btn btn--ghost">Book a free 30-min diagnostic call</a>
+        <button type="button" class="btn btn--ghost" id="restartBtn">Retake the assessment</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REFERENCE ZONE — board guide + sources -->
+<section class="ref-zone">
+  <div class="container">
+
+    <div class="ref-zone__head">
+      <h2 class="ref-zone__title">Investor &amp; Board Conversation Guide</h2>
+      <p class="ref-zone__sub">Framings for discussing AI strategy and ROI with your board and investors.</p>
+    </div>
+    <table class="ref-table ref-table--guide">
+      <thead><tr><th>Board / investor concern</th><th>Your response</th></tr></thead>
+      <tbody>
+        <tr><td>"Where is the ROI on AI spend?"</td><td>"Every material initiative is mapped to a board KPI on a scorecard, with X% of AI workflows now in production — not pilots — and measured impact on cycle time, cost-to-serve, or margin."</td></tr>
+        <tr><td>"Are we exposed on data or security?"</td><td>"We have an acceptable-use policy and shadow-AI controls, an AI model inventory and risk register, and our controls map to the OWASP LLM Top 10 and NIST AI RMF."</td></tr>
+        <tr><td>"Will AI erode our gross margin?"</td><td>"We track AI cost as a % of COGS and contribution margin by segment, with caching, model routing, and usage-aligned pricing to protect margin as usage grows."</td></tr>
+        <tr><td>"What's our competitive moat in AI?"</td><td>"Our proprietary transactional, behavioral, or clinical data compounds with usage and grounds product features that generic models cannot replicate."</td></tr>
+        <tr><td>"Are we compliant as regulation lands?"</td><td>"We risk-tier every AI system against the EU AI Act and sector rules, and we treat ISO 42001-style governance as a sales advantage, not just a cost."</td></tr>
+        <tr><td>"Why not just build it all ourselves?"</td><td>"We build only where AI is a true differentiator and buy the commodity layer — buying/partnering succeeds roughly twice as often as internal builds at our stage."</td></tr>
+      </tbody>
+    </table>
+
+    <details class="appendix">
+      <summary>Appendix — Sources &amp; Calibration</summary>
+      <div class="appendix__body">
+        <p>This assessment is calibrated against current (2024–2026) research and standards. Key references used to ground the questions and thresholds:</p>
+
+        <h4>Maturity &amp; adoption</h4>
+        <ul>
+          <li>Gartner — <em>AI Maturity Model &amp; Roadmap</em> and AI production-durability survey (Jun 2025): 45% of high-maturity orgs keep AI in production 3+ years vs. 20% of low-maturity.</li>
+          <li>McKinsey QuantumBlack — <em>The State of AI</em> (2024; 2025): leaders, not employees, are the bottleneck; workflow redesign is the strongest predictor of EBIT impact; only ~20% measure AI with business metrics.</li>
+          <li>MIT NANDA — <em>The GenAI Divide: State of AI in Business 2025</em>: 95% of generative-AI pilots show no measurable P&amp;L return; buy/partner succeeds ~67% vs. ~33% for internal builds.</li>
+          <li>BCG — <em>AI Adoption Puzzle</em> / <em>AI at Work 2025</em> and the 10-20-70 operating-model rule (70% of value is people/process).</li>
+          <li>a16z — <em>Generative AI in the Enterprise</em> (2024) and <em>AI Application Spending Report</em> (2025): bottom-up tool adoption; internal vs. customer-facing deployment rates.</li>
+        </ul>
+
+        <h4>Data, platform &amp; people</h4>
+        <ul>
+          <li>Gartner — AI-ready-data forecast: ~60% of AI projects abandoned through 2026 due to data not being AI-ready (~80% for GenAI); data-lineage adoption.</li>
+          <li>MLOps/LLMOps maturity literature (arXiv 2025; practitioner LLMOps guides): version everything, CI/CD with eval gates, production monitoring/drift.</li>
+          <li>IBM / agility-at-scale — CAIO role failure patterns; hub-and-spoke operating models ~36% higher ROI than decentralized.</li>
+          <li>Workday (2026, via CIO.com) — ~40% of AI time savings lost to reworking AI output when roles are not redesigned; HBS — talent-density amplification; WEF — workforce/skills shift.</li>
+        </ul>
+
+        <h4>Security &amp; reliability</h4>
+        <ul>
+          <li>OWASP — <em>Top 10 for LLM Applications (v2025)</em> and <em>Top 10 for Agentic Applications (2026)</em>: prompt injection, sensitive-information disclosure, improper output handling, excessive agency, vector/embedding weaknesses, unbounded consumption.</li>
+          <li>IDC / IBM / Harmonic Security — shadow AI: 56% of employees use unauthorized AI tools; sensitive-data exposure on consumer tiers; ~$670K higher average breach cost with high shadow-AI.</li>
+          <li>LLM observability/eval practice — hallucination and silent drift require quality monitoring beyond uptime; red-teaming now expected.</li>
+        </ul>
+
+        <h4>Regulation</h4>
+        <ul>
+          <li>EU AI Act — four-tier risk model; staggered obligations (prohibited practices + AI literacy from Feb 2025; GPAI from Aug 2025; high-risk + transparency + GPAI enforcement from Aug 2026; product-embedded high-risk from Aug 2027); penalties up to €35M or 7% of global turnover. A 2026 "Digital Omnibus" amendment may shift high-risk dates — verify current status.</li>
+          <li>NIST — <em>AI Risk Management Framework 1.0</em> (Govern / Map / Measure / Manage) and the Generative AI Profile.</li>
+          <li>ISO/IEC 42001:2023 — certifiable AI management system.</li>
+          <li>US patchwork — NYC Local Law 144 (AEDT bias audits, live since 2023); California AI Transparency Act (SB 942 / AB 853); Colorado AI Act (postponed and, in 2026, repealed-and-replaced — verify the replacement law); revised federal bank model-risk guidance (2026, superseding SR 11-7).</li>
+          <li>Sector overlays — fintech (model-risk management), healthtech (HIPAA + FDA SaMD / PCCPs), legaltech (ABA Formal Opinion 512; UPL).</li>
+        </ul>
+
+        <h4>Value &amp; economics</h4>
+        <ul>
+          <li>FinOps / CloudZero (2025) — ~84% of companies report AI infrastructure cutting gross margin by 6%+; AI-native product margins trending well below traditional SaaS.</li>
+          <li>Drivetrain / CFO practice (2025) — track cost per workflow, AI cost as % of COGS, contribution margin by segment; power-user concentration as a margin risk; balanced AI scorecard with outcome-appropriate cadence.</li>
+        </ul>
+
+        <h4>Engineering transformation (IIIBC field synthesis)</h4>
+        <ul>
+          <li>Theory of constraints applied to engineering: ~30–40% of effort is coding, 60–70% is surrounding work; a 10× coding speedup yields only 2–3× overall without process redesign — measure where time goes first.</li>
+          <li>Spec-first / verification-first delivery: "AI executes; the engineer specifies and verifies." Specs become the new code review; build verification infrastructure before scaling AI code generation.</li>
+          <li>Multi-agent chains (planner → implementer → reviewer) over single trusted agents; agent-ready codebases (monorepos, <code>AGENT.md</code>, clean boundaries) as a prerequisite.</li>
+          <li>Engineering AI maturity &amp; cost curve (L1–L5, ~$20 → ~$20,000 per engineer per month) and the new measurement stack (AI code share, complexity-adjusted velocity, code turnover ratio, cost per ticket/feature, DX pulse).</li>
+          <li>New risk classes: bad code at scale, activity bloat, runaway token spend, single-vendor dependency, agent tech debt. Enterprise alignment (procurement, security, legal, finance, HR) is the gating factor; accountability for outcomes remains human.</li>
+        </ul>
+
+        <div class="appendix__caveat"><strong>Calibration caveats.</strong> Several 2026 regulatory items (EU Digital Omnibus, Colorado repeal-and-replace, revised US bank model-risk guidance) were in flux at publication; verify the specifics applicable to your markets. Pilot-failure statistics (95% / 85% / 88%) come from different studies with different definitions and are directionally — not precisely — comparable.</div>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <img src="assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+        <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>Structured AI strategy for technology operators who demand more than slide decks.</p>
+        <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+      </div>
+      <div>
+        <p style="font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;color:var(--mist);text-transform:uppercase;margin-bottom:var(--s3);">Contact</p>
+        <p style="font-size:14px;"><a href="mailto:contact@iiibc.com" style="color:#fff;">contact@iiibc.com</a></p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 IIIBC — Beyond Cognition. All rights reserved.</span>
+      <span class="mono">Assessment v1.1 · Technology-Driven Business Edition</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   ASSESSMENT MODEL — Technology-Driven Business Edition
+   ============================================================ */
+const LEVELS = ['Foundational','Developing','Capable','Advanced'];
+
+// bands: [maxForFoundational, maxForDeveloping, maxForCapable] (Advanced = above)
+const SECTIONS = [
+  { id:1, title:"AI Strategy & Leadership Alignment", short:"Strategy & Leadership",
+    sub:"Does a technical leader actually steer AI — or is it drifting bottom-up?",
+    intro:"McKinsey's <em>State of AI 2025</em> found the binding constraint on AI value is not employee willingness but <strong>leaders not steering fast enough</strong> — only ~1% of companies self-assess as \"AI mature.\" For founder- and CTO-led growth firms, AI direction is often informal. This section assesses whether AI has an owner, a thesis, and a prioritized portfolio.",
+    bands:[6,12,17],
+    impl:{"Foundational":"AI is drifting bottom-up; establish ownership and a position before spending more.","Developing":"A direction exists; sharpen the competitive thesis and prioritize the portfolio.","Capable":"Leadership is aligned; focus on resourcing the one initiative that moves competitive position.","Advanced":"Strategy is a strength; press the advantage and instrument it tightly."},
+    questions:[
+      "A named senior leader (CTO, CEO, CDO, or CAIO) owns AI strategy accountability — including the authority to prioritize, fund, and kill or scale initiatives.",
+      "Leadership can articulate a clear <strong>AI position</strong> — whether the company is an aggressive adopter, fast follower, or risk-conservative operator — and the rationale for it.",
+      "We have a documented <strong>competitive thesis</strong> on AI: where AI widens our moat, where it commoditizes us, and which AI-native entrants could disintermediate us.",
+      "We maintain a <strong>prioritized portfolio</strong> of AI initiatives, each traceable to a business outcome — rather than scattered, team-level experiments.",
+      "We can name the single AI initiative in the next 12 months that would most change our competitive position — and we are resourcing it deliberately.",
+      "Our <strong>build-vs-buy</strong> decisions are made deliberately: we build only where AI is a true product differentiator and buy/integrate commodity capability. (Research signal: buying/partnering succeeds ~67% of the time vs. ~33% for internal builds — MIT, 2025.)",
+      "The board or investors are engaged on AI as a strategic topic, and leadership can answer their AI ROI and governance questions with evidence, not assertions."
+    ]},
+  { id:2, title:"Data Readiness & Proprietary Advantage", short:"Data & Proprietary Advantage",
+    sub:"Is your data ready to power AI — and does it compound into a moat?",
+    intro:"Gartner forecasts that <strong>60% of AI projects will be abandoned through 2026 due to data that is not AI-ready</strong> (≈80% for generative AI). For technology operators, proprietary data is also the durable moat that foundation models cannot replicate. This section assesses both readiness and advantage.",
+    bands:[6,12,17],
+    impl:{"Foundational":"Data infrastructure and governance must be addressed before AI is viable at scale.","Developing":"Targeted data quality, lineage, and access work unlocks AI potential.","Capable":"Data supports production AI; prioritize use cases matching your strongest data.","Advanced":"Data is a strategic asset and a moat; compound it deliberately."},
+    questions:[
+      "We have an inventory of the data we collect and store across the product and operations, with clear classification of sensitivity.",
+      "Our data is <strong>AI-ready</strong> for our priority use cases — representative of real patterns and edge cases, consistently labeled, and clean enough to ground a model (not just demo-clean).",
+      "We have <strong>data lineage</strong> — we can trace an AI-relevant output back through its sources and transformations. (Only ~30% of organizations have this visibility; it is a top reason AI audits fail.)",
+      "We hold <strong>proprietary data</strong> (transactional, behavioral, clinical, or domain-specific) structured so that it compounds as a competitive advantage as the product is used.",
+      "Our data is <strong>accessible to AI tools</strong> through documented APIs, a data catalog, or pipelines — data is not stranded in silos that AI cannot reach.",
+      "We have a data governance policy defining ownership, access controls, retention, and acceptable use — including which data may be sent to third-party AI services.",
+      "Where we ground models in company knowledge, we use an appropriate mechanism (e.g., retrieval-augmented generation) rather than ad-hoc copy-paste, with controls against retrieval/embedding leakage."
+    ]},
+  { id:3, title:"AI Platform, Engineering & Software Delivery", short:"Platform & Engineering",
+    sub:"Can you ship AI to production reliably — and is AI re-engineering how you build software?",
+    intro:"This section covers two axes that matter to a technology operator: shipping <strong>AI in your product</strong> (MLOps/LLMOps) and using <strong>AI to transform your own software delivery</strong> (the SDLC). Roughly <strong>only one-third of AI initiatives reach production</strong>; most growth-stage companies sit at MLOps maturity level 0–1. On the delivery side, only ~30–40% of engineering effort is spent writing code — so a 10× coding speedup yields only a 2–3× overall gain if the surrounding workflows are unchanged. The most expensive mistake teams make in 2026 is scaling AI code generation <em>before</em> building the verification infrastructure (tests, validators, guardrails) to catch what it produces.",
+    reference:`<div class="sec__ref">
+      <div class="sec__ref-label">Reference · self-placement</div>
+      <h4>Engineering AI Maturity &amp; Cost</h4>
+      <p>Where does your engineering organization sit on the AI delivery curve? Monthly AI cost per engineer scales ~1,000× across these levels — token spend is becoming a real line item on engineering budgets.</p>
+      <table class="ref-table">
+        <thead><tr><th>Level</th><th>Mode</th><th>Monthly AI cost / engineer</th><th>Implication</th></tr></thead>
+        <tbody>
+          <tr><td>L1–L2</td><td>AI-assisted / augmented (autocomplete, chat)</td><td>~$20</td><td>Tool adoption; little process change</td></tr>
+          <tr><td>L3</td><td>Spec-centric (spec-first; AI implements to spec)</td><td>~$200</td><td>Process redesign begins; verification-first</td></tr>
+          <tr><td>L4</td><td>Agentic (chained agents plan/implement/review)</td><td>~$2,000</td><td>Cost shifts from headcount to compute</td></tr>
+          <tr><td>L5</td><td>Full autonomy (agents own multi-step delivery)</td><td>~$20,000</td><td>Capital-vs-operating mix reshapes workforce planning</td></tr>
+        </tbody>
+      </table>
+      <p class="ref-note"><strong>Three cost levers for the C-suite:</strong> (1) <strong>model specialization</strong> — expensive reasoning models for planning only, cheap fast models for bulk implementation; (2) <strong>own the inference stack where it earns its keep</strong> — rented APIs for experiments, but sovereign workloads (regulated data, residency, 24/7 ops) may justify an in-house AI Factory; (3) <strong>capital vs. operating mix</strong> — higher maturity trades engineer headcount for inference spend; plan the curve, don't lag it. Agent-ready codebases (monorepos, <code>AGENT.md</code> onboarding docs, clean module boundaries) are a prerequisite — legacy codebases that frustrate humans frustrate agents at machine speed.</p>
+    </div>`,
+    bands:[5,10,15],
+    impl:{"Foundational":"AI lives in notebooks and demos; build the path to production first.","Developing":"Basics exist; add versioning, evals, and observability before scaling.","Capable":"Production engineering supports multiple AI features; harden monitoring and rollback.","Advanced":"Mature LLMOps; AI ships and is governed like any production system."},
+    questions:[
+      "We have a defined path to deploy AI features to production — with a separation between staging/experimentation and production environments.",
+      "We <strong>version and peer-review</strong> the things that determine AI behavior: prompts, models, retrieval configuration, and (where relevant) training data and features. Where AI generates production code, <strong>specifications and tests are checked into the repo, versioned, and reviewed</strong> — the spec is the new code review.",
+      "We run <strong>evaluation suites and regression tests</strong> on AI outputs before promoting a prompt or model change — using domain-specific test cases, not just vendor benchmarks. Verification infrastructure is built <em>before</em> scaling AI code generation, and where agents write code we use a <strong>chain (planner → implementer → independent reviewer)</strong> rather than trusting one agent end-to-end.",
+      "We have <strong>production observability</strong> for AI: logging and tracing of prompts, responses, latency, and cost, with alerting on anomalies (including multi-step/agent traces).",
+      "We can <strong>roll back</strong> a prompt or model change quickly when quality regresses, and a named owner is responsible for each production AI system's lifecycle.",
+      "Our infrastructure supports AI cost controls at the engineering layer — rate limiting, quotas, caching, and model routing — so usage cannot cause runaway spend."
+    ]},
+  { id:4, title:"People, Talent & Human-AI Collaboration", short:"People & Talent",
+    sub:"Do your people — and your workflows — actually capture the value?",
+    intro:"McKinsey found <strong>workflow redesign is the single strongest predictor of AI business impact</strong>, yet ~75% of adopters have not redesigned any workflow. Separately, ~40% of AI time savings is lost re-working AI output when roles are not redesigned (Workday, 2026). As AI executes more of the work, <strong>human leverage moves upstream</strong>: engineers operate more as architects and specifiers, and managers review designs and specs rather than diffs. But <strong>accountability for outcomes stays human</strong> — AI can draft, execute, and review, but it cannot own a result. This section assesses human readiness and workflow design.",
+    bands:[6,12,17],
+    impl:{"Foundational":"Invest in AI literacy and a first workflow redesign before scaling tools.","Developing":"Champion-led adoption with workflow redesign is the right entry point.","Capable":"People are ready; close the two-track gap and protect against skill atrophy.","Advanced":"Talent density and workflow design are a strength; scale at organizational pace."},
+    questions:[
+      "AI fluency is <strong>broad-based</strong> across relevant teams — not concentrated in a small, unsupported minority (the \"two-track\" divide between AI users and non-users).",
+      "We have <strong>redesigned at least one core workflow</strong> around AI — re-engineering roles, handoffs, and accountability (e.g., engineers shifting toward specification and verification; reviewers focusing on designs over diffs) — rather than bolting AI onto an unchanged process.",
+      "We have a deliberate <strong>upskilling / change-management</strong> approach (AI champions, enablement, manager sponsorship) — not just a tool rollout.",
+      "Where we have an AI leader or function, they have a real mandate: a reporting line to senior leadership, a pilot budget, and data access — not a \"vanity title.\" (Two-thirds of new AI leaders spend year one merely compiling inventories.)",
+      "We have internal <strong>AI builder talent</strong> (or a deliberate plan to acquire it) proportionate to what we have chosen to build vs. buy.",
+      "We have safeguards against <strong>over-reliance and skill atrophy</strong> — AI augments expert judgment rather than quietly replacing it in high-stakes work.",
+      "Institutional knowledge is preserved so AI systems and workflows are not dependent on a single person; turnover does not break them."
+    ]},
+  { id:5, title:"Governance, Risk & Operating Model", short:"Governance & Operating Model",
+    sub:"Is AI governed proportionately — or is risk concentrating in the gaps?",
+    intro:"A lightweight-but-real governance posture is appropriate for growth-stage firms — but <em>absence</em> of governance is exactly where unmanaged risk concentrates. Hub-and-spoke (\"hybrid\") operating models deliver ~36% higher AI ROI than decentralized ones (IBM). Critically, <strong>engineering cannot transform unilaterally</strong>: enterprise alignment across procurement, security, legal, finance, and HR is the gating factor — an AI Factory built without cost guardrails, data sovereignty, or role realignment stalls. This section assesses governance proportionate to your stage and data sensitivity.",
+    bands:[6,12,17],
+    impl:{"Foundational":"Establish a lightweight AI policy, acceptable-use policy, and model inventory immediately.","Developing":"Core artifacts exist; add human-in-the-loop rules and a defined operating model.","Capable":"Governance is functioning; formalize the council and embed risk as a design input.","Advanced":"Governance is a competitive asset; ready for enterprise buyers and audits."},
+    questions:[
+      "We have an <strong>AI policy</strong> stating principles, roles, and approval gates for higher-risk use cases — proportionate to our stage and the sensitivity of our data.",
+      "We have an <strong>acceptable-use policy</strong> for employee use of public/third-party AI tools, and staff know what data may and may not be entered into them.",
+      "We maintain an <strong>AI risk register</strong> and a <strong>model inventory</strong> — we can list the AI systems we operate (including third-party and product-embedded), their purpose, risk level, and owner.",
+      "We have defined <strong>human-in-the-loop rules</strong>: where a human must review or be able to override an AI-influenced consequential decision.",
+      "We have an <strong>incident detection and escalation</strong> path for AI failures or harms — when an AI system produces a wrong or damaging output, people know what to do.",
+      "We have a defined <strong>operating model</strong> for AI (centralized, federated, or hub-and-spoke) and a cross-functional AI council spanning engineering, security, legal, finance, and HR — so the organization moves along the AI maturity curve together rather than engineering transforming alone.",
+      "Risk, safety, and bias are treated as <strong>design inputs</strong> in new AI work — not a bolt-on review at the end."
+    ]},
+  { id:6, title:"Security & Operational Reliability", short:"Security & Reliability",
+    sub:"Are your AI systems safe from attack, leakage, and silent failure?",
+    intro:"The <strong>OWASP Top 10 for LLM Applications (2025)</strong> and <strong>for Agentic Applications (2026)</strong> define the modern AI attack surface — prompt injection, sensitive-information disclosure, excessive agency, and more. Meanwhile <strong>56% of employees use unauthorized AI tools</strong> (IDC), and shadow AI raises average breach cost by ~$670K (IBM). AI also creates entirely new risk classes that did not exist three years ago: <strong>bad code at scale, activity bloat (motion mistaken for progress), runaway token spend, single-vendor dependency, and agent tech debt.</strong> This section assesses AI security and reliability.",
+    bands:[6,12,17],
+    impl:{"Foundational":"Shadow-AI and injection exposure is likely live today; close it first.","Developing":"Basic controls exist; add drift monitoring, red-teaming, and vendor diligence.","Capable":"Security is structured; tighten agentic controls and reliability monitoring.","Advanced":"AI security is mature and defensible to customers and regulators."},
+    questions:[
+      "We can map our AI controls to a recognized framework (e.g., OWASP Top 10 for LLMs) and have addressed <strong>prompt injection</strong> (direct and indirect) and <strong>insecure output handling</strong> for any AI that feeds downstream systems.",
+      "We have controls against <strong>shadow AI / data leakage</strong>: an approved-tool catalog, guidance (or DLP) preventing sensitive data from being pasted into consumer AI tools, and a path to discover unsanctioned use.",
+      "We monitor for <strong>hallucination and quality degradation</strong> in high-stakes outputs — not just uptime and latency — because fluent wrong answers pass normal monitoring.",
+      "We monitor for <strong>model and data drift</strong> over time, including provider-side model updates that can silently change behavior.",
+      "We <strong>red-team / adversarially test</strong> AI systems for jailbreaks, injection, and data exfiltration before and after release, proportionate to risk.",
+      "Where we use <strong>autonomous agents</strong> with tool or system access, they run under least-privilege scopes, with human approval gates for high-impact actions and an answer to \"what can this agent access?\"",
+      "We conduct <strong>vendor / foundation-model due diligence</strong>: data-use and training opt-out, retention, data residency, SOC 2, a signed DPA, and an assessment of lock-in / failover risk — including whether sovereign workloads (regulated data, residency, 24/7 ops) justify in-house inference (owned GPUs/weights) rather than rented APIs."
+    ]},
+  { id:7, title:"Regulatory & Compliance Readiness", short:"Regulatory & Compliance",
+    sub:"Can you defend your AI to regulators, enterprise buyers, and courts?",
+    intro:"The regulatory baseline is rising fast: the <strong>EU AI Act</strong> (staggered obligations through 2026–2027, penalties up to €35M or 7% of global turnover), the <strong>NIST AI RMF</strong>, and certifiable <strong>ISO/IEC 42001</strong> are now reference points — with sector overlays for fintech, healthtech, and legaltech. This section assesses compliance readiness. <em>(See the research note below for current dates; several 2026 items are in flux — verify the specifics that apply to you.)</em>",
+    bands:[5,10,15],
+    impl:{"Foundational":"Map your regimes and risk-tier your systems before regulation or a buyer forces it.","Developing":"Awareness exists; adopt a framework and meet the nearest deadlines.","Capable":"Compliance is structured; formalize transparency and sector overlays.","Advanced":"Compliance is a sales advantage (e.g., ISO 42001) and a moat as rules tighten."},
+    questions:[
+      "We know <strong>which AI regimes apply to us</strong> by market and by use case, and we can place each AI system in the correct risk tier (e.g., EU AI Act unacceptable / high / limited / minimal).",
+      "We track the <strong>enforcement timeline</strong> for obligations that affect us (e.g., EU AI Act GPAI and high-risk dates, transparency/labeling for AI-generated content) and have a plan to meet them.",
+      "We have adopted (or mapped our practices to) a recognized framework such as the <strong>NIST AI RMF</strong> or <strong>ISO/IEC 42001</strong>, calibrated to the strictest obligation we face.",
+      "We meet <strong>transparency obligations</strong> where they apply: disclosing AI chatbots, labeling AI-generated/synthetic content, and providing provenance where required.",
+      "We address the <strong>sector overlay</strong> that applies to us — e.g., model-risk-management expectations (fintech), HIPAA + FDA SaMD obligations (healthtech), or professional-responsibility/confidentiality duties (legaltech).",
+      "Where we use AI in <strong>consequential decisions</strong> (hiring, credit, eligibility), we meet applicable obligations (e.g., bias audits such as NYC Local Law 144, impact assessments, candidate/consumer notice)."
+    ]},
+  { id:8, title:"AI Value, ROI & Unit Economics", short:"Value & Unit Economics",
+    sub:"Can you prove AI is working — and that it does not quietly destroy your margin?",
+    intro:"<strong>95% of enterprise generative-AI pilots show zero measurable P&amp;L return</strong> (MIT, 2025) — the cause is integration and measurement, not model quality. Meanwhile ~84% of companies report AI infrastructure cutting gross margins by 6%+ (FinOps, 2025). The old engineering metrics (lines of code, raw PR velocity, defect count, cost per engineer) no longer capture AI's effect; without a refreshed measurement stack, <strong>AI investment is unfalsifiable and unprovable.</strong> This section assesses whether AI is measured like a business investment.",
+    reference:`<div class="sec__ref">
+      <div class="sec__ref-label">Reference</div>
+      <h4>The New Measurement Stack</h4>
+      <p>As AI reshapes engineering, the metrics that prove (or disprove) its value shift. Replacing the left column with the right is what makes AI investment falsifiable.</p>
+      <table class="ref-table">
+        <thead><tr><th>Old metric</th><th>New metric</th></tr></thead>
+        <tbody>
+          <tr><td>Lines of code</td><td>AI code share (% AI-generated)</td></tr>
+          <tr><td>PR / raw velocity</td><td>Complexity-adjusted velocity</td></tr>
+          <tr><td>Defect count</td><td>Code turnover ratio (churn of recently shipped code)</td></tr>
+          <tr><td>Cost per engineer</td><td>Cost per ticket / cost per feature</td></tr>
+          <tr><td>Annual engagement survey</td><td>Quarterly developer-experience (DX) pulse</td></tr>
+        </tbody>
+      </table>
+    </div>`,
+    bands:[5,10,15],
+    impl:{"Foundational":"AI value is anecdotal; build a scorecard before spending more.","Developing":"Some metrics exist; tie initiatives to business KPIs and track unit economics.","Capable":"Measurement is working; protect margin and enforce production-vs-pilot discipline.","Advanced":"AI is run like a P&L; value and economics are instrumented and defensible."},
+    questions:[
+      "Each material AI initiative is <strong>mapped to a business KPI</strong> the board already reviews — if it cannot be mapped to a real outcome, that is treated as a red flag.",
+      "We track <strong>adoption and depth-of-use</strong> for AI tools (active use per seat, tasks per user) — and we treat adoption as a leading indicator, not proof of value on its own.",
+      "We know what <strong>share of our AI work is in production vs. pilots</strong>, and we deliberately move proven pilots into production rather than accumulating experiments.",
+      "We track <strong>AI unit economics</strong>: cost per workflow / per ticket / per feature (not raw token count), AI cost as a % of COGS, and contribution margin — and we treat token spend as a managed engineering budget line, forecastable with reasonable confidence.",
+      "We have a <strong>margin-protection plan</strong> for AI in the product (caching, batching, model routing, fine-tuning, or usage-aligned pricing) so heavy users do not erode gross margin.",
+      "We run a <strong>measurement cadence</strong>: operational metrics reviewed weekly/monthly and business-value metrics quarterly, with named owners — so AI is navigated, not assumed."
+    ]},
+];
+
+const OPT_TEXT = [
+  {n:'0', t:'Not in place'},
+  {n:'1', t:'Awareness only'},
+  {n:'2', t:'In progress'},
+  {n:'3', t:'Fully in place'}
+];
+
+const MAX_TOTAL = SECTIONS.reduce((a,s)=>a + s.questions.length*3, 0); // 159
+
+// Overall profile bands [upper bound, profile, path, narrative]
+const PROFILES = [
+  {max:39,  profile:'AI Unaware',   path:'Foundation work only',
+   narr:'Focus on the basics first: AI ownership, an AI policy and acceptable-use policy, shadow-AI control, and data fundamentals. Adopting more tools before these are in place adds risk without return — this is the responsible place to start.'},
+  {max:79,  profile:'AI Exploring', path:'Structured strategy + low-risk internal pilots',
+   narr:'Pair a structured AI strategy with low-risk internal pilots that touch no regulated or customer data. Close your governance and security gaps in parallel, and build internal evidence before moving into product-embedded use.'},
+  {max:119, profile:'AI Developing', path:'Move proven pilots to production',
+   narr:'Move proven pilots into production with governance and measurement. Stand up MLOps/LLMOps, a real operating model, and the metrics that prove value — and start tracking unit economics before margin erodes.'},
+  {max:139, profile:'AI Capable',   path:'Develop an org-wide AI strategy & department blueprint',
+   narr:'You are positioned to develop an organization-wide AI strategy and department blueprint — operating-model design, governance, and a full risk register. Instrument value and margin, and treat governance as a buyer-facing asset.'},
+  {max:159, profile:'AI Leading',   path:'Press the advantage as a category leader',
+   narr:'Press the advantage: differentiated product-embedded AI grounded in a proprietary-data moat, agentic workflows under tight control, and compliance as a sales asset. Your readiness is itself a competitive position worth pressing.'}
+];
+
+const USE_CASES = {
+  low:{ intro:'Start here — low risk, fast value, no exposure of regulated or customer data:',
+    items:[
+      ['Internal knowledge assistant','RAG over docs/wikis for support and onboarding (governed tier, no consumer tools).'],
+      ['Engineering acceleration','Code assistance with review gates and IP-safe configuration.'],
+      ['Content & GTM drafting','Marketing, sales collateral, and proposal drafts with human review.'],
+      ['Meeting & ticket summarization','Reduce internal admin burden with AI-assisted summaries.']
+    ]},
+  mid:{ intro:'Move proven pilots into production with governance and measurement:',
+    items:[
+      ['Customer support copilot','Deflection and agent-assist with evals, guardrails, and escalation.'],
+      ['Internal ops automation','Back-office automation — where the largest measured ROI tends to sit.'],
+      ['Sales / pipeline intelligence','Lead scoring and proposal automation tied to win-rate metrics.'],
+      ['Product-embedded AI (v1)','A customer-facing AI feature with latency/cost SLAs and eval coverage.']
+    ]},
+  high:{ intro:'You are ready for strategic and product-defining AI:',
+    items:[
+      ['Differentiated product-embedded AI','Features grounded in proprietary data that competitors cannot replicate.'],
+      ['Proprietary-data moat','Data products and feedback loops that compound with usage.'],
+      ['Agentic workflows','Multi-step agents under least-privilege scopes and human approval gates.'],
+      ['Compliance as a product asset','ISO 42001 / auditable governance as an enterprise-sales differentiator.'],
+      ['Model-agnostic architecture','Orchestration that de-risks vendor lock-in and protects margin.']
+    ]}
+};
+
+const NEXT_STEPS = {
+  'AI Unaware':{tier:'IIIBC Engagement · Tier 1',name:'AI Strategy Diagnostic → Foundation Starter',desc:'A free 30-minute diagnostic surfaces your highest-impact gap; the Foundation Starter ($18K, 6 weeks) delivers an AI principles policy, a starter risk register, and a 90-day roadmap.'},
+  'AI Exploring':{tier:'IIIBC Engagement · Tier 1',name:'AI Strategy Diagnostic → Foundation Starter',desc:'A free 30-minute diagnostic surfaces your highest-impact gap; the Foundation Starter ($18K, 6 weeks) delivers an AI principles policy, a starter risk register, and a 90-day roadmap.'},
+  'AI Developing':{tier:'IIIBC Engagement · Tier 2',name:'AI Readiness Assessment → Pillar Framework',desc:'A full readiness assessment ($15K–$35K) plus the targeted pillar framework — e.g., the AI-Assisted SDLC & Architecture Decision Framework or the AI Governance & Compliance Framework — that closes your sharpest gap.'},
+  'AI Capable':{tier:'IIIBC Engagement · Tier 3',name:'AI Department Blueprint',desc:'Operating-model design, governance charter, full risk register, and CAIO onboarding kit ($38K–$90K), plus the Intelligence Subscription to stay current as tooling and regulation move.'},
+  'AI Leading':{tier:'IIIBC Engagement · Tier 4',name:'Embedded Advisory',desc:'A fractional CAIO / AI Strategy Director embedded 2–4 days/month, full pillar-framework library access, and positioning as a sector AI model.'}
+};
+
+const BAR_COLORS = {Foundational:'#EF4444',Developing:'#F59E0B',Capable:'#1D4ED8',Advanced:'#10B981'};
+
+// map a 5-level profile name → a 4-level color key
+function profileColorKey(p){
+  if(p==='AI Unaware') return 'Foundational';
+  if(p==='AI Exploring') return 'Developing';
+  if(p==='AI Developing') return 'Capable';
+  return 'Advanced'; // AI Capable, AI Leading
+}
+
+/* ---------- Build form ---------- */
+const sectionsRoot = document.getElementById('sections');
+SECTIONS.forEach(sec=>{
+  const max = sec.questions.length*3;
+  const wrap = document.createElement('section');
+  wrap.className='sec';
+  wrap.id='sec'+sec.id;
+  let html = `<div class="sec__head">
+      <div class="sec__num">Section ${sec.id} · max ${max} pts</div>
+      <h2 class="sec__title">${sec.title}</h2>
+      <p class="sec__sub">${sec.sub}</p>
+      ${sec.intro?`<p class="sec__intro">${sec.intro}</p>`:''}
+    </div>`;
+  sec.questions.forEach((q,i)=>{
+    const qid = `q${sec.id}_${i+1}`;
+    let opts='';
+    OPT_TEXT.forEach(o=>{
+      opts += `<label class="opt"><input type="radio" name="${qid}" value="${o.n}" data-sec="${sec.id}"><span><b>${o.n}</b>${o.t}</span></label>`;
+    });
+    html += `<div class="q" id="wrap_${qid}">
+        <span class="q__id">${sec.id}.${i+1}</span>
+        <label class="q__label" for="${qid}">${q}</label>
+        <div class="opts">${opts}</div>
+      </div>`;
+  });
+  if(sec.reference) html += sec.reference;
+  wrap.innerHTML = html;
+  sectionsRoot.appendChild(wrap);
+});
+
+/* ---------- Progress ---------- */
+const radios = () => document.querySelectorAll('#assessment input[type=radio]');
+const TOTAL_Q = SECTIONS.reduce((a,s)=>a+s.questions.length,0);
+document.getElementById('progTotal').textContent = TOTAL_Q;
+const progFill = document.getElementById('progFill');
+const progDone = document.getElementById('progDone');
+const progPct = document.getElementById('progPct');
+
+function answeredCount(){
+  const seen = new Set();
+  radios().forEach(r=>{ if(r.checked) seen.add(r.name); });
+  return seen.size;
+}
+function updateProgress(){
+  const done = answeredCount();
+  const pct = Math.round(done/TOTAL_Q*100);
+  progFill.style.width = pct+'%';
+  progDone.textContent = done;
+  progPct.textContent = pct+'%';
+}
+document.getElementById('assessment').addEventListener('change', e=>{
+  if(e.target.type==='radio'){
+    document.getElementById('wrap_'+e.target.name)?.classList.remove('is-missing');
+    updateProgress();
+  }
+});
+
+/* ---------- Scoring helpers ---------- */
+function levelFor(score, bands){
+  if(score<=bands[0]) return 'Foundational';
+  if(score<=bands[1]) return 'Developing';
+  if(score<=bands[2]) return 'Capable';
+  return 'Advanced';
+}
+function profileFor(total){
+  for(const p of PROFILES){ if(total<=p.max) return p; }
+  return PROFILES[PROFILES.length-1];
+}
+function escapeHtml(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+let lastReport = null;
+
+/* ---------- Submit ---------- */
+document.getElementById('assessment').addEventListener('submit', e=>{
+  e.preventDefault();
+  const errBox = document.getElementById('submitError');
+  errBox.style.display='none';
+
+  const email = document.getElementById('email').value.trim();
+  const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+  // find unanswered
+  const answered = new Set();
+  radios().forEach(r=>{ if(r.checked) answered.add(r.name); });
+  const missing = [];
+  SECTIONS.forEach(s=>{ for(let i=1;i<=s.questions.length;i++){ const n=`q${s.id}_${i}`; if(!answered.has(n)) missing.push(n);}});
+
+  if(!emailOk || missing.length){
+    let msgs=[];
+    if(!emailOk) msgs.push('Enter a valid email address to receive the report.');
+    if(missing.length) msgs.push(`${missing.length} question${missing.length>1?'s':''} still need an answer — they are highlighted below.`);
+    errBox.textContent = msgs.join(' ');
+    errBox.style.display='block';
+    missing.forEach(n=>document.getElementById('wrap_'+n)?.classList.add('is-missing'));
+    const target = missing.length ? document.getElementById('wrap_'+missing[0]) : document.getElementById('sec0');
+    target?.scrollIntoView({behavior:'smooth',block:'center'});
+    if(!emailOk && !missing.length) document.getElementById('email').focus();
+    return;
+  }
+
+  // compute
+  let total=0;
+  const sectionResults = SECTIONS.map(s=>{
+    let sub=0;
+    for(let i=1;i<=s.questions.length;i++){
+      const sel = document.querySelector(`input[name="q${s.id}_${i}"]:checked`);
+      sub += parseInt(sel.value,10);
+    }
+    total += sub;
+    const max = s.questions.length*3;
+    const level = levelFor(sub, s.bands);
+    return {id:s.id, title:s.title, short:s.short, score:sub, max, level, impl:s.impl[level]};
+  });
+
+  const prof = profileFor(total);
+  const org = document.getElementById('orgName').value.trim() || 'Your company';
+  lastReport = {org, email, total, prof, sectionResults};
+
+  renderReport(lastReport);
+  document.getElementById('report').style.display='block';
+  document.getElementById('report').scrollIntoView({behavior:'smooth',block:'start'});
+});
+
+/* ---------- Render report ---------- */
+function renderReport(R){
+  const dateStr = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+
+  document.getElementById('rcOrg').textContent = R.org;
+  document.getElementById('rcDate').textContent = dateStr;
+  document.getElementById('rcSub').textContent = `Prepared for ${R.org} — a calibrated diagnostic across eight readiness dimensions.`;
+
+  // verdict
+  const vColor = BAR_COLORS[ profileColorKey(R.prof.profile) ];
+  const verdict = document.getElementById('verdict');
+  verdict.style.background = `linear-gradient(110deg, var(--navy), ${shade(vColor)})`;
+  document.getElementById('vScore').textContent = R.total;
+  document.getElementById('vProfile').textContent = R.prof.profile;
+  document.getElementById('vPath').textContent = 'Recommended path: '+R.prof.path;
+  document.getElementById('vNarrative').textContent = R.prof.narr;
+
+  // scorecard
+  const body = document.getElementById('scoreBody');
+  body.innerHTML='';
+  R.sectionResults.forEach(s=>{
+    body.insertAdjacentHTML('beforeend',
+      `<tr><td>${s.id}. ${s.title}</td><td class="num">${s.score}</td><td class="num">${s.max}</td>
+       <td><span class="level-pill lvl-${s.level}">${s.level}</span></td></tr>`);
+  });
+  document.getElementById('tfScore').textContent = R.total;
+  document.getElementById('tfLevel').innerHTML = `<span class="level-pill lvl-${profileColorKey(R.prof.profile)}">${R.prof.profile}</span>`;
+
+  // bars
+  const bars = document.getElementById('bars');
+  bars.innerHTML='';
+  R.sectionResults.forEach(s=>{
+    const pct = Math.round(s.score/s.max*100);
+    bars.insertAdjacentHTML('beforeend',
+      `<div class="bar-row">
+        <span class="bar-row__label">${s.short}</span>
+        <div class="bar-row__track"><div class="bar-row__fill" data-w="${pct}" style="background:${BAR_COLORS[s.level]}"></div></div>
+        <span class="bar-row__pct">${s.score}/${s.max}</span>
+      </div>`);
+  });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    bars.querySelectorAll('.bar-row__fill').forEach(f=>f.style.width=f.dataset.w+'%');
+  }));
+
+  // gaps
+  const gaps = document.getElementById('gaps');
+  gaps.innerHTML='';
+  const weak = R.sectionResults.filter(s=>s.level==='Foundational'||s.level==='Developing')
+                    .sort((a,b)=> (a.score/a.max)-(b.score/b.max));
+  if(!weak.length){
+    gaps.innerHTML = `<div class="gap-empty">No dimension scored Foundational or Developing — a rare and strong result. Your priority shifts from closing gaps to systematizing and scaling what already works.</div>`;
+  } else {
+    weak.forEach(s=>{
+      gaps.insertAdjacentHTML('beforeend',
+        `<div class="gap-card ${s.level==='Foundational'?'is-foundational':''}">
+          <div class="gap-card__head">
+            <span class="gap-card__title">${s.id}. ${s.title}</span>
+            <span class="level-pill lvl-${s.level}">${s.level} · ${s.score}/${s.max}</span>
+          </div>
+          <div class="gap-card__action">${s.impl}</div>
+        </div>`);
+    });
+  }
+
+  // use cases by profile
+  let uc;
+  if(R.prof.profile==='AI Unaware'||R.prof.profile==='AI Exploring') uc=USE_CASES.low;
+  else if(R.prof.profile==='AI Developing') uc=USE_CASES.mid;
+  else uc=USE_CASES.high;
+  document.getElementById('ucIntro').textContent = uc.intro;
+  const ucList = document.getElementById('useCases');
+  ucList.innerHTML='';
+  uc.items.forEach(([t,d])=>{
+    ucList.insertAdjacentHTML('beforeend',
+      `<div class="uc-item"><span class="uc-mark"></span><div><b>${t}</b><span>${d}</span></div></div>`);
+  });
+
+  // next step
+  const ns = NEXT_STEPS[R.prof.profile];
+  document.getElementById('nextStep').innerHTML =
+    `<div class="tier">${ns.tier}</div>
+     <h4>${ns.name}</h4>
+     <p>${ns.desc}</p>
+     <a href="index.html#diagnostic" class="btn btn--primary">Discuss this engagement →</a>`;
+
+  // email panel
+  document.getElementById('emailTarget').textContent = R.email;
+  document.getElementById('emOrg').textContent = `${R.org} — AI Readiness Report`;
+  document.getElementById('emIntro').textContent =
+    `Thank you for completing the IIIBC AI Readiness Assessment (Technology-Driven Business Edition). Here is the headline result for ${R.org}.`;
+  document.getElementById('emScore').textContent = R.total;
+  document.getElementById('emProfile').textContent = R.prof.profile;
+  document.getElementById('emPath').textContent = `Recommended path: ${R.prof.path}. ${R.prof.narr}`;
+}
+
+// blend a hex toward navy for verdict gradient
+function shade(hex){
+  const n={'#EF4444':'#7f1d1d','#F59E0B':'#92500a','#1D4ED8':'#1e3a8a','#10B981':'#065f46'};
+  return n[hex]||'#1e3a8a';
+}
+
+/* ---------- Email actions ---------- */
+function plainTextReport(R){
+  const dateStr = new Date().toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});
+  let lines=[];
+  lines.push('IIIBC — AI READINESS REPORT (TECHNOLOGY-DRIVEN BUSINESS EDITION)');
+  lines.push('Prepared for: '+R.org);
+  lines.push('Date: '+dateStr);
+  lines.push('');
+  lines.push('─── OVERALL READINESS ─────────────────────────────');
+  lines.push('');
+  lines.push(`Score: ${R.total} / ${MAX_TOTAL}`);
+  lines.push(`Profile: ${R.prof.profile}`);
+  lines.push(`Recommended path: ${R.prof.path}`);
+  lines.push('');
+  lines.push(R.prof.narr);
+  lines.push('');
+  lines.push('─── DIMENSION SCORECARD ───────────────────────────');
+  lines.push('');
+  R.sectionResults.forEach(s=>{
+    lines.push(`${s.id}. ${s.title}`);
+    lines.push(`   ${s.score}/${s.max} — ${s.level}`);
+  });
+  lines.push('');
+  lines.push('─── PRIORITY GAPS ─────────────────────────────────');
+  lines.push('');
+  const weak = R.sectionResults.filter(s=>s.level==='Foundational'||s.level==='Developing');
+  if(!weak.length){ lines.push('No Foundational or Developing dimensions — focus on scaling.'); }
+  else weak.forEach(s=>lines.push(`• ${s.title} (${s.level}): ${s.impl}`));
+  lines.push('');
+  lines.push('─── NEXT STEP WITH IIIBC ──────────────────────────');
+  lines.push('');
+  const ns=NEXT_STEPS[R.prof.profile];
+  lines.push(`${ns.name}`);
+  lines.push(ns.desc);
+  lines.push('');
+  lines.push('Book a free 30-minute diagnostic: hello@iiibc.com');
+  lines.push('');
+  lines.push('© IIIBC — Beyond Cognition | iiibc.com');
+  return lines.join('\n');
+}
+
+// Simulated send (no backend in this static sample) + confirmation
+document.getElementById('sendEmailBtn').addEventListener('click', ()=>{
+  if(!lastReport) return;
+  const status = document.getElementById('emailStatus');
+  document.getElementById('emailStatusText').textContent =
+    `Report sent to ${lastReport.email}. Check your inbox — a copy of the HTML email is previewed below.`;
+  status.classList.add('show');
+  // reveal preview
+  document.getElementById('emailPreview').style.display='block';
+  document.getElementById('previewToggle').textContent='Hide email preview ▴';
+  status.scrollIntoView({behavior:'smooth',block:'center'});
+});
+
+// mailto fallback — opens the user's real email client with the report prefilled
+document.getElementById('mailtoBtn').addEventListener('click', ()=>{
+  if(!lastReport) return;
+  const subj = `IIIBC AI Readiness Report — ${lastReport.org} — ${lastReport.prof.profile}`;
+  const bodyTxt = plainTextReport(lastReport);
+  const href = `mailto:${encodeURIComponent(lastReport.email)}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(bodyTxt)}`;
+  window.location.href = href;
+});
+
+document.getElementById('printBtn').addEventListener('click', ()=>window.print());
+
+document.getElementById('previewToggle').addEventListener('click', ()=>{
+  const p=document.getElementById('emailPreview');
+  const show = p.style.display==='none';
+  p.style.display = show?'block':'none';
+  document.getElementById('previewToggle').textContent = show?'Hide email preview ▴':'Preview the email that was sent ▾';
+});
+
+document.getElementById('restartBtn').addEventListener('click', ()=>{
+  document.getElementById('assessment').reset();
+  document.getElementById('report').style.display='none';
+  document.getElementById('emailStatus').classList.remove('show');
+  document.getElementById('emailPreview').style.display='none';
+  updateProgress();
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+
+updateProgress();
+</script>
+</body>
+</html>

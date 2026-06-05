@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module B: AI Literacy Baseline (EU AI Act Art. 4) — IIIBC Tech-Driven AI Training</title>
+  <meta name="description" content="Every person who touches an AI tool here learns what it is, how it lies, what you may and may not feed it, and when to stop and ask a human — and we log that you learned it, because the law now requires proof.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../tech-driven-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../tech-driven-training.html">All Modules</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Tech-Driven AI Training · Module B</div>
+  <h1>AI Literacy Baseline (EU AI Act Art. 4)</h1>
+  <p class="page-header__purpose">Every person who touches an AI tool here learns what it is, how it lies, what you may and may not feed it, and when to stop and ask a human — and we log that you learned it, because the law now requires proof.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Awareness</span>
+    <span class="badge badge--section">Assessment §4 — People &amp; Collaboration</span>
+    <span class="badge badge--audience">All staff · mandatory</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content</a></li>
+    <li><a href="#lab">Hands-On Lab / Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module code</dt><dd>B</dd>
+          <dt>Maps to assessment section</dt><dd>4 — People, Talent &amp; Human-AI Collaboration</dd>
+          <dt>Primary audience</dt><dd>ALL staff (mandatory) — A8 baseline; prerequisite for A1–A7</dd>
+          <dt>Competency level</dt><dd>Awareness</dd>
+          <dt>Duration</dt><dd>60–75 minutes (self-paced 45 min + 15–30 min live/team segment)</dd>
+          <dt>Format</dt><dd>Self-paced module + short live walkthrough + signed completion log</dd>
+          <dt>Prerequisites</dt><dd>None. This is the floor everyone starts on.</dd>
+          <dt>Related modules</dt><dd>F (AI for Everyone), K (Shadow AI &amp; Safe Tool Use), H (Governance &amp; Operating Model), L (AI Regulation &amp; Compliance)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>There are two reasons, and they are not the same. The first is legal. Since <strong>2 February 2025, EU AI Act Article 4</strong> has been in force: any organization that <em>provides</em> or <em>deploys</em> an AI system touching the EU market must ensure its staff — and any contractor operating AI on its behalf — have "a sufficient level of AI literacy." This is not a poster in the break room. The regulators have stated plainly that handing people a tool's usage instructions is <strong>insufficient</strong>. Enforcement begins <strong>2 August 2026</strong>. If you operate in or sell into the EU and cannot show <em>documented, role-tailored</em> literacy training, you have an open compliance gap. This module closes it, and the completion log at the end is your evidence.</p>
+      <p>The second reason is operational, and it bites sooner than any regulator will. Generative AI is now bottom-up and everywhere — staff adopt tools before policy catches up, and executives are among the heaviest unsanctioned users. An employee who does not understand that a language model can be <strong>confidently, fluently wrong</strong> will paste it into a customer email, a board deck, or a compliance filing. An employee who does not understand <strong>data classification</strong> will paste a customer record or a snippet of source code into a free chatbot whose terms allow training on the input. Each of those is a real incident waiting for a name.</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>Article 4 is the cheapest, highest-leverage compliance item on your AI roadmap. It is also the one that prevents the most expensive operational mistakes. Do it first, do it for everyone, and keep the records.</p></div>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>Research note (directional):</em> Only ~6% of staff report feeling "very comfortable" with AI, and ~48% say they would use it more with formal training. The gap is not appetite — it is a literacy floor that no one has built. This module is that floor.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this module, participants will be able to:</p>
+      <ol>
+        <li><strong>Explain in plain language</strong> what a large language model (LLM) is and what it is <em>not</em> — a predictor of likely text, not a knowledge database or a calculator.</li>
+        <li><strong>Name and recognize</strong> the three core failure modes: hallucination, bias, and confident-but-wrong output — and give an example of each from their own work.</li>
+        <li><strong>State the Article 4 obligation</strong> in one sentence and explain why "we gave them instructions" does not satisfy it.</li>
+        <li><strong>Classify data</strong> correctly using the company's four-tier scheme and decide, for any given piece of information, whether it may go into an AI tool.</li>
+        <li><strong>Identify shadow AI</strong> and choose the sanctioned alternative instead of the convenient unsanctioned one.</li>
+        <li><strong>Write a basic effective prompt</strong> and <strong>critically evaluate</strong> the output before trusting or forwarding it.</li>
+        <li><strong>Decide when to escalate</strong> — naming at least three triggers that mean "stop and ask a human."</li>
+        <li><strong>Complete and sign the AI Literacy completion log</strong>, contributing to the company's Article 4 evidence record.</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>0:00–0:05</td><td>Why you are here: the law and the liability</td><td>Live intro / video</td></tr>
+          <tr><td>0:05–0:20</td><td>Part 1 — What generative AI actually is (and isn't)</td><td>Self-paced + 1 demo</td></tr>
+          <tr><td>0:20–0:32</td><td>Part 2 — How AI fails: hallucination, bias, confident-wrong</td><td>Self-paced + examples</td></tr>
+          <tr><td>0:32–0:42</td><td>Part 3 — The Article 4 obligation (your legal baseline)</td><td>Self-paced</td></tr>
+          <tr><td>0:42–0:55</td><td>Part 4 — Acceptable use &amp; data classification (what can/can't go in)</td><td>Self-paced + sort exercise</td></tr>
+          <tr><td>0:55–1:03</td><td>Part 5 — Shadow AI safety + prompting and evaluating output</td><td>Self-paced</td></tr>
+          <tr><td>1:03–1:10</td><td>Part 6 — When to escalate</td><td>Self-paced</td></tr>
+          <tr><td>1:10–1:18</td><td>Hands-on lab: the data-sort and the prompt-critique</td><td>Live or solo</td></tr>
+          <tr><td>1:18–1:22</td><td>Knowledge check (8 questions)</td><td>Quiz</td></tr>
+          <tr><td>1:22–1:25</td><td>Sign the completion log · take the cheat sheet</td><td>Admin</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="content">
+      <h2>Core Content</h2>
+
+      <h3>Part 1 — What Generative AI Actually Is (And Isn't)</h3>
+      <p>A large language model is a system trained on enormous amounts of text to do one thing: <strong>predict the next most likely word</strong> (technically, the next "token") given everything before it. Chatbots like ChatGPT, Claude, Gemini, and Microsoft Copilot are LLMs wrapped in a friendly chat interface. When you ask a question, the model is not "looking up" an answer. It is generating text that <em>statistically resembles</em> a good answer based on patterns it learned in training.</p>
+      <p>That single fact explains almost everything else in this module. The model is fluent, confident, and grammatical — because it learned from fluent, confident, grammatical text. Fluency is not accuracy. The model can produce a beautifully worded, completely false statement with exactly the same confidence as a true one, because to the model they are the same kind of object: likely text.</p>
+      <pre><code>   YOU TYPE                 THE MODEL DOES                 YOU GET BACK
+ &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;   &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;   &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+ &#x2502; a question&#x2502; &#x2192; &#x2502; predicts likely next words, one   &#x2502; &#x2192; &#x2502; fluent text&#x2502;
+ &#x2502; or task   &#x2502;   &#x2502; at a time, from learned patterns  &#x2502;   &#x2502; (maybe true&#x2502;
+ &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;   &#x2502; &#x2014; NOT a lookup, NOT a calculator  &#x2502;   &#x2502;  maybe not)&#x2502;
+                 &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;   &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+        It optimizes for "sounds right," NOT "is right."</code></pre>
+      <p><strong>What it is good at:</strong> drafting, summarizing, rephrasing, brainstorming, explaining a concept, translating tone, generating first-draft code or text you will review.</p>
+      <p><strong>What it is NOT:</strong> a search engine you can trust without checking, a database of facts, a calculator, a lawyer, a doctor, or a substitute for your own judgment. (Many tools now <em>add</em> web search or a calculator on top of the model — useful, but it does not change the rule below.)</p>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Treat every AI tool as a brilliant, fast, eager intern who has read everything and remembers some of it wrong, never says "I don't know," and will confidently invent a citation rather than admit a gap. You would not forward an intern's first draft to a client unreviewed. Same rule here.</p></div>
+      <p><strong>Do / Don't</strong></p>
+      <table>
+        <thead><tr><th>Do</th><th>Don't</th></tr></thead>
+        <tbody>
+          <tr><td>Use AI to draft, then verify the facts yourself</td><td>Treat output as a verified source of truth</td></tr>
+          <tr><td>Ask it to explain its reasoning so you can check it</td><td>Assume confidence means correctness</td></tr>
+          <tr><td>Use it for tasks where you can judge the answer</td><td>Use it for things you cannot check and cannot afford to get wrong</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Part 2 — How AI Fails: Hallucination, Bias, Confident-But-Wrong</h3>
+      <p>There are three failure modes everyone must recognize on sight.</p>
+      <p><strong>1. Hallucination.</strong> The model produces information that is fabricated but plausible: a fake legal case, a non-existent statistic, a citation to a paper that was never written, a quote no one said, an API function that does not exist. It is not "lying" — it is doing exactly what it was built to do (produce likely text) in a situation where the likely text happens to be false.</p>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>Example:</em> A staffer asks for "three peer-reviewed studies showing X." The model returns three studies with titles, authors, journals, and years — and two of them do not exist. Every detail looks real because the model has seen thousands of real citations and generated text in that shape.</p></div>
+      <p><strong>2. Bias.</strong> The model learned from human-written text, which carries human biases. It can reproduce or amplify stereotypes about gender, race, age, and other attributes — in hiring language, in who it assumes holds which job, in tone toward different groups, in which examples it reaches for first. Bias is most dangerous in <strong>consequential decisions</strong> (hiring, lending, eligibility, content moderation), which is exactly where extra human review is mandatory.</p>
+      <p><strong>3. Confident-but-wrong.</strong> This is the meta-failure that makes the other two dangerous. The model has no built-in signal for its own uncertainty in the way a careful human does. A wrong answer arrives in the same fluent, assured tone as a right one. There is no flashing red light. The burden of doubt is entirely on you.</p>
+      <pre><code>  &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+  &#x2502;  HALLUCINATION   &#x2192;  invented facts, fake citations         &#x2502;
+  &#x2502;  BIAS            &#x2192;  reproduces/amplifies human stereotypes  &#x2502;
+  &#x2502;  CONFIDENT-WRONG &#x2192;  same calm tone for true AND false       &#x2502;
+  &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+        The fix for all three is the same: a human verifies.</code></pre>
+      <div class="callout callout--risk"><span class="callout__label">Risk flag</span><p>The higher the stakes, the more verification you owe. A brainstorm of blog headlines needs almost none. A statistic going into investor materials, a clause in a contract, a dosage, a financial figure, or anything a regulator could read needs full, independent verification — every time.</p></div>
+
+      <h3>Part 3 — The Article 4 Obligation (Your Legal Baseline)</h3>
+      <p>This module <em>is</em> the company's Article 4 control. You should understand what the obligation is so you understand why we log it.</p>
+      <p><strong>The rule, in one sentence:</strong> Anyone who provides or deploys AI systems in the EU must ensure staff and contractors operating AI on their behalf have a <em>sufficient level of AI literacy</em>.</p>
+      <p>Two things matter in that sentence:</p>
+      <ul>
+        <li><strong>"Provider AND deployer."</strong> You do not have to <em>build</em> AI to be covered. If you <em>use</em> a third-party AI tool in your work, your company is a <strong>deployer</strong>, and the obligation applies. Almost every company is now a deployer.</li>
+        <li><strong>"Sufficient AI literacy."</strong> The European Commission and major law firms have been explicit: <strong>distributing usage instructions is not enough.</strong> Sufficient literacy means people understand, at minimum:
+          <ul>
+            <li>what AI is and how it can fail,</li>
+            <li>whether the company is building or merely using a given system,</li>
+            <li>the specific risks of the systems they actually touch,</li>
+            <li>and content <strong>tailored to their technical level and role</strong> — a non-technical sales rep and a platform engineer need different depth.</li>
+          </ul>
+        </li>
+      </ul>
+      <p>And it must be <strong>documented</strong>. Training that happened but cannot be evidenced does not help you in an audit.</p>
+      <pre><code>  ARTICLE 4 &#x2014; minimum sufficient literacy
+  &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+  &#x2502; general understanding of AI ........... Part 1 + 2        &#x2502;
+  &#x2502; build-vs-deploy posture awareness ..... Part 3 (this part)&#x2502;
+  &#x2502; risk awareness for systems you use .... Part 2 + 4        &#x2502;
+  &#x2502; tailored to staff technical level ..... role-based tracks &#x2502;
+  &#x2502; DOCUMENTED COMPLETION ................. the log, signed   &#x2502;
+  &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+  In force 2 Feb 2025 · Enforcement begins 2 Aug 2026</code></pre>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>"We told everyone to be careful with ChatGPT" is not Article 4 compliance. "Here is the dated, signed completion log showing every employee and contractor completed role-tailored AI literacy training, version 1.0" is.</p></div>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>Waiting for the August 2026 enforcement date to start. The obligation has been in force since February 2025; the log you build now is the record you will be asked for later. Procrastination here is the most common — and most avoidable — gap.</p></div>
+
+      <h3>Part 4 — Acceptable Use &amp; Data Classification (What Can and Can't Go In)</h3>
+      <p>The single most common way staff create risk is by <strong>putting the wrong data into an AI tool</strong>. Once you paste something into a tool, you may have no control over whether it is stored, logged, reviewed by humans, or used to train a future model. The rule is simple: <strong>classify before you paste.</strong></p>
+      <p>We use four data tiers. Learn them — this is the part you will use every single day.</p>
+      <table>
+        <thead><tr><th>Tier</th><th>What it is</th><th>Examples</th><th>May it go into an AI tool?</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1 — Public</strong></td><td>Already published, no harm if seen</td><td>Marketing copy, public docs, press releases</td><td>✅ Any sanctioned tool</td></tr>
+          <tr><td><strong>2 — Internal</strong></td><td>Not public, low sensitivity</td><td>Internal memos, draft blog posts, meeting notes (no names)</td><td>✅ Sanctioned enterprise tools only</td></tr>
+          <tr><td><strong>3 — Confidential</strong></td><td>Business-sensitive; harm if leaked</td><td>Source code, financials, roadmaps, contracts, strategy</td><td>⚠️ Only sanctioned tools with verified training-opt-out + approval</td></tr>
+          <tr><td><strong>4 — Restricted / Regulated</strong></td><td>Legally protected personal/regulated data</td><td>Customer records (PII), PHI/health data, payment data, secrets/credentials</td><td>❌ Never — no AI tool without explicit, documented sign-off</td></tr>
+        </tbody>
+      </table>
+      <p><strong>The default-safe rule for non-technical staff:</strong> <em>If you are not sure which tier it is, treat it as Tier 4 and do not paste it.</em> When in doubt, ask before, not after.</p>
+      <p><strong>Acceptable-use essentials (the short version):</strong></p>
+      <ul>
+        <li>Use only <strong>sanctioned tools</strong> from the approved list. Sanctioned tools have terms negotiated so your input is not used to train the vendor's models, and they sit inside the company's security perimeter.</li>
+        <li><strong>Never</strong> paste Tier 4 data (customer PII, PHI, payment data, credentials, secrets) into any AI tool.</li>
+        <li><strong>Never</strong> paste secrets — API keys, passwords, tokens, private keys. Treat these as Tier 4 instantly.</li>
+        <li>AI output is a <strong>draft</strong>, not a deliverable. A human owns and signs off on anything that leaves the company.</li>
+        <li><strong>Disclose</strong> AI use where a policy, a client contract, or a grant requires it.</li>
+      </ul>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>The most expensive paste is the one you didn't think about: a support agent dropping a full customer ticket — name, email, account details — into a free chatbot to "draft a nicer reply." That is a Tier 4 → free-tool transfer, and depending on the vendor it may now be training data. The fix is not "don't help customers faster." The fix is the <em>sanctioned</em> tool, where that transfer is contained.</p></div>
+      <pre><code>  THE 5-SECOND DATA CHECK (do this before every paste)
+  &#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+  &#x2502; 1. What tier is this?  (Public / Internal / Conf / Restr)&#x2502;
+  &#x2502; 2. Is this a sanctioned tool?            (yes / no)      &#x2502;
+  &#x2502; 3. Tier 3? approval + opt-out verified?  (yes / no)      &#x2502;
+  &#x2502; 4. Tier 4? STOP. Do not paste. Ask.                     &#x2502;
+  &#x2502; 5. Any secret/credential? STOP. Never.                  &#x2502;
+  &#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;</code></pre>
+
+      <h3>Part 5 — Shadow AI Safety + Prompting and Evaluating Output</h3>
+      <p><strong>Shadow AI</strong> is any AI tool used for work that the company has not sanctioned — the personal ChatGPT account, the browser extension that "summarizes anything," the free image generator, the random app a colleague recommended. People reach for shadow AI because it is convenient and the sanctioned path feels slower. The danger is invisible: you do not know the vendor's data practices, whether your input trains their model, or whether it meets the company's security and compliance bar.</p>
+      <p><strong>The shadow-AI safety basics:</strong></p>
+      <ul>
+        <li>Prefer the <strong>sanctioned tool</strong> every time, even when it is one extra click.</li>
+        <li>If the sanctioned set is missing something you genuinely need, <strong>ask for it to be added</strong> — do not route around it quietly. (Module K covers this in depth; the company manages shadow AI by <em>enablement, not bans</em>.)</li>
+        <li>Be alert to <strong>prompt injection</strong>: malicious instructions hidden inside content you feed the AI — a webpage, a document, an email — that try to make the AI do something it shouldn't. If an AI suddenly behaves oddly after you fed it external content, stop and report it.</li>
+      </ul>
+      <p><strong>Prompting basics — how to get a useful answer:</strong></p>
+      <p>A good prompt gives the model <strong>role, task, context, and format</strong>.</p>
+      <ul>
+        <li><em>Weak:</em> "Write about our product."</li>
+        <li><em>Strong:</em> "You are a B2B copywriter. Write a 120-word LinkedIn post announcing our new analytics dashboard to operations managers at mid-size SaaS companies. Plain, confident tone. No buzzwords."</li>
+      </ul>
+      <p>Then iterate: tell it what to fix. "Shorter." "More concrete." "Remove the marketing tone." Treat it as a conversation, not a vending machine.</p>
+      <p><strong>Critically evaluating output — the four checks before you trust it:</strong></p>
+      <ol>
+        <li><strong>Verify facts.</strong> Any name, number, date, quote, citation, or claim of fact — confirm it independently. Assume citations may be fabricated until checked.</li>
+        <li><strong>Check for the tells.</strong> Over-confidence on something niche, suspiciously round numbers, a citation you cannot find, reasoning that skips a step.</li>
+        <li><strong>Apply your own judgment.</strong> Does this match what <em>you</em> know about the situation? If it contradicts your domain knowledge, trust yourself and dig in.</li>
+        <li><strong>Own it.</strong> If you forward it, you are vouching for it. Your name, not the model's, is on the output.</li>
+      </ol>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The skill that separates a productive AI user from a dangerous one is not prompting — it is <em>evaluating</em>. Anyone can get an answer. The literate user knows which answers to throw away.</p></div>
+
+      <h3>Part 6 — When to Escalate</h3>
+      <p>Knowing when to <em>stop and ask a human</em> is a core literacy skill, not a sign of weakness. Escalate — to your manager, the AI/security point of contact, or legal/compliance — when any of these is true:</p>
+      <ul>
+        <li><strong>High-stakes output.</strong> Anything going to a customer, regulator, board, court, investor, or the public, where an error has real consequences.</li>
+        <li><strong>Consequential decisions about people.</strong> Hiring, firing, lending, eligibility, discipline, or anything where bias would cause harm. A human must own these decisions.</li>
+        <li><strong>Regulated or restricted data is involved.</strong> Any time Tier 4 data is in the picture and someone is tempted to use AI on it.</li>
+        <li><strong>You can't verify it and you can't afford to be wrong.</strong> If you cannot check the answer and the cost of error is high, do not ship it on the model's word.</li>
+        <li><strong>The tool behaved strangely.</strong> Suspected prompt injection, a tool ignoring its instructions, output that seems manipulated, or a leak of information it shouldn't have.</li>
+        <li><strong>You're being asked to use a non-sanctioned tool for real work</strong>, or to paste data you're unsure about.</li>
+      </ul>
+      <pre><code>  ESCALATION QUICK-PATH
+  high stakes? &#x2500;&#x2510;
+  about people? &#x251C;&#x2500;&#x2192; YES to any &#x2192; STOP &#x2192; ask a human before proceeding
+  Tier 4 data? &#x2500;&#x2524;              (manager / AI-security contact / legal)
+  can't verify? &#x2500;&#x2518;</code></pre>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>The most damaging incidents almost never come from people who escalated and waited an hour. They come from people who didn't know there was a line to escalate at. If you finish this module knowing <em>only</em> the escalation triggers, it was worth your time.</p></div>
+    </section>
+
+    <section id="lab">
+      <h2>Hands-On Lab / Exercises</h2>
+
+      <h3>Exercise 1 — The Data Sort (8 minutes)</h3>
+      <p>Below are ten items. For each, write the <strong>tier (1–4)</strong> and a <strong>yes / conditional / no</strong> on whether it may go into a sanctioned AI tool. Then check against the key.</p>
+      <ol>
+        <li>Last quarter's published press release.</li>
+        <li>A customer's full support ticket including their name and email.</li>
+        <li>Your team's internal draft of next year's product roadmap.</li>
+        <li>A blog post draft with no confidential data.</li>
+        <li>A snippet of the company's proprietary source code.</li>
+        <li>A patient's medical record (healthtech context).</li>
+        <li>A list of marketing taglines you're brainstorming.</li>
+        <li>An AWS secret access key.</li>
+        <li>Anonymized, aggregated usage stats already shared publicly.</li>
+        <li>A signed customer contract.</li>
+      </ol>
+      <p><strong>Facilitator answer key:</strong></p>
+      <table>
+        <thead><tr><th>#</th><th>Item</th><th>Tier</th><th>Allowed?</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Published press release</td><td>1</td><td>✅ Yes</td></tr>
+          <tr><td>2</td><td>Customer support ticket w/ PII</td><td>4</td><td>❌ No (sanctioned tool only after PII removed; never free tools)</td></tr>
+          <tr><td>3</td><td>Internal product roadmap</td><td>3</td><td>⚠️ Conditional — sanctioned + opt-out + approval</td></tr>
+          <tr><td>4</td><td>Blog post draft, no confidential data</td><td>2</td><td>✅ Yes — sanctioned enterprise tool</td></tr>
+          <tr><td>5</td><td>Proprietary source code</td><td>3</td><td>⚠️ Conditional — sanctioned dev tools only</td></tr>
+          <tr><td>6</td><td>Patient medical record (PHI)</td><td>4</td><td>❌ No — never without explicit documented sign-off</td></tr>
+          <tr><td>7</td><td>Brainstormed taglines</td><td>1–2</td><td>✅ Yes</td></tr>
+          <tr><td>8</td><td>AWS secret key</td><td>4</td><td>❌ Never — it's a credential</td></tr>
+          <tr><td>9</td><td>Public aggregated stats</td><td>1</td><td>✅ Yes</td></tr>
+          <tr><td>10</td><td>Signed customer contract</td><td>3 (4 if it carries PII)</td><td>⚠️ Conditional / escalate</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise 2 — The Prompt Critique (8 minutes)</h3>
+      <p>You asked an AI tool: <em>"Give me three statistics about AI adoption in fintech, with sources."</em> It returned three crisp statistics, each with a percentage, a year, and a named research firm.</p>
+      <p><strong>Tasks:</strong></p>
+      <ol>
+        <li>List the verification steps you must take before using any of these statistics in a client deck.</li>
+        <li>Identify which failure mode is the biggest risk here.</li>
+        <li>Decide: ship as-is, ship after verification, or escalate?</li>
+      </ol>
+      <p><strong>Facilitator answer key:</strong></p>
+      <ol>
+        <li>Independently locate each cited source; confirm the firm published it; confirm the exact figure, year, and context; if a source cannot be found, discard the statistic. Do not "trust the round number."</li>
+        <li><strong>Hallucination</strong> — fabricated statistics with fake-but-plausible citations are a classic LLM failure, and they are riding on <strong>confident-but-wrong</strong> delivery.</li>
+        <li><strong>Ship only after full verification.</strong> Because it is going to a client (high stakes), if any statistic cannot be verified, discard it. If the whole set is unverifiable, escalate or source figures the normal way.</li>
+      </ol>
+
+      <h3>Exercise 3 (optional, team) — "Find the Tier-4 Paste" (5 minutes)</h3>
+      <p>In small groups, each person names one realistic moment in <em>their own</em> daily work where they'd be tempted to paste Tier 3 or Tier 4 data into an AI tool. The group identifies the sanctioned alternative for each. Output: a short list the manager forwards to the AI/security contact as feature requests for the sanctioned toolset.</p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>Artifact 1 — AI Literacy Completion Log (Article 4 evidence)</h3>
+      <p>Keep this record current; it is the documented evidence Article 4 requires. One row per person; retain through at least the enforcement period and per the company's records-retention policy.</p>
+      <pre><code>&#x250C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2510;
+&#x2502;  IIIBC AI LITERACY BASELINE &#x2014; COMPLETION LOG (Module B)                             &#x2502;
+&#x2502;  Article 4 (EU AI Act) evidence of record · Module version: 1.0                     &#x2502;
+&#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x252C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524;
+&#x2502; Name     &#x2502; Role /    &#x2502; Staff or      &#x2502; Tailored &#x2502; Completion&#x2502; Score    &#x2502; Signature&#x2502;
+&#x2502;          &#x2502; Dept      &#x2502; Contractor    &#x2502; track    &#x2502; date      &#x2502; (&#x2265;80%)   &#x2502; / attest &#x2502;
+&#x251C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x253C;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2524;
+&#x2502;          &#x2502;           &#x2502;               &#x2502;          &#x2502;           &#x2502;          &#x2502;          &#x2502;
+&#x2502;          &#x2502;           &#x2502;               &#x2502;          &#x2502;           &#x2502;          &#x2502;          &#x2502;
+&#x2502;          &#x2502;           &#x2502;               &#x2502;          &#x2502;           &#x2502;          &#x2502;          &#x2502;
+&#x2514;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2534;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2534;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2534;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2534;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2534;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2534;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2500;&#x2518;
+  Owner of record: ____________________   Storage location: ____________________
+  Review cadence: on hire · on material AI-policy change · annually
+  "Tailored track" = Awareness (all) / Practitioner / Builder / Leader &#x2014; Art. 4 requires
+  content matched to the person's technical level and the systems they actually use.</code></pre>
+      <table>
+        <thead><tr><th>Field</th><th>Why it's here</th></tr></thead>
+        <tbody>
+          <tr><td>Staff or Contractor</td><td>Article 4 explicitly covers contractors operating AI on your behalf</td></tr>
+          <tr><td>Tailored track</td><td>Evidence that content was matched to technical level, not one-size-fits-all</td></tr>
+          <tr><td>Completion date</td><td>Establishes the record existed before the relevant date</td></tr>
+          <tr><td>Score / attestation</td><td>Evidence of <em>sufficient</em> literacy, not mere attendance</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Artifact 2 — One-Page "AI Ground Rules" Cheat Sheet (print and keep)</h3>
+      <pre><code>&#x2554;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2557;
+&#x2551;                 AI GROUND RULES &#x2014; keep this at your desk                &#x2551;
+&#x2560;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2563;
+&#x2551;                                                                        &#x2551;
+&#x2551;  1. AI PREDICTS LIKELY TEXT. It is not a fact database. Fluent &#x2260; true.  &#x2551;
+&#x2551;                                                                        &#x2551;
+&#x2551;  2. IT FAILS 3 WAYS:                                                    &#x2551;
+&#x2551;       &#x2022; Hallucination  &#x2014; invents facts &amp; citations                     &#x2551;
+&#x2551;       &#x2022; Bias           &#x2014; repeats human stereotypes                     &#x2551;
+&#x2551;       &#x2022; Confident-wrong &#x2014; wrong answers sound exactly like right ones  &#x2551;
+&#x2551;     YOU verify. Every fact, name, number, quote, citation.             &#x2551;
+&#x2551;                                                                        &#x2551;
+&#x2551;  3. CLASSIFY BEFORE YOU PASTE:                                          &#x2551;
+&#x2551;       Public/Internal &#x2192; sanctioned tool OK                             &#x2551;
+&#x2551;       Confidential    &#x2192; sanctioned + opt-out + approval                &#x2551;
+&#x2551;       Restricted (PII/PHI/payment/secrets) &#x2192; NEVER. Stop. Ask.         &#x2551;
+&#x2551;     Not sure? Treat it as Restricted.                                  &#x2551;
+&#x2551;                                                                        &#x2551;
+&#x2551;  4. USE SANCTIONED TOOLS ONLY. No personal accounts for work data.     &#x2551;
+&#x2551;     Need a tool we don't have? Ask for it &#x2014; don't route around.        &#x2551;
+&#x2551;                                                                        &#x2551;
+&#x2551;  5. OUTPUT IS A DRAFT. A human owns and signs what leaves the company. &#x2551;
+&#x2551;                                                                        &#x2551;
+&#x2551;  6. ESCALATE when: high stakes · decisions about people ·              &#x2551;
+&#x2551;     Tier-4 data · you can't verify it · the tool acted strange.        &#x2551;
+&#x2551;     &#x2192; manager / AI-security contact / legal. Asking is the smart move. &#x2551;
+&#x2551;                                                                        &#x2551;
+&#x2551;  Sanctioned tools list: ________   AI/security contact: ________       &#x2551;
+&#x255A;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x2550;&#x255D;</code></pre>
+
+      <h3>Artifact 3 — Prompt Starter Pattern</h3>
+      <pre><code>ROLE:    You are a [job/expertise].
+TASK:    [One clear action &#x2014; draft / summarize / rewrite / explain].
+CONTEXT: [Audience, purpose, constraints, what to avoid].
+FORMAT:  [Length, structure, tone].
+&#x2192; Then iterate: "shorter" · "more concrete" · "drop the buzzwords" · "show your reasoning"
+&#x2192; Then EVALUATE: verify facts · check the tells · apply your judgment · own it.</code></pre>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> A large language model fundamentally works by:<br>
+          a) Looking up verified facts in a database b) Predicting the next most likely word from learned patterns c) Reasoning like a human expert d) Searching the live internet for every answer</li>
+        <li><strong>(MCQ)</strong> "Hallucination" in an LLM means:<br>
+          a) The tool crashes b) It refuses to answer c) It produces fabricated but plausible-sounding information d) It returns blank output</li>
+        <li><strong>(Short answer)</strong> State the EU AI Act Article 4 obligation in one sentence, and explain why giving staff a tool's usage instructions does not satisfy it.</li>
+        <li><strong>(MCQ)</strong> Your company uses a third-party AI tool but does not build any AI. Under Article 4 you are:<br>
+          a) Exempt — only AI builders are covered b) A <em>deployer</em>, and the obligation applies c) Covered only if you have EU customers and over 250 staff d) Covered only after 2 August 2026</li>
+        <li><strong>(Short answer)</strong> A customer's full support ticket (name, email, account details) — what data tier is it, and may you paste it into your personal ChatGPT account to draft a reply? Why or why not?</li>
+        <li><strong>(MCQ)</strong> You may safely put into a sanctioned enterprise AI tool:<br>
+          a) An AWS secret key b) A patient's medical record c) A public press release draft d) A customer's payment card number</li>
+        <li><strong>(Short answer)</strong> Name three situations in which you must stop and escalate to a human before relying on AI output.</li>
+        <li><strong>(Short answer)</strong> An AI tool gives you three statistics with named sources for a client deck. List the verification steps before you use them, and name the failure mode you're guarding against.</li>
+      </ol>
+      <h3>Answer Key</h3>
+      <ol>
+        <li><strong>b.</strong> It predicts likely text; it is not a lookup, a reasoner, or (by default) a live search.</li>
+        <li><strong>c.</strong> Fabricated but plausible content — including fake citations.</li>
+        <li><em>Sufficient:</em> "Any provider or deployer of AI in the EU must ensure staff and contractors have sufficient AI literacy." Instructions alone are insufficient because Article 4 requires general AI understanding, risk awareness for the systems used, content tailored to technical level, and <strong>documented</strong> completion — not just how-to steps.</li>
+        <li><strong>b.</strong> Using third-party AI makes you a <em>deployer</em>; the obligation has been in force since 2 Feb 2025 (enforcement begins Aug 2026).</li>
+        <li><strong>Tier 4 (Restricted).</strong> No — never paste customer PII into a personal/free tool. Use the sanctioned tool, ideally with the PII removed; the free tool may store the data or use it to train the vendor's model.</li>
+        <li><strong>c.</strong> A public press release draft (Tier 1). The others are Tier 4 — never.</li>
+        <li>Any three: high-stakes output (customer/regulator/board/court); consequential decisions about people (hiring, lending, eligibility); Tier-4/regulated data involved; cannot verify and cannot afford to be wrong; suspected prompt injection / tool behaving strangely; being asked to use a non-sanctioned tool for real work.</li>
+        <li>Independently locate each source, confirm the firm published it, confirm the exact figure/year/context, discard any statistic you can't verify; because it's a client deck (high stakes), don't ship unverifiable figures. Failure mode: <strong>hallucination</strong> (riding on <strong>confident-but-wrong</strong> delivery).</li>
+      </ol>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Pass mark: 80% (record the score in the completion log).</strong> Anyone below 80% retakes the relevant Parts and the check.</p></div>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist</strong></p>
+      <ul>
+        <li>Insert the company's <strong>sanctioned tools list</strong> and <strong>AI/security contact</strong> into Parts 4–6, both artifacts, and the cheat sheet (blanks are intentional).</li>
+        <li>Confirm the company's <strong>data-classification scheme</strong> matches the four tiers here; adjust labels to house terminology if needed.</li>
+        <li>Have the <strong>completion log</strong> ready (shared sheet or LMS field) and confirm who owns the record and where it is stored.</li>
+        <li>Prepare one <strong>live hallucination demo</strong> in a sanctioned tool (e.g., ask for citations on a niche topic and show a fabricated one) — far more memorable than describing it.</li>
+        <li>Version-stamp this module (v1.0) so the log ties completion to a specific content version.</li>
+      </ul>
+      <p><strong>Materials needed:</strong> the module, the cheat sheet (printed, one per person), the data-sort worksheet, a sanctioned AI tool for the demo, the completion log.</p>
+      <p><strong>Timing guidance:</strong> Self-paced Parts run ~45 min. Keep the live segment to the demo (Part 1/2), the data-sort debrief (Part 4), and signing the log. If time is short, the non-negotiables are Part 2 (failures), Part 4 (data classification), and Part 6 (escalation).</p>
+      <p><strong>Common pitfalls</strong></p>
+      <ul>
+        <li><em>Treating this as IT box-ticking.</em> Lead with a real near-miss (a Tier-4 paste, a hallucinated stat that almost shipped). Make it concrete.</li>
+        <li><em>One-size content.</em> Article 4 requires tailoring. This is the Awareness baseline for everyone; technical staff still complete it but then go deeper in their role module — record the tailored track in the log.</li>
+        <li><em>Forgetting contractors.</em> They are explicitly in scope. Anyone operating AI on the company's behalf completes and is logged.</li>
+        <li><em>No record.</em> Training without a signed, dated, versioned log is not Article 4 evidence. The log is the deliverable.</li>
+      </ul>
+      <p><strong>Discussion prompts</strong></p>
+      <ul>
+        <li>"Where in <em>your</em> workflow are you most tempted to paste data you shouldn't?"</li>
+        <li>"Tell me about a time AI gave you a confident answer that was wrong. How did you catch it — or did you?"</li>
+        <li>"What sanctioned tool do we <em>not</em> have that you keep reaching for a personal account to do?"</li>
+      </ul>
+      <p><strong>How to tailor by audience</strong></p>
+      <ul>
+        <li><em>Non-technical (GTM, ops, admin):</em> spend the most time on Parts 4 and 6; use customer-email and document examples.</li>
+        <li><em>Technical (eng, data, platform):</em> keep Awareness content, add the source-code/secrets angle in Part 4, and point to Modules I, J, K for depth.</li>
+        <li><em>Managers:</em> add a note that they sign off on their team's completion and model sanctioned-tool use — manager modeling is the biggest adoption driver.</li>
+      </ul>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <p>IIIBC requires measurable proof a deliverable worked. Module B is working when:</p>
+      <table>
+        <thead><tr><th>#</th><th>Indicator</th><th>Target</th><th>Tier (Kirkpatrick / ROI)</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Completion coverage</strong></td><td>100% of staff <em>and</em> contractors logged, dated, version-stamped</td><td>L1 Reaction / compliance evidence</td></tr>
+          <tr><td>2</td><td><strong>Knowledge-check pass rate</strong></td><td>≥ 95% pass at ≥ 80% on first or second attempt</td><td>L2 Learning</td></tr>
+          <tr><td>3</td><td><strong>Data-classification recall</strong></td><td>≥ 90% correctly classify a held-out item 30 days later</td><td>L2 Learning (retention)</td></tr>
+          <tr><td>4</td><td><strong>Shadow-AI shift</strong></td><td>Measurable drop in unsanctioned-tool use; rise in sanctioned-tool requests</td><td>L3 Behavior</td></tr>
+          <tr><td>5</td><td><strong>Escalation behavior</strong></td><td>≥ 1 logged "stopped and asked" event per team per quarter (a healthy signal, not a failure)</td><td>L3 Behavior</td></tr>
+          <tr><td>6</td><td><strong>Article 4 audit-readiness</strong></td><td>Log produced in &lt; 1 business day on request</td><td>L4 / risk-avoidance ROI</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>Indicator 5 is counter-intuitive: escalations <em>going up</em> is success. It means people learned where the line is. Zero escalations usually means people don't know there is one.</p></div>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <ul>
+        <li><strong>EU AI Act Article 4 (AI literacy; in force 2 Feb 2025, enforcement begins 2 Aug 2026)</strong> — European Commission AI-literacy Q&amp;A; Mayer Brown and Latham &amp; Watkins guidance: provider <em>and</em> deployer scope, "instructions are insufficient," documented + tailored completion. <em>(Authoritative, load-bearing.)</em></li>
+        <li><strong>Competency framework</strong> — Alan Turing Institute <em>AI Skills for Business</em> (v3, Dec 2025); SFIA AI skills: Awareness → Practitioner → Builder → Leader.</li>
+        <li><strong>Shadow AI</strong> — ISACA (auditing unauthorized AI); Cybersecurity Dive (executives are heaviest unsanctioned users); managed by enablement, not bans (see Module K).</li>
+        <li><strong>Workforce literacy gap (directional)</strong> — ~6% feel "very comfortable" with AI; ~48% would use it more with formal training (WEF / IDC / Workera survey synthesis).</li>
+        <li><strong>Related IIIBC modules</strong> — F (AI for Everyone), K (Shadow AI &amp; Safe Tool Use), H (Governance &amp; Operating Model), L (AI Regulation &amp; Compliance).</li>
+      </ul>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Calibration note.</strong> The Article 4 timeline and obligations are authoritative and load-bearing; verify specifics for your markets as the EU Digital Omnibus and related items evolve. Survey statistics (6% / 48%) are vendor- and analyst-reported and should be treated as directional.</p></div>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-a-strategy-governance-roi.html"><span class="dir">← Previous</span><span class="ttl">Module A: AI Strategy, Governance &amp; ROI</span></a>
+      <a class="next" href="module-c-data-rag-foundations.html"><span class="dir">Next →</span><span class="ttl">Module C: Data &amp; RAG Foundations</span></a>
+    </nav>
+
+  </div>
+</div></main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that compounds your moat — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../tech-driven-training.html">All Modules</a>
+      <a href="../index.html">About IIIBC</a>
+      <a href="mailto:contact@iiibc.com">contact@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — AI Strategy Institute. All rights reserved.</span>
+    <span class="mono">Module B · Tech-Driven Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>
