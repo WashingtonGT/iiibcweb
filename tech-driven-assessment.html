@@ -336,7 +336,7 @@
 
     <div class="intro-note">
       <p class="label">How to use this assessment</p>
-      <p>Designed for CTOs, CEOs, VPs of Engineering, Chief Data/AI Officers, and board technology committees. Each question is scored 0–3: <b>0</b> = not in place / no awareness · <b>1</b> = awareness only · <b>2</b> = in progress / partial · <b>3</b> = fully in place and practiced. There are no trick questions — this is a diagnostic, not a grade.</p>
+      <p>Designed for CTOs, CEOs, VPs of Engineering, Chief Data/AI Officers, and board technology committees. Each question is scored 0–3: <b>0</b> = not in place / no awareness · <b>1</b> = awareness only · <b>2</b> = in progress / partial · <b>3</b> = fully in place and practiced. There are no trick questions — this is a diagnostic, not a grade. Your answers are saved automatically in this browser, so you can close this page and return to finish later.</p>
     </div>
 
     <div class="precheck">
@@ -1218,9 +1218,40 @@ document.getElementById('restartBtn').addEventListener('click', ()=>{
   document.getElementById('report').style.display='none';
   document.getElementById('emailStatus').classList.remove('show');
   document.getElementById('emailPreview').style.display='none';
+  clearState();
   updateProgress();
   window.scrollTo({top:0,behavior:'smooth'});
 });
+
+/* ---------- Browser persistence — remember answers on this device ---------- */
+const STORAGE_KEY = 'iiibc-td-assessment-v1';
+const persistForm = document.getElementById('assessment');
+function saveState(){
+  try{
+    const data={};
+    persistForm.querySelectorAll('input,select').forEach(el=>{
+      if(!el.name) return;
+      if(el.type==='radio'||el.type==='checkbox'){ if(el.checked){(data[el.name]=data[el.name]||[]).push(el.value);} }
+      else { data[el.name]=el.value; }
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }catch(e){/* storage unavailable (private mode / disabled) */}
+}
+function restoreState(){
+  let data=null;
+  try{ data=JSON.parse(localStorage.getItem(STORAGE_KEY)||'null'); }catch(e){}
+  if(!data) return;
+  persistForm.querySelectorAll('input,select').forEach(el=>{
+    if(!el.name || !(el.name in data)) return;
+    const v=data[el.name];
+    if(el.type==='radio'||el.type==='checkbox'){ el.checked = Array.isArray(v)?v.includes(el.value):v===el.value; }
+    else { el.value=v; }
+  });
+}
+function clearState(){ try{ localStorage.removeItem(STORAGE_KEY); }catch(e){} }
+persistForm.addEventListener('input', saveState);
+persistForm.addEventListener('change', saveState);
+restoreState();
 
 updateProgress();
 </script>
