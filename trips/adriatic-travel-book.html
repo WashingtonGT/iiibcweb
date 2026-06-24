@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Adriatic Crossing · Croatia — A Travel Book</title>
+<style>
+  :root{
+    --ink:#0E2A33;
+    --ink-2:#123E49;
+    --teal:#1C6B78;
+    --turq:#46B3A6;
+    --stone:#E9E3D5;
+    --stone-card:#F6F2E8;
+    --stone-line:rgba(14,42,51,0.14);
+    --terra:#C0623C;
+    --gold:#B3893F;
+    --sky:#CFE3E2;
+    --paper:#FBF8F1;
+    --font-display:"Palatino Linotype","Book Antiqua",Palatino,"URW Palladio L",Georgia,serif;
+    --font-body:"Helvetica Neue","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+    --font-mono:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    --maxw:980px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--stone);color:var(--ink);
+    font-family:var(--font-body);font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal);text-decoration:none}
+  a:hover{color:var(--terra)}
+  a:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:2px}
+  img{max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{
+    font-family:var(--font-mono);font-size:12px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--teal);font-weight:600;
+  }
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.1;margin:0}
+  p{margin:0 0 1em}
+
+  /* ---------- Top bar nav ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;background:rgba(14,42,51,.94);
+    backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .topbar .wrap{display:flex;align-items:center;gap:18px;height:54px}
+  .brand{font-family:var(--font-display);color:var(--paper);font-size:18px;letter-spacing:.01em;white-space:nowrap}
+  .brand b{color:var(--turq);font-weight:600}
+  .navlinks{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+  .navlinks::-webkit-scrollbar{display:none}
+  .navlinks a{
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:rgba(255,255,255,.72);padding:6px 9px;border-radius:6px;white-space:nowrap;
+  }
+  .navlinks a:hover{color:#fff;background:rgba(255,255,255,.08)}
+
+  /* ---------- Hero ---------- */
+  .hero{background:var(--ink);color:var(--paper);padding:54px 0 38px;position:relative;overflow:hidden}
+  .hero .eyebrow{color:var(--turq)}
+  .hero h1{
+    font-size:clamp(40px,8vw,76px);color:var(--paper);margin:.18em 0 .1em;letter-spacing:-.01em;
+  }
+  .hero .sub{font-family:var(--font-display);font-style:italic;font-size:clamp(18px,3.4vw,26px);color:#cfe3e2;opacity:.92}
+  .hero .meta{
+    margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 26px;
+    font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.78);
+  }
+  .hero .meta b{color:var(--turq);font-weight:600}
+
+  /* ---------- Route map ---------- */
+  .mapwrap{background:var(--ink-2);padding:8px 0 42px;color:var(--paper)}
+  .mapcard{
+    background:linear-gradient(180deg,#0c343d,#0e2a33);border:1px solid rgba(255,255,255,.10);
+    border-radius:14px;padding:14px;margin-top:-22px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)
+  }
+  .mapcard svg{display:block;width:100%;height:auto;border-radius:8px}
+  .maplegend{
+    display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.7)
+  }
+  .maplegend span{display:inline-flex;align-items:center;gap:7px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--turq);display:inline-block}
+  .route-line{stroke-dasharray:1600;stroke-dashoffset:1600;animation:draw 3.2s ease .3s forwards}
+  @keyframes draw{to{stroke-dashoffset:0}}
+
+  /* ---------- Generic section ---------- */
+  section{padding:0}
+  .band{padding:46px 0}
+  .band h2{font-size:clamp(26px,4.5vw,38px)}
+  .lead{font-size:19px;color:#33474d;max-width:62ch}
+
+  /* ---------- Before you go ---------- */
+  .essentials{background:var(--paper);border-top:1px solid var(--stone-line);border-bottom:1px solid var(--stone-line)}
+  .egrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+  .ecard{background:var(--stone-card);border:1px solid var(--stone-line);border-radius:12px;padding:18px 18px 16px}
+  .ecard h4{font-size:19px;margin-bottom:6px;display:flex;align-items:baseline;gap:9px}
+  .ecard .num{font-family:var(--font-mono);font-size:12px;color:var(--terra);font-weight:700}
+  .ecard p{font-size:15px;color:#3a4d52;margin:0}
+
+  /* ---------- Day section ---------- */
+  .day{border-top:1px solid var(--stone-line);padding:50px 0 6px}
+  .day:nth-child(even){background:var(--paper)}
+  .dayhead{display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:8px}
+  .daynum{
+    font-family:var(--font-display);font-size:clamp(56px,13vw,120px);line-height:.82;
+    color:var(--teal);opacity:.22;font-weight:700;letter-spacing:-.03em
+  }
+  .daytitle .eyebrow{display:block;margin-bottom:6px}
+  .daytitle h2{font-size:clamp(28px,5vw,44px)}
+  .dayfacts{
+    display:flex;flex-wrap:wrap;gap:6px 22px;margin:14px 0 22px;
+    font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;color:var(--ink-2)
+  }
+  .dayfacts b{color:var(--terra);font-weight:700}
+
+  /* ---------- Illustration banner ---------- */
+  figure.illo{margin:0 0 24px;border-radius:14px;overflow:hidden;border:1px solid var(--stone-line);
+    box-shadow:0 24px 40px -28px rgba(14,42,51,.5);background:var(--ink)}
+  figure.illo svg{display:block;width:100%;height:auto}
+  figure.illo figcaption{
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(255,255,255,.72);padding:9px 14px;background:var(--ink)
+  }
+
+  /* ---------- Prose + fun facts ---------- */
+  .stack{display:grid;grid-template-columns:1fr;gap:26px}
+  .place{border-left:3px solid var(--turq);padding-left:18px}
+  .place h3{font-size:23px;margin-bottom:8px}
+  .place .kicker{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px}
+  .place p{color:#36494f;font-size:16px}
+  .fact{
+    margin-top:10px;background:var(--stone-card);border:1px dashed var(--gold);border-radius:10px;
+    padding:11px 14px;font-size:14.5px;color:#4a3c22
+  }
+  .fact b{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:3px}
+
+  /* ---------- Activities ---------- */
+  .acts{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+  .acts li{position:relative;padding-left:26px;font-size:15.5px;color:#33474d}
+  .acts li::before{content:"";position:absolute;left:4px;top:.55em;width:8px;height:8px;border-radius:50%;
+    border:2px solid var(--teal)}
+
+  /* ---------- Event callout ---------- */
+  .event{
+    margin-top:22px;background:linear-gradient(180deg,#11414c,#0e2a33);color:var(--paper);
+    border-radius:12px;padding:18px 20px;border:1px solid rgba(255,255,255,.12)
+  }
+  .event .eyebrow{color:var(--turq)}
+  .event h4{color:var(--paper);font-size:21px;margin:6px 0 6px}
+  .event p{color:#cfe0e0;font-size:15px;margin:0}
+  .event a{color:var(--turq)}
+
+  /* ---------- Restaurants ---------- */
+  .eat{margin-top:26px}
+  .eat .barlabel{font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--teal);border-top:1px solid var(--stone-line);padding-top:14px;margin-bottom:14px;display:block}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+  .rcard{background:var(--stone-card);border:1px solid var(--stone-line);border-radius:12px;padding:15px 16px;
+    display:flex;flex-direction:column}
+  .rcard .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .rcard h4{font-size:18px}
+  .stars{font-family:var(--font-mono);font-size:12px;color:var(--gold);white-space:nowrap;font-weight:700}
+  .tags{margin:7px 0 8px;display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    background:rgba(28,107,120,.10);color:var(--teal);border-radius:20px;padding:3px 9px}
+  .tag.warn{background:rgba(192,98,60,.12);color:var(--terra)}
+  .rcard p{font-size:14px;color:#3c4f54;margin:0 0 12px}
+  .rcard .maplink{margin-top:auto;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+  .rcard .maplink::after{content:" ↗"}
+
+  /* ---------- Summary tables ---------- */
+  .tablewrap{overflow-x:auto;margin-top:18px;border:1px solid var(--stone-line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--stone-card)}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--stone-line);vertical-align:top}
+  th{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:rgba(28,107,120,.06)}
+  tr:last-child td{border-bottom:none}
+  td b{color:var(--ink)}
+  .pill{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    padding:2px 8px;border-radius:20px;background:rgba(179,137,63,.16);color:#7a5c1f;white-space:nowrap}
+  .pill.book{background:rgba(192,98,60,.16);color:#8a3f23}
+
+  /* ---------- Checklist ---------- */
+  .checklist{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px;max-width:62ch}
+  .checklist li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:#33474d}
+  .box{flex:0 0 auto;width:18px;height:18px;border:2px solid var(--teal);border-radius:4px;margin-top:3px}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:#9fb6ba;padding:40px 0;margin-top:10px;font-size:14px}
+  footer .eyebrow{color:var(--turq)}
+  footer b{color:var(--paper)}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:640px){
+    body{font-size:16px}
+    .hero{padding:38px 0 30px}
+    .dayhead{gap:12px}
+    .navlinks{gap:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .route-line{animation:none;stroke-dashoffset:0}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">The <b>Adriatic</b> Crossing</span>
+    <nav class="navlinks" aria-label="Days">
+      <a href="#map">Map</a>
+      <a href="#prep">Before</a>
+      <a href="#d1">Day 1</a>
+      <a href="#d2">Day 2</a>
+      <a href="#d3">Day 3</a>
+      <a href="#d4">Day 4</a>
+      <a href="#d5">Day 5</a>
+      <a href="#d6">Day 6</a>
+      <a href="#d7">Day 7</a>
+      <a href="#eat">Eat</a>
+      <a href="#book">Checklist</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">A 7-day road trip · August 6–12, 2026</span>
+    <h1>The Adriatic Crossing</h1>
+    <div class="sub">Zagreb &middot; Plitvice &middot; Split &middot; Krka &middot; Dubrovnik</div>
+    <div class="meta">
+      <span><b>~700 km</b> by road</span>
+      <span><b>2</b> national parks</span>
+      <span><b>4</b> UNESCO wonders</span>
+      <span><b>1</b> rented car, all in Croatia</span>
+    </div>
+  </div>
+</header>
+
+<!-- ROUTE MAP -->
+<div class="mapwrap" id="map">
+  <div class="wrap">
+    <div class="mapcard">
+      <svg viewBox="0 0 900 460" role="img" aria-label="Stylised route map from Zagreb south along the Croatian Adriatic coast through Split and Krka to Dubrovnik">
+        <defs>
+          <linearGradient id="seaG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#15616d"/><stop offset="1" stop-color="#0c3a44"/>
+          </linearGradient>
+          <pattern id="waves" width="34" height="20" patternUnits="userSpaceOnUse">
+            <path d="M0 12 Q8 6 17 12 T34 12" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1.4"/>
+          </pattern>
+        </defs>
+        <rect width="900" height="460" fill="#0e2a33"/>
+        <!-- sea -->
+        <path d="M0 150 C120 130 210 200 250 250 C300 315 360 330 430 370 C520 420 560 450 700 460 L0 460 Z" fill="url(#seaG)"/>
+        <path d="M0 150 C120 130 210 200 250 250 C300 315 360 330 430 370 C520 420 560 450 700 460 L0 460 Z" fill="url(#waves)"/>
+        <!-- inland -->
+        <path d="M0 0 H900 V120 C760 140 640 120 520 175 C430 218 380 250 320 235 C250 218 170 150 0 150 Z" fill="#16323a"/>
+        <text x="120" y="70" fill="rgba(255,255,255,.30)" font-family="Palatino Linotype, serif" font-size="26" font-style="italic">Croatia</text>
+        <text x="120" y="420" fill="rgba(70,179,166,.45)" font-family="Palatino Linotype, serif" font-size="30" font-style="italic">Adriatic Sea</text>
+        <!-- route -->
+        <path class="route-line" d="M150 90 L240 165 L375 260 L640 375"
+              fill="none" stroke="#46B3A6" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 9"/>
+        <!-- Krka day-trip spur -->
+        <path d="M375 260 L300 210" fill="none" stroke="#46B3A6" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 9" opacity=".7"/>
+        <!-- nodes -->
+        <g font-family="ui-monospace, monospace" font-size="12" fill="#0e2a33" text-anchor="middle">
+          <g><circle cx="150" cy="90" r="13" fill="#F6F2E8" stroke="#46B3A6" stroke-width="2"/><text x="150" y="94">1</text>
+             <text x="150" y="64" fill="#fff" font-size="13">Zagreb</text></g>
+          <g><circle cx="240" cy="165" r="13" fill="#F6F2E8" stroke="#46B3A6" stroke-width="2"/><text x="240" y="169">3</text>
+             <text x="270" y="160" fill="#cfe3e2" font-size="12" text-anchor="start">Plitvice</text></g>
+          <g><circle cx="300" cy="210" r="12" fill="#F6F2E8" stroke="#B3893F" stroke-width="2"/><text x="300" y="214">5</text>
+             <text x="288" y="198" fill="#cfe3e2" font-size="12" text-anchor="end">Krka</text></g>
+          <g><circle cx="375" cy="260" r="13" fill="#F6F2E8" stroke="#46B3A6" stroke-width="2"/><text x="375" y="264">4</text>
+             <text x="375" y="292" fill="#fff" font-size="13">Split</text></g>
+          <g><circle cx="640" cy="375" r="13" fill="#F6F2E8" stroke="#B3893F" stroke-width="2"/><text x="640" y="379">6</text>
+             <text x="640" y="407" fill="#fff" font-size="13">Dubrovnik</text></g>
+        </g>
+        <!-- compass -->
+        <g transform="translate(840,400)" stroke="rgba(255,255,255,.5)" fill="rgba(255,255,255,.5)">
+          <circle r="18" fill="none" stroke-width="1"/>
+          <path d="M0 -16 L4 0 L0 16 L-4 0 Z" fill="rgba(70,179,166,.8)" stroke="none"/>
+          <text x="0" y="-22" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle" fill="rgba(255,255,255,.7)">N</text>
+        </g>
+      </svg>
+      <div class="maplegend">
+        <span><span class="dot"></span> Overnight bases: Zagreb · Split (×3) · Dubrovnik</span>
+        <span><span class="dot" style="background:var(--gold)"></span> Day trip / final leg</span>
+        <span>Day 2 = Zagreb &amp; Samobor · Day 5 = Krka + Šibenik · all in Croatia</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEFORE YOU GO -->
+<section class="band essentials" id="prep">
+  <div class="wrap reveal">
+    <span class="eyebrow">Read this first</span>
+    <h2>Before you go</h2>
+    <p class="lead">Six things to settle before wheels-up. The first two — your timed national-park tickets — are the ones that quietly make or break a peak-summer trip.</p>
+    <div class="egrid">
+      <div class="ecard">
+        <h4><span class="num">01</span> Book Plitvice early</h4>
+        <p>Peak-summer entry is timed and capped — tickets routinely sell out 3–4 weeks ahead. Buy a morning <b>Entrance 1</b> slot on the official site <b>np-plitvicka-jezera.hr</b> (avoid lookalike resellers). ~&euro;40/adult; ~55-minute arrival window.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">02</span> Book Krka too</h4>
+        <p>Your Day 5 second park is also timed and capped in August. Reserve an early slot on the official <b>npkrka.hr</b> and enter via <b>Skradin</b> (scenic boat shuttle in) or <b>Lozovac</b>. Going early beats both the midday heat and the crowds at Skradinski Buk.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">03</span> One country, one car</h4>
+        <p>The whole route stays inside <b>Croatia</b> — no Montenegro, no Green Card, no border queues. At the Alamo counter in Zagreb, just confirm the <b>one-way drop at Dubrovnik (DBV)</b> is on the contract.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">04</span> The Pelješac Bridge</h4>
+        <p>On the Day 6 Split&rarr;Dubrovnik drive, make sure your nav routes you over the <b>Pelješac Bridge</b>. It leaps the Neum corridor so you <b>stay in Croatia the whole way</b> — no Bosnia crossing, no extra paperwork.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">05</span> One biometric check-in</h4>
+        <p>Croatia is in Schengen, so your <b>only</b> border formality is arrival at Zagreb airport, where the EU's biometric <b>EES</b> registers you on first entry. Pre-load the "Travel to Europe" app to speed it up. The euro is used throughout — keep a little cash for konobas and parking.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">06</span> Two festival nights</h4>
+        <p>Two evenings are worth booking ahead: the <b>Split Summer Festival</b> in Diocletian's Palace (Aug 9) and the <b>Dubrovnik Summer Festival</b> inside the old-town walls (Aug 11). Both stage opera, concerts and theatre in spectacular historic settings.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DAY 1 -->
+<article class="day" id="d1">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">01</div>
+      <div class="daytitle"><span class="eyebrow">Thursday · Aug 6 · Arrival</span><h2>Landing in Zagreb</h2></div>
+    </div>
+    <div class="dayfacts"><span>Drive <b>~25 min</b> from ZAG</span><span>Stay <b>Sheraton Zagreb</b></span><span>Land <b>10:40 AM</b></span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of St. Mark's Church with its famous coloured tiled roof and twin cathedral spires">
+        <rect width="800" height="300" fill="#1b3942"/>
+        <rect width="800" height="300" fill="#21454f"/>
+        <g opacity=".5" fill="none" stroke="rgba(255,255,255,.06)"><path d="M0 230 H800 M0 250 H800 M0 270 H800"/></g>
+        <!-- cathedral spires behind -->
+        <g fill="#2b525c"><rect x="600" y="70" width="22" height="180"/><rect x="638" y="70" width="22" height="180"/>
+          <path d="M600 70 L611 24 L622 70 Z"/><path d="M638 70 L649 24 L660 70 Z"/></g>
+        <!-- church body -->
+        <rect x="150" y="150" width="360" height="100" fill="#e9e3d5"/>
+        <rect x="150" y="150" width="360" height="100" fill="none" stroke="#cdbf9f"/>
+        <!-- tower -->
+        <rect x="150" y="96" width="70" height="154" fill="#dcd2bb"/>
+        <path d="M150 96 L185 50 L220 96 Z" fill="#1c6b78"/>
+        <!-- famous roof: two coats of arms in tiles -->
+        <path d="M230 150 L350 100 L470 150 Z" fill="#1c6b78"/>
+        <g>
+          <path d="M255 140 L320 113 L320 140 Z" fill="#C0623C"/>
+          <path d="M320 113 L320 140 L385 140 Z" fill="#E9E3D5"/>
+          <g fill="#fff" opacity=".85"><rect x="278" y="126" width="7" height="7"/><rect x="292" y="120" width="7" height="7"/><rect x="306" y="126" width="7" height="7"/></g>
+          <path d="M395 138 L430 120 L430 138 Z" fill="#46B3A6"/>
+          <path d="M430 120 L430 138 L452 138 Z" fill="#B3893F"/>
+        </g>
+        <!-- door + windows -->
+        <rect x="315" y="195" width="34" height="55" rx="17" fill="#1b3942"/>
+        <g fill="#1b3942"><rect x="200" y="190" width="20" height="34" rx="10"/><rect x="440" y="190" width="20" height="34" rx="10"/></g>
+      </svg>
+      <figcaption>St. Mark's Church &amp; the cathedral spires · Gornji Grad (Upper Town)</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">The Upper Town · Gornji Grad</span>
+        <h3>Medieval Zagreb on the hill</h3>
+        <p>Collect the car, drop bags at the Sheraton, then climb into the Upper Town for your first afternoon. This is the oldest, most atmospheric quarter — cobbles, gas lamps still lit by hand each evening, and the city's postcard landmark, <b>St. Mark's Church</b>. Its dazzling 1880 roof tiles spell out two coats of arms: the medieval kingdoms of Croatia, Dalmatia and Slavonia on the left, the city of Zagreb on the right.</p>
+        <div class="fact"><b>Fun fact</b> The church square is flanked by the Croatian Parliament and the prime minister's office, so it's often fenced and the church itself usually opens only around Mass — but the roof, the real star, is best admired from outside anyway.</div>
+      </div>
+      <div class="place">
+        <span class="kicker">Reopened April 2026</span>
+        <h3>Zagreb Cathedral</h3>
+        <p>Croatia's tallest building and the grandest Gothic structure south-east of the Alps reopened to visitors in <b>April 2026</b> after six years of repairs following the 2020 earthquake. Step inside (open daily ~08:00–19:00); expect some scaffolding still wrapping the twin 108-metre spires.</p>
+      </div>
+      <ul class="acts">
+        <li>Ride the <b>funicular</b> — at 66 metres, one of the world's shortest public railways, running since 1890 — up to the Lotrščak Tower.</li>
+        <li>Be near the <b>Lotrščak Tower</b> at noon: the Grič cannon has fired a single daily blast since 1877, a tradition said to keep the city's clocks in sync.</li>
+        <li>Wander <b>Tkalčićeva Street</b> — once a millstream, now the city's liveliest run of cafés and restaurants — and settle in for dinner.</li>
+      </ul>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Where to eat tonight</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Pod Zidom Bistro</h4><span class="stars">★ 4.8</span></div>
+          <div class="tags"><span class="tag">Seasonal</span><span class="tag">Lamb · fish</span><span class="tag">Book ahead</span></div>
+          <p>Your quality anchor in Zagreb: precise seasonal cooking — lamb gnocchi, tartares, fresh white fish — with lovely outdoor seating just below the market.</p>
+          <a class="maplink" href="https://maps.google.com/?cid=13610124922708822971" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Stari Fijaker</h4><span class="stars">★ 4.6</span></div>
+          <div class="tags"><span class="tag">Traditional</span><span class="tag">Cozy</span></div>
+          <p>Old-school Croatian home cooking and a warm, wood-panelled room — the comforting, characterful choice for a first night.</p>
+          <a class="maplink" href="https://maps.google.com/?cid=2061720518482097918" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 2 -->
+<article class="day" id="d2">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">02</div>
+      <div class="daytitle"><span class="eyebrow">Friday · Aug 7 · Zagreb</span><h2>Museums, market &amp; a hill town</h2></div>
+    </div>
+    <div class="dayfacts"><span>Optional drive <b>~45 min</b> to Samobor</span><span>Stay <b>Sheraton Zagreb</b></span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of a small Croatian hill town with a ruined castle and red rooftops">
+        <rect width="800" height="300" fill="#234852"/>
+        <path d="M0 220 C150 150 320 150 420 120 C520 92 640 120 800 90 L800 300 L0 300 Z" fill="#2c5a64"/>
+        <path d="M0 250 C200 220 400 240 600 220 C700 210 760 220 800 215 L800 300 L0 300 Z" fill="#1f4750"/>
+        <!-- castle on hill -->
+        <g fill="#cdbf9f"><rect x="360" y="70" width="60" height="60"/><rect x="356" y="58" width="12" height="14"/><rect x="380" y="54" width="12" height="18"/><rect x="412" y="58" width="12" height="14"/></g>
+        <rect x="384" y="96" width="16" height="34" fill="#234852"/>
+        <!-- town roofs -->
+        <g fill="#C0623C"><path d="M120 250 l40 -28 l40 28 Z"/><path d="M200 252 l34 -24 l34 24 Z"/><path d="M520 250 l40 -28 l40 28 Z"/><path d="M600 252 l34 -24 l34 24 Z"/><path d="M300 256 l30 -22 l30 22Z"/></g>
+        <g fill="#e9e3d5"><rect x="128" y="250" width="64" height="34"/><rect x="206" y="252" width="56" height="32"/><rect x="528" y="250" width="64" height="34"/><rect x="606" y="252" width="56" height="32"/><rect x="306" y="256" width="48" height="28"/></g>
+        <!-- custard slice nod: a layered square -->
+        <g transform="translate(690,210)"><rect width="58" height="40" rx="3" fill="#f3ead0"/><rect y="12" width="58" height="6" fill="#e7c773"/><rect y="22" width="58" height="10" fill="#fff7e6"/></g>
+      </svg>
+      <figcaption>Samobor — a hill town built for custard slices</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">A museum morning</span>
+        <h3>Zagreb's small, brilliant collections</h3>
+        <p>With a full day, lean into the city's museums. The <b>Museum of Broken Relationships</b> is unlike anything else — donated objects and the stories of the love affairs they outlived; it won a European Museum of the Year award and spawned imitators worldwide. Pair it with the <b>Mimara Museum</b> and the <b>Museum of Arts &amp; Crafts</b> for old masters and design.</p>
+        <div class="fact"><b>Fun fact</b> "The belly of Zagreb," the <b>Dolac market</b>, has traded under its sea of red parasols since 1930 — a working farmers' market right above the main square, perfect for a mid-morning browse.</div>
+      </div>
+      <div class="place">
+        <span class="kicker">Afternoon escape</span>
+        <h3>Samobor — or Varaždin</h3>
+        <p>For an easy outing, <b>Samobor</b> (~45 min) is a postcard hill town whose café tradition revolves around the <i>samoborska kremšnita</i>, a towering vanilla custard slice. If you'd rather have more architecture, swap in <b>Varaždin</b> (~1 hr), a beautifully preserved Baroque town once Croatia's capital, optionally with hilltop <b>Trakošćan Castle</b> and its lakeside walk.</p>
+      </div>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat today</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>La Štruk</h4><span class="stars">★ 4.6</span></div>
+          <div class="tags"><span class="tag">Cheese</span><span class="tag">Iconic dish</span><span class="tag">Casual</span></div>
+          <p>A whole tiny restaurant devoted to <i>štrukli</i>, Zagreb's cheese-filled pastry. Order it gratinated with truffle — a perfect light, very local lunch.</p>
+          <a class="maplink" href="https://maps.google.com/?cid=7342510568818240418" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Pod Zidom Bistro</h4><span class="stars">★ 4.8</span></div>
+          <div class="tags"><span class="tag">Seasonal</span><span class="tag">Dinner</span></div>
+          <p>Worth a return if you loved it — or save it for tonight if you ate elsewhere on arrival.</p>
+          <a class="maplink" href="https://maps.google.com/?cid=13610124922708822971" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 3 -->
+<article class="day" id="d3">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">03</div>
+      <div class="daytitle"><span class="eyebrow">Saturday · Aug 8 · To the coast</span><h2>Plitvice Lakes, then Split</h2></div>
+    </div>
+    <div class="dayfacts"><span>Drive <b>~2 hr</b> to Plitvice</span><span>then <b>~2.5 hr</b> to Split</span><span>Stay <b>AC Hotel Split</b> (night 1)</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of Plitvice Lakes terraced turquoise pools with waterfalls, a boardwalk and pine forest">
+        <rect width="800" height="300" fill="#0f3a36"/>
+        <path d="M0 0 H800 V120 C650 150 520 110 380 140 C250 168 120 120 0 150 Z" fill="#15514a"/>
+        <!-- pines -->
+        <g fill="#0c3a35"><path d="M90 150 l22 50 h-44 Z"/><path d="M120 140 l26 60 h-52 Z"/><path d="M700 150 l22 50 h-44 Z"/><path d="M730 138 l26 62 h-52 Z"/><path d="M620 152 l20 46 h-40Z"/></g>
+        <!-- terraced turquoise pools -->
+        <path d="M0 175 C200 165 600 165 800 175 L800 205 C600 196 200 196 0 205 Z" fill="#46B3A6"/>
+        <path d="M0 205 C220 196 580 196 800 205 L800 240 C560 232 240 232 0 240 Z" fill="#5cc3b6"/>
+        <path d="M0 240 C240 232 560 232 800 240 L800 300 L0 300 Z" fill="#7ad2c6"/>
+        <!-- waterfalls -->
+        <g fill="rgba(255,255,255,.8)"><rect x="280" y="178" width="6" height="34"/><rect x="300" y="178" width="4" height="30"/><rect x="520" y="208" width="6" height="34"/><rect x="540" y="208" width="4" height="30"/></g>
+        <!-- big waterfall (Veliki Slap) -->
+        <g fill="rgba(255,255,255,.85)"><rect x="395" y="120" width="10" height="120" rx="4"/><rect x="410" y="130" width="6" height="105"/><rect x="384" y="135" width="5" height="100"/></g>
+        <!-- boardwalk -->
+        <g stroke="#a9885a" stroke-width="4"><path d="M120 268 L360 250"/><path d="M360 250 L640 262"/></g>
+        <g stroke="#caa873" stroke-width="2"><path d="M150 264 v8 M210 260 v8 M270 256 v8 M330 252 v8 M430 252 v8 M500 256 v8 M570 260 v8"/></g>
+      </svg>
+      <figcaption>Plitvice Lakes — sixteen terraced pools and Veliki Slap, the great fall</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">UNESCO World Heritage · since 1979</span>
+        <h3>Why the water is that colour</h3>
+        <p>Plitvice is Croatia's oldest and largest national park, a chain of <b>sixteen terraced lakes</b> that spill into one another over natural travertine dams. Those barriers are alive: mosses and bacteria deposit limestone (tufa) that grows by roughly a centimetre a year, slowly raising the dams and re-sculpting the lakes. The unreal blues and greens come from the mineral-rich water, the lake-bed, and the angle of the light — which means the colours shift hour by hour.</p>
+        <div class="fact"><b>Fun fact</b> The forests around the lakes still shelter brown bears, wolves and lynx. And in the 1960s these waterfalls doubled as the American "Wild West" in the hugely popular German <i>Winnetou</i> films.</div>
+      </div>
+      <div class="place">
+        <span class="kicker">Plan it as the day's main event</span>
+        <h3>Walking the boardwalks</h3>
+        <p>This is not a quick photo stop. Treat your booked morning slot seriously, start at <b>Entrance 1</b> for the dramatic Lower Lakes and the 78-metre <b>Veliki Slap</b> (Croatia's tallest waterfall), and budget around four hours including the electric boat and panoramic shuttle. Then drive down to the coast — you'll reach Split in the early evening.</p>
+      </div>
+      <ul class="acts">
+        <li>Wear grippy shoes — the boardwalks get slick with mist and have no railings.</li>
+        <li>Check in to the high-rise <b>AC Hotel Split</b> for sweeping views over the city and the sea.</li>
+      </ul>
+    </div>
+
+    <div class="event">
+      <span class="eyebrow">Tonight, if you have the energy</span>
+      <h4>Šotobraco Splitom — a folk-dance promenade</h4>
+      <p>On select August evenings the FA Jedinstvo ensemble dances its way from the National Theatre through the old town to the Riva (free, around 7:30 PM). It's a no-commitment, walk-along bit of living tradition — ideal for a tired arrival night. <i>The 2025 dates were Aug 8/14/18/28; confirm the 2026 calendar at visitsplit.com.</i></p>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat today</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Lička kuća</h4><span class="stars">★ 4.2</span></div>
+          <div class="tags"><span class="tag">Lamb</span><span class="tag">Lika cuisine</span><span class="tag">At Entrance 1</span></div>
+          <p>Far better than its car-park location suggests — a rustic mountain house doing lamb soup and slow-baked <i>zavežljaj</i> parcels. The perfect Plitvice lunch (closed Tue; you're there Sat).</p>
+          <a class="maplink" href="https://maps.google.com/?cid=5489584373770769472" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Konoba Fetivi</h4><span class="stars">★ 4.6</span></div>
+          <div class="tags"><span class="tag">Seafood</span><span class="tag">Daily catch</span><span class="tag warn">Closed Sun</span></div>
+          <p>A tiny Split konoba in a stone courtyard where the fresh catch is shown tableside. Best on tonight's Saturday arrival, since it's closed tomorrow.</p>
+          <a class="maplink" href="https://maps.google.com/?cid=5688369168728730697" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Konoba Marjan</h4><span class="stars">★ 4.6</span></div>
+          <div class="tags"><span class="tag">Seafood</span><span class="tag">Octopus salad</span><span class="tag warn">Closed Sun</span></div>
+          <p>Beloved neighbourhood seafood — octopus salad, tuna tartare, fish for two, attentive service. Another strong Saturday-night option.</p>
+          <a class="maplink" href="https://maps.google.com/?cid=8961594353758320462" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 4 -->
+<article class="day" id="d4">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">04</div>
+      <div class="daytitle"><span class="eyebrow">Sunday · Aug 9 · Split</span><h2>Inside a Roman palace</h2></div>
+    </div>
+    <div class="dayfacts"><span>On foot all day</span><span>Stay <b>AC Hotel Split</b> (night 2)</span><span>Festival night ★</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of Diocletian's Palace Peristyle in Split — a colonnade with the cathedral bell tower and an Egyptian sphinx">
+        <rect width="800" height="300" fill="#e9e3d5"/>
+        <rect width="800" height="300" fill="#efe9da"/>
+        <rect y="250" width="800" height="50" fill="#d8ccae"/>
+        <!-- sky strip -->
+        <rect width="800" height="70" fill="#cfe3e2"/>
+        <!-- bell tower -->
+        <g fill="#d3c6a6"><rect x="600" y="40" width="56" height="210"/></g>
+        <g fill="#efe9da"><rect x="612" y="70" width="14" height="30" rx="7"/><rect x="632" y="70" width="14" height="30" rx="7"/><rect x="612" y="115" width="14" height="30" rx="7"/><rect x="632" y="115" width="14" height="30" rx="7"/><rect x="612" y="160" width="14" height="30" rx="7"/><rect x="632" y="160" width="14" height="30" rx="7"/></g>
+        <path d="M600 40 L628 14 L656 40 Z" fill="#1c6b78"/>
+        <!-- colonnade -->
+        <g fill="#cdbf9f"><rect x="80" y="90" width="22" height="160"/><rect x="150" y="90" width="22" height="160"/><rect x="220" y="90" width="22" height="160"/><rect x="290" y="90" width="22" height="160"/><rect x="360" y="90" width="22" height="160"/></g>
+        <g fill="#bdae8b"><rect x="74" y="82" width="34" height="12"/><rect x="144" y="82" width="34" height="12"/><rect x="214" y="82" width="34" height="12"/><rect x="284" y="82" width="34" height="12"/><rect x="354" y="82" width="34" height="12"/></g>
+        <!-- arches lintel -->
+        <path d="M74 82 q160 -34 320 0" fill="none" stroke="#bdae8b" stroke-width="12"/>
+        <!-- sphinx -->
+        <g transform="translate(470,196)" fill="#3a3a3a"><path d="M0 0 q10 -34 60 -34 q14 0 18 8 l6 -2 l2 8 l-8 4 q4 16 -6 18 L70 54 L0 54 Z"/><rect x="58" y="-30" width="22" height="14" fill="#2b2b2b"/></g>
+        <!-- people scale -->
+        <g fill="#7d6f55" opacity=".8"><rect x="200" y="226" width="6" height="22" rx="3"/><rect x="214" y="228" width="6" height="20" rx="3"/><rect x="330" y="228" width="6" height="20" rx="3"/></g>
+      </svg>
+      <figcaption>The Peristyle of Diocletian's Palace — and its 3,500-year-old Egyptian sphinx</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">Built ~305 AD · still inhabited</span>
+        <h3>A palace that became a city</h3>
+        <p>Split grew up <i>inside</i> the retirement palace of <b>Diocletian</b> — the Roman emperor famous for being the only one to voluntarily abdicate the throne. Sixteen centuries later, thousands of people still live and work within the old palace walls: laundry hangs between Roman columns, cafés spill across the ceremonial <b>Peristyle</b>, and shops occupy the imperial substructures. It's not a ruin behind a rope; it's a living neighbourhood.</p>
+        <div class="fact"><b>Fun fact</b> A black granite <b>sphinx</b> Diocletian shipped from Egypt — already ~1,500 years old when it arrived — still sits in the Peristyle, roughly 3,500 years old today. And the emperor who persecuted Christians now lies beneath a building reborn as the <b>Cathedral of St. Domnius</b>, among the oldest cathedrals still in use anywhere.</div>
+      </div>
+      <ul class="acts">
+        <li>Climb the <b>cathedral bell tower</b> (built atop Diocletian's mausoleum) and explore the cavernous substructures — the same cellars that played Daenerys's throne room in <i>Game of Thrones</i>.</li>
+        <li>Stroll the palm-lined <b>Riva</b> waterfront, then hike forested <b>Marjan Hill</b>, the "lungs of Split," for a sunset over the islands.</li>
+        <li>Half-day option that suits you perfectly: drive 15 minutes to <b>Klis Fortress</b> — a clifftop stronghold that held off the Ottomans (and stood in as GoT's Meereen) — paired with the sprawling Roman ruins of <b>Salona</b> next door.</li>
+      </ul>
+    </div>
+
+    <div class="event">
+      <span class="eyebrow">★ Tonight — your headline performance</span>
+      <h4>Split Summer Festival, in the Peristyle</h4>
+      <p>The 72nd <b>Splitsko ljeto</b> (Jul 14–Aug 14) stages opera, ballet and concerts in the open-air Roman courtyard at the heart of the palace — music inside seventeen centuries of stone. Book the Aug 9 night as soon as the programme posts at <a href="https://www.splitsko-ljeto.hr" target="_blank" rel="noopener">splitsko-ljeto.hr</a>.</p>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat today · note Sunday closures</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Perlica (Klis)</h4><span class="stars">★ 4.4</span></div>
+          <div class="tags"><span class="tag">Spit-roast lamb</span><span class="tag">Open Sunday</span></div>
+          <p>Locals drive out for the spit-roasted lamb by Klis Fortress — ideal lunch if you do the fortress trip. Confirm the per-weight price before ordering.</p>
+          <a class="maplink" href="https://maps.google.com/?cid=3295252240139199227" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Konoba Otprilike Ovako</h4><span class="stars">★ 4.7</span></div>
+          <div class="tags"><span class="tag">Traditional</span><span class="tag">Open Sunday</span></div>
+          <p>One of the few characterful konobas open on Sundays (from 4 PM) — handy for an early dinner before the festival. Fish stew, black pasta; ask what's freshest.</p>
+          <a class="maplink" href="https://maps.google.com/?cid=2458342428146426854" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 5 -->
+<article class="day" id="d5">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">05</div>
+      <div class="daytitle"><span class="eyebrow">Monday · Aug 10 · The added day</span><h2>Krka, then Šibenik in stone</h2></div>
+    </div>
+    <div class="dayfacts"><span>Drive <b>~1 hr</b> to Krka</span><span>Šibenik <b>~20 min</b> on</span><span>Stay <b>AC Hotel Split</b> (night 3)</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of Krka's broad Skradinski Buk waterfall tumbling over travertine steps into a turquoise pool, with a footbridge and pines">
+        <rect width="800" height="300" fill="#0f3a36"/>
+        <path d="M0 0 H800 V96 C650 122 520 86 380 112 C250 136 120 96 0 124 Z" fill="#15514a"/>
+        <!-- pines -->
+        <g fill="#0c3a35"><path d="M70 124 l22 46 h-44 Z"/><path d="M100 114 l26 56 h-52 Z"/><path d="M710 124 l22 46 h-44 Z"/><path d="M740 112 l26 58 h-52 Z"/></g>
+        <!-- broad multi-channel waterfall (Skradinski Buk) -->
+        <g fill="#dff3ef">
+          <path d="M150 120 q250 -26 500 0 l0 18 q-250 -24 -500 0 Z"/>
+        </g>
+        <g fill="rgba(255,255,255,.92)">
+          <rect x="190" y="132" width="9" height="86" rx="4"/><rect x="230" y="134" width="7" height="82"/>
+          <rect x="300" y="130" width="10" height="92" rx="4"/><rect x="345" y="134" width="7" height="84"/>
+          <rect x="410" y="128" width="11" height="96" rx="4"/><rect x="455" y="132" width="7" height="86"/>
+          <rect x="520" y="130" width="10" height="90" rx="4"/><rect x="565" y="134" width="7" height="82"/>
+          <rect x="610" y="132" width="9" height="84" rx="4"/>
+        </g>
+        <!-- travertine ledges -->
+        <g fill="#bda878" opacity=".6"><rect x="150" y="150" width="500" height="6" rx="3"/><rect x="170" y="178" width="460" height="6" rx="3"/></g>
+        <!-- turquoise plunge pool -->
+        <path d="M0 218 C220 206 580 206 800 218 L800 248 C560 240 240 240 0 248 Z" fill="#46B3A6"/>
+        <path d="M0 248 C240 240 560 240 800 248 L800 300 L0 300 Z" fill="#5cc3b6"/>
+        <g opacity=".5" stroke="rgba(255,255,255,.18)"><path d="M0 268 H800 M0 284 H800"/></g>
+        <!-- footbridge across the foot of the falls -->
+        <g stroke="#a9885a" stroke-width="4"><path d="M120 222 L680 222"/></g>
+        <g stroke="#caa873" stroke-width="2"><path d="M160 222 v10 M240 222 v10 M320 222 v10 M400 222 v10 M480 222 v10 M560 222 v10 M640 222 v10"/></g>
+      </svg>
+      <figcaption>Skradinski Buk — Krka's broad curtain of falls over living travertine steps</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">National park no. 2 · a flatter, swimmable cousin</span>
+        <h3>Krka &amp; Skradinski Buk</h3>
+        <p>Your extra Split night buys a second waterfall park — and a gentler one. The Krka river drops over the same kind of living <b>travertine</b> dams as Plitvice, but its showpiece, <b>Skradinski Buk</b>, is a single broad curtain you circle on a flat boardwalk loop in well under two hours. Arrive early via <b>Skradin</b>, riding the scenic park boat upriver to the falls.</p>
+        <div class="fact"><b>Fun fact</b> In 1895 the falls powered the <b>Jaruga hydroelectric plant</b> — one of the world's first AC power stations, switched on just two days after the Niagara plant. The little town of Šibenik downstream had public electric street lighting before most of Europe's capitals.</div>
+      </div>
+      <div class="place">
+        <span class="kicker">UNESCO World Heritage · 20 min from Krka</span>
+        <h3>Šibenik &amp; the Cathedral of St. James</h3>
+        <p>Exactly your kind of stop: a stone old town climbing to a hilltop fort. The 15th–16th-century <b>Cathedral of St. James</b> is built <i>entirely of stone</i> — no brick, no timber, no mortar binding — its great dome and barrel vault assembled from interlocking slabs, a feat of engineering unique in Europe. Then climb <b>St. Michael's Fortress</b> above town for the short, steep view you like (it doubles as an open-air summer stage).</p>
+        <div class="fact"><b>Fun fact</b> Around the cathedral's outer apse runs a frieze of <b>71 sculpted heads</b> — not saints but ordinary 15th-century townsfolk, every one a different face, said to be the people who did (or didn't) help pay for the church.</div>
+      </div>
+      <ul class="acts">
+        <li>Pick the <b>earliest Krka slot</b> on npkrka.hr — it beats the heat and the day-tripper crush at the falls.</li>
+        <li>Back in Split for the evening: an easy Riva dinner, or a second Split Summer Festival night if the Aug 10 programme tempts you (the festival runs through Aug 14).</li>
+      </ul>
+    </div>
+
+    <div class="event">
+      <span class="eyebrow">Optional tonight</span>
+      <h4>A second night of the Split Summer Festival</h4>
+      <p>You're still in Split, and <b>Splitsko ljeto</b> runs through Aug 14 — so if the Aug 10 programme has something you like, it's an easy bonus evening in the Peristyle with nothing to organise but a ticket. Otherwise, a relaxed seafood dinner on the Riva is the perfect close to a park day. Programme at <a href="https://www.splitsko-ljeto.hr" target="_blank" rel="noopener">splitsko-ljeto.hr</a>.</p>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat today</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Pelegrini (Šibenik)</h4><span class="stars">★ Michelin</span></div>
+          <div class="tags"><span class="tag">Tasting menu</span><span class="tag">Splurge</span><span class="tag">Book ahead</span></div>
+          <p>A Michelin-starred room on the steps facing the Cathedral of St. James — the splurge that doubles down on today's buildings theme. Adriatic seafood, deep wine list; reserve well ahead.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Pelegrini+Restaurant+Sibenik" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Konoba Toni (Skradin)</h4><span class="stars">★ 4.6</span></div>
+          <div class="tags"><span class="tag">Skradin risotto</span><span class="tag">By the boat dock</span><span class="tag">Lunch</span></div>
+          <p>Right where you board the Krka boat: the famous <i>skradinski rižot</i>, a veal risotto stirred for hours, plus grilled fish. The classic, easy park-day lunch.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Konoba+Toni+Skradin" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Konoba Dalmatino (Šibenik)</h4><span class="stars">★ 4.7</span></div>
+          <div class="tags"><span class="tag">Seafood</span><span class="tag">Old town</span><span class="tag">Relaxed</span></div>
+          <p>The unfussy Dalmatian alternative a few lanes from the cathedral: fresh catch, octopus, black risotto in a warm stone room. Small — worth booking.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Konoba+Dalmatino+Sibenik" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 6 -->
+<article class="day" id="d6">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">06</div>
+      <div class="daytitle"><span class="eyebrow">Tuesday · Aug 11 · Down the coast</span><h2>The Pelješac road to Dubrovnik</h2></div>
+    </div>
+    <div class="dayfacts"><span>Drive <b>~3–3.5 hr</b> via the bridge</span><span>Stay <b>Hilton Imperial Dubrovnik</b></span><span>Walls &amp; festival ★</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of the cable-stayed Pelješac Bridge spanning a turquoise channel between low Dalmatian hills">
+        <rect width="800" height="300" fill="#cfe3e2"/>
+        <rect width="800" height="120" fill="#d8ecea"/>
+        <!-- distant hills -->
+        <path d="M0 120 L90 70 L190 120 Z" fill="#6fa6a0"/>
+        <path d="M620 120 L720 64 L800 120 Z" fill="#6fa6a0"/>
+        <path d="M120 120 L240 84 L360 120 Z" fill="#5b948e"/>
+        <!-- sea -->
+        <rect y="120" width="800" height="180" fill="#15616d"/>
+        <path d="M0 120 H800 V300 H0 Z" fill="url(#seaG2)"/>
+        <defs><linearGradient id="seaG2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f8a98"/><stop offset="1" stop-color="#0c3a44"/></linearGradient></defs>
+        <g opacity=".5" stroke="rgba(255,255,255,.10)"><path d="M0 200 H800 M0 232 H800 M0 264 H800"/></g>
+        <!-- bridge deck -->
+        <rect x="40" y="150" width="720" height="9" fill="#e9e3d5"/>
+        <rect x="40" y="159" width="720" height="4" fill="#c9bd9d"/>
+        <!-- pylons -->
+        <g fill="#d8ccae"><rect x="250" y="70" width="12" height="86"/><rect x="540" y="70" width="12" height="86"/></g>
+        <g fill="#cdbf9f"><path d="M250 70 l6 -14 l6 14Z"/><path d="M540 70 l6 -14 l6 14Z"/></g>
+        <!-- cables -->
+        <g stroke="rgba(255,255,255,.55)" stroke-width="1.4">
+          <path d="M256 60 L150 150 M256 60 L195 150 M256 60 L240 150"/>
+          <path d="M256 60 L362 150 M256 60 L317 150 M256 60 L272 150"/>
+          <path d="M546 60 L440 150 M546 60 L485 150 M546 60 L530 150"/>
+          <path d="M546 60 L652 150 M546 60 L607 150 M546 60 L562 150"/>
+        </g>
+        <!-- piers into the water -->
+        <g fill="#0e3a42" opacity=".8"><rect x="252" y="159" width="8" height="50"/><rect x="542" y="159" width="8" height="50"/><rect x="120" y="159" width="6" height="34"/><rect x="676" y="159" width="6" height="34"/></g>
+      </svg>
+      <figcaption>The Pelješac Bridge — Croatia's 2.4 km leap over the sea, bypassing Bosnia</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">Morning · the great coastal drive</span>
+        <h3>South over the Pelješac Bridge</h3>
+        <p>Check out mid-morning and run south down the <b>Makarska Riviera</b>, mountains on one side and islands strewn across a hard blue sea on the other. The drive's headline act is the <b>Pelješac Bridge</b>: a 2.4-km cable-stayed span, opened in 2022, that vaults the Neum corridor so you reach Dubrovnik <i>entirely within Croatia</i> — no Bosnia crossing, no passports at all today.</p>
+        <div class="fact"><b>Worth a stop</b> Where the bridge meets the mainland, <b>Ston</b> guards a 5-km chain of medieval defensive walls — the longest in Europe after China's — and farms the oysters that have been prized here since Roman times. A plate of them by the water is the ideal mid-drive lunch.</div>
+      </div>
+      <div class="place">
+        <span class="kicker">Afternoon &amp; evening · the Pearl of the Adriatic</span>
+        <h3>Dubrovnik's walls at golden hour</h3>
+        <p>Check into the <b>Hilton Imperial Dubrovnik</b>, two minutes from the Pile Gate, and walk straight into the old town. Stroll the marble <b>Stradun</b>, then walk the <b>City Walls</b> — a ~2-km circuit past the round <b>Minčeta Tower</b> and out over <b>Fort Lovrijenac</b>. Go late afternoon as the heat eases and the stone turns gold; for an aerial finish, ride the <b>Mount Srđ cable car</b> above the rooftops at sunset.</p>
+        <div class="fact"><b>Fun fact</b> Dubrovnik was the merchant Republic of <b>Ragusa</b>, a tiny sea power that rivalled Venice, abolished the slave trade in <b>1416</b>, and whose never-breached walls more recently played King's Landing in <i>Game of Thrones</i>.</div>
+      </div>
+      <ul class="acts">
+        <li>Leave the car at the hotel — the old town is car-free and entirely walkable from the Pile Gate.</li>
+        <li>Buy the <b>City Walls</b> ticket (also covers Fort Lovrijenac) and start the circuit anticlockwise to keep the best light ahead of you.</li>
+      </ul>
+    </div>
+
+    <div class="event">
+      <span class="eyebrow">★ Tonight — your final headline performance</span>
+      <h4>Dubrovnik Summer Festival, inside the walls</h4>
+      <p>For 45 summer nights (~Jul 10–Aug 25) the <b>Dubrovnik Summer Festival</b> turns the old town's courtyards, churches and forts into stages — classical concerts, opera, drama and dance under the open sky. A performance within the ramparts is the ideal last-night anchor. Book the Aug 11 programme at <a href="https://www.dubrovnik-festival.hr" target="_blank" rel="noopener">dubrovnik-festival.hr</a>.</p>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat today</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Nautika (Pile Gate)</h4><span class="stars">★ 4.6</span></div>
+          <div class="tags"><span class="tag">Seafood</span><span class="tag">Sea-view terrace</span><span class="tag">Splurge · book</span></div>
+          <p>Two minutes from your hotel: white-tablecloth Adriatic seafood on terraces over Fort Lovrijenac and the open sea — the special-occasion dinner. Reserve.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Restaurant+Nautika+Dubrovnik" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Proto (old town)</h4><span class="stars">★ 4.5</span></div>
+          <div class="tags"><span class="tag">Seafood</span><span class="tag">Upstairs terrace</span><span class="tag">Classic</span></div>
+          <p>A Dubrovnik institution since 1886, just off the Stradun: grilled fish, black risotto and oysters on a leafy first-floor terrace. Reliable old-town quality.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Proto+Restaurant+Dubrovnik" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Lady Pi-Pi</h4><span class="stars">★ 4.5</span></div>
+          <div class="tags"><span class="tag">Grill</span><span class="tag">Vine terrace</span><span class="tag warn">No bookings</span></div>
+          <p>Up by the walls: charcoal-grilled fish and meat on a vine-shaded terrace with a rooftop view. Casual and characterful — go early, there's always a queue.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Lady+Pi-Pi+Restaurant+Dubrovnik" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 7 -->
+<article class="day" id="d7">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">07</div>
+      <div class="daytitle"><span class="eyebrow">Wednesday · Aug 12 · Departure</span><h2>A last morning in Dubrovnik</h2></div>
+    </div>
+    <div class="dayfacts"><span>Airport <b>~30 min</b></span><span>Car back by <b>10:00 AM</b></span><span>Fly <b>DBV 12:15 PM</b></span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of Dubrovnik's walled old town with round fort and terracotta rooftops by the sea">
+        <rect width="800" height="300" fill="#cfe3e2"/>
+        <rect y="180" width="800" height="120" fill="#15616d"/>
+        <path d="M0 180 H800 V300 H0 Z" fill="url(#seaG3)"/>
+        <defs><linearGradient id="seaG3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c7b88"/><stop offset="1" stop-color="#0c3a44"/></linearGradient></defs>
+        <g opacity=".5" stroke="rgba(255,255,255,.10)"><path d="M0 215 H800 M0 245 H800 M0 275 H800"/></g>
+        <!-- city wall -->
+        <path d="M120 180 V120 H660 V180" fill="none" stroke="#d8ccae" stroke-width="14"/>
+        <g fill="#d8ccae"><rect x="120" y="104" width="14" height="14"/><rect x="150" y="104" width="14" height="14"/><rect x="630" y="104" width="14" height="14"/><rect x="600" y="104" width="14" height="14"/></g>
+        <!-- round fort (Minceta) -->
+        <g><rect x="100" y="86" width="46" height="94" fill="#cdbf9f"/><rect x="96" y="74" width="54" height="16" fill="#d8ccae"/>
+          <g fill="#d8ccae"><rect x="100" y="64" width="10" height="12"/><rect x="118" y="64" width="10" height="12"/><rect x="136" y="64" width="10" height="12"/></g></g>
+        <!-- roofs -->
+        <g fill="#C0623C"><path d="M200 130 l24 -18 l24 18Z"/><path d="M250 132 l20 -16 l20 16Z"/><path d="M300 128 l26 -20 l26 20Z"/><path d="M360 132 l20 -16 l20 16Z"/><path d="M410 130 l24 -18 l24 18Z"/><path d="M470 132 l20 -16 l20 16Z"/><path d="M520 128 l26 -20 l26 20Z"/></g>
+        <g fill="#e0964f"><path d="M226 134 l20 -15 l20 15Z"/><path d="M330 134 l20 -15 l20 15Z"/><path d="M440 134 l20 -15 l20 15Z"/></g>
+        <!-- bell tower -->
+        <rect x="560" y="96" width="20" height="84" fill="#efe9da"/><path d="M560 96 l10 -14 l10 14Z" fill="#1c6b78"/>
+      </svg>
+      <figcaption>Dubrovnik — the Pearl of the Adriatic, last sight before the flight</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">The easy exit</span>
+        <h3>No border, no rush</h3>
+        <p>Because the trip ends in Croatia, the white-knuckle border morning is gone: <b>Dubrovnik airport is only ~30 minutes</b> from the hotel. If your 12:15 United flight leaves time, slip into the old town for an early <b>Stradun</b> stroll before the cruise crowds land — the marble streets are at their loveliest empty — then collect anything you missed on the walls.</p>
+        <div class="fact"><b>One last view</b> The cliff-edge <b>Buža bar</b>, reached through a hole in the seaward wall, serves a morning coffee on the rocks straight above the Adriatic — a quiet, perfect full stop before you point the car at the airport.</div>
+      </div>
+      <ul class="acts">
+        <li>Have a relaxed breakfast at the hotel, then drive ~30 min and return the car at <b>Dubrovnik (DBV)</b> by 10:00.</li>
+        <li>Top up the tank near the airport on the way in to avoid the rental refuelling fee.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- MUSIC SUMMARY -->
+<section class="band" id="music">
+  <div class="wrap reveal">
+    <span class="eyebrow">The soundtrack</span>
+    <h2>Music &amp; performance, at a glance</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>When</th><th>Where</th><th>What</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>Aug 6–7</td><td>Zagreb</td><td>Quiet window between festivals — check infozagreb.hr for an Upper Town or cathedral concert</td><td><span class="pill">Optional</span></td></tr>
+          <tr><td>Aug 8 eve</td><td>Split old town</td><td>Šotobraco folk-dance promenade (free, ~7:30 PM)</td><td><span class="pill">Confirm date</span></td></tr>
+          <tr><td><b>Aug 9 eve</b></td><td><b>Diocletian's Palace</b></td><td><b>Split Summer Festival — opera/ballet/concert in the Peristyle</b></td><td><span class="pill book">Book first</span></td></tr>
+          <tr><td>Aug 10 eve</td><td>Split</td><td>Optional second Split Summer Festival night (runs through Aug 14)</td><td><span class="pill">Optional</span></td></tr>
+          <tr><td><b>Aug 11 eve</b></td><td><b>Dubrovnik old town</b></td><td><b>Dubrovnik Summer Festival — concert/opera/theatre in a courtyard or fort</b></td><td><span class="pill book">Book ahead</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- EAT INDEX -->
+<section class="band essentials" id="eat">
+  <div class="wrap reveal">
+    <span class="eyebrow">The table</span>
+    <h2>Every restaurant, in one place</h2>
+    <p class="lead">Chosen for quality and local character, leaning into seafood, lamb, cheese and good salads. A standing tip: konobas will offer house wine and rakija — easy to wave off, nothing here depends on it.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Place</th><th>Where</th><th>Good for</th><th>Note</th><th>Map</th></tr></thead>
+        <tbody>
+          <tr><td><b>Pod Zidom Bistro</b> ★4.8</td><td>Zagreb</td><td>Seasonal, lamb, fish</td><td>Book ahead; outdoor tables</td><td><a href="https://maps.google.com/?cid=13610124922708822971" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>La Štruk</b> ★4.6</td><td>Zagreb</td><td>Cheese štrukli</td><td>Casual, central</td><td><a href="https://maps.google.com/?cid=7342510568818240418" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Stari Fijaker</b> ★4.6</td><td>Zagreb</td><td>Traditional Croatian</td><td>Warm, classic room</td><td><a href="https://maps.google.com/?cid=2061720518482097918" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Lička kuća</b> ★4.2</td><td>Plitvice</td><td>Lamb, Lika cuisine</td><td>At Entrance 1; closed Tue</td><td><a href="https://maps.google.com/?cid=5489584373770769472" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Konoba Fetivi</b> ★4.6</td><td>Split</td><td>Seafood, daily catch</td><td>Closed Sun</td><td><a href="https://maps.google.com/?cid=5688369168728730697" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Konoba Marjan</b> ★4.6</td><td>Split</td><td>Seafood, octopus salad</td><td>Closed Sun</td><td><a href="https://maps.google.com/?cid=8961594353758320462" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Perlica</b> ★4.4</td><td>Klis (Split)</td><td>Spit-roast lamb</td><td>Open Sun; confirm price/weight</td><td><a href="https://maps.google.com/?cid=3295252240139199227" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Konoba Otprilike Ovako</b> ★4.7</td><td>Split</td><td>Traditional</td><td>Open Sun (from 4 PM)</td><td><a href="https://maps.google.com/?cid=2458342428146426854" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Konoba Toni</b> ★4.6</td><td>Skradin (Krka)</td><td>Skradin risotto, fish</td><td>By the park boat dock; lunch</td><td><a href="https://www.google.com/maps/search/?api=1&query=Konoba+Toni+Skradin" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Pelegrini</b> ★ Michelin</td><td>Šibenik</td><td>Tasting menu, seafood</td><td>Splurge; book ahead</td><td><a href="https://www.google.com/maps/search/?api=1&query=Pelegrini+Restaurant+Sibenik" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Konoba Dalmatino</b> ★4.7</td><td>Šibenik</td><td>Seafood, black risotto</td><td>Old town; small, book</td><td><a href="https://www.google.com/maps/search/?api=1&query=Konoba+Dalmatino+Sibenik" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Nautika</b> ★4.6</td><td>Dubrovnik</td><td>Seafood, sea-view terrace</td><td>By Pile Gate; splurge, book</td><td><a href="https://www.google.com/maps/search/?api=1&query=Restaurant+Nautika+Dubrovnik" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Proto</b> ★4.5</td><td>Dubrovnik</td><td>Seafood, oysters</td><td>Old town; upstairs terrace</td><td><a href="https://www.google.com/maps/search/?api=1&query=Proto+Restaurant+Dubrovnik" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Lady Pi-Pi</b> ★4.5</td><td>Dubrovnik</td><td>Charcoal grill, view</td><td>No bookings; go early</td><td><a href="https://www.google.com/maps/search/?api=1&query=Lady+Pi-Pi+Restaurant+Dubrovnik" target="_blank" rel="noopener">↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="band" id="book">
+  <div class="wrap reveal">
+    <span class="eyebrow">Don't forget</span>
+    <h2>Booking &amp; logistics checklist</h2>
+    <ul class="checklist">
+      <li><span class="box"></span> <span><b>Plitvice</b> timed-entry ticket — Entrance 1, early slot — booked by mid-July (it sells out)</span></li>
+      <li><span class="box"></span> <span><b>Krka</b> timed-entry ticket — Aug 10 early slot — booked at npkrka.hr</span></li>
+      <li><span class="box"></span> <span><b>Split Summer Festival</b>, Aug 9 evening — book when the programme posts at splitsko-ljeto.hr</span></li>
+      <li><span class="box"></span> <span><b>Dubrovnik Summer Festival</b>, Aug 11 evening — book at dubrovnik-festival.hr</span></li>
+      <li><span class="box"></span> <span>Confirm 2026 dates for <b>Šotobraco</b> / <b>Maestro Terza</b> on visitsplit.com</span></li>
+      <li><span class="box"></span> <span>Confirm the <b>Alamo</b> one-way drop at <b>Dubrovnik (DBV)</b> (no Montenegro Green Card needed)</span></li>
+      <li><span class="box"></span> <span>Pre-load the <b>EES "Travel to Europe"</b> app before Aug 6</span></li>
+      <li><span class="box"></span> <span>Reserve dinner at <b>Pod Zidom</b> (Zagreb), <b>Pelegrini</b> (Šibenik) and <b>Nautika</b> (Dubrovnik)</span></li>
+      <li><span class="box"></span> <span>Confirm the <b>Hotel Sokoline cancellation</b> is processed (no charge)</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="eyebrow">The Adriatic Crossing</span>
+    <p style="margin-top:10px;max-width:60ch">Seven days down the Croatian Adriatic — from a Roman emperor's palace to the walls of Dubrovnik, with two waterfall parks, stone old towns and a great deal of good seafood in between. <b>Drive safely, eat well, and book the festival nights early.</b></p>
+    <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;opacity:.6;margin-top:18px">Itinerary Aug 6–12, 2026 · Illustrations drawn for this guide · Map links open in Google Maps</p>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll-reveal
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    },{threshold:0.12});
+    els.forEach(function(e){io.observe(e)});
+  })();
+
+  // Active section highlight in top nav
+  (function(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('.navlinks a'));
+    var map = {};
+    links.forEach(function(l){ var id=l.getAttribute('href').slice(1); var t=document.getElementById(id); if(t) map[id]=l; });
+    var ids = Object.keys(map);
+    if(!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(l){l.style.color='';l.style.background='';});
+          var l = map[en.target.id];
+          if(l){ l.style.color='#fff'; l.style.background='rgba(70,179,166,.22)'; }
+        }
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    ids.forEach(function(id){ io.observe(document.getElementById(id)); });
+  })();
+</script>
+</body>
+</html>
