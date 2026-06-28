@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Month on Beacon Hill · Boston — A Stay Book</title>
+<style>
+  :root{
+    --ink:#0E2A33;
+    --ink-2:#123E49;
+    --teal:#1C6B78;
+    --turq:#46B3A6;
+    --stone:#E9E3D5;
+    --stone-card:#F6F2E8;
+    --stone-line:rgba(14,42,51,0.14);
+    --terra:#C0623C;
+    --gold:#B3893F;
+    --sky:#CFE3E2;
+    --paper:#FBF8F1;
+    --brick:#9C3B2E;
+    --font-display:"Palatino Linotype","Book Antiqua",Palatino,"URW Palladio L",Georgia,serif;
+    --font-body:"Helvetica Neue","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+    --font-mono:ui-monospace,"SF Mono","Cascadia Mono","Roboto Mono",Menlo,Consolas,monospace;
+    --maxw:980px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--stone);color:var(--ink);
+    font-family:var(--font-body);font-size:17px;line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--teal);text-decoration:none}
+  a:hover{color:var(--terra)}
+  a:focus-visible{outline:2px solid var(--terra);outline-offset:3px;border-radius:2px}
+  img{max-width:100%}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 22px}
+  .eyebrow{
+    font-family:var(--font-mono);font-size:12px;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--teal);font-weight:600;
+  }
+  h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.1;margin:0}
+  p{margin:0 0 1em}
+
+  /* ---------- Top bar nav ---------- */
+  .topbar{
+    position:sticky;top:0;z-index:50;background:rgba(14,42,51,.94);
+    backdrop-filter:blur(6px);border-bottom:1px solid rgba(255,255,255,.08);
+  }
+  .topbar .wrap{display:flex;align-items:center;gap:18px;height:54px}
+  .brand{font-family:var(--font-display);color:var(--paper);font-size:18px;letter-spacing:.01em;white-space:nowrap}
+  .brand b{color:var(--turq);font-weight:600}
+  .navlinks{margin-left:auto;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+  .navlinks::-webkit-scrollbar{display:none}
+  .navlinks a{
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
+    color:rgba(255,255,255,.72);padding:6px 9px;border-radius:6px;white-space:nowrap;
+  }
+  .navlinks a:hover{color:#fff;background:rgba(255,255,255,.08)}
+
+  /* ---------- Hero ---------- */
+  .hero{background:var(--ink);color:var(--paper);padding:54px 0 38px;position:relative;overflow:hidden}
+  .hero .eyebrow{color:var(--turq)}
+  .hero h1{
+    font-size:clamp(38px,7.6vw,72px);color:var(--paper);margin:.18em 0 .1em;letter-spacing:-.01em;
+  }
+  .hero .sub{font-family:var(--font-display);font-style:italic;font-size:clamp(18px,3.4vw,26px);color:#cfe3e2;opacity:.92}
+  .hero .meta{
+    margin-top:22px;display:flex;flex-wrap:wrap;gap:10px 26px;
+    font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.78);
+  }
+  .hero .meta b{color:var(--turq);font-weight:600}
+
+  /* ---------- Route map ---------- */
+  .mapwrap{background:var(--ink-2);padding:8px 0 42px;color:var(--paper)}
+  .mapcard{
+    background:linear-gradient(180deg,#0c343d,#0e2a33);border:1px solid rgba(255,255,255,.10);
+    border-radius:14px;padding:14px;margin-top:-22px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)
+  }
+  .mapcard svg{display:block;width:100%;height:auto;border-radius:8px}
+  .maplegend{
+    display:flex;flex-wrap:wrap;gap:8px 16px;margin-top:12px;
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;color:rgba(255,255,255,.7)
+  }
+  .maplegend span{display:inline-flex;align-items:center;gap:7px}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--turq);display:inline-block}
+
+  /* ---------- Generic section ---------- */
+  section{padding:0}
+  .band{padding:46px 0}
+  .band h2{font-size:clamp(26px,4.5vw,38px)}
+  .lead{font-size:19px;color:#33474d;max-width:64ch}
+
+  /* ---------- Before you go ---------- */
+  .essentials{background:var(--paper);border-top:1px solid var(--stone-line);border-bottom:1px solid var(--stone-line)}
+  .egrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:24px}
+  .ecard{background:var(--stone-card);border:1px solid var(--stone-line);border-radius:12px;padding:18px 18px 16px}
+  .ecard h4{font-size:19px;margin-bottom:6px;display:flex;align-items:baseline;gap:9px}
+  .ecard .num{font-family:var(--font-mono);font-size:12px;color:var(--terra);font-weight:700}
+  .ecard p{font-size:15px;color:#3a4d52;margin:0}
+
+  /* ---------- Day section ---------- */
+  .day{border-top:1px solid var(--stone-line);padding:50px 0 6px}
+  .day:nth-child(even){background:var(--paper)}
+  .dayhead{display:flex;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:8px}
+  .daynum{
+    font-family:var(--font-display);font-size:clamp(56px,13vw,120px);line-height:.82;
+    color:var(--teal);opacity:.22;font-weight:700;letter-spacing:-.03em
+  }
+  .daytitle .eyebrow{display:block;margin-bottom:6px}
+  .daytitle h2{font-size:clamp(28px,5vw,44px)}
+  .dayfacts{
+    display:flex;flex-wrap:wrap;gap:6px 22px;margin:14px 0 22px;
+    font-family:var(--font-mono);font-size:12px;letter-spacing:.05em;color:var(--ink-2)
+  }
+  .dayfacts b{color:var(--terra);font-weight:700}
+
+  /* ---------- Illustration banner ---------- */
+  figure.illo{margin:0 0 24px;border-radius:14px;overflow:hidden;border:1px solid var(--stone-line);
+    box-shadow:0 24px 40px -28px rgba(14,42,51,.5);background:var(--ink)}
+  figure.illo svg{display:block;width:100%;height:auto}
+  figure.illo figcaption{
+    font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+    color:rgba(255,255,255,.72);padding:9px 14px;background:var(--ink)
+  }
+
+  /* ---------- Prose + fun facts ---------- */
+  .stack{display:grid;grid-template-columns:1fr;gap:26px}
+  .place{border-left:3px solid var(--turq);padding-left:18px}
+  .place h3{font-size:23px;margin-bottom:8px}
+  .place .kicker{font-family:var(--font-mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px}
+  .place p{color:#36494f;font-size:16px}
+  .fact{
+    margin-top:10px;background:var(--stone-card);border:1px dashed var(--gold);border-radius:10px;
+    padding:11px 14px;font-size:14.5px;color:#4a3c22
+  }
+  .fact b{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--terra);display:block;margin-bottom:3px}
+
+  /* ---------- Activities ---------- */
+  .acts{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:9px}
+  .acts li{position:relative;padding-left:26px;font-size:15.5px;color:#33474d}
+  .acts li::before{content:"";position:absolute;left:4px;top:.55em;width:8px;height:8px;border-radius:50%;
+    border:2px solid var(--teal)}
+
+  /* ---------- Event callout ---------- */
+  .event{
+    margin-top:22px;background:linear-gradient(180deg,#11414c,#0e2a33);color:var(--paper);
+    border-radius:12px;padding:18px 20px;border:1px solid rgba(255,255,255,.12)
+  }
+  .event .eyebrow{color:var(--turq)}
+  .event h4{color:var(--paper);font-size:21px;margin:6px 0 6px}
+  .event p{color:#cfe0e0;font-size:15px;margin:0}
+  .event a{color:var(--turq)}
+
+  /* ---------- Restaurants / cards ---------- */
+  .eat{margin-top:26px}
+  .eat .barlabel{font-family:var(--font-mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--teal);border-top:1px solid var(--stone-line);padding-top:14px;margin-bottom:14px;display:block}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+  .rcard{background:var(--stone-card);border:1px solid var(--stone-line);border-radius:12px;padding:15px 16px;
+    display:flex;flex-direction:column}
+  .rcard .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+  .rcard h4{font-size:18px}
+  .stars{font-family:var(--font-mono);font-size:12px;color:var(--gold);white-space:nowrap;font-weight:700}
+  .tags{margin:7px 0 8px;display:flex;flex-wrap:wrap;gap:6px}
+  .tag{font-family:var(--font-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+    background:rgba(28,107,120,.10);color:var(--teal);border-radius:20px;padding:3px 9px}
+  .tag.warn{background:rgba(192,98,60,.12);color:var(--terra)}
+  .tag.cheap{background:rgba(70,179,166,.16);color:#1a7567}
+  .rcard p{font-size:14px;color:#3c4f54;margin:0 0 12px}
+  .rcard .maplink{margin-top:auto;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+  .rcard .maplink::after{content:" ↗"}
+
+  /* ---------- Summary tables ---------- */
+  .tablewrap{overflow-x:auto;margin-top:18px;border:1px solid var(--stone-line);border-radius:12px}
+  table{border-collapse:collapse;width:100%;font-size:14.5px;background:var(--stone-card)}
+  th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--stone-line);vertical-align:top}
+  th{font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);background:rgba(28,107,120,.06)}
+  tr:last-child td{border-bottom:none}
+  td b{color:var(--ink)}
+  .pill{font-family:var(--font-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;
+    padding:2px 8px;border-radius:20px;background:rgba(179,137,63,.16);color:#7a5c1f;white-space:nowrap}
+  .pill.book{background:rgba(192,98,60,.16);color:#8a3f23}
+  .pill.free{background:rgba(70,179,166,.18);color:#1a7567}
+
+  /* ---------- Checklist ---------- */
+  .checklist{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:10px;max-width:64ch}
+  .checklist li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:#33474d}
+  .box{flex:0 0 auto;width:18px;height:18px;border:2px solid var(--teal);border-radius:4px;margin-top:3px}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--ink);color:#9fb6ba;padding:40px 0;margin-top:10px;font-size:14px}
+  footer .eyebrow{color:var(--turq)}
+  footer b{color:var(--paper)}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media (max-width:640px){
+    body{font-size:16px}
+    .hero{padding:38px 0 30px}
+    .dayhead{gap:12px}
+    .navlinks{gap:0}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="brand">A Month on <b>Beacon Hill</b></span>
+    <nav class="navlinks" aria-label="Sections">
+      <a href="#map">Map</a>
+      <a href="#prep">Before</a>
+      <a href="#d1">Sun</a>
+      <a href="#d2">Mon</a>
+      <a href="#d3">Tue</a>
+      <a href="#d4">Wed</a>
+      <a href="#d5">Thu</a>
+      <a href="#d6">Fri</a>
+      <a href="#d7">Jul 4</a>
+      <a href="#rhythm">Rhythm</a>
+      <a href="#books">Books</a>
+      <a href="#weekends">Weekends</a>
+      <a href="#events">Events</a>
+      <a href="#eat">Eat</a>
+      <a href="#book">Checklist</a>
+    </nav>
+  </div>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">A 33-day work-stay · June 28 – July 31, 2026</span>
+    <h1>A Month on Beacon Hill</h1>
+    <div class="sub">Living in Boston &middot; on the T &middot; on foot &middot; book in hand</div>
+    <div class="meta">
+      <span><b>1</b> walkable base · 64 Revere St</span>
+      <span><b>0</b> cars needed</span>
+      <span><b>Office hours</b> 8:00–16:30</span>
+      <span><b>Free</b> evenings &amp; weekends</span>
+    </div>
+  </div>
+</header>
+
+<!-- MAP -->
+<div class="mapwrap" id="map">
+  <div class="wrap">
+    <div class="mapcard">
+      <svg viewBox="0 0 900 470" role="img" aria-label="Stylised map of central Boston: the Charles River and Esplanade along the top, Beacon Hill base, Boston Common and Public Garden, Back Bay and the library, Chinatown, and the North End by the harbour, with day-trip spurs out to Salem, Concord and the Arnold Arboretum">
+        <defs>
+          <linearGradient id="riverG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1f8a98"/><stop offset="1" stop-color="#11525c"/>
+          </linearGradient>
+          <linearGradient id="harborG" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#15616d"/><stop offset="1" stop-color="#0c3a44"/>
+          </linearGradient>
+          <pattern id="ripple" width="34" height="20" patternUnits="userSpaceOnUse">
+            <path d="M0 12 Q8 6 17 12 T34 12" fill="none" stroke="rgba(255,255,255,.07)" stroke-width="1.4"/>
+          </pattern>
+        </defs>
+        <rect width="900" height="470" fill="#0e2a33"/>
+        <!-- Charles River across the top -->
+        <path d="M0 30 C200 70 420 60 600 90 C720 110 820 110 900 100 L900 150 C820 158 720 160 600 142 C420 116 200 124 0 92 Z" fill="url(#riverG)"/>
+        <path d="M0 30 C200 70 420 60 600 90 C720 110 820 110 900 100 L900 150 C820 158 720 160 600 142 C420 116 200 124 0 92 Z" fill="url(#ripple)"/>
+        <text x="120" y="62" fill="rgba(255,255,255,.40)" font-family="Palatino Linotype, serif" font-size="20" font-style="italic">Charles River &amp; the Esplanade</text>
+        <!-- Harbour bottom-right -->
+        <path d="M720 470 C760 380 820 340 900 320 L900 470 Z" fill="url(#harborG)"/>
+        <text x="792" y="430" fill="rgba(70,179,166,.5)" font-family="Palatino Linotype, serif" font-size="17" font-style="italic" text-anchor="middle">Boston</text>
+        <text x="792" y="450" fill="rgba(70,179,166,.5)" font-family="Palatino Linotype, serif" font-size="17" font-style="italic" text-anchor="middle">Harbor</text>
+        <!-- The Common / Public Garden green -->
+        <path d="M250 250 q70 -30 150 -10 q40 70 -20 120 q-90 30 -150 -20 q-20 -50 20 -90 Z" fill="#1f5a43" opacity=".75"/>
+        <text x="320" y="320" fill="rgba(255,255,255,.55)" font-family="Palatino Linotype, serif" font-size="14" font-style="italic" text-anchor="middle">Common &amp;</text>
+        <text x="320" y="338" fill="rgba(255,255,255,.55)" font-family="Palatino Linotype, serif" font-size="14" font-style="italic" text-anchor="middle">Public Garden</text>
+        <!-- Red line (Charles/MGH through Park St) -->
+        <path d="M210 150 L235 200 L300 235" fill="none" stroke="#C0623C" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- Green line toward Copley -->
+        <path d="M300 235 L150 300 L70 320" fill="none" stroke="#46B3A6" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 8"/>
+        <!-- walking lines from base -->
+        <g stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-dasharray="1 7" stroke-linecap="round">
+          <path d="M210 175 L210 150"/>
+          <path d="M210 175 L300 235"/>
+          <path d="M210 175 L520 250"/>
+        </g>
+        <!-- day-trip spurs -->
+        <g stroke="var(--gold)" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 9" opacity=".8">
+          <path d="M520 130 L640 70 L760 50"/>
+          <path d="M150 300 L70 400"/>
+        </g>
+        <!-- nodes -->
+        <g font-family="ui-monospace, monospace" font-size="12" fill="#0e2a33" text-anchor="middle">
+          <!-- Base: Beacon Hill -->
+          <g><circle cx="210" cy="175" r="15" fill="#F6F2E8" stroke="#46B3A6" stroke-width="3"/><text x="210" y="180">★</text>
+             <text x="210" y="205" fill="#fff" font-size="13">Beacon Hill base</text></g>
+          <!-- Charles/MGH -->
+          <g><circle cx="210" cy="150" r="9" fill="#C0623C"/><text x="150" y="138" fill="#f3cfc2" font-size="11" text-anchor="start">Charles/MGH</text></g>
+          <!-- Hatch Shell -->
+          <g><circle cx="380" cy="100" r="10" fill="#F6F2E8" stroke="#46B3A6" stroke-width="2"/><text x="380" y="104">♪</text>
+             <text x="380" y="88" fill="#cfe3e2" font-size="11">Hatch Shell</text></g>
+          <!-- Park St -->
+          <g><circle cx="300" cy="235" r="8" fill="#C0623C"/><text x="300" y="226" fill="#f3cfc2" font-size="11">Park St</text></g>
+          <!-- BPL / Back Bay -->
+          <g><circle cx="70" cy="320" r="11" fill="#F6F2E8" stroke="#46B3A6" stroke-width="2"/><text x="70" y="324">B</text>
+             <text x="86" y="324" fill="#cfe3e2" font-size="11" text-anchor="start">Public Library (Copley)</text></g>
+          <!-- North End / waterfront -->
+          <g><circle cx="520" cy="250" r="11" fill="#F6F2E8" stroke="#B3893F" stroke-width="2"/><text x="520" y="254">N</text>
+             <text x="520" y="278" fill="#fff" font-size="11">North End</text></g>
+          <!-- Chinatown -->
+          <g><circle cx="430" cy="330" r="11" fill="#F6F2E8" stroke="#B3893F" stroke-width="2"/><text x="430" y="334">C</text>
+             <text x="430" y="356" fill="#fff" font-size="11">Chinatown</text></g>
+          <!-- SoWa -->
+          <g><circle cx="470" cy="400" r="9" fill="#F6F2E8" stroke="#B3893F" stroke-width="2"/><text x="470" y="404">S</text>
+             <text x="470" y="424" fill="#cfe0e0" font-size="11">SoWa (Sun)</text></g>
+          <!-- day trip labels -->
+          <g><circle cx="760" cy="50" r="8" fill="#F6F2E8" stroke="#B3893F" stroke-width="2"/>
+             <text x="760" y="38" fill="#e8d5a8" font-size="11">Salem / Rockport ↗</text></g>
+          <g><circle cx="70" cy="400" r="8" fill="#F6F2E8" stroke="#B3893F" stroke-width="2"/>
+             <text x="70" y="420" fill="#e8d5a8" font-size="11">Arboretum / Walden ↘</text></g>
+        </g>
+        <!-- compass -->
+        <g transform="translate(852,440)" stroke="rgba(255,255,255,.5)" fill="rgba(255,255,255,.5)">
+          <circle r="16" fill="none" stroke-width="1"/>
+          <path d="M0 -14 L3.5 0 L0 14 L-3.5 0 Z" fill="rgba(70,179,166,.8)" stroke="none"/>
+          <text x="0" y="-20" font-family="ui-monospace, monospace" font-size="10" text-anchor="middle" fill="rgba(255,255,255,.7)">N</text>
+        </g>
+      </svg>
+      <div class="maplegend">
+        <span><span class="dot"></span> Base &amp; walkable spots (all ≤15 min on foot or one short ride)</span>
+        <span><span class="dot" style="background:var(--terra)"></span> Red Line</span>
+        <span><span class="dot" style="background:var(--turq)"></span> Green Line</span>
+        <span><span class="dot" style="background:var(--gold)"></span> Weekend day trips (Commuter Rail / T)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BEFORE YOU GO -->
+<section class="band essentials" id="prep">
+  <div class="wrap reveal">
+    <span class="eyebrow">Settle in first</span>
+    <h2>Before the month begins</h2>
+    <p class="lead">This isn't a packed tour — it's a month of <i>living</i> here. Six things to set up in the first day or two so the rest of the stay runs itself.</p>
+    <div class="egrid">
+      <div class="ecard">
+        <h4><span class="num">01</span> Get a CharlieCard</h4>
+        <p>Pick up a plastic <b>CharlieCard</b> and load a <b>monthly LinkPass</b> (subway + local bus, ~$90 — confirm the current price). Over 33 days it beats per-ride fares and makes incidental travel feel free. New tap-readers also take a contactless card or phone.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">02</span> Know your stations</h4>
+        <p><b>Charles/MGH</b> (Red Line) is at the foot of Charles St, ~5–8 min from Revere St — your workhorse. <b>Park Street</b> (Red + Green) at the Common is the hub. Skip the car entirely; Beacon Hill parking is brutal.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">03</span> Stock the kitchen</h4>
+        <p>Charles St has a grocer, butcher and bakeries within minutes; the North End salumerias are great for bread, cheese and cured meats. Cooking a few weeknights is the budget lever that funds the weekend splurges.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">04</span> Your local bookshop</h4>
+        <p><b>Beacon Hill Books &amp; Café</b> is at <b>71 Charles St</b>, ~3 minutes away — a five-floor townhouse with fireplaces, reading nooks and a café. Make it a regular haunt; it's the heart of your books-and-libraries theme.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">05</span> Plan around July 4</h4>
+        <p>The <b>Boston Pops Fireworks Spectacular</b> lands on <b>Sat Jul 4</b> at the Hatch Shell — a 10-minute walk away. Being this close is a gift: arrive early, bring a blanket (no alcohol on the Oval), and walk home rather than fight the T.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">06</span> Set the weekly rhythm</h4>
+        <p>Weeknights are short and local after 4:30; weekends go bigger. Two fixtures repeat all month: free <b>Landmarks Orchestra</b> concerts Wednesdays at the Hatch Shell, and the <b>SoWa Open Market</b> every Sunday.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WEEK 1 DAY BY DAY ============ -->
+
+<!-- DAY 1 -->
+<article class="day" id="d1">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">01</div>
+      <div class="daytitle"><span class="eyebrow">Sunday · Jun 28 · Arrival</span><h2>Landing on the Hill</h2></div>
+    </div>
+    <div class="dayfacts"><span>Base <b>64 Revere St</b>, Beacon Hill</span><span>On foot all day</span><span>Easy first night</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of Beacon Hill: a row of red-brick townhouses with shuttered windows, a lit gas lamp, and the gold dome of the Massachusetts State House behind">
+        <rect width="800" height="300" fill="#1b3942"/>
+        <rect width="800" height="300" fill="#21454f"/>
+        <!-- State House gold dome behind -->
+        <g><rect x="600" y="120" width="120" height="80" fill="#d8ccae"/>
+           <path d="M620 120 q40 -54 80 0 Z" fill="#B3893F"/>
+           <circle cx="660" cy="58" r="7" fill="#e8c969"/>
+           <rect x="656" y="64" width="8" height="14" fill="#B3893F"/>
+        </g>
+        <!-- brick row houses -->
+        <g>
+          <rect x="40" y="120" width="130" height="160" fill="#9C3B2E"/>
+          <rect x="175" y="100" width="130" height="180" fill="#883328"/>
+          <rect x="310" y="130" width="130" height="150" fill="#a14334"/>
+          <rect x="445" y="110" width="120" height="170" fill="#7e2f24"/>
+        </g>
+        <!-- cornices -->
+        <g fill="#5f231b"><rect x="40" y="120" width="130" height="8"/><rect x="175" y="100" width="130" height="8"/><rect x="310" y="130" width="130" height="8"/><rect x="445" y="110" width="120" height="8"/></g>
+        <!-- windows (warm light) -->
+        <g fill="#f3d489">
+          <rect x="60" y="150" width="26" height="40" rx="2"/><rect x="120" y="150" width="26" height="40" rx="2"/>
+          <rect x="60" y="210" width="26" height="40" rx="2"/><rect x="120" y="210" width="26" height="40" rx="2"/>
+          <rect x="196" y="132" width="26" height="40" rx="2"/><rect x="256" y="132" width="26" height="40" rx="2"/>
+          <rect x="196" y="192" width="26" height="40" rx="2"/><rect x="256" y="192" width="26" height="40" rx="2"/>
+          <rect x="330" y="160" width="26" height="38" rx="2"/><rect x="390" y="160" width="26" height="38" rx="2"/>
+          <rect x="330" y="216" width="26" height="38" rx="2"/><rect x="390" y="216" width="26" height="38" rx="2"/>
+          <rect x="466" y="142" width="24" height="38" rx="2"/><rect x="520" y="142" width="24" height="38" rx="2"/>
+          <rect x="466" y="200" width="24" height="38" rx="2"/><rect x="520" y="200" width="24" height="38" rx="2"/>
+        </g>
+        <!-- doors -->
+        <g fill="#143038"><rect x="86" y="240" width="34" height="40" rx="2"/><rect x="222" y="240" width="34" height="40" rx="2"/><rect x="356" y="240" width="34" height="40" rx="2"/><rect x="490" y="240" width="32" height="40" rx="2"/></g>
+        <!-- gas lamp -->
+        <g><rect x="600" y="200" width="6" height="80" fill="#10262d"/>
+           <rect x="592" y="188" width="22" height="20" rx="3" fill="#10262d"/>
+           <rect x="596" y="190" width="14" height="14" fill="#ffd97a"/>
+           <circle cx="603" cy="197" r="20" fill="#ffd97a" opacity=".15"/></g>
+        <!-- cobble hint -->
+        <rect y="280" width="800" height="20" fill="#2b3b40"/>
+      </svg>
+      <figcaption>Beacon Hill — brick row houses, gas lamps, and the State House dome</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">The north slope · 64 Revere St</span>
+        <h3>Drop the bags, then drift</h3>
+        <p>You've landed in one of the most walkable corners of America: gas-lamp brick streets, hand-laid sidewalks, and the flatter north slope where Revere Street sits. Don't plan anything ambitious — just get oriented. Wander down to <b>Charles Street</b>, the neighborhood's spine, to scope the grocer, the bakeries, and a wine shop for the week, and to step into <b>Beacon Hill Books &amp; Café</b> around the corner.</p>
+        <div class="fact"><b>Good to know</b> Beacon Hill's gas lamps are lit every day of the year — a deliberate bit of preserved 19th-century atmosphere. Acorn Street, a block or two over, is the most-photographed street in the US.</div>
+      </div>
+      <ul class="acts">
+        <li>Stroll to the <b>Public Garden &amp; Boston Common</b> (~8–10 min) — the lagoon, the swan boats, and the start of the Freedom Trail.</li>
+        <li>Do a first grocery run on Charles St so weekday breakfasts and a couple of dinners are sorted.</li>
+        <li>Find your nearest T entrance at <b>Charles/MGH</b> so Monday's commute is muscle memory.</li>
+      </ul>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat tonight · keep it easy &amp; local</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Charles Street pick</h4><span class="stars">$$</span></div>
+          <div class="tags"><span class="tag">Neighborhood</span><span class="tag">Walk to it</span></div>
+          <p>A relaxed first dinner on Charles St — a pub plate or a neighborhood bistro — then an early night. You're here for a month; no need to rush the highlights.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=restaurants+Charles+St+Beacon+Hill+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Cook in</h4><span class="stars">$</span></div>
+          <div class="tags"><span class="tag cheap">Budget</span><span class="tag">Kitchen</span></div>
+          <p>Or christen the Airbnb kitchen with groceries from Charles St — the budget default for weeknights, so the weekend splurge feels earned.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=grocery+Charles+St+Beacon+Hill+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 2 -->
+<article class="day" id="d2">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">02</div>
+      <div class="daytitle"><span class="eyebrow">Monday · Jun 29 · First workday</span><h2>Commute, then the river</h2></div>
+    </div>
+    <div class="dayfacts"><span>Work <b>8:00–16:30</b></span><span>Free <b>after 4:30</b></span><span>Esplanade ~8 min walk</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of the Charles River Esplanade at dusk: the Hatch Shell band stage, sailboats on the river, joggers on the path, and the Back Bay skyline">
+        <rect width="800" height="300" fill="#15303a"/>
+        <rect width="800" height="150" fill="#1c4350"/>
+        <!-- dusk sky glow -->
+        <circle cx="640" cy="120" r="70" fill="#e08a52" opacity=".25"/>
+        <!-- skyline -->
+        <g fill="#0f2a31"><rect x="40" y="70" width="26" height="80"/><rect x="74" y="50" width="20" height="100"/><rect x="100" y="90" width="30" height="60"/><rect x="700" y="60" width="24" height="90"/><rect x="730" y="40" width="18" height="110"/><rect x="752" y="84" width="30" height="66"/></g>
+        <!-- river -->
+        <rect y="150" width="800" height="150" fill="#15616d"/>
+        <path d="M0 150 H800 V300 H0 Z" fill="url(#riverG)"/>
+        <g opacity=".5" stroke="rgba(255,255,255,.10)"><path d="M0 196 H800 M0 230 H800 M0 264 H800"/></g>
+        <!-- sailboats -->
+        <g><path d="M250 150 l0 -34 l22 34 Z" fill="#e9e3d5"/><rect x="250" y="150" width="2" height="6" fill="#fff"/></g>
+        <g><path d="M330 152 l0 -26 l16 26 Z" fill="#cfe3e2"/></g>
+        <!-- Hatch Shell band stage -->
+        <g transform="translate(430,84)">
+          <path d="M0 66 A70 70 0 0 1 140 66 Z" fill="#1c6b78"/>
+          <path d="M14 66 A56 56 0 0 1 126 66 Z" fill="#2b818d"/>
+          <path d="M30 66 A40 40 0 0 1 110 66 Z" fill="#3a98a4"/>
+          <rect x="20" y="66" width="100" height="8" fill="#0e3a42"/>
+          <rect x="56" y="50" width="28" height="24" fill="#143038"/>
+        </g>
+        <!-- path + joggers -->
+        <rect x="0" y="150" width="800" height="0"/>
+        <g fill="#7d6f55"><rect x="120" y="142" width="5" height="14" rx="2"/><rect x="150" y="140" width="5" height="16" rx="2"/><rect x="600" y="141" width="5" height="15" rx="2"/></g>
+      </svg>
+      <figcaption>The Esplanade at dusk — the Hatch Shell and the Charles, ten minutes from home</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">The after-work default</span>
+        <h3>Cross to the Esplanade</h3>
+        <p>End of day one at the office. The simplest, best evening on Beacon Hill is also the closest: cross at Charles Circle over the <b>Frances Appleton pedestrian bridge</b> to the riverbank, and walk the <b>Charles River Esplanade</b> as the light goes gold. Sailboats, joggers, the Hatch Shell, and the Back Bay skyline across the water — a free, restful reset after a workday.</p>
+        <div class="fact"><b>Fun fact</b> The Esplanade's lagoons and the Hatch Memorial Shell sit on land reclaimed from the river in the early 20th century; the Shell has hosted free concerts since 1929, and the Boston Pops have played their July 4 spectacular here for over half a century.</div>
+      </div>
+      <ul class="acts">
+        <li>Loop back through <b>Charles Street</b> for a casual bite, or grab dinner ingredients and cook in.</li>
+        <li>Note the Wednesday concert plan (two nights ahead) — see <a href="#rhythm">the weekday rhythm</a>.</li>
+      </ul>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 3 -->
+<article class="day" id="d3">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">03</div>
+      <div class="daytitle"><span class="eyebrow">Tuesday · Jun 30 · After work</span><h2>Among the bookshelves</h2></div>
+    </div>
+    <div class="dayfacts"><span>Beacon Hill Books ~3 min</span><span>BPL tour <b>Tue 6 PM</b></span><span>Quiet evening</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of a cozy multi-floor bookshop interior: tall shelves of colourful book spines, a fireplace, a reading armchair and a warm lamp">
+        <rect width="800" height="300" fill="#241a14"/>
+        <rect width="800" height="300" fill="#2c2018"/>
+        <!-- shelves -->
+        <g>
+          <rect x="40" y="30" width="300" height="240" fill="#3a2a1e"/>
+          <g fill="#241a14"><rect x="48" y="38" width="284" height="6"/><rect x="48" y="96" width="284" height="6"/><rect x="48" y="154" width="284" height="6"/><rect x="48" y="212" width="284" height="6"/></g>
+          <!-- book spines -->
+          <g>
+            <rect x="54" y="48" width="12" height="46" fill="#9C3B2E"/><rect x="68" y="50" width="10" height="44" fill="#1C6B78"/><rect x="80" y="46" width="14" height="48" fill="#B3893F"/><rect x="96" y="52" width="9" height="42" fill="#46B3A6"/><rect x="107" y="48" width="13" height="46" fill="#7e2f24"/><rect x="122" y="50" width="10" height="44" fill="#2b818d"/><rect x="134" y="46" width="12" height="48" fill="#C0623C"/><rect x="148" y="52" width="9" height="42" fill="#5f231b"/><rect x="159" y="48" width="14" height="46" fill="#1f5a43"/><rect x="175" y="50" width="10" height="44" fill="#B3893F"/><rect x="187" y="46" width="12" height="48" fill="#1C6B78"/><rect x="201" y="50" width="11" height="44" fill="#9C3B2E"/><rect x="214" y="48" width="13" height="46" fill="#46B3A6"/><rect x="229" y="52" width="9" height="42" fill="#C0623C"/><rect x="240" y="46" width="14" height="48" fill="#2b818d"/><rect x="256" y="50" width="10" height="44" fill="#B3893F"/><rect x="268" y="48" width="12" height="46" fill="#7e2f24"/><rect x="282" y="52" width="9" height="42" fill="#1f5a43"/><rect x="293" y="48" width="13" height="46" fill="#1C6B78"/><rect x="308" y="50" width="11" height="44" fill="#C0623C"/>
+          </g>
+          <g transform="translate(0,58)">
+            <rect x="54" y="48" width="13" height="46" fill="#1f5a43"/><rect x="69" y="50" width="10" height="44" fill="#C0623C"/><rect x="81" y="46" width="12" height="48" fill="#46B3A6"/><rect x="95" y="52" width="11" height="42" fill="#9C3B2E"/><rect x="108" y="48" width="13" height="46" fill="#B3893F"/><rect x="123" y="50" width="10" height="44" fill="#1C6B78"/><rect x="135" y="46" width="12" height="48" fill="#7e2f24"/><rect x="149" y="52" width="9" height="42" fill="#2b818d"/><rect x="160" y="48" width="14" height="46" fill="#C0623C"/><rect x="176" y="50" width="10" height="44" fill="#1f5a43"/><rect x="188" y="46" width="12" height="48" fill="#B3893F"/><rect x="202" y="50" width="11" height="44" fill="#46B3A6"/><rect x="215" y="48" width="13" height="46" fill="#9C3B2E"/><rect x="230" y="52" width="9" height="42" fill="#1C6B78"/><rect x="241" y="46" width="14" height="48" fill="#C0623C"/><rect x="257" y="50" width="10" height="44" fill="#2b818d"/><rect x="269" y="48" width="12" height="46" fill="#B3893F"/><rect x="283" y="52" width="9" height="42" fill="#7e2f24"/><rect x="294" y="48" width="13" height="46" fill="#1f5a43"/><rect x="309" y="50" width="10" height="44" fill="#46B3A6"/>
+          </g>
+          <g transform="translate(0,116)">
+            <rect x="54" y="48" width="12" height="46" fill="#C0623C"/><rect x="68" y="50" width="10" height="44" fill="#B3893F"/><rect x="80" y="46" width="14" height="48" fill="#1C6B78"/><rect x="96" y="52" width="9" height="42" fill="#7e2f24"/><rect x="107" y="48" width="13" height="46" fill="#46B3A6"/><rect x="122" y="50" width="10" height="44" fill="#9C3B2E"/><rect x="134" y="46" width="12" height="48" fill="#1f5a43"/><rect x="148" y="52" width="9" height="42" fill="#B3893F"/><rect x="159" y="48" width="14" height="46" fill="#2b818d"/><rect x="175" y="50" width="10" height="44" fill="#C0623C"/><rect x="187" y="46" width="12" height="48" fill="#1C6B78"/><rect x="201" y="50" width="11" height="44" fill="#7e2f24"/><rect x="214" y="48" width="13" height="46" fill="#B3893F"/><rect x="229" y="52" width="9" height="42" fill="#46B3A6"/><rect x="240" y="46" width="14" height="48" fill="#9C3B2E"/><rect x="256" y="50" width="10" height="44" fill="#1f5a43"/><rect x="268" y="48" width="12" height="46" fill="#C0623C"/><rect x="282" y="52" width="9" height="42" fill="#2b818d"/><rect x="293" y="48" width="13" height="46" fill="#B3893F"/><rect x="308" y="50" width="11" height="44" fill="#1C6B78"/>
+          </g>
+        </g>
+        <!-- fireplace -->
+        <g transform="translate(470,150)">
+          <rect x="0" y="0" width="150" height="120" fill="#3a2a1e"/>
+          <rect x="20" y="34" width="110" height="86" fill="#160f0a"/>
+          <g><path d="M55 120 q20 -40 40 0 Z" fill="#e08a52"/><path d="M64 120 q12 -26 24 0 Z" fill="#f3d489"/></g>
+          <rect x="-8" y="-12" width="166" height="14" fill="#4a3422"/>
+        </g>
+        <!-- armchair + lamp -->
+        <g transform="translate(650,170)">
+          <rect x="0" y="40" width="70" height="60" rx="10" fill="#1C6B78"/>
+          <rect x="-10" y="50" width="18" height="44" rx="8" fill="#175863"/>
+          <rect x="62" y="50" width="18" height="44" rx="8" fill="#175863"/>
+        </g>
+        <g transform="translate(745,90)"><rect x="-3" y="0" width="6" height="90" fill="#2c2018"/><path d="M-22 0 h44 l-10 30 h-24 Z" fill="#f3d489"/><circle cx="0" cy="20" r="30" fill="#ffd97a" opacity=".14"/></g>
+      </svg>
+      <figcaption>Beacon Hill Books &amp; Café — five floors, fireplaces, and a café on the way down</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">Your running theme</span>
+        <h3>A bookshop kind of evening</h3>
+        <p>Tonight leans into the books-and-libraries thread that runs through the whole stay. Start three minutes from the door at <b>Beacon Hill Books &amp; Café</b> — a 19th-century townhouse turned five-floor bookshop with fireplaces and reading nooks, and a café for tea, wine, or a small bite. If you want more, hop the Green Line to <b>Copley</b> for the Boston Public Library's free art-and-architecture tour, which runs <b>Tuesdays at 6 PM</b>.</p>
+        <div class="fact"><b>Fun fact</b> The BPL, founded in 1848, was the first large free municipal library in the US and the first to lend books and to open a dedicated children's room — the original "free to all" carved over its Copley doors.</div>
+      </div>
+      <ul class="acts">
+        <li>Other nights, swap in the <b>Brattle Book Shop</b> downtown (used &amp; rare, with a famous outdoor sale lot — catch it before it closes) or <b>Trident</b> in Back Bay.</li>
+        <li>Weekend stretch goal: <b>Harvard Book Store</b> in Cambridge and <b>Brookline Booksmith</b> in Coolidge Corner.</li>
+      </ul>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat tonight</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Beacon Hill Books Café</h4><span class="stars">$$</span></div>
+          <div class="tags"><span class="tag">Café</span><span class="tag">Tea · wine</span><span class="tag">Walk to it</span></div>
+          <p>Stay for the in-house café — small plates, tea and wine in the bookshop's garden-level room. A perfect low-key after-work bite.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Beacon+Hill+Books+and+Cafe+71+Charles+St+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Tatte / café row</h4><span class="stars">$</span></div>
+          <div class="tags"><span class="tag cheap">Budget</span><span class="tag">Quick</span></div>
+          <p>Charles St cafés cover an easy soup-and-sandwich evening if you'd rather read than cook.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=cafe+Charles+St+Beacon+Hill+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 4 -->
+<article class="day" id="d4">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">04</div>
+      <div class="daytitle"><span class="eyebrow">Wednesday · Jul 1 · After work</span><h2>The North End, on the cheap</h2></div>
+    </div>
+    <div class="dayfacts"><span>North End ~20 min walk</span><span>Landmarks concert? <b>check Jul dates</b></span><span>Everyday eating</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of a North End street: narrow Italian storefronts with awnings, the white steeple of the Old North Church, string lights, and a cannoli">
+        <rect width="800" height="300" fill="#20323a"/>
+        <!-- sky -->
+        <rect width="800" height="120" fill="#2a4651"/>
+        <!-- Old North Church steeple -->
+        <g><rect x="650" y="60" width="40" height="120" fill="#e9e3d5"/>
+           <rect x="654" y="40" width="32" height="22" fill="#dcd2bb"/>
+           <path d="M650 60 h40 l-20 -22 Z" fill="#cdbf9f"/>
+           <path d="M658 40 l12 -28 l12 28 Z" fill="#1c6b78"/>
+           <rect x="666" y="74" width="8" height="20" rx="4" fill="#20323a"/>
+        </g>
+        <!-- buildings -->
+        <g>
+          <rect x="30" y="110" width="160" height="170" fill="#7e2f24"/>
+          <rect x="200" y="90" width="160" height="190" fill="#9C3B2E"/>
+          <rect x="370" y="120" width="150" height="160" fill="#883328"/>
+        </g>
+        <!-- awnings (Italian green/red/white) -->
+        <g><rect x="40" y="200" width="140" height="10" fill="#1f5a43"/><path d="M40 210 h140 v16 l-140 0 Z" fill="#2a6d52"/></g>
+        <g><rect x="210" y="184" width="140" height="10" fill="#9C3B2E"/><path d="M210 194 h140 v16 l-140 0 Z" fill="#b14738"/></g>
+        <g><rect x="380" y="212" width="130" height="10" fill="#e9e3d5"/><path d="M380 222 h130 v16 l-130 0 Z" fill="#f3ead0"/></g>
+        <!-- windows -->
+        <g fill="#f3d489"><rect x="56" y="134" width="22" height="34"/><rect x="100" y="134" width="22" height="34"/><rect x="144" y="134" width="22" height="34"/><rect x="226" y="118" width="22" height="34"/><rect x="270" y="118" width="22" height="34"/><rect x="314" y="118" width="22" height="34"/><rect x="396" y="146" width="20" height="32"/><rect x="436" y="146" width="20" height="32"/><rect x="476" y="146" width="20" height="32"/></g>
+        <!-- string lights -->
+        <g stroke="#caa873" stroke-width="1.5" fill="none"><path d="M20 120 q120 40 240 4 q120 -36 240 6"/></g>
+        <g fill="#ffd97a"><circle cx="80" cy="134" r="3"/><circle cx="160" cy="128" r="3"/><circle cx="240" cy="124" r="3"/><circle cx="320" cy="126" r="3"/><circle cx="400" cy="130" r="3"/><circle cx="480" cy="134" r="3"/></g>
+        <!-- cannoli -->
+        <g transform="translate(600,230)"><rect x="0" y="0" width="80" height="40" rx="20" fill="#caa05a"/><ellipse cx="0" cy="20" rx="9" ry="18" fill="#fff5e2"/><ellipse cx="80" cy="20" rx="9" ry="18" fill="#fff5e2"/><circle cx="80" cy="14" r="4" fill="#7e2f24"/></g>
+        <rect y="278" width="800" height="22" fill="#16262b"/>
+      </svg>
+      <figcaption>The North End — Boston's Little Italy, and the Old North Church steeple</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">Local favorites, low spend</span>
+        <h3>Dinner where the prices held still</h3>
+        <p>Walk (or take a short ride) to the <b>North End</b>, Boston's Little Italy — narrow lanes, the smell of bread, and a few old-school spots that have resisted both gentrification and inflation. <b>Galleria Umberto</b> sells caramelized-crust Sicilian pizza squares and arancini for a few dollars (lunch only, cash, closes when it sells out); <b>Salumeria Italiana</b> stacks cut-to-order subs on Iggy's bread. Finish with a cannoli and a piazza sit.</p>
+        <div class="fact"><b>Fun fact</b> The North End is Boston's oldest residential neighborhood, and the <b>Old North Church</b> (1723) is where the "one if by land, two if by sea" lanterns hung in 1775 to signal Paul Revere — whose own house, the oldest in downtown Boston, is a few lanes away.</div>
+      </div>
+      <ul class="acts">
+        <li>If a <b>Landmarks Orchestra</b> Wednesday concert falls in your window, the Hatch Shell is the alternative tonight (7 PM, free) — confirm July dates on esplanade.org.</li>
+        <li>Stock up at a salumeria for cheese, bread and cured meats to eat in later in the week.</li>
+      </ul>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat tonight · everyday North End</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Galleria Umberto</h4><span class="stars">$</span></div>
+          <div class="tags"><span class="tag cheap">Under $10</span><span class="tag">Sicilian pizza</span><span class="tag warn">Lunch · cash</span></div>
+          <p>Squares of cheesy, caramelized-crust pizza and arancini for a few dollars. A North End institution — go before it sells out.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Galleria+Umberto+North+End+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Salumeria Italiana</h4><span class="stars">$</span></div>
+          <div class="tags"><span class="tag cheap">~$11 subs</span><span class="tag">Deli</span></div>
+          <p>Cut-to-order Italian subs on Iggy's bread, plus cheeses and pantry goods to take home for the week.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Salumeria+Italiana+North+End+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Modern / Mike's Pastry</h4><span class="stars">$</span></div>
+          <div class="tags"><span class="tag">Cannoli</span><span class="tag">Dessert</span></div>
+          <p>The rival cannoli counters on Hanover St — pick a side. A cheap, very local sweet to walk home with.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=cannoli+Hanover+St+North+End+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 5 -->
+<article class="day" id="d5">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">05</div>
+      <div class="daytitle"><span class="eyebrow">Thursday · Jul 2 · After work</span><h2>A palace of books</h2></div>
+    </div>
+    <div class="dayfacts"><span>Green Line to <b>Copley</b></span><span>BPL tour <b>Thu 6 PM</b></span><span>Newbury St stroll</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of the Boston Public Library's Beaux-Arts McKim facade: a long arcade of tall arched windows, carved cornice, and lanterns flanking the entrance">
+        <rect width="800" height="300" fill="#cfe3e2"/>
+        <rect width="800" height="120" fill="#d8ecea"/>
+        <rect y="120" width="800" height="180" fill="#e9e3d5"/>
+        <!-- building base -->
+        <rect x="60" y="70" width="680" height="200" fill="#efe9da"/>
+        <rect x="60" y="70" width="680" height="200" fill="none" stroke="#cdbf9f" stroke-width="2"/>
+        <!-- cornice -->
+        <rect x="50" y="70" width="700" height="16" fill="#d8ccae"/>
+        <rect x="50" y="60" width="700" height="12" fill="#cdbf9f"/>
+        <!-- string course -->
+        <rect x="60" y="150" width="680" height="6" fill="#d8ccae"/>
+        <!-- arched windows arcade -->
+        <g>
+          <g fill="#1c4350">
+            <path d="M110 150 v-44 a22 22 0 0 1 44 0 v44 Z"/>
+            <path d="M180 150 v-44 a22 22 0 0 1 44 0 v44 Z"/>
+            <path d="M250 150 v-44 a22 22 0 0 1 44 0 v44 Z"/>
+            <path d="M320 150 v-44 a22 22 0 0 1 44 0 v44 Z"/>
+            <path d="M390 150 v-44 a22 22 0 0 1 44 0 v44 Z"/>
+            <path d="M460 150 v-44 a22 22 0 0 1 44 0 v44 Z"/>
+            <path d="M530 150 v-44 a22 22 0 0 1 44 0 v44 Z"/>
+            <path d="M600 150 v-44 a22 22 0 0 1 44 0 v44 Z"/>
+          </g>
+          <!-- keystones -->
+          <g fill="#cdbf9f"><rect x="128" y="80" width="8" height="10"/><rect x="198" y="80" width="8" height="10"/><rect x="268" y="80" width="8" height="10"/><rect x="338" y="80" width="8" height="10"/><rect x="408" y="80" width="8" height="10"/><rect x="478" y="80" width="8" height="10"/><rect x="548" y="80" width="8" height="10"/><rect x="618" y="80" width="8" height="10"/></g>
+        </g>
+        <!-- entrance with lanterns -->
+        <g><rect x="356" y="200" width="88" height="70" fill="#1b3942"/>
+           <rect x="356" y="194" width="88" height="8" fill="#B3893F"/>
+        </g>
+        <!-- lanterns -->
+        <g><rect x="338" y="196" width="6" height="74" fill="#3a2f1c"/><circle cx="341" cy="190" r="9" fill="#ffd97a"/></g>
+        <g><rect x="456" y="196" width="6" height="74" fill="#3a2f1c"/><circle cx="459" cy="190" r="9" fill="#ffd97a"/></g>
+        <!-- inscription band -->
+        <rect x="120" y="172" width="560" height="14" fill="#e3dcc8"/>
+        <text x="400" y="183" text-anchor="middle" font-family="Palatino Linotype, serif" font-size="11" letter-spacing="3" fill="#9a865a">FREE TO ALL</text>
+        <!-- people -->
+        <g fill="#7d6f55" opacity=".8"><rect x="300" y="248" width="6" height="22" rx="3"/><rect x="314" y="250" width="6" height="20" rx="3"/><rect x="500" y="250" width="6" height="20" rx="3"/></g>
+      </svg>
+      <figcaption>Boston Public Library, McKim Building (1895) — Bates Hall, the courtyard, and Sargent murals within</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">Copley Square · free to enter</span>
+        <h3>The Boston Public Library</h3>
+        <p>A short Green Line hop to <b>Copley</b> drops you at one of the great American interiors. The 1895 <b>McKim Building</b> is Beaux-Arts at full volume: a peaceful Italianate <b>courtyard</b>, the cathedral-like <b>Bates Hall</b> reading room, and murals by John Singer Sargent and Edwin Austin Abbey upstairs — all free to wander. The free <b>art &amp; architecture tour</b> runs <b>Thursdays at 6 PM</b>, ideal after work.</p>
+        <div class="fact"><b>Fun fact</b> Sargent considered his "Triumph of Religion" murals here his most important work, laboring on them for nearly 30 years. The building was dubbed a "palace for the people" — a deliberate idea that ordinary citizens deserved marble, murals and quiet grandeur.</div>
+      </div>
+      <ul class="acts">
+        <li>Spill out onto <b>Newbury Street</b> and <b>Copley Square</b> for a Back Bay evening stroll past Trinity Church.</li>
+        <li>Browse <b>Trident Booksellers &amp; Café</b> on Newbury while you're here.</li>
+      </ul>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat tonight</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Newbury St casual</h4><span class="stars">$$</span></div>
+          <div class="tags"><span class="tag">Back Bay</span><span class="tag">Patios</span></div>
+          <p>Newbury and Boylston are lined with easy mid-priced rooms and patios — a relaxed Back Bay dinner before the ride home.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=restaurants+Newbury+St+Back+Bay+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Saloniki / Clover</h4><span class="stars">$</span></div>
+          <div class="tags"><span class="tag cheap">Budget</span><span class="tag">Fast-casual</span></div>
+          <p>Quick, good-value Greek or veggie counters near Copley if you're keeping the spend low for a weekend splurge.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Saloniki+Greek+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 6 -->
+<article class="day" id="d6">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">06</div>
+      <div class="daytitle"><span class="eyebrow">Friday · Jul 3 · After work</span><h2>Chinatown &amp; the long weekend</h2></div>
+    </div>
+    <div class="dayfacts"><span>Chinatown ~10 min on the T</span><span>Best-value eating in town</span><span>Holiday weekend begins</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of the Chinatown paifang gate with green-tiled roofs and red columns, lanterns strung across the street, and a steaming basket of dumplings">
+        <rect width="800" height="300" fill="#1c2f36"/>
+        <rect width="800" height="130" fill="#26424c"/>
+        <!-- paifang gate -->
+        <g>
+          <!-- columns -->
+          <rect x="150" y="90" width="22" height="190" fill="#9C3B2E"/>
+          <rect x="330" y="90" width="22" height="190" fill="#9C3B2E"/>
+          <rect x="510" y="90" width="22" height="190" fill="#9C3B2E"/>
+          <!-- main beam -->
+          <rect x="130" y="96" width="420" height="20" fill="#7e2f24"/>
+          <!-- green tiled roofs -->
+          <path d="M120 96 q220 -40 440 0 l-12 -22 q-208 -34 -416 0 Z" fill="#1f5a43"/>
+          <path d="M120 74 q220 -34 440 0 l-10 -16 q-210 -28 -420 0 Z" fill="#2a6d52"/>
+          <!-- small side roofs -->
+          <path d="M138 130 h60 l-10 -14 h-40 Z" fill="#1f5a43"/>
+          <path d="M492 130 h60 l-10 -14 h-40 Z" fill="#1f5a43"/>
+          <!-- plaque -->
+          <rect x="300" y="98" width="80" height="16" fill="#B3893F"/>
+        </g>
+        <!-- lanterns strung -->
+        <g stroke="#caa873" stroke-width="1.2" fill="none"><path d="M170 116 q230 50 460 0"/></g>
+        <g fill="#C0623C"><ellipse cx="260" cy="140" rx="12" ry="16"/><ellipse cx="400" cy="150" rx="12" ry="16"/><ellipse cx="540" cy="140" rx="12" ry="16"/></g>
+        <g fill="#7e2f24"><rect x="254" y="124" width="12" height="4"/><rect x="394" y="134" width="12" height="4"/><rect x="534" y="124" width="12" height="4"/></g>
+        <!-- dumpling basket -->
+        <g transform="translate(580,196)">
+          <ellipse cx="70" cy="74" rx="92" ry="20" fill="#6b4a2a"/>
+          <rect x="-22" y="40" width="184" height="36" rx="8" fill="#8a6336"/>
+          <g fill="#6b4a2a"><rect x="-22" y="44" width="184" height="3"/><rect x="-22" y="56" width="184" height="3"/><rect x="-22" y="68" width="184" height="3"/></g>
+          <g fill="#f3ead0"><ellipse cx="10" cy="40" rx="20" ry="14"/><ellipse cx="56" cy="36" rx="22" ry="15"/><ellipse cx="104" cy="40" rx="20" ry="14"/><ellipse cx="140" cy="42" rx="16" ry="12"/></g>
+          <!-- steam -->
+          <g stroke="rgba(255,255,255,.4)" stroke-width="3" fill="none" stroke-linecap="round"><path d="M40 20 q-8 -16 4 -30"/><path d="M80 16 q-8 -16 4 -30"/></g>
+        </g>
+        <rect y="278" width="800" height="22" fill="#13242a"/>
+      </svg>
+      <figcaption>Chinatown — the paifang gate, and the city's best-value eating</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">Cheap, generous, open late</span>
+        <h3>The best-value blocks in Boston</h3>
+        <p>Ease into the holiday weekend in <b>Chinatown</b>, a short ride or walk away and reliably the cheapest, most generous eating in the city. <b>Gene's Chinese Flatbread Café</b> does Xi'an hand-pulled noodles with most dishes under $10; <b>Dumpling Café</b> and the Beach Street food-court stalls pile on Taiwanese and Szechuan plates; <b>bánh mì</b> counters near Downtown Crossing run under $10. Few dollars, big plates — exactly the everyday register.</p>
+        <div class="fact"><b>Fun fact</b> Boston's Chinatown is the only surviving historic Chinatown in New England and one of the most densely populated neighborhoods in the city — its paifang gate, a gift marking the US bicentennial, is the ceremonial front door.</div>
+      </div>
+      <ul class="acts">
+        <li>Tomorrow is July 4 and the Esplanade will be packed early — buy water and snacks tonight, and plan an early-afternoon arrival.</li>
+        <li>If the Brattle Book Shop's outdoor lot is open downtown, it's a few minutes from Chinatown — browse before dinner.</li>
+      </ul>
+    </div>
+
+    <div class="eat">
+      <span class="barlabel">Eat tonight · everyday Chinatown</span>
+      <div class="cards">
+        <div class="rcard">
+          <div class="top"><h4>Gene's Chinese Flatbread</h4><span class="stars">$</span></div>
+          <div class="tags"><span class="tag cheap">Under $10</span><span class="tag">Xi'an noodles</span></div>
+          <p>Hand-pulled, hand-ripped noodles and cumin-lamb skewers — a cult cheap-eat. Tiny and cash-friendly; expect a line at peak.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Gene's+Chinese+Flatbread+Cafe+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Dumpling Café</h4><span class="stars">$</span></div>
+          <div class="tags"><span class="tag cheap">Under $13</span><span class="tag">Taiwanese</span><span class="tag">Open late</span></div>
+          <p>Soup dumplings and a vast Taiwanese/Szechuan menu, hugely generous portions, open till the small hours.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Dumpling+Cafe+Chinatown+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+        <div class="rcard">
+          <div class="top"><h4>Bánh Mì counters</h4><span class="stars">$</span></div>
+          <div class="tags"><span class="tag cheap">Under $10</span><span class="tag">Sandwiches</span></div>
+          <p>Crusty, herby Vietnamese sandwiches near Downtown Crossing — the best fast lunch-or-dinner deal in the area.</p>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=banh+mi+Downtown+Crossing+Boston" target="_blank" rel="noopener">Open in Maps</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- DAY 7 -->
+<article class="day" id="d7">
+  <div class="wrap reveal">
+    <div class="dayhead">
+      <div class="daynum">07</div>
+      <div class="daytitle"><span class="eyebrow">Saturday · Jul 4 · Independence Day</span><h2>The Pops &amp; the fireworks</h2></div>
+    </div>
+    <div class="dayfacts"><span>Oval opens <b>~12 PM</b></span><span>Concert <b>7–9:30 PM</b></span><span>Walk home, ~10 min ★</span></div>
+
+    <figure class="illo">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of the July 4 fireworks over the Charles River and the Hatch Shell, with the Boston skyline, a flag, and a crowd on the lawn">
+        <rect width="800" height="300" fill="#0b1f27"/>
+        <!-- night sky -->
+        <rect width="800" height="180" fill="#0e2a33"/>
+        <!-- fireworks -->
+        <g stroke-width="2" fill="none" stroke-linecap="round">
+          <g stroke="#C0623C" opacity=".95"><g transform="translate(190,80)"><path d="M0 0 L0 -40 M0 0 L28 -28 M0 0 L40 0 M0 0 L28 28 M0 0 L0 40 M0 0 L-28 28 M0 0 L-40 0 M0 0 L-28 -28"/></g></g>
+          <g stroke="#46B3A6" opacity=".95"><g transform="translate(420,60)"><path d="M0 0 L0 -50 M0 0 L35 -35 M0 0 L50 0 M0 0 L35 35 M0 0 L0 50 M0 0 L-35 35 M0 0 L-50 0 M0 0 L-35 -35 M0 0 L18 -46 M0 0 L46 -18 M0 0 L46 18 M0 0 L18 46"/></g></g>
+          <g stroke="#B3893F" opacity=".9"><g transform="translate(620,100)"><path d="M0 0 L0 -34 M0 0 L24 -24 M0 0 L34 0 M0 0 L24 24 M0 0 L0 34 M0 0 L-24 24 M0 0 L-34 0 M0 0 L-24 -24"/></g></g>
+        </g>
+        <g fill="#ffd97a"><circle cx="190" cy="80" r="3"/><circle cx="420" cy="60" r="3"/><circle cx="620" cy="100" r="3"/></g>
+        <!-- skyline silhouette -->
+        <g fill="#06161c"><rect x="0" y="120" width="40" height="60"/><rect x="44" y="100" width="24" height="80"/><rect x="72" y="130" width="34" height="50"/><rect x="690" y="110" width="26" height="70"/><rect x="720" y="90" width="20" height="90"/><rect x="744" y="124" width="40" height="56"/></g>
+        <!-- river -->
+        <rect y="180" width="800" height="120" fill="#0c3a44"/>
+        <path d="M0 180 H800 V300 H0 Z" fill="url(#harborG)"/>
+        <!-- fireworks reflections -->
+        <g stroke="rgba(255,255,255,.18)" stroke-width="2"><path d="M420 184 v60"/><path d="M190 184 v44"/><path d="M620 184 v40"/></g>
+        <!-- Hatch Shell -->
+        <g transform="translate(330,128)">
+          <path d="M0 56 A60 60 0 0 1 120 56 Z" fill="#1c6b78"/>
+          <path d="M14 56 A46 46 0 0 1 106 56 Z" fill="#2b818d"/>
+          <rect x="18" y="56" width="84" height="6" fill="#0e3a42"/>
+          <rect x="48" y="44" width="24" height="18" fill="#143038"/>
+        </g>
+        <!-- flag -->
+        <g transform="translate(60,150)"><rect x="0" y="0" width="3" height="50" fill="#cdbf9f"/><rect x="3" y="0" width="40" height="26" fill="#9C3B2E"/><g fill="#e9e3d5"><rect x="3" y="4" width="40" height="3"/><rect x="3" y="11" width="40" height="3"/><rect x="3" y="18" width="40" height="3"/></g><rect x="3" y="0" width="16" height="12" fill="#1c4350"/></g>
+        <!-- crowd on lawn -->
+        <rect y="262" width="800" height="38" fill="#10242b"/>
+        <g fill="#1c3a42"><circle cx="120" cy="270" r="7"/><circle cx="150" cy="274" r="7"/><circle cx="185" cy="270" r="7"/><circle cx="240" cy="274" r="7"/><circle cx="300" cy="270" r="7"/><circle cx="520" cy="272" r="7"/><circle cx="560" cy="270" r="7"/><circle cx="600" cy="274" r="7"/><circle cx="660" cy="270" r="7"/></g>
+      </svg>
+      <figcaption>July 4 at the Hatch Shell — the Boston Pops and fireworks over the Charles</figcaption>
+    </figure>
+
+    <div class="stack">
+      <div class="place">
+        <span class="kicker">★ The marquee night — and you live next door</span>
+        <h3>Boston Pops Fireworks Spectacular</h3>
+        <p>The single biggest night of your stay lands in week one — and the Hatch Shell is a ten-minute walk from your door. The <b>Boston Pops</b>, led by Keith Lockhart, play the Esplanade from <b>7 to 9:30 PM</b> with guest artists (Lainey Wilson, Chance the Rapper, Trombone Shorty, Megan Hilty; Jane Lynch hosting), a drone show during the "1812 Overture," and fireworks choreographed to the live orchestra. This year carries extra weight as the America-250 signature event.</p>
+        <div class="fact"><b>Your home-field advantage</b> Public access to the Oval lawn opens at <b>noon</b> and it fills fast. Being on Beacon Hill means you can claim a spot early, duck home if you forget something, and — best of all — <b>walk home</b> afterward while everyone else floods the T.</div>
+      </div>
+      <ul class="acts">
+        <li>Morning/early afternoon: a quieter Freedom Trail or harbor walk before the crowds build; then stage at the Esplanade.</li>
+        <li>Bring a blanket, water and snacks; <b>no alcohol</b> on the Oval. Security screening and road closures apply around the river.</li>
+        <li>Skip the post-show T crush entirely — stroll back over the footbridge to the Hill.</li>
+      </ul>
+    </div>
+
+    <div class="event">
+      <span class="eyebrow">If you'd rather avoid the crush</span>
+      <h4>Watch from the Cambridge side or a rooftop</h4>
+      <p>The fireworks are visible from much of the riverbank; the Cambridge (Memorial Drive) side and elevated spots give you the show without the Oval density. Either way, the music is broadcast locally so you can follow the Pops while you watch. Plan dinner <i>before</i> 5 PM — nearby kitchens get slammed.</p>
+    </div>
+  </div>
+</article>
+
+<!-- ============ THE REPEATABLE RHYTHM ============ -->
+<section class="band" id="rhythm">
+  <div class="wrap reveal">
+    <span class="eyebrow">For the rest of the month</span>
+    <h2>The weekday rhythm</h2>
+    <p class="lead">Week one shows the shape; the remaining weeks run on the same easy loop. You don't need to "tour" on a weeknight — just step into the city for two or three relaxed hours after 4:30 and rotate among these.</p>
+    <div class="egrid">
+      <div class="ecard">
+        <h4><span class="num">Mon</span> River reset</h4>
+        <p>The <b>Esplanade</b> at golden hour — walk, sit, watch the sailboats. The lowest-effort, highest-return evening, and the closest.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">Tue</span> Books</h4>
+        <p><b>Beacon Hill Books</b> around the corner, or the BPL's free architecture tour (Tue 6 PM). Swap in <b>Brattle</b> or <b>Trident</b> other weeks.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">Wed</span> Free concert</h4>
+        <p><b>Boston Landmarks Orchestra</b>, free at the Hatch Shell, 7 PM — within your stay: <b>Jul 22 ("Best of Boston")</b> and <b>Jul 29 ("Mozart's 40th")</b>.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">Thu</span> Big interior</h4>
+        <p><b>BPL Copley</b> (free tour Thu 6 PM) + a Back Bay / <b>Newbury St</b> stroll. Or an MFA late evening when open.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">Fri</span> Cheap &amp; lively</h4>
+        <p><b>Chinatown</b> or the <b>North End</b> for an everyday dinner, then an early start on the weekend plan.</p>
+      </div>
+      <div class="ecard">
+        <h4><span class="num">Any</span> Just wander</h4>
+        <p><b>Public Garden → Common</b>, the <b>Freedom Trail</b> in chunks, the <b>Seaport</b> waterfront at sunset, or <b>Charles St</b> window-shopping.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKS & LIBRARIES -->
+<section class="band essentials" id="books">
+  <div class="wrap reveal">
+    <span class="eyebrow">Your running theme</span>
+    <h2>Bookstores &amp; libraries</h2>
+    <p class="lead">Boston is one of the great book cities. A standing rotation, from the shop around the corner to the Beaux-Arts "palace for the people."</p>
+    <div class="cards" style="margin-top:24px">
+      <div class="rcard">
+        <div class="top"><h4>Beacon Hill Books &amp; Café</h4><span class="stars">★ local</span></div>
+        <div class="tags"><span class="tag">71 Charles St</span><span class="tag">Café</span><span class="tag">~3 min</span></div>
+        <p>Five-floor townhouse with fireplaces, reading nooks and a café. Your regular haunt — and the heart of the theme.</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Beacon+Hill+Books+and+Cafe+Boston" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <div class="rcard">
+        <div class="top"><h4>Brattle Book Shop</h4><span class="stars">★ 1825</span></div>
+        <div class="tags"><span class="tag">Used &amp; rare</span><span class="tag">Outdoor lot</span><span class="tag warn">Daytime</span></div>
+        <p>One of America's oldest used bookshops: three floors plus the famous outdoor sale lot. Catch the lot on a dry day, before it closes.</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Brattle+Book+Shop+Boston" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <div class="rcard">
+        <div class="top"><h4>Trident Booksellers</h4><span class="stars">★ Back Bay</span></div>
+        <div class="tags"><span class="tag">New books</span><span class="tag">All-day café</span></div>
+        <p>A Newbury St staple since 1984 — books plus a full café. Good for a weekend brunch-and-browse.</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Trident+Booksellers+Cafe+Boston" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <div class="rcard">
+        <div class="top"><h4>Harvard Book Store</h4><span class="stars">★ Cambridge</span></div>
+        <div class="tags"><span class="tag">New · used</span><span class="tag">Bargain cellar</span><span class="tag">Red Line</span></div>
+        <p>Superb new, used and remaindered stock in Harvard Square — pair with a Cambridge wander on a weekend.</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Harvard+Book+Store+Cambridge" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <div class="rcard">
+        <div class="top"><h4>Brookline Booksmith</h4><span class="stars">★ Coolidge</span></div>
+        <div class="tags"><span class="tag">Indie</span><span class="tag">Used cellar</span><span class="tag">Author events</span></div>
+        <p>Beloved indie in Coolidge Corner (Green "C" Line) with a deep used cellar and a packed events calendar — check who's reading during your stay.</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Brookline+Booksmith" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <div class="rcard">
+        <div class="top"><h4>Boston Public Library</h4><span class="stars">★ Copley</span></div>
+        <div class="tags"><span class="tag">Free tours</span><span class="tag">Bates Hall</span><span class="tag">Sargent murals</span></div>
+        <p>The 1895 McKim landmark — courtyard, reading room and murals, free to wander. Tours Tue/Thu 6 PM. The West End branch is closest to home.</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Boston+Public+Library+Copley" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+      <div class="rcard">
+        <div class="top"><h4>Boston Athenaeum</h4><span class="stars">★ 10½ Beacon St</span></div>
+        <div class="tags"><span class="tag">Historic library</span><span class="tag">Day pass</span><span class="tag">~7 min</span></div>
+        <p>A storied membership library beside the State House, offering paid day passes and tours — a quiet, beautiful splurge for a book lover.</p>
+        <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Boston+Athenaeum" target="_blank" rel="noopener">Open in Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEKENDS -->
+<section class="band" id="weekends">
+  <div class="wrap reveal">
+    <span class="eyebrow">Go bigger Sat &amp; Sun</span>
+    <h2>Weekends — splurges &amp; parks</h2>
+    <p class="lead">Two flavors, matching the brief: a bigger plate or experience in the city, and parks or day trips reachable without a car. Bank the weekday savings for these.</p>
+
+    <figure class="illo" style="margin-top:24px">
+      <svg viewBox="0 0 800 300" role="img" aria-label="Illustration of a calm pond ringed by tall pines under a clear sky, with a wooded trail — evoking Walden Pond and the Arnold Arboretum">
+        <rect width="800" height="300" fill="#0f3a36"/>
+        <rect width="800" height="120" fill="#bfe0dd"/>
+        <circle cx="660" cy="64" r="34" fill="#ffe9b0" opacity=".7"/>
+        <!-- tree line -->
+        <g fill="#15514a"><path d="M0 120 q120 -50 240 0 q120 -46 280 0 q140 -50 280 0 L800 160 L0 160 Z"/></g>
+        <!-- pines -->
+        <g fill="#0c3a35">
+          <path d="M70 150 l26 -70 l26 70 Z"/><path d="M60 150 l36 -96 l36 96 Z" opacity=".85"/>
+          <path d="M150 150 l22 -56 l22 56 Z"/>
+          <path d="M650 150 l26 -70 l26 70 Z"/><path d="M700 150 l30 -84 l30 84 Z" opacity=".85"/>
+          <path d="M600 150 l20 -50 l20 50 Z"/>
+        </g>
+        <!-- pond -->
+        <path d="M0 160 C200 150 600 150 800 160 L800 300 L0 300 Z" fill="#1f7a82"/>
+        <path d="M0 160 C200 150 600 150 800 160 L800 230 C600 222 200 222 0 230 Z" fill="#2b8f95"/>
+        <g opacity=".5" stroke="rgba(255,255,255,.14)"><path d="M120 200 H680 M180 218 H620 M240 236 H560"/></g>
+        <!-- reflection of sun -->
+        <ellipse cx="660" cy="186" rx="26" ry="6" fill="#ffe9b0" opacity=".35"/>
+        <!-- trail at front -->
+        <path d="M0 286 q160 -24 360 -10 q200 14 440 -6" fill="none" stroke="#a9885a" stroke-width="10" opacity=".8"/>
+      </svg>
+      <figcaption>Walden Pond &amp; the Arnold Arboretum — green within reach of the T</figcaption>
+    </figure>
+
+    <span class="eyebrow" style="display:block;margin-top:8px">In the city</span>
+    <ul class="acts" style="margin-bottom:22px">
+      <li><b>A proper dinner out</b> — North End for full Italian, a Seaport/waterfront seafood house for the real lobster-and-oysters version, or a Back Bay room. This is where the weekend splurge lives; reserve ahead.</li>
+      <li><b>SoWa Open Market</b> (Sundays 11–4, South End) — farmers, artisans, a dozen food trucks and a beer garden, free entry. Runs every Sunday of your stay.</li>
+      <li><b>Museums:</b> the <b>MFA</b> and the <b>Isabella Stewart Gardner</b> (a Venetian-palazzo courtyard — squarely your taste) sit side by side on the Green "E" Line.</li>
+      <li><b>Harvard Square / Cambridge</b> for bookstores, campus and riverside walks; <b>Charlestown</b> for Bunker Hill and the USS Constitution with a North End lunch.</li>
+    </ul>
+
+    <span class="eyebrow" style="display:block">Parks &amp; nature — no car needed</span>
+    <ul class="acts" style="margin-bottom:22px">
+      <li><b>Arnold Arboretum</b> (Orange Line to Forest Hills) — a free, sprawling tree garden made for a long, quiet walk; part of Olmsted's <b>Emerald Necklace</b> chain of parks.</li>
+      <li><b>Walden Pond, Concord</b> (Commuter Rail toward Fitchburg, then a short ride/walk) — Thoreau's pond, a swim and a wooded loop, with a literary bonus.</li>
+      <li><b>Castle Island, South Boston</b> — a flat harborside loop around a real fort, plus a classic <b>Sullivan's</b> hot dog; reachable by bus.</li>
+      <li><b>Boston Harbor Islands</b> — ferry from Long Wharf to <b>Spectacle</b> or <b>Georges Island</b> for beaches, trails and skyline views.</li>
+    </ul>
+
+    <span class="eyebrow" style="display:block">Day trips by Commuter Rail (from North Station)</span>
+    <ul class="acts">
+      <li><b>Salem</b> (~30 min, ~$8) — witch-trial history, the excellent <b>Peabody Essex Museum</b>, harbor and a walkable old town. The easiest, richest day trip.</li>
+      <li><b>Rockport</b> (~1 hr 15) — a Cape Ann seaside town of galleries, harbor shops and the famous Motif No. 1.</li>
+      <li><b>Concord / Lexington</b> — Revolutionary War sites (Old North Bridge), Walden, and the authors' houses; sights are spread out, so plan the legs.</li>
+      <li><b>Bigger swings:</b> <b>Newport, RI</b> mansions + Cliff Walk; <b>Provincetown</b> by summer ferry (a great car-free Cape day); <b>Portland, ME</b> on the Amtrak Downeaster.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- EVENTS TABLE -->
+<section class="band essentials" id="events">
+  <div class="wrap reveal">
+    <span class="eyebrow">The summer calendar</span>
+    <h2>Anchor events, within your dates</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>When</th><th>Where</th><th>What</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td><b>Sat Jul 4</b></td><td><b>Hatch Shell, Esplanade</b></td><td><b>Boston Pops Fireworks Spectacular</b>, 7–9:30 PM — Pops + guests, drone show &amp; fireworks (America-250 edition)</td><td><span class="pill free">Free · arrive ~noon</span></td></tr>
+          <tr><td>Sundays (all stay)</td><td>South End</td><td>SoWa Open Market, 11 AM–4 PM — farmers, artisans, food trucks, beer garden</td><td><span class="pill free">Free</span></td></tr>
+          <tr><td><b>Wed Jul 22</b></td><td>Hatch Shell</td><td>Boston Landmarks Orchestra — "The Best of Boston," 7 PM</td><td><span class="pill free">Free</span></td></tr>
+          <tr><td><b>Wed Jul 29</b></td><td>Hatch Shell</td><td>Boston Landmarks Orchestra — "Mozart's 40th," 7 PM</td><td><span class="pill free">Free</span></td></tr>
+          <tr><td>Late Jul (TBC)</td><td>Boston Common</td><td>Free Shakespeare on the Common — <i>A Midsummer Night's Dream</i> (30th season)</td><td><span class="pill">Confirm dates</span></td></tr>
+          <tr><td>Tue &amp; Thu 6 PM</td><td>BPL Copley</td><td>Free art &amp; architecture tour of the McKim Building</td><td><span class="pill free">Drop-in</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:14px;color:#5a6b6f;margin-top:14px"><i>Just after you leave:</i> the Landmarks Orchestra continues (Verdi Requiem Aug 5, Organ Symphony Aug 12) and a free Boston Jazz Foundation day falls on Aug 8 — relevant only if your dates shift later.</p>
+  </div>
+</section>
+
+<!-- EAT INDEX -->
+<section class="band" id="eat">
+  <div class="wrap reveal">
+    <span class="eyebrow">The table</span>
+    <h2>Where to eat, in one place</h2>
+    <p class="lead">Budget-minded local favorites for the everyday, a couple of weekend splurges, and the bookshop café. Weekdays skew "$"–"$$"; save "$$$" for the weekend.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Place</th><th>Where</th><th>Good for</th><th>Note</th><th>Map</th></tr></thead>
+        <tbody>
+          <tr><td><b>Galleria Umberto</b></td><td>North End</td><td>Sicilian pizza, arancini</td><td><span class="pill free">$ · lunch, cash</span></td><td><a href="https://www.google.com/maps/search/?api=1&query=Galleria+Umberto+North+End+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Salumeria Italiana</b></td><td>North End</td><td>Italian subs, deli</td><td><span class="pill free">$ · ~$11</span></td><td><a href="https://www.google.com/maps/search/?api=1&query=Salumeria+Italiana+North+End+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Gene's Chinese Flatbread</b></td><td>Chinatown / DTX</td><td>Xi'an hand-pulled noodles</td><td><span class="pill free">$ · under $10</span></td><td><a href="https://www.google.com/maps/search/?api=1&query=Gene's+Chinese+Flatbread+Cafe+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Dumpling Café</b></td><td>Chinatown</td><td>Soup dumplings, Taiwanese</td><td><span class="pill free">$ · open late</span></td><td><a href="https://www.google.com/maps/search/?api=1&query=Dumpling+Cafe+Chinatown+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Bánh Mì counters</b></td><td>Downtown Crossing</td><td>Vietnamese sandwiches</td><td><span class="pill free">$ · under $10</span></td><td><a href="https://www.google.com/maps/search/?api=1&query=banh+mi+Downtown+Crossing+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Quincy Market stalls</b></td><td>Faneuil Hall</td><td>Chowder, lobster roll, quick</td><td>$$ · everyday seafood</td><td><a href="https://www.google.com/maps/search/?api=1&query=Quincy+Market+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Beacon Hill Books Café</b></td><td>Charles St</td><td>Café, tea, wine, small plates</td><td>$$ · ~3 min walk</td><td><a href="https://www.google.com/maps/search/?api=1&query=Beacon+Hill+Books+and+Cafe+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Mike's / Modern Pastry</b></td><td>North End</td><td>Cannoli</td><td><span class="pill free">$ · dessert</span></td><td><a href="https://www.google.com/maps/search/?api=1&query=cannoli+Hanover+St+North+End+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Neptune Oyster</b></td><td>North End</td><td>Oysters, hot lobster roll</td><td><span class="pill book">$$$ · weekend splurge</span></td><td><a href="https://www.google.com/maps/search/?api=1&query=Neptune+Oyster+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>A North End trattoria</b></td><td>North End</td><td>Full Italian dinner</td><td>$$$ · weekend; reserve</td><td><a href="https://www.google.com/maps/search/?api=1&query=North+End+Italian+restaurant+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Saloniki / Clover</b></td><td>Back Bay / multiple</td><td>Greek / veggie fast-casual</td><td><span class="pill free">$ · quick</span></td><td><a href="https://www.google.com/maps/search/?api=1&query=Saloniki+Greek+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+          <tr><td><b>Charles St row</b></td><td>Beacon Hill</td><td>Neighborhood dinners, cafés</td><td>$$ · walk home</td><td><a href="https://www.google.com/maps/search/?api=1&query=restaurants+Charles+St+Beacon+Hill+Boston" target="_blank" rel="noopener">↗</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="band essentials" id="book">
+  <div class="wrap reveal">
+    <span class="eyebrow">Don't forget</span>
+    <h2>Setup &amp; booking checklist</h2>
+    <ul class="checklist">
+      <li><span class="box"></span> <span>Buy a <b>CharlieCard</b> + load a <b>monthly LinkPass</b> (confirm current price ~$90)</span></li>
+      <li><span class="box"></span> <span>Plan <b>July 4</b>: early Esplanade arrival (Oval opens ~noon), blanket + water, walk home</span></li>
+      <li><span class="box"></span> <span>Note the free <b>Landmarks Orchestra</b> Wednesdays — <b>Jul 22 &amp; Jul 29</b> (esplanade.org)</span></li>
+      <li><span class="box"></span> <span>Confirm <b>Free Shakespeare on the Common</b> 2026 run dates (commonwealthshakespeare.org)</span></li>
+      <li><span class="box"></span> <span>Pick one <b>weekend restaurant splurge</b> and reserve ahead (e.g. Neptune Oyster, a North End trattoria)</span></li>
+      <li><span class="box"></span> <span>Choose 1–2 <b>Commuter Rail day trips</b> (Salem easiest) and check weekend schedules (mbta.com)</span></li>
+      <li><span class="box"></span> <span>Check <b>Brookline Booksmith / Harvard Book Store</b> author-event calendars for your dates</span></li>
+      <li><span class="box"></span> <span>Stock the Airbnb kitchen on <b>Charles St / North End</b> for weekday everyday meals</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="eyebrow">A Month on Beacon Hill</span>
+    <p style="margin-top:10px;max-width:62ch">Thirty-three days of living in Boston the easy way — a walkable brick base, the T and your feet, a bookshop on every other corner, cheap-and-good weeknight eating, and weekends saved for a great meal, a market, or a park at the end of a train line. <b>Get the LinkPass, claim your July 4 spot early, and keep a book in your bag.</b></p>
+    <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:.1em;opacity:.6;margin-top:18px">Stay Jun 28 – Jul 31, 2026 · Illustrations drawn for this guide · Map links open in Google Maps · Confirm event dates and fares before you go</p>
+  </div>
+</footer>
+
+<script>
+  // Smooth scroll-reveal
+  (function(){
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var els = document.querySelectorAll('.reveal');
+    if(reduce || !('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    },{threshold:0.12});
+    els.forEach(function(e){io.observe(e)});
+  })();
+
+  // Active section highlight in top nav
+  (function(){
+    var links = Array.prototype.slice.call(document.querySelectorAll('.navlinks a'));
+    var map = {};
+    links.forEach(function(l){ var id=l.getAttribute('href').slice(1); var t=document.getElementById(id); if(t) map[id]=l; });
+    var ids = Object.keys(map);
+    if(!('IntersectionObserver' in window)) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          links.forEach(function(l){l.style.color='';l.style.background='';});
+          var l = map[en.target.id];
+          if(l){ l.style.color='#fff'; l.style.background='rgba(70,179,166,.22)'; }
+        }
+      });
+    },{rootMargin:'-45% 0px -50% 0px'});
+    ids.forEach(function(id){ io.observe(document.getElementById(id)); });
+  })();
+</script>
+</body>
+</html>
