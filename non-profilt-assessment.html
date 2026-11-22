@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Readiness Assessment — Non-Profit Edition | IIIBC</title>
+  <title>AI readiness assessment — Non-Profit Edition | IIIBC</title>
   <meta name="description" content="IIIBC AI Readiness Assessment for donor-funded, project-based non-profit organizations. Complete the diagnostic, receive a scored readiness report, and have it emailed to your leadership team.">
   <meta name="author" content="IIIBC">
 
@@ -269,8 +269,8 @@
 <section class="hero">
   <div class="container">
     <span class="hero__eyebrow">IIIBC · Beyond Cognition · Non-Profit Edition</span>
-    <h1>AI Readiness Assessment for Non-Profit Organizations</h1>
-    <p class="hero__sub">A diagnostic for donor-funded, project-based organizations. Answer honestly across eight dimensions — you will receive a scored readiness report and have it emailed to your leadership team. AI should amplify your mission, not complicate it.</p>
+    <h1>AI readiness assessment for non-profit organizations</h1>
+    <p class="hero__sub">This diagnostic shows donor-funded, project-based organizations how ready they are for AI, across eight dimensions. Answer honestly, and you will receive a scored readiness report emailed to your leadership team. AI should amplify your mission, not complicate it.</p>
     <div class="hero__meta">
       <div class="hero__meta-item"><span class="hero__meta-k">Time</span><span class="hero__meta-v">15–25 minutes</span></div>
       <div class="hero__meta-item"><span class="hero__meta-k">Dimensions</span><span class="hero__meta-v">8 readiness areas</span></div>
@@ -295,7 +295,7 @@
 
     <div class="intro-note">
       <p class="label">How to use this assessment</p>
-      <p>Designed for Executive Directors, Program Directors, COOs, and Board Technology Committees. Each question is scored 0–3: <b>0</b> = not in place / no awareness · <b>1</b> = awareness only · <b>2</b> = in progress / partial · <b>3</b> = fully in place and practiced. There are no trick questions — this is a diagnostic, not a grade. Your answers are saved automatically in this browser, so you can close this page and return to finish later.</p>
+      <p>This assessment is built for executive directors, program directors, chief operating officers, and board technology committees. Score each question 0–3: <b>0</b> = not in place / no awareness · <b>1</b> = awareness only · <b>2</b> = in progress / partial · <b>3</b> = fully in place and practiced. There are no trick questions—this is a diagnostic, not a grade. This browser saves your answers automatically, so you can close the page and come back later to finish.</p>
     </div>
 
     <form id="assessment" novalidate>
@@ -304,8 +304,8 @@
       <section class="sec" id="sec0">
         <div class="sec__head">
           <div class="sec__num">Section 0</div>
-          <h2 class="sec__title">Organization Profile</h2>
-          <p class="sec__sub">Context that shapes how your results are interpreted. We also use it to address your report.</p>
+          <h2 class="sec__title">Organization profile</h2>
+          <p class="sec__sub">This context shapes how we interpret your results. We also use it to address your report.</p>
         </div>
 
         <div class="field--grid">
@@ -314,7 +314,7 @@
             <input type="text" id="orgName" name="orgName" autocomplete="organization" placeholder="e.g., Meridian Community Trust">
           </div>
           <div class="field">
-            <label for="contactName">Your name &amp; role</label>
+            <label for="contactName">Your name and role</label>
             <input type="text" id="contactName" name="contactName" placeholder="e.g., Dana Okoro, Executive Director">
           </div>
         </div>
@@ -344,7 +344,7 @@
             <input type="number" id="staff" name="staff" min="0" placeholder="e.g., 24">
           </div>
           <div class="field">
-            <label for="projects">Active projects / programs</label>
+            <label for="projects">Active projects or programs</label>
             <input type="number" id="projects" name="projects" min="0" placeholder="e.g., 6">
           </div>
         </div>
@@ -382,9 +382,9 @@
 
       <!-- SUBMIT -->
       <div class="submit-bar">
-        <h3>Generate your AI Readiness Report</h3>
-        <p>We will score all eight dimensions, build your readiness profile, and email the report to the address above. Nothing is shared with third parties.</p>
-        <button type="submit" class="btn btn--primary btn--lg" id="submitBtn">Submit &amp; Generate Report</button>
+        <h3>Generate your AI readiness report</h3>
+        <p>We will score all eight dimensions, build your readiness profile, and email the report to the address above. We share nothing with third parties.</p>
+        <button type="submit" class="btn btn--primary btn--lg" id="submitBtn">Submit and generate report</button>
         <div class="submit-error" id="submitError"></div>
       </div>
 
@@ -399,7 +399,7 @@
     <!-- Cover -->
     <div class="report-cover">
       <div class="report-cover__brand">IIIBC · Beyond Cognition</div>
-      <h2>AI Readiness Report</h2>
+      <h2>AI readiness report</h2>
       <p class="report-cover__sub" id="rcSub">Prepared for your organization</p>
       <div class="report-cover__meta">
         <div><span>Edition</span>Non-Profit · Donor-Funded</div>
@@ -411,7 +411,7 @@
 
     <!-- Verdict -->
     <div class="report-section">
-      <h3>Overall Readiness Profile</h3>
+      <h3>Overall readiness profile</h3>
       <div class="verdict" id="verdict">
         <div class="verdict__score"><span id="vScore">0</span><small>/159</small></div>
         <div class="verdict__body">
@@ -424,9 +424,9 @@
 
     <!-- Scorecard -->
     <div class="report-section">
-      <h3>Dimension Scorecard</h3>
+      <h3>Dimension scorecard</h3>
       <table class="scorecard">
-        <thead><tr><th>Dimension</th><th class="num">Your Score</th><th class="num">Max</th><th>Readiness Level</th></tr></thead>
+        <thead><tr><th>Dimension</th><th class="num">Your score</th><th class="num">Max</th><th>Readiness level</th></tr></thead>
         <tbody id="scoreBody"></tbody>
         <tfoot><tr><td>Total</td><td class="num" id="tfScore">0</td><td class="num">159</td><td id="tfLevel"></td></tr></tfoot>
       </table>
@@ -434,33 +434,33 @@
 
     <!-- Bars -->
     <div class="report-section">
-      <h3>Readiness by Dimension</h3>
+      <h3>Readiness by dimension</h3>
       <div class="bars" id="bars"></div>
     </div>
 
     <!-- Gap analysis -->
     <div class="report-section">
-      <h3>Priority Gap Analysis</h3>
-      <p style="font-size:15px;color:var(--slate);margin-bottom:var(--s4);">Dimensions scoring <b>Foundational</b> or <b>Developing</b> are your highest-leverage next moves.</p>
+      <h3>Priority gap analysis</h3>
+      <p style="font-size:15px;color:var(--slate);margin-bottom:var(--s4);">Close your weakest dimensions first. Those that score <b>Foundational</b> or <b>Developing</b> are where your next move pays off most.</p>
       <div id="gaps"></div>
     </div>
 
     <!-- Recommended use cases -->
     <div class="report-section">
-      <h3>Recommended AI Use Cases</h3>
+      <h3>Recommended AI use cases</h3>
       <p style="font-size:15px;color:var(--slate);margin-bottom:var(--s4);" id="ucIntro"></p>
       <div class="uc-list" id="useCases"></div>
     </div>
 
     <!-- Next steps -->
     <div class="report-section">
-      <h3>Recommended Next Step with IIIBC</h3>
+      <h3>Recommended next step with IIIBC</h3>
       <div class="next-step" id="nextStep"></div>
     </div>
 
     <!-- EMAIL -->
     <div class="report-section">
-      <h3>Email This Report</h3>
+      <h3>Email this report</h3>
       <div class="email-panel">
         <div class="email-panel__row">
           <button type="button" class="btn btn--primary" id="sendEmailBtn">Send report to <span id="emailTarget">your inbox</span></button>
@@ -480,7 +480,7 @@
             <div class="email-preview__teal"></div>
           </div>
           <div class="email-preview__body">
-            <h5 id="emOrg">Your AI Readiness Report</h5>
+            <h5 id="emOrg">Your AI readiness report</h5>
             <p id="emIntro"></p>
             <div class="email-preview__score">
               <span>Overall readiness</span>
@@ -497,7 +497,7 @@
       </div>
 
       <div class="actions-row">
-        <a href="index.html#diagnostic" class="btn btn--ghost">Book a free 30-min diagnostic call</a>
+        <a href="index.html#diagnostic" class="btn btn--ghost">Book a free 30-minute diagnostic call</a>
         <button type="button" class="btn btn--ghost" id="restartBtn">Retake the assessment</button>
       </div>
     </div>
@@ -536,52 +536,52 @@ const LEVELS = ['Foundational','Developing','Capable','Advanced'];
 
 // bands: [maxForFoundational, maxForDeveloping, maxForCapable] (Advanced = above)
 const SECTIONS = [
-  { id:1, title:'Mission & Leadership Alignment', short:'Leadership Alignment',
+  { id:1, title:'Mission and leadership alignment', short:'Leadership alignment',
     sub:'Can your leadership connect AI to your mission, not just your operations?',
-    intro:'Non-profits that succeed with AI adopt it as a mission amplifier, not a technology initiative.',
+    intro:'Non-profits that succeed with AI adopt it to amplify their mission, not as a technology project.',
     bands:[5,10,15],
-    impl:{Foundational:'AI education for leadership is the first step before any tool adoption.',Developing:'Run leadership alignment work in parallel with pilot exploration.',Capable:'Ready for structured AI strategy development.',Advanced:'Leadership is a strength — build on it to accelerate adoption.'},
+    impl:{Foundational:'Educate leadership on AI before adopting any tools.',Developing:'Work on leadership alignment in parallel with exploring pilots.',Capable:'Ready to develop a structured AI strategy.',Advanced:'Leadership is a strength; build on it to speed up adoption.'},
     questions:[
-      'Senior leadership can articulate at least two specific ways AI could improve mission delivery.',
-      'Our board has discussed AI as a strategic topic (not just compliance/risk) in the past 18 months.',
-      'We have a designated internal champion or working group exploring AI adoption.',
-      'Our strategic plan includes digital transformation, data strategy, or technology investment as a priority.',
-      'Leadership is aware of AI use cases specific to our sector (donor segmentation, grant reporting, outcome tracking).',
-      'We share an understanding of what AI is NOT suitable for in our context (high-stakes beneficiary decisions).'
+      'Senior leadership can explain at least two specific ways AI could improve mission delivery.',
+      'Our board has discussed AI as a strategic topic (not only compliance or risk) in the past 18 months.',
+      'We have a named internal champion or working group exploring AI adoption.',
+      'Our strategic plan makes digital modernization, data strategy, or technology investment a priority.',
+      'Leadership is aware of AI use cases specific to our sector (donor segmentation, grant reporting, and outcome tracking).',
+      'Leadership shares an understanding of what AI is not suitable for in our context (high-stakes beneficiary decisions).'
     ]},
-  { id:2, title:'Data Maturity & Governance', short:'Data Governance',
-    sub:'Is your data ready to power AI — and safe enough to trust it?',
-    intro:'AI is only as good as the data it works with. Non-profits often hold sensitive data across disconnected systems.',
+  { id:2, title:'Data maturity and governance', short:'Data governance',
+    sub:'Is your data ready to power AI—and safe enough to trust?',
+    intro:'AI is only as good as the data it works with. Non-profits often hold sensitive data in several disconnected systems.',
     bands:[7,14,20],
-    impl:{Foundational:'Data infrastructure must be addressed before AI is viable.',Developing:'Targeted data quality and governance investments make AI pilots viable.',Capable:'AI pilots are feasible — prioritize use cases matching your strongest data.',Advanced:'Data is a strategic asset; AI can be applied across multiple programs.'},
+    impl:{Foundational:'Fix your data infrastructure first; AI is not viable until you do.',Developing:'Targeted investments in data quality and governance will make AI pilots viable.',Capable:'AI pilots are feasible; prioritize use cases that match your strongest data.',Advanced:'Data is a strategic asset; you can apply AI across multiple programs.'},
     questions:[
       'We have a current inventory of the data we collect, store, and use across all programs.',
       'Our data is stored in structured digital formats (not primarily paper, spreadsheets, or email inboxes).',
       'We have a documented data governance policy defining ownership, access, and use.',
-      'We have data sharing agreements with partners, funders, and contractors.',
-      'Beneficiary data is governed under a clear consent framework.',
+      'We have data-sharing agreements with partners, funders, and contractors.',
+      'Beneficiary data is governed by a clear consent framework.',
       'We track program outcomes consistently enough to compare across projects, cohorts, or time.',
-      'We have 2–3 years of historical data clean enough to analyze for our primary programs.',
-      'We know which data sets carry the highest sensitivity and have elevated protections for them.'
+      'For our primary programs, we have 2–3 years of historical data clean enough to analyze.',
+      'We know which data sets carry the highest sensitivity and give them stronger protection.'
     ]},
   { id:3, title:'Technology Infrastructure', short:'Technology Infrastructure',
-    sub:'Does your technology environment support AI adoption — or create barriers?',
-    intro:'',
+    sub:'Does your technology environment support AI adoption—or create barriers?',
+    intro:'Basic IT infrastructure and security come before any AI tool.',
     bands:[5,10,15],
-    impl:{Foundational:'Basic IT infrastructure and security must precede AI adoption.',Developing:'Address key gaps; low-risk AI tools (content, admin) are accessible now.',Capable:'Infrastructure supports AI pilots — plan integrations thoughtfully.',Advanced:'Strong foundation; enterprise AI tools are viable.'},
+    impl:{Foundational:'Put basic IT infrastructure and security in place before adopting AI.',Developing:'Close the key gaps; low-risk AI tools (content, admin) are available now.',Capable:'Your infrastructure supports AI pilots; plan integrations carefully.',Advanced:'Strong foundation; enterprise AI tools are viable.'},
     questions:[
       'We have reliable, secure internet and modern devices for all staff who would use AI tools.',
-      'We use cloud-based platforms for core operations (M365, Google Workspace, Salesforce NPSP, etc.).',
+      'We use cloud-based platforms for core operations (for example, Microsoft 365, Google Workspace, or Salesforce Nonprofit).',
       'We have a designated person or contracted support responsible for IT security.',
-      'We have cybersecurity protections: MFA, regular backups, staff phishing awareness.',
-      'Our systems have API or export capabilities that could allow data to flow to/from AI tools.',
+      'We have cybersecurity protections: multi-factor authentication, regular backups, and staff phishing awareness.',
+      'Our systems can export data or connect through an application programming interface (API), so data could flow to and from AI tools.',
       'We have a process to evaluate and approve new tools before staff use them (including free AI tools).'
     ]},
-  { id:4, title:'People & Organizational Capacity', short:'People & Capacity',
+  { id:4, title:'People and organizational capacity', short:'People and capacity',
     sub:'Do your people have the skills and bandwidth to adopt and sustain AI?',
-    intro:'The most common reason AI stalls in non-profits is not technology — it is people capacity.',
+    intro:'People capacity, not technology, is the most common reason AI stalls in non-profits.',
     bands:[6,12,17],
-    impl:{Foundational:'Invest in AI literacy and change management before tool deployment.',Developing:'Champion-led pilots with structured learning loops are the right entry point.',Capable:'People are ready — focus on governance and sustainability of AI practice.',Advanced:'Culture is a strength; AI adoption can move at organizational pace.'},
+    impl:{Foundational:'Invest in AI literacy and change management before deploying tools.',Developing:'Start with champion-led pilots and structured learning loops.',Capable:'Your people are ready; focus on governance and on sustaining AI practice.',Advanced:'Culture is a strength; AI adoption can move at the organization’s own pace.'},
     questions:[
       'Staff have basic digital literacy and are comfortable learning new software.',
       'At least one staff member has used AI tools (ChatGPT, Copilot, Claude) for work.',
@@ -589,61 +589,61 @@ const SECTIONS = [
       'We have bandwidth (or budget to hire) to run an AI pilot without diverting program delivery.',
       'Our onboarding and training is documented well enough to train new staff on AI tools consistently.',
       'We preserve institutional knowledge when key staff leave (no single-person dependencies).',
-      'We foster a culture of learning and experimentation without fear of failure.'
+      'We build a culture of learning and experimentation without fear of failure.'
     ]},
-  { id:5, title:'Financial & Funding Readiness', short:'Financial & Funding',
-    sub:'Can your funding model support AI investment — and can AI improve it?',
-    intro:'Unlike corporations, non-profit technology investment must often be justified to external funders.',
+  { id:5, title:'Financial and funding readiness', short:'Financial and funding',
+    sub:'Can your funding model support AI investment—and can AI improve it?',
+    intro:'Non-profits face a funding test that corporations do not: technology spending often has to be justified to external funders.',
     bands:[6,12,17],
-    impl:{Foundational:'Build the financial and funder narrative before piloting AI.',Developing:'Explore capacity-building grants; start with zero/low-cost AI tools.',Capable:'The financial case is buildable — pursue funder conversations alongside a pilot.',Advanced:'Strong funding case; AI investment can be positioned as donor value.'},
+    impl:{Foundational:'Build the financial case and funder narrative before piloting AI.',Developing:'Explore capacity-building grants; start with free or low-cost AI tools.',Capable:'The financial case is buildable; pursue funder conversations alongside a pilot.',Advanced:'Strong funding case; you can position AI investment as value for donors.'},
     questions:[
       'We have unrestricted reserves or discretionary budget that could fund a $5k–$25k AI pilot.',
-      'At least one funder is known to support technology and innovation (incl. capacity-building grants).',
-      'We can articulate a credible mission ROI for AI (serve more beneficiaries, reduce cost-per-outcome).',
+      'At least one funder is known to support technology and innovation (including capacity-building grants).',
+      'We can make a credible case for the mission ROI of AI (serve more beneficiaries, reduce cost-per-outcome).',
       'We track cost-per-outcome or cost-per-beneficiary metrics usable as an efficiency baseline.',
-      'We are aware of AI-specific or digital transformation grant opportunities.',
+      'We know about AI-specific grant opportunities, or grants to modernize digital systems.',
       'Our grant reporting is a significant staff time burden (high AI automation potential).',
       'Our donor strategy relies on personalization (strong AI potential in fundraising).'
     ]},
-  { id:6, title:'Donor & Stakeholder Communication', short:'Donor Communication',
-    sub:'Are you ready to be transparent with donors and stakeholders about AI use?',
-    intro:'Donor trust is a non-profit’s most valuable asset. AI introduces new transparency questions.',
+  { id:6, title:'Donor and stakeholder communication', short:'Donor communication',
+    sub:'Are you ready to be open with donors, funders, your board, and the public about how you use AI?',
+    intro:'Donor trust is a non-profit’s most valuable asset, and AI raises new questions about transparency.',
     bands:[4,9,12],
-    impl:{Foundational:'Develop an AI communication stance before any external AI use is visible.',Developing:'Draft AI use disclosure and board talking points.',Capable:'Communication readiness is solid — refine for specific major donor segments.',Advanced:'You can use AI transparency as a donor engagement differentiator.'},
+    impl:{Foundational:'Set your AI communication position before any AI use becomes visible outside the organization.',Developing:'Draft an AI use disclosure and talking points for the board.',Capable:'Communication readiness is solid; refine it for specific major donor segments.',Advanced:'You can use AI transparency to set your organization apart with donors.'},
     questions:[
       'If asked by a major donor today, we could explain how we use AI and how it protects beneficiary data.',
       'We have considered whether donor communications should disclose AI-assisted content.',
       'Our board is prepared to respond to donor or public questions about AI use.',
-      'We have a plan to proactively share our AI principles and safeguards with major funders.',
+      'We have a plan to share our AI principles and safeguards with major funders before they ask.',
       'We understand our major donors’ attitudes toward AI (opportunity, risk, or neutral).'
     ]},
-  { id:7, title:'Ethical & Beneficiary Safeguards', short:'Ethics & Safeguards',
+  { id:7, title:'Ethical and beneficiary safeguards', short:'Ethics and safeguards',
     sub:'Are the people you serve protected from AI-related harm?',
-    intro:'Non-profits often serve vulnerable populations. AI applied to them requires heightened ethical vigilance.',
+    intro:'AI applied to vulnerable populations demands extra ethical care, and non-profits often serve them.',
     bands:[6,12,17],
-    impl:{Foundational:'An ethics framework is prerequisite to any AI touching beneficiary data or decisions.',Developing:'Develop an ethics policy in parallel with operational AI pilots.',Capable:'Strong ethical foundation — apply it to each new use case systematically.',Advanced:'Ethical readiness is a competitive and funder differentiator.'},
+    impl:{Foundational:'Put an ethics framework in place before any AI touches beneficiary data or decisions.',Developing:'Develop an ethics policy in parallel with operational AI pilots.',Capable:'Strong ethical foundation; apply it systematically to each new AI use case.',Advanced:'Ethical readiness sets you apart, both competitively and with funders.'},
     questions:[
       'We have identified programs where AI influences beneficiary decisions and built in human review.',
       'We are aware of AI bias risks against the populations we serve.',
       'We have or are developing an AI ethics policy protecting beneficiary rights.',
       'We have reviewed whether beneficiary consent covers AI use of their data.',
-      'We have a mechanism for beneficiaries to raise concerns about technology/data use.',
+      'We have a way for beneficiaries to raise concerns about technology or data use.',
       'We review AI tools for accessibility (disability, literacy, technology access).',
       'Staff understand AI outputs require human judgment and feel supported to override them.'
     ]},
-  { id:8, title:'Project-Based AI Integration', short:'Project Integration',
+  { id:8, title:'Project-based AI integration', short:'Project integration',
     sub:'Can your project delivery model absorb and sustain AI across grant cycles?',
-    intro:'The challenge is not just adopting AI — it is sustaining it when funding cycles end and teams change.',
+    intro:'The hard part is sustaining AI after funding cycles end and teams change. Adopting it is only the start.',
     bands:[6,12,17],
-    impl:{Foundational:'Embed AI considerations into your project design methodology first.',Developing:'Pilot AI in one active project with a structured evaluation plan.',Capable:'AI can be integrated into the project lifecycle systematically.',Advanced:'Your project model is AI-compatible — scale across programs.'},
+    impl:{Foundational:'Build AI considerations into your project design method first.',Developing:'Pilot AI in one active project with a structured evaluation plan.',Capable:'You can integrate AI systematically into the project lifecycle.',Advanced:'Your project model is AI-compatible; scale AI across programs.'},
     questions:[
-      'Our project and grant budget templates include a technology/digital tools line for AI.',
+      'Our project and grant budget templates include a technology or digital tools line for AI.',
       'Our project close-out process captures what worked, what data was created, and what tools were used.',
       'We consider AI in program delivery when writing new grant proposals.',
       'We have a cross-project data architecture (data from one project can ethically inform future ones).',
       'We have evaluated whether AI can reduce the grant reporting burden.',
-      'Our M&E framework is structured enough to generate data for AI-assisted impact analysis.',
-      'We have considered how AI tools are transitioned, maintained, or sunset when a project ends.'
+      'Our monitoring, evaluation, and learning (M&E) framework is structured enough to produce data for AI-assisted impact analysis.',
+      'We have considered how AI tools are handed over, maintained, or retired when a project ends.'
     ]}
 ];
 
@@ -659,39 +659,39 @@ const MAX_TOTAL = SECTIONS.reduce((a,s)=>a + s.questions.length*3, 0); // 159
 // Overall profile bands [upper bound, profile, path, narrative]
 const PROFILES = [
   {max:39,  profile:'AI Unready',  path:'Foundation work only',
-   narr:'Focus on the basics first: data governance, IT security, staff AI literacy, and an ethics policy. Adopting tools before these are in place creates risk without return. This is the right and responsible place to start.'},
-  {max:79,  profile:'AI Curious',  path:'Structured education + low-risk pilots',
-   narr:'You are ready for structured AI education paired with low-risk pilots — administrative automation and content assistance that touch no beneficiary data. Build confidence and internal evidence before moving into program-adjacent uses.'},
+   narr:'Focus on the basics first: data governance, IT security, staff AI literacy, and an ethics policy. Adopting tools before these are in place creates risk without return. This is the responsible place to start.'},
+  {max:79,  profile:'AI Curious',  path:'Structured education plus low-risk pilots',
+   narr:'You are ready for structured AI education paired with low-risk pilots: administrative automation and content assistance that touch no beneficiary data. Build confidence and internal evidence before moving into program-adjacent uses.'},
   {max:119, profile:'AI Ready',    path:'Run a defined pilot in your strongest program area',
    narr:'You can pursue a defined AI pilot in your highest-readiness program area while building toward a full AI strategy. Match your first pilot to your strongest data and your most willing team.'},
   {max:139, profile:'AI Capable',  path:'Develop an organization-wide AI strategy',
-   narr:'You are positioned to develop an organization-wide AI strategy — function design, pillar frameworks, an ethics policy, and a donor communication toolkit. Engage a structured strategy foundation to sequence it well.'},
+   narr:'You are ready to develop an organization-wide AI strategy: function design, pillar frameworks, an ethics policy, and a donor communication toolkit. Engage a structured strategy foundation to sequence it well.'},
   {max:159, profile:'AI Leading',  path:'Become a sector model',
-   narr:'Your organization can position itself as an AI-forward sector model. Pursue an innovation strategy, funder storytelling, and peer leadership — your readiness is itself an asset worth communicating.'}
+   narr:'Your organization can position itself as an AI-forward sector model. Pursue an innovation strategy, funder storytelling, and peer leadership. Your readiness is itself an asset worth communicating.'}
 ];
 
 const USE_CASES = {
-  low:{ intro:'Start here — low risk, no beneficiary data, immediate staff value:',
+  low:{ intro:'Start here. These uses carry low risk, involve no beneficiary data, and give staff immediate value:',
     items:[
       ['Grant writing assistance','AI drafting and editing of proposals (staff reviews all output).'],
       ['Donor communication drafting','Appeal letters, thank-you notes, and newsletters with AI assistance.'],
       ['Meeting summaries','AI-assisted transcription and action-item extraction.'],
-      ['HR & admin templates','Job descriptions and internal documents to reduce administrative burden.']
+      ['HR and admin templates','Job descriptions and internal documents to reduce administrative work.']
     ]},
-  mid:{ intro:'Move into program-adjacent AI with appropriate governance:',
+  mid:{ intro:'Move into AI that sits closer to your programs, with appropriate governance:',
     items:[
-      ['Donor segmentation & retention','Predict lapsed donors and optimize ask amounts.'],
+      ['Donor segmentation and retention','Predict which donors will lapse and optimize ask amounts.'],
       ['Grant reporting automation','AI synthesis of outcome data into structured funder reports.'],
       ['Beneficiary needs screening','AI-assisted (not AI-decided) triage for intake processes.'],
       ['Program outcome analysis','Pattern detection across multi-year M&E data.'],
-      ['Translation & multilingual comms','Serve diverse populations more equitably.']
+      ['Translation and multilingual communication','Serve diverse populations more equitably.']
     ]},
   high:{ intro:'You are ready for strategic, mission-level AI:',
     items:[
       ['Predictive impact modeling','Forecast program outcomes to guide resource allocation.'],
-      ['Funder intelligence','AI monitoring of funder priorities, RFPs, and alignment signals.'],
+      ['Funder intelligence','AI monitoring of funder priorities, requests for proposals (RFPs), and alignment signals.'],
       ['Beneficiary pathway analytics','Track and optimize individual service pathways.'],
-      ['Theory-of-change validation','Test logic models against outcome data at scale.'],
+      ['Theory-of-change validation','Test logic models against all of your outcome data.'],
       ['Cross-sector data collaboration','Ethically pooled sector data for collective impact analysis.']
     ]}
 };
@@ -794,7 +794,7 @@ document.getElementById('assessment').addEventListener('submit', e=>{
   if(!emailOk || missing.length){
     let msgs=[];
     if(!emailOk) msgs.push('Enter a valid email address to receive the report.');
-    if(missing.length) msgs.push(`${missing.length} question${missing.length>1?'s':''} still need an answer — they are highlighted below.`);
+    if(missing.length) msgs.push(`${missing.length} question${missing.length>1?'s':''} still need an answer. They are highlighted below.`);
     errBox.textContent = msgs.join(' ');
     errBox.style.display='block';
     missing.forEach(n=>document.getElementById('wrap_'+n)?.classList.add('is-missing'));
@@ -878,7 +878,7 @@ function renderReport(R){
   const weak = R.sectionResults.filter(s=>s.level==='Foundational'||s.level==='Developing')
                     .sort((a,b)=> (a.score/a.max)-(b.score/b.max));
   if(!weak.length){
-    gaps.innerHTML = `<div class="gap-empty">No dimension scored Foundational or Developing — a rare and strong result. Your priority shifts from closing gaps to systematizing and scaling what already works.</div>`;
+    gaps.innerHTML = `<div class="gap-empty">No dimension scored Foundational or Developing, which is a rare and strong result. Your priority shifts from closing gaps to systematizing and scaling what already works.</div>`;
   } else {
     weak.forEach(s=>{
       gaps.insertAdjacentHTML('beforeend',
@@ -975,7 +975,7 @@ document.getElementById('sendEmailBtn').addEventListener('click', ()=>{
   if(!lastReport) return;
   const status = document.getElementById('emailStatus');
   document.getElementById('emailStatusText').textContent =
-    `Report sent to ${lastReport.email}. Check your inbox — a copy of the HTML email is previewed below.`;
+    `Report sent to ${lastReport.email}. Check your inbox. A preview of the HTML email appears below.`;
   status.classList.add('show');
   // reveal preview
   document.getElementById('emailPreview').style.display='block';
