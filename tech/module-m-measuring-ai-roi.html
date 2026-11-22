@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module M: Measuring AI — New Metric Stack &amp; Unit Economics — IIIBC Tech-Driven AI Training</title>
+  <meta name="description" content="If you can't falsify it, it isn't measurement. Replace the metrics AI broke, instrument adoption-to-value, and put token cost in the denominator — or your AI investment is a story, not a result.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../tech-driven-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../tech-driven-training.html">All Modules</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Tech-Driven AI Training · Module M</div>
+  <h1>Measuring AI: New Metric Stack &amp; Unit Economics</h1>
+  <p class="page-header__purpose">If you can't falsify it, it isn't measurement. Replace the metrics AI broke, instrument adoption-to-value, and put token cost in the denominator — or your AI investment is a story, not a result.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Leader</span>
+    <span class="badge badge--section">Assessment §8 — Value, ROI &amp; Economics</span>
+    <span class="badge badge--audience">Execs / Finance / Eng leadership</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content</a></li>
+    <li><a href="#exercises">Hands-On Lab / Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module code</dt><dd>M</dd>
+          <dt>Maps to assessment section</dt><dd>8 — AI Value, ROI &amp; Unit Economics</dd>
+          <dt>Primary audience</dt><dd>Executives &amp; Finance (A1), Engineering leadership, Product Managers (A4)</dd>
+          <dt>Competency level</dt><dd>Leader</dd>
+          <dt>Duration</dt><dd>Half-day working session building a per-role dashboard</dd>
+          <dt>Format</dt><dd>Working session + dashboard build</dd>
+          <dt>Prerequisites</dt><dd>Module A (Strategy for Leaders) helpful; Module B baseline</dd>
+          <dt>Related modules</dt><dd>A (Strategy &amp; ROI), D/E (Engineering &amp; LLMOps cost levers), H (Governance), L (Compliance)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>The headline number is brutal and clarifying: <strong>95% of enterprise generative-AI pilots show zero measurable P&amp;L return</strong> (MIT, 2025). The cause is not weak models — it's weak integration and weaker measurement. Most companies cannot tell you whether their AI spend is working because they're still measuring with instruments AI quietly broke. "Lines of code" rewards an AI that floods the repo. "Hours saved" is an estimate no CFO believes. Two-thirds of organizations still rely on estimates rather than measured financial results, and over a third have no formal AI measurement framework at all.</p>
+      <p>At the same time, the cost side is moving against you silently. Around <strong>84% of companies report AI infrastructure cutting gross margins by 6%+</strong> (FinOps, 2025); per-token prices fall while tokens-per-task rise, so total inference spend climbs. A prompt or model change can spike consumption 100× overnight. For an AI-embedded product, a handful of power users can compress a 75% gross margin toward 60% with no pricing change — and no one notices until the quarterly numbers.</p>
+      <p>This module gives leadership the two instruments that make AI investment provable: a <strong>refreshed measurement stack</strong> that ties adoption to business outcomes, and <strong>AI unit economics</strong> that keep margin from leaking. Without these, as the parent plan states plainly, AI investment is <strong>unfalsifiable and unprovable</strong>.</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The job of measurement is to answer three questions a board actually asks — <em>Is it adopted? Is it making us better or faster? Is it making or losing us money net of its cost?</em> Everything else is vanity.</p></div>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>"Our engineers say AI makes them 40% faster." Self-reported time savings, lines of AI-generated code, and pilot demos are activity metrics. They feel like progress (activity bloat: motion mistaken for progress) and prove nothing about the P&amp;L.</p></div>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>Research note (directional):</em> Only ~39% of orgs report any measurable EBIT impact from AI and only ~5.5% attribute &gt;5% of EBIT to it (McKinsey 2025). Workflow redesign — not model choice — is the strongest predictor of impact, yet ~75% haven't redesigned a workflow. Measurement is what reveals whether the redesign (Module G) actually paid.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this session, participants will be able to:</p>
+      <ol>
+        <li><strong>Explain why old engineering/finance metrics fail</strong> under AI and name their replacements.</li>
+        <li><strong>Build the new measurement stack</strong> (AI code share, complexity-adjusted velocity, code turnover ratio, cost per ticket/feature, DX pulse).</li>
+        <li><strong>Apply the three-tier ROI model</strong> — adoption → depth/efficiency → financial impact — with token/usage cost always in the denominator.</li>
+        <li><strong>Track AI unit economics</strong>: cost per workflow, AI cost as % of COGS, contribution margin, and the power-user margin risk.</li>
+        <li><strong>Apply margin-protection levers</strong> (caching, batching, model routing, fine-tuning, usage-aligned pricing) and the L1–L5 cost-curve lens.</li>
+        <li><strong>Pair every velocity KPI with a quality/security guardrail</strong> so "more, faster" can't silently degrade reliability.</li>
+        <li><strong>Map each AI initiative to a board-reviewed business KPI</strong> and run an outcome-appropriate measurement cadence.</li>
+        <li><strong>Design a per-role AI dashboard</strong> and identify the red flag: an initiative that can't be tied to a real outcome.</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>0:00–0:10</td><td>The 95% problem and the two instruments</td><td>Live</td></tr>
+          <tr><td>0:10–0:40</td><td>Part 1 — The new measurement stack (old → new)</td><td>Workshop</td></tr>
+          <tr><td>0:40–1:15</td><td>Part 2 — The three-tier ROI model (with the cost denominator)</td><td>Workshop</td></tr>
+          <tr><td>1:15–1:55</td><td>Part 3 — AI unit economics &amp; margin protection</td><td>Workshop</td></tr>
+          <tr><td>1:55–2:15</td><td>Part 4 — Velocity ↔ quality guardrails</td><td>Workshop</td></tr>
+          <tr><td>2:15–2:35</td><td>Part 5 — Mapping initiatives to KPIs + cadence</td><td>Workshop</td></tr>
+          <tr><td>2:35–3:15</td><td>Hands-on lab: build a per-role AI dashboard</td><td>Lab</td></tr>
+          <tr><td>3:15–3:25</td><td>Knowledge check</td><td>Quiz</td></tr>
+          <tr><td>3:25–3:30</td><td>Commit owners and review cadence</td><td>Working</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="content">
+      <h2>Core Content</h2>
+
+      <h3>Part 1 — The New Measurement Stack</h3>
+      <p>AI didn't just change productivity; it broke the metrics that used to measure it. Replace the left column with the right.</p>
+      <table>
+        <thead><tr><th>Old metric</th><th>Why AI broke it</th><th>New metric</th></tr></thead>
+        <tbody>
+          <tr><td>Lines of code</td><td>AI inflates volume; more lines ≠ more value</td><td><strong>AI code share</strong> (% AI-generated)</td></tr>
+          <tr><td>PR / raw velocity</td><td>Volume up, complexity/value unclear</td><td><strong>Complexity-adjusted velocity</strong></td></tr>
+          <tr><td>Defect count</td><td>Misses code that's reworked or thrown away</td><td><strong>Code turnover ratio</strong> (churn of recently shipped code)</td></tr>
+          <tr><td>Cost per engineer</td><td>Ignores compute; headcount shifts to inference</td><td><strong>Cost per ticket / cost per feature</strong></td></tr>
+          <tr><td>Annual engagement survey</td><td>Too slow for AI-era change</td><td><strong>Quarterly developer-experience (DX) pulse</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>AI code share is a <em>context</em> metric, not a target. "40% of our lines are AI-generated" tells you adoption depth; it tells you nothing about whether that code is good. Always read it next to code turnover ratio and the quality guardrails (Part 4). A high AI code share with a high turnover ratio means the AI is producing code you keep rewriting — negative value dressed as productivity.</p></div>
+
+      <h3>Part 2 — The Three-Tier ROI Model</h3>
+      <p>Measure value in three ascending tiers. The discipline that separates real from fake ROI: <strong>token/usage cost always goes in the denominator.</strong></p>
+      <pre><code>  TIER 3 — FINANCIAL IMPACT        ← revenue / margin, net of AI cost
+        ▲   "Is it making or losing us money?"
+        │   ROI with token+infra cost in the denominator
+        │
+  TIER 2 — DEPTH / EFFICIENCY      ← time saved, PRs/eng, cycle time, AI code share
+        ▲   "Is it making us better or faster?"
+        │
+  TIER 1 — ADOPTION                ← active use/seat, depth-of-use, cert completions
+            "Is it actually being used?"  (leading indicator only)</code></pre>
+      <table>
+        <thead><tr><th>Tier</th><th>Example metrics</th><th>Benchmark (directional)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1 — Adoption</strong></td><td>Daily/weekly active use, API calls, cert completions</td><td>~51% of devs use AI daily, ~85% regularly</td></tr>
+          <tr><td><strong>2 — Depth / efficiency</strong></td><td>Time saved, PRs/engineer, cycle-time delta, AI code share, % workflows in production vs pilot</td><td>AI code share ~15–25% of lines (top quartile 40–60%); high adopters ~113% more PRs</td></tr>
+          <tr><td><strong>3 — Financial impact</strong></td><td>Gross-margin impact, cost-to-serve, revenue/employee, ROI net of cost</td><td>Healthy AI-coding ROI ~2.5–3.5× (top quartile 4–6×) <em>only when cost is in the denominator</em></td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--risk"><span class="callout__label">Risk flag</span><p>Adoption is a <em>leading</em> indicator, not value. "90% of staff use AI weekly" with no Tier-2/3 movement is the BCG "adoption puzzle" — usage up, impact flat. Never report Tier 1 alone to a board.</p></div>
+
+      <h3>Part 3 — AI Unit Economics &amp; Margin Protection</h3>
+      <p>For any AI in the product, treat it like a P&amp;L line, not a feature.</p>
+      <p><strong>Metrics to track (CFO-grade):</strong></p>
+      <ul>
+        <li><strong>Cost per workflow / per ticket / per feature</strong> — not raw token count. Tokens are an input; cost-per-unit-of-value is the metric.</li>
+        <li><strong>AI cost as % of COGS</strong> — the margin-erosion gauge.</li>
+        <li><strong>Contribution margin by customer segment</strong> — surfaces the power-user problem.</li>
+        <li><strong>Forecastability</strong> — can you predict next quarter's AI cost within a reasonable band? Most can't (only ~15% forecast within ±10%).</li>
+      </ul>
+      <p><strong>The power-user trap:</strong></p>
+      <pre><code>  Flat per-seat pricing + fat-tailed usage =
+     light users subsidize heavy users until heavy users dominate.
+  Illustrative: one account drifts from 75% → 60% gross margin (−15 pts)
+     purely from heavier AI usage at unchanged price.</code></pre>
+      <p><strong>Margin-protection levers</strong> (teach these as first-class engineering+pricing decisions):</p>
+      <ol>
+        <li><strong>Caching</strong> — don't pay twice for the same answer.</li>
+        <li><strong>Batching</strong> — amortize calls.</li>
+        <li><strong>Model routing</strong> — expensive reasoning models for planning/hard tasks only; cheap, fast models for bulk work (the Module D/E specialization lever).</li>
+        <li><strong>Fine-tuning / smaller models</strong> — for high-volume narrow tasks (50–70% cost reduction at scale).</li>
+        <li><strong>Usage-aligned pricing</strong> — meter or tier so heavy users pay for the cost they create.</li>
+      </ol>
+      <p><strong>The L1–L5 cost lens:</strong> engineering AI cost per head spans ~$20 (assisted) → ~$20,000 (full autonomy) per month — a ~1,000× range. Higher maturity trades headcount for inference. Workforce <em>and</em> margin planning must track this curve, not lag it.</p>
+
+      <h3>Part 4 — Velocity ↔ Quality Guardrails</h3>
+      <p>Every velocity metric gets a paired quality metric. This is non-negotiable, because AI code shows materially more defects (~75% more logic errors, ~2.7× more security issues — directional). "More code, faster" with no guardrail is how you ship a security incident on schedule.</p>
+      <table>
+        <thead><tr><th>Velocity metric</th><th>Paired guardrail</th></tr></thead>
+        <tbody>
+          <tr><td>PRs / engineer ↑</td><td>Defect rate / escaped bugs</td></tr>
+          <tr><td>AI code share ↑</td><td>Code turnover ratio + escaped vulnerabilities</td></tr>
+          <tr><td>Cycle time ↓</td><td>Review coverage on AI-generated code</td></tr>
+          <tr><td>Support deflection ↑ (CS)</td><td>CSAT + escalation/false-resolution rate</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Part 5 — Map Initiatives to KPIs + Cadence</h3>
+      <p>Two rules close the loop:</p>
+      <ol>
+        <li><strong>Every material AI initiative maps to a board-reviewed business KPI.</strong> If it can't be mapped, that's the red flag — pause it or reframe it. This is the same discipline as the Module A portfolio.</li>
+        <li><strong>Cadence matches the outcome horizon.</strong> Operational metrics (adoption, latency, cost, incidents) reviewed weekly/monthly; value metrics (margin, revenue/employee, cycle time) quarterly. A monthly-only cadence misses outcomes that mature over quarters; a quarterly-only cadence misses a runaway cost spike for 90 days.</li>
+      </ol>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>A balanced AI scorecard = 1–2 business-outcome metrics + 1–2 operational metrics + 1–2 quality/risk guardrails, each with a named owner and a cadence. That fits on one page and answers the board's three questions.</p></div>
+    </section>
+
+    <section id="exercises">
+      <h2>Hands-On Lab / Exercises</h2>
+
+      <h3>Lab M.1 — Build a Per-Role AI Dashboard (40 min)</h3>
+      <p>Pick two live AI initiatives (e.g., an internal engineering copilot and a customer-facing product feature). For each, fill the balanced scorecard:</p>
+      <table>
+        <thead><tr><th>Slot</th><th>Internal eng copilot</th><th>Product AI feature</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Business KPI it maps to</strong></td><td></td><td></td></tr>
+          <tr><td>Tier 1 — Adoption metric</td><td></td><td></td></tr>
+          <tr><td>Tier 2 — Depth/efficiency metric</td><td></td><td></td></tr>
+          <tr><td>Tier 3 — Financial metric (net of cost)</td><td></td><td></td></tr>
+          <tr><td>Unit economics metric</td><td></td><td></td></tr>
+          <tr><td>Quality/security guardrail</td><td></td><td></td></tr>
+          <tr><td>Owner</td><td></td><td></td></tr>
+          <tr><td>Review cadence</td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <p><strong>Facilitator answer key (sample):</strong></p>
+      <table>
+        <thead><tr><th>Slot</th><th>Internal eng copilot</th><th>Product AI feature</th></tr></thead>
+        <tbody>
+          <tr><td>Business KPI</td><td>Cost per feature / time-to-market</td><td>Gross margin + retention</td></tr>
+          <tr><td>Tier 1</td><td>Weekly active devs, cert completion</td><td>% sessions using the feature</td></tr>
+          <tr><td>Tier 2</td><td>PRs/eng, cycle-time delta, AI code share</td><td>Task success rate, latency</td></tr>
+          <tr><td>Tier 3</td><td>Cost per feature net of token spend</td><td>Contribution margin by segment, net of inference</td></tr>
+          <tr><td>Unit economics</td><td>AI cost / engineer / month (L1–L5)</td><td>AI cost as % of COGS; cost per workflow</td></tr>
+          <tr><td>Guardrail</td><td>Code turnover ratio, escaped vulns</td><td>CSAT, false-resolution / hallucination rate</td></tr>
+          <tr><td>Owner</td><td>VP Eng</td><td>PM + Finance</td></tr>
+          <tr><td>Cadence</td><td>Adoption weekly; cost monthly; value quarterly</td><td>Cost/quality weekly; margin/retention quarterly</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Lab M.2 — Find the Unfalsifiable Initiative (15 min)</h3>
+      <p>List every AI initiative currently running. For each, answer: <em>what board KPI does it move, and how would we know if it failed?</em> Any initiative without a falsifiable answer is flagged red — it's a story, not an investment. Decide: instrument it, reframe it, or kill it.</p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>Artifact M-1 — Balanced AI Scorecard (one page, per initiative)</h3>
+      <pre><code>INITIATIVE: ______________________________  OWNER: __________  CADENCE: ______
+Maps to business KPI: ______________________________________________
+TIER 1 Adoption:    metric ______________  baseline ____  target ____
+TIER 2 Depth:       metric ______________  baseline ____  target ____
+TIER 3 Financial:   metric (NET OF AI COST) ___________  baseline ____  target ____
+Unit economics:     cost/workflow ____  AI % of COGS ____  contribution margin ____
+Quality guardrail:  metric ______________  threshold ____
+Red-flag test: If this initiative fails, the number that moves is: ____________</code></pre>
+
+      <h3>Artifact M-2 — Old→New Metric Swap Card</h3>
+      <p><code>Lines of code → AI code share · Raw velocity → complexity-adjusted velocity · Defect count → code turnover ratio · Cost per engineer → cost per ticket/feature · Annual survey → quarterly DX pulse. Rule: every velocity metric ships with a paired quality metric, and every ROI number has token cost in the denominator.</code></p>
+
+      <h3>Artifact M-3 — Margin-Protection Checklist</h3>
+      <p><code>[ ] Caching on repeated queries  [ ] Batching where possible  [ ] Model routing (cheap for bulk, expensive for planning)  [ ] Fine-tuned/small models for high-volume narrow tasks  [ ] Usage-aligned pricing for heavy users  [ ] AI cost forecastable within a stated band  [ ] Power-user margin reviewed by segment</code></p>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> Why is "lines of code" a broken metric under AI? a) AI writes fewer lines · b) <strong>AI inflates volume, so more lines ≠ more value</strong> · c) It's illegal · d) It's too slow to collect</li>
+        <li><strong>(Short answer)</strong> Name the three tiers of the ROI model, in order.</li>
+        <li><strong>(MCQ)</strong> What must always go in the denominator of an AI ROI calculation? a) Headcount · b) <strong>Token/usage (inference) cost</strong> · c) Revenue · d) Lines of code</li>
+        <li><strong>(T/F)</strong> High weekly active usage of an AI tool proves it's delivering business value.</li>
+        <li><strong>(Short answer)</strong> Describe the power-user margin trap in one sentence.</li>
+        <li><strong>(Short answer)</strong> Name three margin-protection levers.</li>
+        <li><strong>(MCQ)</strong> A high AI code share combined with a high code turnover ratio most likely means: a) Great productivity · b) <strong>The AI is producing code you keep rewriting (negative value)</strong> · c) Low adoption · d) A security breach</li>
+        <li><strong>(Short answer)</strong> What's the "red flag" test for any AI initiative?</li>
+      </ol>
+
+      <h3>Answer key</h3>
+      <p><strong>Answer key:</strong> 1-b · 2: Adoption → Depth/efficiency → Financial impact · 3-b · 4-False (adoption is a leading indicator only; the BCG "adoption puzzle") · 5: flat per-seat pricing + fat-tailed usage means light users subsidize heavy users until heavy usage erodes gross margin · 6: any three of caching, batching, model routing, fine-tuning/small models, usage-aligned pricing · 7-b · 8: if it can't be mapped to a board-reviewed business KPI (you can't say what number moves if it fails), it's a story not an investment — instrument, reframe, or kill it.</p>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist:</strong></p>
+      <ul>
+        <li>Get the client's <strong>actual</strong> AI cost data (token/inference bills) and at least one product/feature P&amp;L before the session — abstract dashboards don't stick; their real numbers do.</li>
+        <li>Pull current adoption data (seat usage, API calls) and any existing engineering metrics so Lab M.1 uses live inputs.</li>
+        <li>Have Finance in the room — unit economics is a CFO conversation as much as an engineering one.</li>
+      </ul>
+      <p><strong>Timing:</strong> Half-day. Parts 1–3 are the core. If the client has no product-embedded AI, compress Part 3's product example and weight internal-productivity economics.</p>
+      <p><strong>Common pitfalls:</strong></p>
+      <ul>
+        <li>Letting the room celebrate Tier-1 adoption as success → redirect to Tier 2/3 relentlessly.</li>
+        <li>Reporting ROI without cost in the denominator → the single most common way AI ROI is overstated.</li>
+        <li>Treating measurement as an engineering-only or finance-only exercise → it's both; the dashboard needs joint owners.</li>
+        <li>Setting velocity targets with no paired quality guardrail → invites the "fast wrong code" failure.</li>
+      </ul>
+      <p><strong>Discussion prompts:</strong></p>
+      <ul>
+        <li>"Which of our AI initiatives could we kill tomorrow and not be able to prove we'd lost anything?"</li>
+        <li>"What's our AI cost as a % of COGS — and who owns that number?"</li>
+        <li>"Where is a power user quietly eating our margin?"</li>
+      </ul>
+      <p><strong>Tailoring by audience:</strong> Execs/Finance → Parts 2, 3, 5 and the scorecard. Eng leadership → Parts 1, 4 and the L1–L5 cost levers. PMs → Tier 2/3 for product features and the quality guardrails.</p>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <p>This module worked if, within one quarter:</p>
+      <table>
+        <thead><tr><th>Indicator</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Metric migration</strong></td><td>Old metrics (LOC, raw velocity) replaced by the new stack in at least one team</td></tr>
+          <tr><td><strong>Initiative-to-KPI mapping</strong></td><td>100% of material AI initiatives mapped to a board-reviewed KPI; unmappable ones flagged/resolved</td></tr>
+          <tr><td><strong>Cost in the denominator</strong></td><td>Every reported AI ROI figure includes token/infra cost</td></tr>
+          <tr><td><strong>Unit economics visibility</strong></td><td>AI cost as % of COGS tracked; AI cost forecastable within a stated band</td></tr>
+          <tr><td><strong>Paired guardrails</strong></td><td>Every velocity KPI has a live quality/security pair</td></tr>
+          <tr><td><strong>Cadence live</strong></td><td>Operational metrics reviewed weekly/monthly, value metrics quarterly, with named owners</td></tr>
+          <tr><td><strong>Knowledge check</strong></td><td>≥ 80% pass among participants</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <ul>
+        <li><strong>Pilot-failure &amp; value gap</strong> — MIT NANDA <em>GenAI Divide</em> (2025, 95% no measurable P&amp;L return); McKinsey <em>State of AI</em> (2025, ~39% measurable EBIT impact; workflow redesign strongest predictor); BCG <em>AI Adoption Puzzle</em> / <em>AI at Work 2025</em> (usage up, impact flat). <em>Directional.</em></li>
+        <li><strong>AI unit economics / FinOps</strong> — CloudZero / FinOps (2025, ~84% report 6%+ gross-margin erosion); Drivetrain CFO guidance (cost per workflow, AI % of COGS, contribution margin, power-user concentration); Flexera FinOps for AI.</li>
+        <li><strong>Measurement / AI code share</strong> — Worklytics (ROI dashboards 2025); DX (measuring AI impact in engineering); HackerRank <em>2025 Developer Skills Report</em>; Exceeds.ai / Larridin (AI code-share benchmarks).</li>
+        <li><strong>Engineering cost curve</strong> — IIIBC field synthesis ("Where are the bottlenecks"): L1–L5 maturity-cost curve (~$20 → ~$20,000/engineer/month), model specialization, and the new measurement stack.</li>
+        <li><strong>Companion modules:</strong> A (Strategy &amp; portfolio-to-KPI discipline), D/E (engineering cost levers, model routing), G (workflow redesign — what measurement validates), H (governance), L (compliance).</li>
+      </ul>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Calibration note.</strong> ROI multiples, AI code-share ranges, and error/security multiples are vendor- and analyst-reported, vary by methodology, and are for target-setting — not guarantees. The discipline (cost in the denominator; adoption ≠ value; paired guardrails; map-to-KPI) is the durable, load-bearing content.</p></div>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-l-ai-regulation-compliance.html"><span class="dir">← Previous</span><span class="ttl">Module L: AI Regulation &amp; Compliance</span></a>
+      <a class="next" href="../tech-driven-training.html"><span class="dir">Next →</span><span class="ttl">All Modules</span></a>
+    </nav>
+  </div>
+</div>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that compounds your moat — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../tech-driven-training.html">All Modules</a>
+      <a href="../index.html">About IIIBC</a>
+      <a href="mailto:hello@iiibc.com">hello@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — Beyond Cognition. All rights reserved.</span>
+    <span class="mono">Module M · Tech-Driven Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>

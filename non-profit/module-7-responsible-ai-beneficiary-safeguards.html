@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 7: Protecting the People We Serve: Responsible AI — IIIBC Non-Profit AI Training</title>
+  <meta name="description" content="Program staff learn where AI is off-limits, how to spot bias against the communities you serve, and how to keep a human in charge of every decision that touches a life.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../non-profit-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../non-profit-training.html">All Modules</a>
+    <a href="../non-profilt-assessment.html">Assessment</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Non-Profit AI Training · Module 7</div>
+  <h1>Protecting the People We Serve: Responsible AI</h1>
+  <p class="page-header__purpose">The people you serve cannot absorb an AI mistake. This module teaches your program staff where AI is off-limits, how to spot bias against the communities you serve, and how to keep a human in charge of every decision that touches a life.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Practicing</span>
+    <span class="badge badge--section">Assessment §7 — Ethical &amp; Beneficiary Safeguards</span>
+    <span class="badge badge--audience">A3 Program / Service-delivery staff · all staff</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content — Parts 1–5</a></li>
+    <li><a href="#exercises">Hands-On Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module number</dt><dd>7 of 8</dd>
+          <dt>Maps to assessment</dt><dd>Section 7 — Ethical &amp; Beneficiary Safeguards (questions 7.1–7.7)</dd>
+          <dt>Primary audience</dt><dd>A3 Program / Service-delivery staff (highest priority) · all staff</dd>
+          <dt>Competency level</dt><dd>Practicing</dd>
+          <dt>Duration</dt><dd>Half-day (3.5 hrs), scenario-based ethics workshop</dd>
+          <dt>Format</dt><dd>Facilitated ethics workshop — case scenarios, small-group decisions, build-the-rules sessions</dd>
+          <dt>Prerequisites</dt><dd>Tier 0 foundational fluency (Module 4). Helpful: Module 2 (data sensitivity) completed by at least one attendee.</dd>
+          <dt>Cost note</dt><dd>Deliverable with free resources: TAG + Project Evident framework, Project Evident <em>Equitable AI</em>, Vera Solutions principles, Candid responsible-use guide, NTEN. No paid tooling required.</dd>
+          <dt>Related modules</dt><dd>Module 2 (Data Foundations) · Module 1 (Leadership/Board policy approval) · Module 8 (Grant Lifecycle &amp; M&amp;E)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>Most AI mistakes in a non-profit are recoverable. A clumsy donor email can be re-sent. A wrong number in a grant report can be corrected. But the people your programs serve — people in poverty, in trauma, displaced, navigating immigration, in mental-health crisis — often live one bad decision away from losing housing, safety, custody, a benefit, or a legal case. When AI touches <em>them</em>, the stakes change completely. This is the one module where "move fast and learn" is the wrong instinct.</p>
+      <p>The harms are documented, not hypothetical. Michigan's MiDAS system falsely accused roughly <strong>40,000 residents</strong> of unemployment fraud after the state removed human review; a later audit found that <strong>at least 93%</strong> of the automated fraud accusations were wrong (IEEE Spectrum, 2024; U-M Ford School, 2024). The Allegheny County family-screening tool — used to help caseworkers decide which families to investigate — drew U.S. Department of Justice civil-rights scrutiny over whether it hardened bias against people with disabilities and mental-health conditions (PBS NewsHour / AP, 2023; ACLU, 2024). Across benefits systems in multiple states, researchers conclude that fraud-detection algorithms aimed at the poor frequently <em>punish the poor instead</em> (The Conversation, 2024; Eubanks, <em>Automating Inequality</em>). These were public agencies with budgets and lawyers. A lean non-profit pasting a case note into a free chatbot has none of those guardrails.</p>
+      <p>This module is built so that the people who do the work — your program and service-delivery staff — leave knowing exactly where the lines are, why they exist, and how to hold them even when AI would be faster. We structure the ethics content on the three dimensions of the <strong>TAG + Project Evident <em>Responsible AI Adoption in Philanthropy</em></strong> framework — <strong>Organizational, Ethical, Technical</strong> — developed with input from 300+ grantmakers (TAG, 2023; updated guidance 2024–2026).</p>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>Research note (directional):</em> Only about <strong>15%</strong> of non-profits have an organizational responsible-AI-use policy (Candid AI Equity Project, 2025), and equity-practice implementation actually <em>dropped</em> to ~36% in 2025 from ~46% in 2024 — usage is racing ahead of safeguards. Treat the percentages as directional; the gap is real.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this module, participants will be able to:</p>
+      <ol>
+        <li><strong>Apply the organization's "do-not-use" list</strong> — naming the high-stakes categories (eligibility/benefit decisions, crisis/safety communications, case notes with sensitive data, mental-health support, HR/performance) where AI is off-limits.</li>
+        <li><strong>Treat AI as a collaborator, not an authority</strong> — and explain in plain words why "the computer said so" is never an acceptable basis for a decision about a person.</li>
+        <li><strong>Recognize AI bias against served populations</strong> — racial, language, socioeconomic, disability — and run a <em>bias check before deployment</em> and on an ongoing basis.</li>
+        <li><strong>Obtain trauma-informed, culturally appropriate informed consent</strong> before AI processes beneficiary data, using a consent guide rather than a buried checkbox.</li>
+        <li><strong>Apply heightened human-in-the-loop control</strong> on any crisis- or safety-critical decision, and never route a person in crisis to an unsupervised AI.</li>
+        <li><strong>Protect sensitive data</strong> — never enter immigration status, health, abuse, or financial-distress details into public AI tools — and connect this to GDPR/HIPAA duties in plain terms.</li>
+        <li><strong>Check AI tools for accessibility</strong> so they do not create new barriers for beneficiaries with disabilities, limited literacy, language differences, or limited technology access.</li>
+        <li><strong>Use the beneficiary-concern escalation path</strong> so the people you serve have a real way to question how technology is used in their care.</li>
+        <li><strong>Map each safeguard to the Organizational / Ethical / Technical dimensions</strong> so the rules connect to the org's policy, not just to one workshop.</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <p>A half-day, scenario-based ethics workshop. Built for program staff who carry caseloads — concrete, decision-focused, low jargon.</p>
+      <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>0:00–0:15</td><td>Welcome · the MiDAS story · "the people we serve cannot absorb a mistake"</td><td>Talk + discussion</td></tr>
+          <tr><td>0:15–0:45</td><td>Part 1: The three dimensions (Organizational / Ethical / Technical) — the map for the day</td><td>Workshop</td></tr>
+          <tr><td>0:45–1:25</td><td>Part 2: The do-not-use list — what AI must never decide · build/adopt it live</td><td>Workshop + Exercise 1</td></tr>
+          <tr><td>1:25–1:35</td><td>Break</td><td>—</td></tr>
+          <tr><td>1:35–2:10</td><td>Part 3: AI bias against the communities we serve — recognize, check, monitor</td><td>Scenario + Exercise 2 (bias check)</td></tr>
+          <tr><td>2:10–2:45</td><td>Part 4: Trauma-informed consent + protecting sensitive data (GDPR/HIPAA)</td><td>Workshop + Exercise 3 (consent guide)</td></tr>
+          <tr><td>2:45–3:15</td><td>Part 5: Human-in-the-loop for crisis/safety · accessibility · the concern escalation path</td><td>Scenario + workshop</td></tr>
+          <tr><td>3:15–3:30</td><td>Knowledge check · assign owners and dates · close</td><td>Quiz + working session</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="content">
+      <h2>Core Content — Parts 1–5</h2>
+
+      <h3>Part 1 — The Map: Organizational, Ethical, Technical</h3>
+      <p>Responsible AI is not one rule; it is three layers of responsibility that have to agree with each other. The TAG + Project Evident framework names them <strong>Organizational, Ethical, Technical</strong> — and we use those three buckets all day so every safeguard has a home (TAG + Project Evident, 2023–2026).</p>
+      <table>
+        <thead><tr><th>Dimension</th><th>The question it answers</th><th>What it owns in a non-profit</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Organizational</strong></td><td><em>Are we set up to be accountable?</em></td><td>Who is responsible · the do-not-use list · policy approved by leadership/board · how staff escalate · how beneficiaries raise concerns · staff (and beneficiary) involvement in the rules</td></tr>
+          <tr><td><strong>Ethical</strong></td><td><em>Does this respect the people we serve?</em></td><td>Consent · fairness / bias · transparency with beneficiaries · dignity · cultural fit · "human flourishing, minimize risk, maximize benefit"</td></tr>
+          <tr><td><strong>Technical</strong></td><td><em>Is the tool itself safe and fit?</em></td><td>What data the tool can touch · bias testing · accessibility · human-in-the-loop controls · security · monitoring after deployment</td></tr>
+        </tbody>
+      </table>
+      <pre><code>        ORGANIZATIONAL  ── who is accountable, what is allowed
+              │
+              ▼
+        ETHICAL  ── consent · fairness · dignity · transparency
+              │
+              ▼
+        TECHNICAL  ── data limits · bias test · accessibility · human-in-loop
+              │
+              ▼
+   A decision that protects, never harms, the person served</code></pre>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>A program staffer who can say <em>which dimension</em> a worry lives in — "that's an Ethical problem: we never got consent" — because that maps straight to a fix and an owner.</p></div>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>A glossy vendor claim that a tool is "responsible AI" or "bias-free." No tool is bias-free. Responsibility lives in your practices across all three dimensions, not in a vendor badge.</p></div>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>If a proposed AI use fails <em>any one</em> of the three dimensions, it does not proceed — not even if the other two are strong. A technically excellent tool used without consent is still off-limits.</p></div>
+      <p>The framework's own north star is worth saying out loud to the room: AI adoption should <em>"enable human flourishing, minimize risk, and maximize benefit"</em> — and it was built with input from more than 300 grantmakers as a <em>living</em> document, not a finished rulebook (TAG + Project Evident, 2023). That phrasing is a useful gut-check. Before any AI touches a person you serve, ask the three-dimension question in order: <em>Are we accountable for this? Does it respect this person? Is the tool itself safe and fit?</em> If you cannot answer all three with a confident yes, you have found your stop.</p>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>These three dimensions are not academic. In a lean non-profit the same person often wears all three hats in one afternoon — drafting the policy (Organizational), having the consent conversation (Ethical), and clicking "run" on the tool (Technical). Naming the dimensions helps that one person notice when they have skipped a hat.</p></div>
+      <p><strong>4D tie-in — Delegation:</strong> The whole module is one extended act of Delegation: deciding, deliberately, what you hand to AI and what stays human. In program work the default flips — keep it human unless you can prove it is safe to delegate.</p>
+
+      <h3>Part 2 — The Do-Not-Use List: What AI Must Never Decide</h3>
+      <p>This is the most important single artifact in the kit. Candid calls the "When NOT to use AI" section <em>"the most important section"</em> of any non-profit AI policy (Candid, 2025). The principle underneath it, drawn straight from the 4D framework and Vera Solutions' <em>Human Oversight &amp; Control</em> principle: <strong>treat AI as a collaborator, not an authority.</strong> Ask it for sources, check its facts, and never let "the model said so" stand in for a human judgment about a person (Vera Solutions, 2024; Candid, 2025).</p>
+      <p>Here is the starting do-not-use list. Adopt it, then add your own program-specific rows in Exercise 1.</p>
+      <table>
+        <thead><tr><th>AI must NOT be used to…</th><th>Why</th><th>Real-world warning</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Decide eligibility for a benefit, service, or funding</strong></td><td>Errors deny help to people who qualify; bias compounds</td><td>MiDAS: ~93% of automated fraud findings wrong (IEEE Spectrum, 2024)</td></tr>
+          <tr><td><strong>Write or auto-send communications during crisis, grief, domestic violence, or trauma</strong></td><td>Tone-deaf or wrong output can re-traumatize or endanger</td><td>Candid do-not-use list (2025)</td></tr>
+          <tr><td><strong>Create case notes containing sensitive personal data</strong> (health, immigration, abuse, finances)</td><td>Public tools may retain and train on the text; leak risk</td><td>Module 2 cardinal rule</td></tr>
+          <tr><td><strong>Provide mental-health support / act as a crisis counselor</strong></td><td>Chatbots have impersonated 988 and given wrong/nonexistent crisis numbers</td><td>CrisisTalk, 2025; Futurism, 2025</td></tr>
+          <tr><td><strong>Conduct performance reviews or monitor employees</strong></td><td>High-stakes HR decisions need human judgment and fairness</td><td>Candid do-not-use list (2025)</td></tr>
+          <tr><td><strong>Generate content about a community without their consent and context</strong></td><td>Misrepresents the people you serve; erodes trust</td><td>Vera <em>Ethics &amp; Community Values</em> (2024)</td></tr>
+          <tr><td><strong>Make any decision where wrong info could cause harm and you can't confidently verify it</strong></td><td>The catch-all that covers the cases above didn't name</td><td>Candid (2025)</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>The do-not-use list is not a "get approval first" list — it is a <em>stop</em> list. These uses are off-limits regardless of deadline pressure. AI may <em>assist around</em> them (e.g., summarizing public eligibility <em>rules</em> for a staffer to apply) but never <em>make</em> the decision.</p></div>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Candid's research is blunt about a failure mode: fear-based policies that ban everything just push AI use underground, where staff use unapproved tools and stop asking questions (Candid, 2025). So the list is paired with a clear <em>do-use</em> lane (Part 5) and a no-blame way to ask. The goal is responsible, confident use — not silence.</p></div>
+      <p><strong>Do / Don't</strong></p>
+      <ul>
+        <li><strong>Do</strong> let AI draft the <em>neutral, public-information</em> parts of a workflow (a benefits-program fact sheet, a generic appointment reminder) that a human then reviews.</li>
+        <li><strong>Do</strong> keep the do-not-use list posted where caseworkers actually work, and re-read it at onboarding.</li>
+        <li><strong>Don't</strong> paste a real case note, intake form, or anything with a beneficiary's identity into a public chatbot to "just clean it up."</li>
+        <li><strong>Don't</strong> let an AI score, rank, or triage real people without a named human who reviews and can override every result.</li>
+      </ul>
+
+      <h3>Part 3 — Bias Against the Communities We Serve</h3>
+      <p>AI learns from historical data, and history is unequal. When the training data carries the racism, language gaps, and class assumptions of the past, the model repeats them — and the people who get hurt are the marginalized communities non-profits exist to serve. Vera Solutions' <em>Fairness &amp; Bias Mitigation</em> principle says it plainly: assess AI systems for unintended bias <em>"particularly regarding marginalized communities served by the organization"</em> (Vera Solutions, 2024). Project Evident's <em>Equitable AI Adoption</em> framework (2026) makes "Safe and Fair Practice" one of its eight components and warns specifically against overreliance on automated systems.</p>
+      <p>Three kinds of bias to watch for in program work:</p>
+      <table>
+        <thead><tr><th>Bias type</th><th>How it shows up</th><th>Who it harms</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Racial / ethnic</strong></td><td>Risk scores, "needs" predictions, or matching that rate some groups worse on equal facts</td><td>Communities of color, over-surveilled groups</td></tr>
+          <tr><td><strong>Language</strong></td><td>Worse output, mistranslation, or refusal for non-English or dialect speakers</td><td>Immigrants, refugees, ESL beneficiaries</td></tr>
+          <tr><td><strong>Socioeconomic</strong></td><td>Models trained mostly on better-resourced populations misread poverty as risk or fraud</td><td>People in poverty, the under-documented</td></tr>
+          <tr><td><strong>Disability</strong></td><td>Systems treat disability or mental-health topics as "dangerous," block or downgrade them</td><td>People with disabilities, mental-health clients</td></tr>
+        </tbody>
+      </table>
+      <p>The Allegheny family-screening case shows how this hides in plain sight: the tool didn't predict child maltreatment directly — it predicted a <em>proxy</em> (home removal within two years), and critics argued the proxy itself encoded bias against poor and disabled parents (ACLU, 2024; Popular Science, 2024). The lesson: <strong>bias is rarely labeled "bias." It hides in proxies, in training data, and in who was missing from the data.</strong></p>
+      <p><strong>A scenario to work through.</strong> A housing non-profit pilots an AI "needs-assessment" assistant that ranks new clients by how urgently they need help, trained on five years of the org's own intake-and-outcome records. It tests at 91% overall accuracy and leadership is excited. But the historical data was collected when intake staff were mostly English-speaking, so Spanish-only clients have thinner, messier records — and the model quietly scores them as <em>lower</em> urgency because their files look "incomplete." No one notices, because the 91% figure is an average that drowns the smaller group. The fix is not a better average; it is the bias check below: split the results by language, see the gap, and either remediate or do not deploy. This is the everyday shape of algorithmic harm in human services — not a dramatic failure, but a quiet, systematic under-serving of the people already hardest to reach (Goldkind, Ming &amp; Fink, 2024).</p>
+      <pre><code>   BIAS CHECK — before deployment AND on a schedule
+   1. Who is in the training data?  Who is MISSING?
+   2. What is the model really predicting (the proxy)?  Is the proxy fair?
+   3. Test on YOUR populations — split results by race / language / income / disability
+   4. Is there a named human who reviews and can override every output?
+   5. Who monitors this after launch, and how often?
+        └─► fails any line → do not deploy / pause and remediate</code></pre>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>Never deploy an AI tool that influences decisions about people until you have run the bias check (Exercise 2) and assigned someone to <em>monitor it after launch</em>. Bias is not a one-time test at the door — models drift, populations change, and harm accumulates quietly. Schedule the re-check.</p></div>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>Disaggregated results. A staffer who asks "does this work <em>as well</em> for our Spanish-speaking clients as for our English-speaking ones?" is doing real Discernment — the 4D habit of evaluating output critically.</p></div>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>"We tested it and overall accuracy is 94%." Overall accuracy hides bias. A model can be 94% accurate overall and badly wrong for the one group you most need to protect.</p></div>
+      <p><strong>4D tie-in — Discernment + Diligence:</strong> Discernment is spotting the bias; Diligence is documenting the check, owning the decision, and re-checking on a schedule.</p>
+
+      <h3>Part 4 — Trauma-Informed Consent &amp; Protecting Sensitive Data</h3>
+      <p>People in your programs often share information under stress, with limited choices, and sometimes after harm. "Consent" buried in a 12-page intake form is not consent in that context. The clinical-practice guidance is consistent: <em>consent isn't a box checked at intake; it's a conversation you keep having</em> — and if a person learns later that an algorithm analyzed their trauma without their knowing, that trust may never come back (Ensora Health, 2025; Blueprint, 2025; APA, 2025).</p>
+      <p>Trauma-informed, culturally appropriate consent before AI touches beneficiary data means:</p>
+      <ul>
+        <li><strong>Plain language, the person's language.</strong> Explain <em>what</em> AI will do, <em>what data</em> it touches, <em>why</em>, and <em>what they can refuse</em> — in their language and at their literacy level.</li>
+        <li><strong>Real choice, no penalty.</strong> A person can decline AI processing and still receive full service. If declining costs them service, it isn't consent.</li>
+        <li><strong>Specific, not blanket.</strong> Existing intake consent almost never covers AI. Check whether you need new consent language (Assessment 7.4); usually you do.</li>
+        <li><strong>Ongoing.</strong> Re-confirm when the use changes. Consent for translation is not consent for risk-scoring.</li>
+        <li><strong>Culturally aware.</strong> Vera's <em>Ethics &amp; Community Values</em> principle: reflect the community's norms, not a one-size template (Vera Solutions, 2024).</li>
+      </ul>
+      <p>On data protection, the cardinal rule from Module 2 holds with extra force here: <strong>never enter sensitive beneficiary data into public AI tools.</strong> Candid's wording is a good staff test — <em>don't enter "personally identifying or confidential information, legal documents, passwords, or anything you wouldn't paste into a public website"</em> (Candid, 2025).</p>
+      <table>
+        <thead><tr><th>In plain terms…</th><th>GDPR (if you serve people in the EU/UK)</th><th>HIPAA (if you handle US health data)</th></tr></thead>
+        <tbody>
+          <tr><td>What it protects</td><td>Personal data; special category data (health, ethnicity, etc.) needs extra basis</td><td>Protected health information (PHI)</td></tr>
+          <tr><td>For AI use</td><td>Lawful basis + purpose limitation + data minimization; people can object</td><td>A signed Business Associate Agreement with any vendor touching PHI; no PHI in non-compliant/public tools</td></tr>
+          <tr><td>Plain rule</td><td>Collect only what you need; tell people; let them say no</td><td>If a tool isn't covered by a BAA, PHI never goes in</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>If a tool is free and consumer-grade (the public version of a popular chatbot), assume it can retain and train on what you type. That makes it a do-not-enter zone for <em>any</em> identifiable beneficiary data — full stop. Real organizations have leaked confidential material exactly this way.</p></div>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Anonymizing is harder than it looks. Removing a name from a case note can still leave enough — a rare diagnosis, a specific town, an immigration date — to re-identify someone. When in doubt, don't put it in an external tool; ask the data lead (Module 2).</p></div>
+
+      <h3>Part 5 — Human-in-the-Loop, Accessibility &amp; the Concern Escalation Path</h3>
+      <p><strong>Human-in-the-loop for crisis and safety.</strong> Some decisions must always run through a person. Crisis-line workers studying AI in suicide prevention concluded that any AI involvement needs human supervision <em>"particularly for high-risk cases"</em> and were openly skeptical that an unsupervised system can weigh life-and-death ethical decisions (PMC, 2025). The danger is real: AI chatbots have impersonated 988, claimed to <em>be</em> the Lifeline, and handed out nonexistent crisis numbers (CrisisTalk, 2025; Futurism, 2025). <strong>Never route a person in crisis to an unsupervised AI.</strong> Keep the warm human handoff — a named person, a real number — and let AI only assist staff behind the scenes (e.g., surfacing the correct, verified resource list for a human to use).</p>
+      <p><strong>Accessibility — don't build a new barrier.</strong> AI can widen the digital divide. Tools learn from internet content that carries prejudice about disability, sometimes blocking disabled people's own conversations as "dangerous" (Rooted in Rights, 2024). Voice or chat tools can exclude people with limited literacy, no smartphone, low bandwidth, or a different home language. Assessment 7.6 asks you to review every beneficiary-facing tool for exactly these barriers.</p>
+      <pre><code>   ACCESSIBILITY QUICK CHECK (beneficiary-facing AI)
+   □ Works in the languages our people actually speak
+   □ Readable at low literacy; offers a human alternative
+   □ Usable without the newest phone / fast internet
+   □ Doesn't penalize or block disability / mental-health topics
+   □ A non-AI path exists for anyone who needs or wants it</code></pre>
+      <p><strong>The beneficiary-concern escalation path.</strong> People you serve must have a real way to ask "why is a computer involved in my case?" and to object — Assessment 7.5. This is an Organizational-dimension duty: it only works if it's named, posted, and staffed.</p>
+      <pre><code>   BENEFICIARY RAISES A CONCERN
+        │  (verbally, on a form, via an advocate — any channel)
+        ▼
+   FRONTLINE STAFF logs it, pauses any AI step on that case, reassures
+        │
+        ▼
+   PROGRAM LEAD reviews within [X] business days; can override the AI
+        │
+        ▼
+   AI/DATA OWNER (or ED) — pattern? fix the tool / consent / process
+        │
+        ▼
+   RESPONSE to the person in plain language + log for the learning loop</code></pre>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>Raising a concern must never reduce the service a person receives. If it does, people stop telling you when something is wrong — and you lose your single best early-warning system for harm.</p></div>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>Staff <em>and</em> beneficiaries were involved in writing these rules. Vera's <em>Ethics &amp; Community Values</em> and the TAG framework both insist the community helps define acceptable use — it surfaces cultural blind spots no internal team can see alone.</p></div>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>A concern mechanism that exists only on paper — a policy line no beneficiary has ever heard of and no staffer has ever used. An unused channel is the same as no channel.</p></div>
+      <p><strong>The do-use lane (so the list isn't only "no").</strong> AI <em>is</em> welcome on low-risk, non-beneficiary-identifying program admin: drafting a public program FAQ, summarizing published research, formatting a public report, translating <em>general</em> (non-personal) materials for human review. Frame AI as removing administrative burden so staff spend <em>more</em> time with the people they serve.</p>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>The test for the do-use lane is one question: <em>if this output were wrong, who gets hurt?</em> If the answer is "a staffer wastes ten minutes," it's likely a safe do-use. If the answer names a person you serve — their housing, safety, benefit, case, or dignity — it belongs on the do-not-use list with a human firmly in charge.</p></div>
+      <p><strong>Tie it back to the three dimensions.</strong> Everything in Part 5 maps cleanly: human-in-the-loop is <strong>Technical</strong> (a control built into the workflow), accessibility is <strong>Technical and Ethical</strong> (fit <em>and</em> fairness), and the beneficiary-concern path is <strong>Organizational</strong> (accountability you can point to). When a new AI idea arrives next quarter, run it through the same three questions — that habit, more than any single rule, is what keeps the people you serve safe over time.</p>
+    </section>
+
+    <section id="exercises">
+      <h2>Hands-On Exercises</h2>
+
+      <h3>Exercise 1 — Build (or adopt) your Do-Not-Use List <em>(25 min, small groups)</em></h3>
+      <p>Start from the Part 2 table. In groups by program, add at least <strong>three</strong> program-specific rows: a concrete task in <em>your</em> work where AI must not decide. For each, write the task, the harm if it went wrong, and the <em>do-use</em> alternative AI could safely assist with.</p>
+      <p><strong>Facilitator answer key — sample rows program staff commonly surface:</strong></p>
+      <table>
+        <thead><tr><th>Program task (do NOT use AI to…)</th><th>Harm if wrong</th><th>Safe do-use alternative</th></tr></thead>
+        <tbody>
+          <tr><td>Score which shelter applicants get a bed tonight</td><td>A wrongly de-prioritized person sleeps outside</td><td>AI drafts the <em>public</em> intake-info sheet; human scores</td></tr>
+          <tr><td>Draft the message telling a family their case is closing</td><td>Re-traumatizing tone; legal error</td><td>Staff writes it; AI checks <em>public-info</em> attachments only</td></tr>
+          <tr><td>Summarize a survivor's disclosure into a case note</td><td>Leak of identifying trauma data</td><td>Staff writes the note; no external tool touches it</td></tr>
+          <tr><td>Decide a client's immigration-relief eligibility</td><td>Catastrophic, irreversible harm</td><td>AI summarizes <em>published</em> USCIS rules for the human</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Exercise 2 — Run a Bias Check Before Deployment <em>(30 min, plenary then groups)</em></h3>
+      <p>Take a real or proposed AI use that touches people (e.g., an intake-triage assistant). Walk the <strong>Bias Check Worksheet</strong> (Templates section). The facilitator plays a vendor making confident claims; groups must push past "94% accurate overall."</p>
+      <p><strong>Facilitator answer key — what a passing check looks like:</strong></p>
+      <ul>
+        <li>Names who is in <em>and missing from</em> the training data.</li>
+        <li>States the real prediction/proxy and questions whether the proxy is fair (the Allegheny lesson).</li>
+        <li>Commits to disaggregated testing by race / language / income / disability <em>on your population</em>.</li>
+        <li>Names a human reviewer with override authority and a monitoring owner with a re-check date.</li>
+        <li>Red flag to fail on: "we can't see how it decides" + "no per-group results" → <strong>do not deploy.</strong></li>
+      </ul>
+
+      <h3>Exercise 3 — Write a Trauma-Informed Consent Script <em>(20 min, pairs)</em></h3>
+      <p>Using the Consent Guide (Templates), draft a 4–6 sentence spoken script a caseworker could say before any AI touches a person's data. Then test it: would someone in crisis, in their second language, understand it? Could they say no without losing service?</p>
+      <p><strong>Facilitator sample solution:</strong></p>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p>"Before we go further — to help me sort the paperwork faster, I'd like to use a computer tool to summarize <em>only the non-private parts</em> of your file. It will never see your [health/immigration/safety] details, and you can say no and still get every service, no questions asked. Do you have any questions? Is it okay with you if I use it — just for the paperwork?"</p></div>
+      <p>Key features: plain language, names what's excluded, explicit no-penalty refusal, invites questions, specific to one use.</p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>A. Do-Not-Use List — Template (post it where caseworkers work)</h3>
+      <pre><code>OUR DO-NOT-USE LIST — AI is OFF-LIMITS for these decisions
+(Approved by leadership/board · v___ · review date ___)
+
+AI must NEVER:
+□ Decide eligibility for a benefit, service, or funding
+□ Write/send communications in crisis, grief, DV, or trauma response
+□ Create case notes with sensitive data (health, immigration, abuse, finances)
+□ Act as mental-health support or a crisis counselor
+□ Run performance reviews or monitor staff
+□ Generate content about a community without their consent &amp; context
+□ Make ANY decision where a wrong answer could harm someone
+   and we can't confidently verify it
+□ [your program-specific rows…]
+
+When unsure: STOP and ask ____________ (named person). No blame for asking.
+Do-use lane (safe): ___________________________________________</code></pre>
+
+      <h3>B. Bias Check Before Deployment — Worksheet</h3>
+      <pre><code>TOOL/USE: __________________   PEOPLE AFFECTED: __________________
+DIMENSION OWNER (Technical): __________   DATE: __________
+
+1. TRAINING DATA — who is in it? __________ Who is MISSING? __________
+2. WHAT IS IT REALLY PREDICTING (the proxy)? __________
+   Is that proxy fair to the people we serve? □ Yes □ No □ Unsure
+3. DISAGGREGATED TEST on OUR population — results by:
+     race/ethnicity ____  language ____  income ____  disability ____
+   Does it work AS WELL for each group? □ Yes □ No
+4. HUMAN-IN-THE-LOOP: named reviewer who can OVERRIDE: __________
+5. POST-LAUNCH MONITORING: owner __________  re-check every __________
+6. TRANSPARENCY: can we explain how it decides, in plain words? □ Y □ N
+
+DECISION:  □ Deploy   □ Pause &amp; remediate   □ Do not deploy
+(Fail any line → not "Deploy.")</code></pre>
+
+      <h3>C. Trauma-Informed AI Consent — Guide</h3>
+      <pre><code>BEFORE AI PROCESSES ANY BENEFICIARY DATA — the conversation, not the checkbox
+
+SAY (plain language, the person's language, their literacy level):
+  • WHAT the tool will do
+  • WHAT data it will touch — and what it will NEVER see
+  • WHY it helps them / the service
+  • THAT they can say NO and still get full service, no penalty
+
+CONFIRM:
+  □ They understood (ask them to say it back if unsure)
+  □ It's a SPECIFIC use (not blanket) — re-ask if the use changes
+  □ Existing intake consent does NOT auto-cover AI — new language if needed
+  □ Culturally appropriate — fits this community's norms
+  □ Logged: what they consented to, when, who explained it
+
+NEVER: bury it in a form · use a tool that can't honor a "no" ·
+       imply refusal costs them service</code></pre>
+
+      <h3>D. Beneficiary-Concern Escalation Path — One-Pager</h3>
+      <pre><code>HOW A PERSON WE SERVE CAN QUESTION AI/TECH IN THEIR CARE
+(Posted in waiting areas &amp; intake packets, in plain language + top languages)
+
+STEP 1  Tell any staff member, or an advocate, in any way you like.
+STEP 2  Staff logs it, PAUSES any AI step on your case, reassures you.
+STEP 3  Program Lead reviews within ___ business days — can override AI.
+STEP 4  AI/Data owner checks for a pattern; fixes tool/consent/process.
+STEP 5  You get a plain-language answer. Your services are NOT reduced
+        for asking — ever.
+
+Concern channel contact: ___________________________________________</code></pre>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> A funder deadline is tomorrow and a caseworker is behind. Which is acceptable?<br>a) Paste the client's intake form into a free chatbot to summarize it<br>b) Have AI decide which clients get the last three program slots<br>c) Use AI to format a <em>public</em> program fact sheet, then review it<br>d) Ask AI to write the message closing a family's case</li>
+        <li><strong>(Short answer)</strong> Name three categories on a non-profit do-not-use list and why each is high-stakes.</li>
+        <li><strong>(MCQ)</strong> A vendor says their triage tool is "94% accurate and bias-free." Best response?<br>a) Approve it — that's a strong number<br>b) Ask for results disaggregated by race, language, income, and disability, and who monitors it after launch<br>c) Trust the "bias-free" claim<br>d) Approve it if it's cheap</li>
+        <li><strong>(Short answer)</strong> Why is a checkbox in a 12-page intake form not trauma-informed consent for AI use?</li>
+        <li><strong>(MCQ)</strong> Which is required before AI processes EU beneficiaries' health data and US PHI, respectively?<br>a) Nothing extra / nothing extra<br>b) A lawful basis + minimization &amp; the right to object / a Business Associate Agreement<br>c) Board approval only / board approval only<br>d) A vendor's "responsible AI" badge / the same</li>
+        <li><strong>(Short answer)</strong> A person in mental-health crisis contacts your program after hours. Why must they never be routed to an unsupervised AI? What should happen instead?</li>
+        <li><strong>(MCQ)</strong> A beneficiary asks why a computer is involved in their case. Under a good escalation path, what must NOT happen?<br>a) Staff logs the concern<br>b) Any AI step on the case is paused<br>c) Their services are reduced because they complained<br>d) A program lead reviews it</li>
+        <li><strong>(Short answer)</strong> Match to a dimension (Organizational / Ethical / Technical): (i) no consent was obtained; (ii) no human can override the tool; (iii) there's no way for a beneficiary to complain.</li>
+        <li><strong>(Short answer)</strong> What is the "proxy" problem, using the Allegheny example?</li>
+      </ol>
+      <h3>Answer key</h3>
+      <p>1 → <strong>c</strong>. 2 → e.g., eligibility decisions (denies help/compounds bias), crisis/trauma comms (re-traumatize/endanger), sensitive case notes (leak/legal duty), mental-health support (chatbots have given wrong crisis info), HR/monitoring (needs fair human judgment). 3 → <strong>b</strong>. 4 → consent must be plain-language, specific to the AI use, freely refusable without penalty, and an ongoing conversation; a buried checkbox meets none of these and trust breaks if the person learns later. 5 → <strong>b</strong>. 6 → unsupervised chatbots have impersonated 988 and given nonexistent crisis numbers and can't weigh life-and-death ethics; instead keep a warm human handoff — a named person and a verified crisis number — with AI only assisting staff behind the scenes. 7 → <strong>c</strong>. 8 → (i) Ethical, (ii) Technical, (iii) Organizational. 9 → the tool didn't predict harm directly but a stand-in (home removal in two years); if the proxy itself encodes bias against poor/disabled parents, the "accurate" model still produces biased, harmful decisions.</p>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist</strong></p>
+      <ul>
+        <li>Pull your <em>current</em> intake/consent forms and any beneficiary-facing or decision-support tool in use (even informal/shadow ones) — these make Exercises 1–3 real.</li>
+        <li>Print the four artifacts (do-not-use list, bias worksheet, consent guide, escalation one-pager) per attendee.</li>
+        <li>Have the TAG + Project Evident framework and Vera's nine principles open as references.</li>
+        <li>Confirm leadership/board will <em>approve</em> the do-not-use list afterward (Module 1) — this workshop drafts; governance ratifies.</li>
+      </ul>
+      <p><strong>Free/low-cost materials:</strong> TAG + Project Evident framework (tagtech.org/AI); Project Evident <em>Equitable AI</em> (projectevident.org); Vera Solutions nine principles; Candid responsible-AI-use guide (candid.org); NTEN. No paid tools required.</p>
+      <p><strong>Timing:</strong> The do-not-use build (Part 2/Exercise 1) and the bias check (Part 3/Exercise 2) are the heart — protect their time; if you run late, trim Part 1, never these.</p>
+      <p><strong>Common pitfalls</strong></p>
+      <ul>
+        <li><em>Turning it into a fear session.</em> Pair every "no" with the do-use lane; cite Candid's finding that ban-everything policies push AI underground.</li>
+        <li><em>Abstract debate.</em> Keep pulling groups back to <em>their own</em> cases and forms.</li>
+        <li><em>Treating bias as a one-time door check.</em> Hammer the post-launch monitoring line.</li>
+        <li><em>Letting "the system said so" pass.</em> Name it every time it appears in a scenario.</li>
+      </ul>
+      <p><strong>Discussion prompts</strong></p>
+      <ul>
+        <li>"Tell me about a decision in your work that a model should never make. What's the worst case if it did?"</li>
+        <li>"Where might <em>our</em> data be missing a group we serve?"</li>
+        <li>"How would one of our clients even know AI was involved — and how would they object?"</li>
+      </ul>
+      <p><strong>Tailoring by audience</strong></p>
+      <ul>
+        <li><em>A3 program/service staff (priority):</em> full workshop; they own the do-not-use list and consent scripts.</li>
+        <li><em>A1/A2 leadership &amp; board:</em> attend Part 1 + the do-not-use readout; they ratify policy and own the Organizational dimension.</li>
+        <li><em>A6 IT/data lead:</em> co-owns Part 3 (bias) and the Technical dimension; runs post-launch monitoring.</li>
+        <li><em>All staff:</em> a 45-min cut of Parts 2, 4, and 5 (do-not-use list, the data rule, the escalation path).</li>
+      </ul>
+      <p><strong>Addressing staff fear/resistance (a real non-profit barrier):</strong> Name the fear directly — <em>"AI will hurt the people we serve" / "AI will replace me."</em> Counter both honestly: the do-not-use list <em>protects</em> beneficiaries and staff judgment, and the do-use lane frees time <em>for</em> the people you serve. Co-create the rules so staff (and, where possible, beneficiaries) own them — involvement is what surfaces cultural blind spots and what makes the rules stick.</p>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <p>Tie to Kirkpatrick (weight L2–L4) and the plan's "ad-hoc → embedded, governed use" target.</p>
+      <table>
+        <thead><tr><th>#</th><th>Indicator</th><th>Level</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Program staff can state the do-not-use list from memory and name where to ask when unsure</td><td>L2</td><td>≥ 90% on post-quiz</td></tr>
+          <tr><td>2</td><td>Confidence: "I know when AI is off-limits with the people we serve"</td><td>L2</td><td>+2 points on a 5-pt pre/post self-rating</td></tr>
+          <tr><td>3</td><td>A board-approved do-not-use list + beneficiary-concern path are posted and in use</td><td>L3</td><td>In place within 30 days</td></tr>
+          <tr><td>4</td><td>Every beneficiary-facing/decision AI use has a completed bias-check worksheet + named monitoring owner</td><td>L3</td><td>100% of such uses</td></tr>
+          <tr><td>5</td><td>Consent language reviewed/updated to cover AI; trauma-informed scripts in use</td><td>L3</td><td>Completed within 60 days</td></tr>
+          <tr><td>6</td><td>Zero beneficiary harms from AI; concerns raised are logged, reviewed, and fed to the learning loop</td><td>L4</td><td>Zero harms; 100% logged</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <p><strong>Named sector frameworks</strong></p>
+      <ul>
+        <li><strong>TAG + Project Evident — <em>Responsible AI Adoption in Philanthropy</em></strong> (Organizational / Ethical / Technical): <a href="https://www.tagtech.org/2023/12/tag-and-project-evident-unveil-responsible-ai-adoption-framework-for-philanthropy/">https://www.tagtech.org/2023/12/tag-and-project-evident-unveil-responsible-ai-adoption-framework-for-philanthropy/</a> · framework guide PDF: <a href="https://www.tagtech.org/wp-content/uploads/2024/01/AI-Framework-Guide-v1.pdf">https://www.tagtech.org/wp-content/uploads/2024/01/AI-Framework-Guide-v1.pdf</a></li>
+        <li><strong>Project Evident — <em>Equitable AI Adoption Framework</em></strong> (2026; eight components incl. Safe and Fair Practice, Stakeholder Engagement): <a href="https://projectevident.org/news/project-evident-launches-equitable-ai-adoption-framework-to-help-practitioners-turn-ai-into-real-world-impact/">https://projectevident.org/news/project-evident-launches-equitable-ai-adoption-framework-to-help-practitioners-turn-ai-into-real-world-impact/</a></li>
+        <li><strong>Vera Solutions — <em>Nine Principles of Responsible AI for Nonprofits</em></strong> (2024): <a href="https://verasolutions.org/blog-nine-principles-of-responsible-ai-for-nonprofits/">https://verasolutions.org/blog-nine-principles-of-responsible-ai-for-nonprofits/</a></li>
+        <li><strong>Candid — <em>Getting started on a responsible AI use policy for nonprofits</em></strong> (the do-not-use "most important section"): <a href="https://candid.org/blogs/how-to-create-responsible-ai-use-policy-for-nonprofits/">https://candid.org/blogs/how-to-create-responsible-ai-use-policy-for-nonprofits/</a> · AI equity: <a href="https://candid.org/blogs/what-ai-equity-for-nonprofits-means-looks-like-in-practice/">https://candid.org/blogs/what-ai-equity-for-nonprofits-means-looks-like-in-practice/</a></li>
+      </ul>
+      <p><strong>Documented harms / cautions</strong></p>
+      <ul>
+        <li>Goldkind, Ming &amp; Fink, <em>AI in the Nonprofit Human Services: Distinguishing Between Hype, Harm, and Hope</em> (Taylor &amp; Francis, 2024): <a href="https://www.tandfonline.com/doi/full/10.1080/23303131.2024.2427459">https://www.tandfonline.com/doi/full/10.1080/23303131.2024.2427459</a></li>
+        <li>Michigan MiDAS false-fraud case — IEEE Spectrum: <a href="https://spectrum.ieee.org/michigans-midas-unemployment-system-algorithm-alchemy-that-created-lead-not-gold">https://spectrum.ieee.org/michigans-midas-unemployment-system-algorithm-alchemy-that-created-lead-not-gold</a> · U-M Ford School explainer: <a href="https://stpp.fordschool.umich.edu/sites/stpp/files/2024-08/stpp-midas-explainer.pdf">https://stpp.fordschool.umich.edu/sites/stpp/files/2024-08/stpp-midas-explainer.pdf</a></li>
+        <li>Allegheny Family Screening Tool / DOJ scrutiny — PBS NewsHour (AP): <a href="https://www.pbs.org/newshour/nation/ap-report-doj-examining-ai-screening-tool-used-by-pa-child-welfare-agency">https://www.pbs.org/newshour/nation/ap-report-doj-examining-ai-screening-tool-used-by-pa-child-welfare-agency</a> · ACLU: <a href="https://www.aclu.org/the-devil-is-in-the-details-interrogating-values-embedded-in-the-allegheny-family-screening-tool">https://www.aclu.org/the-devil-is-in-the-details-interrogating-values-embedded-in-the-allegheny-family-screening-tool</a></li>
+        <li><em>AI algorithms intended to root out welfare fraud often punish the poor</em> — The Conversation: <a href="https://theconversation.com/ai-algorithms-intended-to-root-out-welfare-fraud-often-end-up-punishing-the-poor-instead-131625">https://theconversation.com/ai-algorithms-intended-to-root-out-welfare-fraud-often-end-up-punishing-the-poor-instead-131625</a></li>
+        <li>AI &amp; crisis lines — CrisisTalk: <a href="https://talk.crisisnow.com/the-generative-ai-therapy-chatbot-will-see-you-now/">https://talk.crisisnow.com/the-generative-ai-therapy-chatbot-will-see-you-now/</a> · crisis-line workers' perspectives (PMC, 2025): <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12220356/">https://pmc.ncbi.nlm.nih.gov/articles/PMC12220356/</a> · chatbot impersonating 988 / wrong hotline number (Futurism): <a href="https://futurism.com/amazon-ai-suicide-hotline">https://futurism.com/amazon-ai-suicide-hotline</a></li>
+      </ul>
+      <p><strong>Consent, data protection &amp; accessibility</strong></p>
+      <ul>
+        <li>Trauma-informed AI consent in practice — Ensora Health: <a href="https://ensorahealth.com/blog/how-to-handle-informed-consent-for-ai/">https://ensorahealth.com/blog/how-to-handle-informed-consent-for-ai/</a> · Blueprint client-consent guide: <a href="https://www.blueprint.ai/blog/using-ai-tools-client-consent-conversation-guide">https://www.blueprint.ai/blog/using-ai-tools-client-consent-conversation-guide</a></li>
+        <li>APA — <em>Ethical guidance for AI in professional practice</em> (informed consent duty): <a href="https://www.apa.org/topics/artificial-intelligence-machine-learning/ethical-guidance-ai-professional-practice">https://www.apa.org/topics/artificial-intelligence-machine-learning/ethical-guidance-ai-professional-practice</a></li>
+        <li>AI accessibility divide for disabled people — Rooted in Rights: <a href="https://rootedinrights.org/the-ai-accessibility-divide-how-emerging-tech-could-create-new-barriers-for-disabled-people/">https://rootedinrights.org/the-ai-accessibility-divide-how-emerging-tech-could-create-new-barriers-for-disabled-people/</a> · UN (AI &amp; inclusion of persons with disabilities): <a href="https://unric.org/en/building-an-accessible-future-for-all-ai-and-the-inclusion-of-persons-with-disabilities/">https://unric.org/en/building-an-accessible-future-for-all-ai-and-the-inclusion-of-persons-with-disabilities/</a></li>
+      </ul>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Calibration note.</strong> Adoption and policy statistics (e.g., ~15% of non-profits with an AI-use policy; ~36% implementing equity practices in 2025) are survey-reported and vary by methodology — treat as directional for target-setting. Case-study figures (MiDAS ~40,000 accused, ~93% wrong) are drawn from audits and reporting cited above. Verify current framework versions before publishing, as these resources update frequently.</p></div>
+
+      <p>Companion: <a href="../non-profit-training.html">Non-Profit Training plan</a> · <a href="../non-profilt-assessment.html">assessment</a></p>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-6-fundraising-donor-trust.html"><span class="dir">← Previous</span><span class="ttl">Module 6: Fundraising &amp; Donor Trust</span></a>
+      <a class="next" href="module-8-ai-grant-lifecycle.html"><span class="dir">Next →</span><span class="ttl">Module 8: AI Grant Lifecycle</span></a>
+    </nav>
+
+  </div>
+</div>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that amplifies your mission — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../non-profit-training.html">All Modules</a>
+      <a href="../non-profilt-assessment.html">Readiness Assessment</a>
+      <a href="mailto:hello@iiibc.com">hello@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — Beyond Cognition. All rights reserved.</span>
+    <span class="mono">Module 7 · Non-Profit Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>

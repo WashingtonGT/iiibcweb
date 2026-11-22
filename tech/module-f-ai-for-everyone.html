@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module F: AI for Everyone (Non-Technical) — IIIBC Tech-Driven AI Training</title>
+  <meta name="description" content="The two-track workforce starts quietly: a handful of power users pull ahead while everyone else watches. This module raises the floor — so your whole GTM team uses AI safely and well, not just the brave 6%.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../tech-driven-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../tech-driven-training.html">All Modules</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Tech-Driven AI Training · Module F</div>
+  <h1>AI for Everyone (Non-Technical)</h1>
+  <p class="page-header__purpose">The two-track workforce starts quietly: a handful of power users pull ahead while everyone else watches. This module raises the floor — so your whole GTM team uses AI safely and well, not just the brave 6%.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Awareness→Practitioner</span>
+    <span class="badge badge--section">Assessment §4 — People &amp; Collaboration</span>
+    <span class="badge badge--audience">GTM / non-technical</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content</a></li>
+    <li><a href="#exercises">Hands-On Lab / Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module code</dt><dd>F</dd>
+          <dt>Maps to assessment section</dt><dd>4 — People, Talent &amp; Human-AI Collaboration</dd>
+          <dt>Primary audience</dt><dd>A6 GTM (Sales, Marketing, Customer Success) + all non-technical staff</dd>
+          <dt>Competency level</dt><dd>Awareness → Practitioner</dd>
+          <dt>Duration</dt><dd>90-min live kickoff + ~3 hrs self-paced + 4 weeks of manager-led nudges</dd>
+          <dt>Format</dt><dd>Blended: self-paced lessons + one live workshop + weekly applied reps</dd>
+          <dt>Prerequisites</dt><dd>Module B (AI Literacy Baseline) — completed and logged</dd>
+          <dt>Related modules</dt><dd>B (literacy baseline), K (shadow AI &amp; safe tool use), G (managers who run the nudges)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>A productivity gap is opening inside companies, not just between them. Only about <strong>6% of employees describe themselves as "very comfortable" using AI</strong>, and roughly <strong>one in three are actively uncomfortable</strong>. Meanwhile a small set of self-taught power users compound their advantage every week. Left alone, this hardens into a two-track workforce: AI-haves who move faster and AI-have-nots who fall behind — inside the same team, on the same comp band.</p>
+      <p>The cause is not talent. It is training. Only about <strong>12% of employees received any AI training in 2024</strong>, yet <strong>48% say they would use AI more if they got formal training</strong>. The demand is already there; the floor is just too low. When you skip deliberate enablement, people either avoid the tools (and lose the productivity you paid for) or use them recklessly (and put customer-facing accuracy and confidential data at risk).</p>
+      <p>For a growth-stage operator, GTM is where this bites first. Sales reps draft outreach, CS agents answer customers, marketers ship content — all day, at volume, often touching customer data. A confident-but-wrong AI answer here is not an internal mistake; it reaches a prospect, a customer, or the public.</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>Talent density is built deliberately. Raising the floor — getting the uncomfortable third to genuine Practitioner fluency — usually returns more than coaching the power users to be slightly faster.</p></div>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>"Just give everyone a ChatGPT login and they'll figure it out." Access is not adoption. The 2024 data is unambiguous: tool access without training produces a divide, not fluency.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this module, participants will be able to:</p>
+      <ol>
+        <li><strong>Write a structured prompt</strong> using a repeatable pattern (Role · Task · Context · Format · Constraints) for everyday work — drafting, summarizing, research, analysis, and meeting notes.</li>
+        <li><strong>Apply role-specific prompt patterns</strong> for their function (sales, marketing, or customer success) to a real work task.</li>
+        <li><strong>Spot a likely hallucination or bias</strong> in an AI output and name the verification step they will take before it reaches a customer.</li>
+        <li><strong>State the acceptable-use rules</strong> — specifically what data must never go into an AI tool — without looking them up.</li>
+        <li><strong>Run a human-review pass</strong> on any customer-facing AI draft, using a checklist, before it leaves the building.</li>
+        <li><strong>Build and maintain a personal prompt library</strong> of their five most-used, proven prompts.</li>
+        <li><strong>Turn a weak prompt into a strong one</strong> by diagnosing what was missing (context, role, format, or constraint).</li>
+        <li><strong>Describe how their manager's weekly nudge works</strong> and what reps are expected to contribute back to the team library.</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>0:00–0:10</td><td>Why this module: the two-track divide, the floor, and the promise. No jargon.</td><td>Live talk</td></tr>
+          <tr><td>0:10–0:25</td><td>Part 1 — How to talk to AI: the R-T-C-F-C prompt pattern</td><td>Live + demo</td></tr>
+          <tr><td>0:25–0:40</td><td>Part 2 — Everyday wins: drafting, summarizing, research, analysis, notes</td><td>Demo + try-it</td></tr>
+          <tr><td>0:40–1:00</td><td>Part 3 — Your role's playbook (breakouts: Sales / Marketing / CS)</td><td>Breakout</td></tr>
+          <tr><td>1:00–1:15</td><td>Part 4 — When AI lies: hallucination, bias, and the human-review gate</td><td>Live + examples</td></tr>
+          <tr><td>1:15–1:25</td><td>Part 5 — The rules: what data can't go in; your prompt library</td><td>Live</td></tr>
+          <tr><td>1:25–1:30</td><td>Wrap: the 4-week nudge plan, what to bring back, how to ask for help</td><td>Live</td></tr>
+          <tr><td>Self-paced (post-session)</td><td>Lessons 1–5 with embedded exercises; build your first prompt library</td><td>Async, ~3 hrs</td></tr>
+          <tr><td>Weeks 1–4</td><td>Manager-led weekly nudge: one applied rep + one library contribution</td><td>Team ritual</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="content">
+      <h2>Core Content</h2>
+
+      <h3>Part 1 — How to Talk to AI (the R-T-C-F-C Pattern)</h3>
+      <p>Most weak AI results come from weak instructions, not a weak model. The fix is a pattern you can remember on a busy day. We call it <strong>R-T-C-F-C</strong>:</p>
+      <pre><code>ROLE       — who you want the AI to act as       ("You are a B2B SaaS sales researcher.")
+TASK        — the one thing you want done          ("Summarize this prospect's recent news.")
+CONTEXT     — what it needs to know to do it well  ("We sell fraud-detection to fintechs.")
+FORMAT      — the shape of the answer you want      ("5 bullets, each under 15 words.")
+CONSTRAINTS — the rules and limits                  ("Only use the text I paste. No guessing.")</code></pre>
+      <p>You do not need all five every time. But the more a task matters, the more of them you should include. The single biggest upgrade for non-technical users is adding <strong>Context</strong> and <strong>Format</strong> — that is where vague, generic output turns into something usable.</p>
+      <p><strong>Do / Don't</strong></p>
+      <table>
+        <thead><tr><th>Do</th><th>Don't</th></tr></thead>
+        <tbody>
+          <tr><td>Give the AI a role and an audience</td><td>Assume it knows your company or product</td></tr>
+          <tr><td>Paste the source text you want it to use</td><td>Ask it to "look up" recent facts it can't verify</td></tr>
+          <tr><td>Ask for a specific format (bullets, table, 100 words)</td><td>Accept a wall of text and edit it for 20 minutes</td></tr>
+          <tr><td>Tell it what NOT to do ("don't invent stats")</td><td>Trust the first draft for anything customer-facing</td></tr>
+          <tr><td>Iterate: "make it shorter / warmer / more specific"</td><td>Re-type the whole prompt to make one change</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Treat the AI like a sharp new hire on day one — capable, fast, eager, and completely ignorant of your business. You would never let that person email a customer unsupervised. Same rule here.</p></div>
+
+      <h3>Part 2 — Everyday Wins (Drafting, Summarizing, Research, Analysis, Notes)</h3>
+      <p>These five tasks cover most of a non-technical person's AI use. Each has a reliable pattern.</p>
+      <p><strong>Drafting.</strong> Give the AI a role, the audience, the key points, and the tone. Always edit the result — the draft is a starting line, not a finish line.</p>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>"You are a CS specialist. Draft a reply to a customer frustrated about a billing error. Apologize, explain we've issued a refund, offer a 15-min call. Warm, plain English, under 120 words. Don't promise anything beyond the refund and the call."</em></p></div>
+      <p><strong>Summarizing.</strong> Paste the text and ask for a specific shape. This is the safest, highest-value everyday use because the AI works only from text you provide.</p>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>"Summarize the pasted call transcript into: (1) what the customer wants, (2) objections raised, (3) agreed next steps. Bullets. Quote them directly where it matters."</em></p></div>
+      <p><strong>Research (with a hard caveat).</strong> AI is good at organizing what you give it and generating angles to investigate. It is <strong>not</strong> a reliable source of current facts, names, numbers, or citations. Use it to structure thinking, then verify every fact yourself.</p>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>"I'm preparing for a call with a healthtech CFO. List 8 questions a fraud-detection vendor should ask to understand their priorities. Don't state facts about any specific company."</em></p></div>
+      <p><strong>Analysis.</strong> Paste structured data (a list, a table, exported numbers) and ask for patterns, not predictions. Spot-check the math.</p>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>"Here are 20 closed-lost reasons from last quarter. Group them into themes, count each, and name the top 3. Use only the rows I pasted."</em></p></div>
+      <p><strong>Meeting notes.</strong> Turn a messy transcript or your rough notes into structured output: decisions, owners, deadlines, open questions. Then confirm owners and dates against your own memory before sharing.</p>
+      <pre><code>RAW INPUT                    AI TRANSFORM                 HUMAN GATE
+messy transcript    ──►   decisions / owners / dates   ──►  confirm + send
+exported numbers    ──►   themes + counts              ──►  spot-check math
+long thread         ──►   3-bullet summary             ──►  verify facts</code></pre>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The tasks where AI is safest are the ones where it works <em>only from text you give it</em> (summarize, reformat, restructure). The tasks where it's riskiest are the ones where it <em>generates facts</em> (research, stats, names). Bias your everyday use toward the first column.</p></div>
+
+      <h3>Part 3 — Your Role's Playbook</h3>
+      <p>AI helps most when it's pointed at the specific, repeated work of your role. The full pattern library is in the Takeaway Artifacts; here is the principle for each GTM function. <strong>Every customer-facing output gets a human review pass — no exceptions.</strong></p>
+      <p><strong>Sales.</strong> Use AI for <em>preparation and drafting</em>, never for <em>facts about the customer</em>.</p>
+      <ul>
+        <li><strong>Account research:</strong> structure your prep, generate smart discovery questions, organize notes you already have. Verify any company fact independently.</li>
+        <li><strong>Outreach drafting:</strong> turn your bullet points and a value prop into a first-draft email or LinkedIn message. You supply the specifics; AI supplies the structure and tone. You edit for truth and voice.</li>
+        <li><strong>Call prep:</strong> summarize prior call notes into talking points, likely objections, and next-step options.</li>
+      </ul>
+      <p><strong>Marketing.</strong> Use AI for <em>volume and variation</em>, with a human owning the claim and the brand voice.</p>
+      <ul>
+        <li><strong>Content drafts:</strong> outlines, first drafts, headline variations, subject lines. Treat as raw material.</li>
+        <li><strong>Repurposing:</strong> turn one approved asset (a blog, a webinar transcript) into many formats (social posts, email, FAQ). This is one of the highest-ROI uses because the source is already vetted.</li>
+        <li><strong>Hard rule:</strong> any product claim, stat, or customer reference is verified against an approved source before publishing.</li>
+      </ul>
+      <p><strong>Customer Success.</strong> Use AI for <em>response drafting and knowledge retrieval</em>, with accuracy owned by the human.</p>
+      <ul>
+        <li><strong>Response drafting:</strong> turn a resolution into a clear, on-tone reply. Faster, more consistent, still reviewed.</li>
+        <li><strong>Knowledge retrieval:</strong> summarize and explain from your <em>own</em> docs you paste in (or a sanctioned, grounded internal tool). Never let it invent a policy, price, or SLA.</li>
+        <li><strong>Hard rule:</strong> if the AI states a specific number (refund amount, SLA, price, entitlement), confirm it against the system of record before sending.</li>
+      </ul>
+      <div class="callout callout--risk"><span class="callout__label">Risk flag</span><p>Customer-facing accuracy is the whole game in GTM. A hallucinated stat in a marketing post, a wrong SLA in a CS reply, or an invented "fact" about a prospect in a sales email all cost trust that took months to build. The human-review gate is not bureaucracy — it's the difference between a tool and a liability.</p></div>
+
+      <h3>Part 4 — When AI Lies (Hallucination, Bias, and the Review Gate)</h3>
+      <p>AI models are built to produce <strong>plausible</strong> text, not <strong>true</strong> text. Most of the time plausible and true overlap. The danger is the gap — and it's stated with total confidence.</p>
+      <p><strong>Hallucination</strong> = the AI states something false as if it were fact. Common forms: invented statistics, fake citations or URLs, plausible-but-wrong names/dates, made-up product features or policies.</p>
+      <p><strong>Bias</strong> = the AI reflects skews in its training data: stereotyped assumptions, one-sided framing, defaulting to a dominant perspective. In GTM this shows up as tone-deaf copy, assumptions about who the buyer is, or unbalanced messaging.</p>
+      <p><strong>How to catch it — the smell test:</strong></p>
+      <table>
+        <thead><tr><th>Warning sign</th><th>What to do</th></tr></thead>
+        <tbody>
+          <tr><td>A specific number, date, or stat you can't trace</td><td>Don't use it until you verify the source</td></tr>
+          <tr><td>A citation, link, or "study"</td><td>Open it. Confirm it exists and says that.</td></tr>
+          <tr><td>A confident claim about <em>your</em> product/policy/price</td><td>Check the system of record</td></tr>
+          <tr><td>A fact about a specific company or person</td><td>Verify independently — assume it's a guess</td></tr>
+          <tr><td>Output that feels one-sided or stereotyped</td><td>Re-prompt for balance; have a colleague glance</td></tr>
+        </tbody>
+      </table>
+      <p><strong>The human-review gate</strong> — run this before anything reaches a customer:</p>
+      <pre><code>   ┌─────────────────────────────────────────────┐
+   │  BEFORE IT LEAVES THE BUILDING                │
+   │  □ Every fact/number/claim verified            │
+   │  □ Sounds like us (brand/voice)                │
+   │  □ No confidential data was used in the prompt │
+   │  □ A human owns this — that human is me        │
+   └─────────────────────────────────────────────┘</code></pre>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>You don't have to verify everything you ever generate — a brainstorm for your eyes only is low-stakes. You <em>do</em> have to verify everything that (a) reaches a customer or the public, or (b) feeds a decision. The stakes set the scrutiny.</p></div>
+
+      <h3>Part 5 — The Rules and Your Prompt Library</h3>
+      <p><strong>Acceptable use — what must never go into a public AI tool.</strong> This is the short version of the company AUP (full detail in Module K). Commit it to memory:</p>
+      <table>
+        <thead><tr><th>Never paste in</th><th>Why</th></tr></thead>
+        <tbody>
+          <tr><td>Customer records / personal data (PII, PHI)</td><td>Privacy law, contracts, trust</td></tr>
+          <tr><td>Confidential financials, deal terms, pricing strategy</td><td>Competitive and contractual harm</td></tr>
+          <tr><td>Source code or proprietary IP</td><td>Leaks the moat</td></tr>
+          <tr><td>Anything under NDA or marked confidential</td><td>Legal exposure</td></tr>
+          <tr><td>Credentials, API keys, secrets</td><td>Security breach</td></tr>
+        </tbody>
+      </table>
+      <p>The rule of thumb: <strong>if you'd be uncomfortable seeing it on a competitor's screen, don't paste it into a tool you don't control.</strong> Use only <strong>sanctioned tools</strong> with verified training-opt-out (your manager or Module K tells you which). When in doubt, ask before you paste.</p>
+      <p><strong>Build a personal prompt library.</strong> The fastest path from Awareness to Practitioner is stopping the re-invention. Every time a prompt works well, save it.</p>
+      <ul>
+        <li>Keep it simple: a doc, a notes app, or a shared team sheet.</li>
+        <li>Capture the prompt, what it's for, and one note on what made it work.</li>
+        <li>Aim for your <strong>top 5</strong> first. Quality over quantity.</li>
+        <li>Contribute your best one to the <strong>team library</strong> each week (this is what the manager nudge collects).</li>
+      </ul>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>A shared team prompt library is the single most effective floor-raiser. It turns one person's discovery into everyone's default, and it's how the uncomfortable third gets a running start instead of a blank page.</p></div>
+
+      <h3>Part 6 — Manager-Led Adoption Nudges</h3>
+      <p>Training events fade. Weekly reps stick. Formal, manager-led enablement is the single biggest driver of sustained AI adoption — far more than any one workshop. Managers run a light, repeating ritual for four weeks after the live session:</p>
+      <pre><code>WEEKLY NUDGE (15 min, in an existing team meeting)
+  1. SHARE  — one person demos a prompt that saved them time
+  2. STEAL  — everyone saves it to their library
+  3. REP    — each person commits to one applied use this week
+  4. ASK    — surface one place AI didn't work; troubleshoot together</code></pre>
+      <p>This is covered in depth for managers in Module G. For participants, the expectation is simple: show up with one win and one question each week.</p>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>"We did the training, so adoption is handled." A single session moves Awareness. Only repeated, manager-modeled practice moves Practitioner. Budget the four weeks of nudges as part of the module — not as optional follow-up.</p></div>
+    </section>
+
+    <section id="exercises">
+      <h2>Hands-On Lab / Exercises</h2>
+
+      <h3>Exercise 1 — Fix the Weak Prompt (15 min)</h3>
+      <p>Below is a weak prompt. Rewrite it using R-T-C-F-C. Then run both and compare.</p>
+      <p><strong>Weak:</strong> <code>Write a sales email.</code></p>
+      <p><strong>Your task:</strong> add a Role, a Task, real Context (use your actual product), a Format, and at least one Constraint.</p>
+      <p><em>Sample strong rewrite (facilitator key):</em></p>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>"You are an SDR for a fraud-detection SaaS that sells to fintechs. Draft a cold email to a VP of Risk at a Series-C lending startup. Hook on rising chargeback fraud in lending. Format: under 90 words, one clear CTA (15-min call), no jargon. Don't invent stats about their company or ours; leave a [bracket] where I should add a real number."</em></p></div>
+      <p><strong>Why it's better:</strong> role + audience set the tone; context makes it relevant; format keeps it short and scannable; the constraint prevents hallucinated stats and flags where the human must supply a real number.</p>
+
+      <h3>Exercise 2 — Run the Review Gate on a Real Draft (20 min)</h3>
+      <ol>
+        <li>Pick a real, low-risk task from your role (a follow-up email, a summary, a content outline).</li>
+        <li>Generate a draft with a strong prompt.</li>
+        <li>Run the <strong>human-review gate</strong> checklist line by line.</li>
+        <li>Find at least one thing to fix or verify. Write down what it was.</li>
+      </ol>
+      <p><em>Facilitator key — what people usually find:</em> an unverifiable claim or number; a tone that's off-brand; a detail the AI invented; or a near-miss where confidential data almost went into the prompt. The goal is to make the gate a reflex, not to produce a perfect draft.</p>
+
+      <h3>Exercise 3 — Start Your Prompt Library (10 min)</h3>
+      <ol>
+        <li>Take the best prompt you wrote today.</li>
+        <li>Save it in your library with: the prompt, what it's for, one note on why it worked.</li>
+        <li>Post your single best prompt to the team library.</li>
+      </ol>
+      <p><em>Facilitator key:</em> success = every participant leaves with at least one saved prompt and one contribution to the shared sheet. This seeds the Week-1 nudge.</p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>Artifact A — The R-T-C-F-C Prompt Card (keep at your desk)</h3>
+      <pre><code>ROLE:        You are a [role] who [relevant expertise].
+TASK:        [The one thing to do.]
+CONTEXT:     We [what we do]. The audience is [who]. Key facts: [paste].
+FORMAT:      [Bullets / table / email under N words / etc.]
+CONSTRAINTS: Use only what I paste. Don't invent facts/stats.
+             Flag anything you're unsure of with [VERIFY].</code></pre>
+
+      <h3>Artifact B — Role-Based Prompt-Pattern Library</h3>
+      <p><strong>Sales</strong></p>
+      <table>
+        <thead><tr><th>Use</th><th>Prompt pattern</th></tr></thead>
+        <tbody>
+          <tr><td>Discovery prep</td><td>"You are a [segment] sales researcher. From the notes I paste, list 5 discovery questions and 3 likely objections for [role] at a [company type]. Don't add facts I didn't provide."</td></tr>
+          <tr><td>Outreach draft</td><td>"You are an SDR for [product, who it's for]. Draft a cold email to [persona] hooking on [pain]. Under 90 words, one CTA. Leave [brackets] for stats I'll add. No invented claims."</td></tr>
+          <tr><td>Call follow-up</td><td>"Turn the pasted call notes into a follow-up email: recap, agreed next steps, a clear ask. Warm, concise, under 120 words."</td></tr>
+          <tr><td>Objection handling</td><td>"I sell [product]. A prospect said: '[objection]'. Give me 3 honest responses, each under 25 words. No overpromising."</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Marketing</strong></p>
+      <table>
+        <thead><tr><th>Use</th><th>Prompt pattern</th></tr></thead>
+        <tbody>
+          <tr><td>Content outline</td><td>"You are a B2B content strategist for [product]. Outline a blog on [topic] for [audience]: H2s + one line each. Angle: [POV]."</td></tr>
+          <tr><td>First draft</td><td>"Draft section [X] from this outline. [Brand voice notes]. ~200 words. Don't state stats or customer names unless I provide them."</td></tr>
+          <tr><td>Repurposing</td><td>"Turn this approved [blog/transcript] into: 3 LinkedIn posts, 1 email, 5 subject lines. Keep all claims exactly as written in the source."</td></tr>
+          <tr><td>Variation/testing</td><td>"Give me 5 subject-line variants for this email, each a different angle (curiosity, ROI, social proof, urgency, question). Under 8 words each."</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Customer Success</strong></p>
+      <table>
+        <thead><tr><th>Use</th><th>Prompt pattern</th></tr></thead>
+        <tbody>
+          <tr><td>Response draft</td><td>"You are a CS specialist for [product]. The resolution is: [paste]. Draft a clear, warm reply, under 120 words. State only facts in the resolution."</td></tr>
+          <tr><td>De-escalation</td><td>"A customer is frustrated about [issue]. We are doing [action]. Draft an empathetic reply that owns it and sets a next step. No promises beyond [action]."</td></tr>
+          <tr><td>Knowledge retrieval</td><td>"From the pasted help-doc text only, answer this customer question in plain English. If the docs don't cover it, say so — don't guess."</td></tr>
+          <tr><td>Internal summary</td><td>"Summarize this ticket thread into: issue, what was tried, current status, recommended next step. Bullets."</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--risk"><span class="callout__label">Risk flag</span><p>Every pattern above ends at a human-review gate before it reaches a customer. The prompts are tuned to <em>reduce</em> hallucination ("use only what I paste," "don't guess," "[brackets] for stats") — but they don't eliminate it.</p></div>
+
+      <h3>Artifact C — Good Prompt vs Weak Prompt (before/after)</h3>
+      <table>
+        <thead><tr><th>#</th><th>Weak prompt</th><th>Why it fails</th><th>Strong prompt</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>"Write a follow-up email."</td><td>No role, no context, no facts — generic filler</td><td>"You are a CS specialist. Turn these call notes [paste] into a follow-up email: recap + 2 next steps + a 15-min call ask. Warm, under 120 words."</td></tr>
+          <tr><td>2</td><td>"Tell me about Acme Corp."</td><td>Invites hallucinated facts about a real company</td><td>"From the company text I'm pasting [paste], pull 5 facts relevant to a fraud-detection pitch. Don't add anything not in the text."</td></tr>
+          <tr><td>3</td><td>"Summarize this."</td><td>No shape; you'll re-edit for 10 minutes</td><td>"Summarize the pasted transcript into: (1) what they want, (2) objections, (3) next steps. Bullets, quote where it matters."</td></tr>
+          <tr><td>4</td><td>"Make our product sound great."</td><td>Vague, off-brand, will invent claims</td><td>"Draft 3 value-prop lines for [product] aimed at [persona], each under 15 words. Use only the benefits I list: [paste]. No new claims."</td></tr>
+          <tr><td>5</td><td>"What's a good price to offer?"</td><td>Asks AI to invent a business decision</td><td>"Here are our 3 published tiers [paste]. Draft a plain-English explanation a customer can understand. Don't suggest discounts or new prices."</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Artifact D — Personal Prompt Library Starter</h3>
+      <pre><code>MY TOP 5 PROMPTS
+1. [What it's for] → [the prompt] → [why it works]
+2. ...
+TEAM CONTRIBUTION THIS WEEK: ___________________________</code></pre>
+
+      <h3>Artifact E — The "Can I Paste This?" Quick Check</h3>
+      <pre><code>Before pasting into any AI tool, ask:
+  □ Is this a SANCTIONED tool (training opt-out verified)?
+  □ Customer/personal data?  → NO. Stop.
+  □ Confidential financials / deal terms / pricing?  → NO. Stop.
+  □ Source code / proprietary IP?  → NO. Stop.
+  □ Under NDA or marked confidential?  → NO. Stop.
+  □ Would I mind a competitor seeing it?  → If yes, don't paste.
+When in doubt → ask before you paste.</code></pre>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> What do the letters R-T-C-F-C stand for in the prompt pattern?
+          <ul>
+            <li>a) Read, Type, Check, Format, Confirm</li>
+            <li>b) Role, Task, Context, Format, Constraints</li>
+            <li>c) Request, Tone, Content, Feedback, Close</li>
+          </ul>
+        </li>
+        <li><strong>(MCQ)</strong> Which everyday task is <em>safest</em> for AI because it works only from text you provide?
+          <ul>
+            <li>a) Researching a prospect's latest funding round</li>
+            <li>b) Summarizing a transcript you paste in</li>
+            <li>c) Stating your product's current SLA from memory</li>
+          </ul>
+        </li>
+        <li><strong>(Short answer)</strong> A draft marketing post cites "a 2024 study showing 73% of buyers prefer X." What two things must you do before publishing?</li>
+        <li><strong>(MCQ)</strong> A teammate wants to paste a customer's account record into ChatGPT to draft a reply. What's the correct response?
+          <ul>
+            <li>a) Fine, it's just one record</li>
+            <li>b) Stop — customer/personal data must never go into a public AI tool</li>
+            <li>c) Only if they delete it afterward</li>
+          </ul>
+        </li>
+        <li><strong>(Short answer)</strong> Why is "repurposing" one of the highest-ROI AI uses for marketing — and what's the one rule that keeps it safe?</li>
+        <li><strong>(MCQ)</strong> What is a "hallucination" in AI output?
+          <ul>
+            <li>a) A creative idea the AI generates</li>
+            <li>b) A false statement presented confidently as fact</li>
+            <li>c) A formatting error</li>
+          </ul>
+        </li>
+        <li><strong>(Short answer)</strong> Rewrite this weak prompt into a strong one for your role: "Write something for a customer."</li>
+        <li><strong>(MCQ)</strong> What is the single biggest driver of <em>sustained</em> AI adoption on a team?
+          <ul>
+            <li>a) A one-time training session</li>
+            <li>b) Giving everyone a tool license</li>
+            <li>c) Repeated, manager-led weekly nudges and modeling</li>
+          </ul>
+        </li>
+        <li><strong>(Short answer)</strong> Name the four checks on the human-review gate before a draft reaches a customer.</li>
+        <li><strong>(Short answer)</strong> What goes into your personal prompt library, and how often should you contribute to the team library?</li>
+      </ol>
+
+      <h3>Answer key</h3>
+      <ol>
+        <li><strong>b</strong> — Role, Task, Context, Format, Constraints.</li>
+        <li><strong>b</strong> — Summarizing pasted text; the AI isn't generating new facts.</li>
+        <li>Verify the study exists and actually says that (open the source), and confirm the statistic is current/accurate — or remove it. Don't publish an untraceable stat.</li>
+        <li><strong>b</strong> — Customer/personal data must never go into a public AI tool.</li>
+        <li>The source asset is already approved/vetted, so the facts are trustworthy; AI just reshapes it into many formats. Rule: keep all claims exactly as written in the approved source — don't let the AI add or alter claims.</li>
+        <li><strong>b</strong> — A false statement presented confidently as fact.</li>
+        <li>Any answer with a clear role, task, real context, format, and at least one constraint (e.g., "You are a CS specialist; turn this resolution [paste] into a warm reply under 120 words; state only facts in the resolution").</li>
+        <li><strong>c</strong> — Repeated, manager-led weekly nudges and modeling.</li>
+        <li>Every fact/number/claim verified; sounds like us (brand/voice); no confidential data used in the prompt; a human owns it.</li>
+        <li>Your top ~5 proven prompts (the prompt, what it's for, why it works); contribute your single best one to the team library each week.</li>
+      </ol>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist</strong></p>
+      <ul>
+        <li>Confirm every participant has completed and logged <strong>Module B</strong> (prerequisite).</li>
+        <li>Have the company <strong>AUP / data-classification rules</strong> on hand (the real ones, not the generic table).</li>
+        <li>Confirm which AI tools are <strong>sanctioned</strong> with verified training-opt-out — name them explicitly.</li>
+        <li>Set up a <strong>shared team prompt-library</strong> doc/sheet before the session; seed it with 2–3 examples.</li>
+        <li>Prepare role-relevant demo prompts for the Sales / Marketing / CS breakouts.</li>
+        <li>Brief managers on the <strong>4-week nudge</strong> ritual (cross-reference Module G).</li>
+      </ul>
+      <p><strong>Materials needed:</strong> a sanctioned AI tool for live demo; the prompt card (Artifact A); the role library (Artifact B); the shared library doc; the AUP one-pager.</p>
+      <p><strong>Timing guidance:</strong> the live session is 90 minutes; protect Part 3 (role breakouts) and Part 4 (review gate) — these are where Practitioner behavior forms. If you run short, compress Part 2, never Part 4.</p>
+      <p><strong>Common pitfalls</strong></p>
+      <ul>
+        <li><em>Intimidation.</em> The uncomfortable third disengages if the room skews to power users. Keep examples non-technical, celebrate small wins, and never let jargon creep in.</li>
+        <li><em>Skipping the gate.</em> People love the speed and forget the review. Make Exercise 2 mandatory and have everyone share what they caught.</li>
+        <li><em>Tool confusion.</em> If people aren't sure which tool is sanctioned, they'll either avoid AI or use a risky one. Name the tools explicitly and put them on a slide.</li>
+        <li><em>One-and-done.</em> Without the four weeks of nudges, this reverts to Awareness. Get manager commitment before you start.</li>
+      </ul>
+      <p><strong>Discussion prompts</strong></p>
+      <ul>
+        <li>"Where in your week do you re-do the same kind of writing? That's your first prompt to save."</li>
+        <li>"What's one thing you'd never want to be wrong about in front of a customer? That's your review-gate line."</li>
+        <li>"Who on the team has a prompt the rest of us should steal?"</li>
+      </ul>
+      <p><strong>Tailoring by audience</strong></p>
+      <ul>
+        <li><strong>Sales:</strong> lean on outreach drafting and call prep; emphasize "never invent facts about the prospect."</li>
+        <li><strong>Marketing:</strong> lean on repurposing and variation; emphasize claim verification and brand voice.</li>
+        <li><strong>CS:</strong> lean on response drafting and knowledge retrieval; emphasize confirming numbers (SLA, refunds, price) against the system of record.</li>
+        <li><strong>Mixed non-technical (ops, admin, finance support):</strong> keep to the everyday-wins five (Part 2) and the rules (Part 5); the role breakout can be a general "your workflow" exercise.</li>
+      </ul>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <p>This module worked if, within 30 days, you can show:</p>
+      <table>
+        <thead><tr><th>#</th><th>Indicator</th><th>Target</th><th>Tier</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><strong>Completion</strong> — participants finishing self-paced + live + ≥3 of 4 nudges</td><td>≥ 90% of cohort</td><td>Adoption</td></tr>
+          <tr><td>2</td><td><strong>Floor raised</strong> — share self-rating "comfortable/very comfortable" with AI (pre→post survey)</td><td>Up from baseline; close the gap on the ~6%/⅓-uncomfortable split</td><td>Adoption</td></tr>
+          <tr><td>3</td><td><strong>Active applied use</strong> — participants using a sanctioned AI tool weekly for real work</td><td>≥ 80% weekly active at week 4</td><td>Adoption</td></tr>
+          <tr><td>4</td><td><strong>Library depth</strong> — team prompt library entries contributed per participant</td><td>≥ 4 saved + 1 team contribution each</td><td>Depth / efficiency</td></tr>
+          <tr><td>5</td><td><strong>Quality guardrail</strong> — customer-facing AI errors escaping to customers (CS/marketing)</td><td>No increase vs. baseline; review-gate logged</td><td>Guardrail</td></tr>
+          <tr><td>6</td><td><strong>Behavior change</strong> — proportion who can state the AUP "what can't go in" rules unaided</td><td>≥ 95%</td><td>Adoption / risk</td></tr>
+        </tbody>
+      </table>
+      <p>Tie completion and sustained applied use (not attendance) to role expectations. Pair every efficiency gain with the quality guardrail — speed that leaks errors to customers is not a win.</p>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <ul>
+        <li><strong>EU AI Act Article 4 (AI literacy, in force Feb 2025)</strong> — the mandatory, logged baseline that Module B satisfies; this module builds applied fluency on top of it.</li>
+        <li><strong>Competency framework</strong> — Alan Turing Institute <em>AI Skills for Business</em> (v3, Dec 2025); SFIA AI skills: the Awareness→Practitioner→Builder→Leader scaffold this module moves people along.</li>
+        <li><strong>Workforce divide &amp; talent density</strong> — WEF (dual-workforce, Oct 2025); IDC/Workera and IBM AI skills-gap analyses. <em>(Directional: the ~6% "very comfortable," ~⅓ uncomfortable, ~12% trained in 2024, and ~48% would-use-more-with-training figures are survey-reported and should be treated as directional for target-setting.)</em></li>
+        <li><strong>Manager enablement &amp; adoption</strong> — McKinsey QuantumBlack (reconfiguring work; rethinking management for agentic AI); BCG (<em>AI at Work 2025</em>): formal, manager-led enablement is the strongest adoption driver. See <strong>Module G</strong>.</li>
+        <li><strong>Shadow AI &amp; safe tool use</strong> — ISACA; The Hacker News; Cybersecurity Dive. The acceptable-use rules here are the GTM-facing summary of <strong>Module K</strong>.</li>
+        <li><strong>IIIBC field synthesis</strong> — raise the floor, not just the ceiling; talent density is built deliberately; human-review gate for all customer-facing accuracy.</li>
+      </ul>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Calibration note.</strong> The workforce-comfort and training-uptake statistics are vendor/survey-reported and vary by methodology — use them to set direction and targets, not as precise claims. The Article 4 obligation and the manager-enablement finding are the load-bearing, authoritative anchors.</p></div>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-e-llmops-rag-production.html"><span class="dir">← Previous</span><span class="ttl">Module E: LLMOps &amp; RAG in Production</span></a>
+      <a class="next" href="module-g-managing-agentic-ai.html"><span class="dir">Next →</span><span class="ttl">Module G: Managing in the Age of Agentic AI</span></a>
+    </nav>
+  </div>
+</div>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that compounds your moat — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../tech-driven-training.html">All Modules</a>
+      <a href="../index.html">About IIIBC</a>
+      <a href="mailto:hello@iiibc.com">hello@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — Beyond Cognition. All rights reserved.</span>
+    <span class="mono">Module F · Tech-Driven Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>

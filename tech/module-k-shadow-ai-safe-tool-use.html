@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module K: Shadow AI &amp; Safe Tool Use — IIIBC Tech-Driven AI Training</title>
+  <meta name="description" content="Your staff are already using AI you didn't approve. The answer is not a ban they'll route around — it's a sanctioned tool that's easier than the shadow one, and people who know exactly what they may feed it.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../tech-driven-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../tech-driven-training.html">All Modules</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Tech-Driven AI Training · Module K</div>
+  <h1>Shadow AI &amp; Safe Tool Use</h1>
+  <p class="page-header__purpose">Your staff are already using AI you didn't approve. The answer is not a ban they'll route around — it's a sanctioned tool that's easier than the shadow one, and people who know exactly what they may feed it.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Awareness</span>
+    <span class="badge badge--section">Assessment §6 — Security &amp; Reliability</span>
+    <span class="badge badge--audience">All staff</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content</a></li>
+    <li><a href="#exercises">Hands-On Lab / Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module code</dt><dd>K</dd>
+          <dt>Maps to assessment section</dt><dd>6 — Security &amp; Operational Reliability</dd>
+          <dt>Primary audience</dt><dd>ALL staff (A8) — with a deeper cut for managers and IT/security</dd>
+          <dt>Competency level</dt><dd>Awareness</dd>
+          <dt>Duration</dt><dd>45–60 minutes</dd>
+          <dt>Format</dt><dd>Self-paced module + 15-min live team segment + signed acknowledgment</dd>
+          <dt>Prerequisites</dt><dd>Module B (AI Literacy Baseline)</dd>
+          <dt>Related modules</dt><dd>B (Literacy Baseline), H (Governance &amp; Operating Model), L (Regulation &amp; Compliance), I/J (Secure AI Coding, OWASP)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>Shadow AI — the use of AI tools that IT, security, and legal never approved — is not a fringe behavior. It is the dominant adoption pattern. Industry surveys put roughly <strong>56% of employees using unauthorized AI tools</strong> while only ~23% use organization-provided ones, and executives are consistently among the heaviest unsanctioned users. People are not being reckless; they are being productive with the easiest tool in front of them. The free chatbot is one tab away and the sanctioned path, if one exists, is usually slower.</p>
+      <p>The problem is what travels with that convenience. When an employee pastes a customer record, a snippet of proprietary source code, an unreleased financial model, or a patient's data into a consumer tool whose terms permit training on the input, the company has handed confidential data to a third party it has no contract with — and frequently cannot even discover that it happened. The breach-cost data is blunt: organizations with high shadow-AI exposure see materially higher average breach costs (IBM puts the premium around <strong>$670K</strong>). Source code, legal documents, and M&amp;A material are among the most commonly leaked categories.</p>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>"We'll just block all the AI tools." Bans don't work — they push usage onto personal devices and personal accounts where you have zero visibility, turning a manageable governance problem into an invisible one.</p></div>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The winning move is enablement, not prohibition. Give people a sanctioned tool that is at least as good and at least as easy, teach them the data rules, and give them an escalation path. Manage shadow AI by making the safe path the convenient one.</p></div>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>Research note (directional):</em> ~57% of AI users in some surveys actively hide their AI usage; ~38% admit sharing sensitive work data with AI without permission. The hiding is a symptom of fear-of-the-ban, not malice. Remove the fear and you regain visibility.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this module, participants will be able to:</p>
+      <ol>
+        <li><strong>Define shadow AI</strong> and explain why it is the default pattern, not an exception.</li>
+        <li><strong>Articulate the three concrete harms</strong> of ungoverned tool use: data leakage to third parties, loss of visibility/auditability, and compliance exposure.</li>
+        <li><strong>Distinguish a sanctioned enterprise tool from a consumer tool</strong> — and name what the enterprise tier buys (no-training-on-data, SSO, admin controls, retention settings, a signed DPA).</li>
+        <li><strong>Apply the data-classification rules</strong> to decide whether a given piece of information may go into any AI tool, and which tool.</li>
+        <li><strong>Use the company's approved-tool catalog</strong> and request a new tool through the proper process.</li>
+        <li><strong>Recognize indirect prompt-injection risk</strong> in untrusted content (pasting a webpage, email, or document into an AI tool).</li>
+        <li><strong>Escalate correctly</strong> when they encounter an unsanctioned tool, a suspected leak, or a use case the catalog doesn't cover.</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>0:00–0:05</td><td>Why you're here: shadow AI is already happening</td><td>Live intro</td></tr>
+          <tr><td>0:05–0:15</td><td>Part 1 — What shadow AI is and why people do it</td><td>Self-paced</td></tr>
+          <tr><td>0:15–0:25</td><td>Part 2 — The three harms (leakage, blindness, compliance)</td><td>Self-paced + cases</td></tr>
+          <tr><td>0:25–0:35</td><td>Part 3 — Consumer vs. enterprise tiers: what you actually get</td><td>Self-paced</td></tr>
+          <tr><td>0:35–0:45</td><td>Part 4 — The data-classification → tool decision</td><td>Self-paced + exercise</td></tr>
+          <tr><td>0:45–0:52</td><td>Part 5 — Escalation and the approved-tool catalog</td><td>Self-paced</td></tr>
+          <tr><td>0:52–0:58</td><td>Hands-on lab: "Can I put this here?" sort</td><td>Live or solo</td></tr>
+          <tr><td>0:58–1:00</td><td>Knowledge check + sign the acknowledgment</td><td>Quiz / admin</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="content">
+      <h2>Core Content</h2>
+
+      <h3>Part 1 — What Shadow AI Is, and Why Good People Do It</h3>
+      <p>Shadow AI is any use of an AI tool, model, or service that has not been vetted and approved by the organization for the data and task it's being used on. It spans three flavors:</p>
+      <pre><code>  ┌─────────────────────────────────────────────────────────────┐
+  │  SHADOW AI — three common shapes                              │
+  ├─────────────────────────────────────────────────────────────┤
+  │  1. Unsanctioned tools   — free ChatGPT/Claude/Gemini on a    │
+  │                            personal account, browser plugins   │
+  │  2. Sanctioned tool,     — approved Copilot used on data it    │
+  │     wrong data            was never cleared for                │
+  │  3. Embedded AI features — "summarize with AI" buttons that    │
+  │                            quietly ship data to a vendor       │
+  └─────────────────────────────────────────────────────────────┘</code></pre>
+      <p>People reach for shadow AI because it solves a real problem <em>now</em>. The lesson here is not "stop being productive." It is "be productive on the sanctioned path, and here is why that path protects you and the company."</p>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>The most dangerous shadow AI is the kind that doesn't feel like AI — the "AI summarize" button in a note-taking app, the meeting transcriber that joins calls, the browser extension that "improves your writing." Each one is a data egress point. Treat any feature that sends your content somewhere to be "processed" as a tool that needs vetting.</p></div>
+
+      <h3>Part 2 — The Three Harms</h3>
+      <p><strong>Harm 1 — Data leakage to an uncontracted third party.</strong> Consumer AI terms frequently permit the provider to retain and train on your inputs. Paste a customer list, source code, or an unreleased roadmap, and it may persist in a system you have no agreement with and cannot claw back. The canonical example is the engineering team that pasted proprietary source code into a public chatbot to debug it — the code left the building permanently.</p>
+      <p><strong>Harm 2 — Loss of visibility and auditability.</strong> If a tool isn't sanctioned, security can't log it, legal can't account for it in a data-subject request, and no one can answer "what AI touched this data?" after an incident. Invisible usage is unmanageable usage.</p>
+      <p><strong>Harm 3 — Compliance exposure.</strong> For regulated data (PII, PHI, financial, privileged), ungoverned AI use can breach GDPR, HIPAA, contractual data-handling terms, or sector rules in one paste — and the EU AI Act's literacy and transparency obligations assume you actually know which systems are in use (see Module L).</p>
+      <div class="callout callout--risk"><span class="callout__label">Risk flag</span><p>"It was just a quick question" is how most leaks start. The model doesn't forget the context you gave it to get a good answer. If the question contained classified data, the leak already happened — the answer quality is irrelevant.</p></div>
+
+      <h3>Part 3 — Consumer vs. Enterprise Tiers: What You Actually Get</h3>
+      <p>The same model can be safe or unsafe depending on the tier you access it through. This is the single most important practical distinction in the module.</p>
+      <table>
+        <thead><tr><th>Property</th><th>Consumer / free tier</th><th>Enterprise / managed tier</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Trains on your input?</strong></td><td>Often yes (check terms)</td><td>Contractually <strong>no</strong> (zero-data-retention / no-training)</td></tr>
+          <tr><td><strong>Data retention</strong></td><td>Provider-default, opaque</td><td>Configurable / minimal</td></tr>
+          <tr><td><strong>SSO + access control</strong></td><td>Personal login</td><td>Company SSO / IdP, deprovision on exit</td></tr>
+          <tr><td><strong>Admin visibility / logs</strong></td><td>None</td><td>Admin console, audit logs</td></tr>
+          <tr><td><strong>Signed DPA</strong></td><td>No</td><td>Yes</td></tr>
+          <tr><td><strong>Data residency options</strong></td><td>Rarely</td><td>Often (region pinning)</td></tr>
+          <tr><td><strong>SOC 2 / security attestation</strong></td><td>Varies</td><td>Expected</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>"Use the enterprise version" is not bureaucratic nagging. The enterprise tier is the difference between a model that helps you and a model that quietly keeps your customer's data. When in doubt, use the company-provisioned account, signed in with your company SSO.</p></div>
+
+      <h3>Part 4 — The Decision: "Can I Put This Here?"</h3>
+      <p>Combine the data-classification scheme from Module B with the tool tier. The rule is a two-key decision: <strong>what is the data, and which tool am I using.</strong></p>
+      <pre><code>        WHAT IS THE DATA?
+        ┌───────────────┬───────────────────────────────────────┐
+        │ Public         │ Any sanctioned tool. Fine.            │
+        │ Internal       │ Sanctioned enterprise tool only.      │
+        │ Confidential   │ Sanctioned enterprise tool, no-train, │
+        │ (customer,      │ + need-to-know. Check with owner.    │
+        │  source, fin.)  │                                       │
+        │ Restricted     │ Do NOT put in any AI tool without     │
+        │ (PII/PHI/       │ explicit approval + DPA + legal sign- │
+        │  privileged)    │ off. Default = no.                   │
+        └───────────────┴───────────────────────────────────────┘</code></pre>
+      <p>And a second rule for <strong>untrusted content you didn't write</strong>: pasting a random webpage, customer email, or third-party document into an AI tool can carry <strong>indirect prompt injection</strong> — hidden instructions in the content that hijack the model (covered deeply in Module J). Treat external content as untrusted input, not just data.</p>
+
+      <h3>Part 5 — Escalation and the Approved-Tool Catalog</h3>
+      <p>Every participant should leave knowing three things:</p>
+      <ol>
+        <li><strong>Where the approved-tool catalog lives</strong> — the canonical list of sanctioned tools, the data tier each is cleared for, and how to access them.</li>
+        <li><strong>How to request a new tool</strong> — the lightweight intake (use case, data classification, vendor) that routes to security/IT for vetting. Fast approval is part of the deal: if requesting is slow, shadow AI wins.</li>
+        <li><strong>How to report a problem</strong> — an unsanctioned tool spreading on the team, a suspected leak ("I pasted something I shouldn't have"), or a use case the catalog doesn't cover. Reporting a mistake must be <strong>safe and blameless</strong> — a hidden leak is far worse than a reported one.</li>
+      </ol>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Pair this module with a real, published, <em>short</em> approved-tool catalog. Training people on rules with no sanctioned alternative just teaches them the company has no answer — and confirms that shadow AI is the only way to get work done.</p></div>
+    </section>
+
+    <section id="exercises">
+      <h2>Hands-On Lab / Exercises</h2>
+
+      <h3>Lab K.1 — "Can I Put This Here?" Sort (15 min)</h3>
+      <p>Present each item below. For each, participants decide: <strong>(a)</strong> the data classification, <strong>(b)</strong> whether it may go into an AI tool, and <strong>(c)</strong> which tool/tier.</p>
+      <table>
+        <thead><tr><th>#</th><th>The scenario</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>A blog post draft about industry trends, no customer names</td></tr>
+          <tr><td>2</td><td>A customer's support ticket containing their email and account ID</td></tr>
+          <tr><td>3</td><td>A snippet of our production authentication code, to debug it</td></tr>
+          <tr><td>4</td><td>A list of prospects and deal sizes from the CRM</td></tr>
+          <tr><td>5</td><td>A patient intake form (healthtech context)</td></tr>
+          <tr><td>6</td><td>A public competitor's pricing page, pasted in to summarize</td></tr>
+          <tr><td>7</td><td>The board deck for next week's meeting</td></tr>
+          <tr><td>8</td><td>A meeting you want auto-transcribed by a new app you found</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Facilitator answer key:</strong></p>
+      <ol>
+        <li><strong>Public</strong> → any sanctioned tool. Fine.</li>
+        <li><strong>Confidential/Restricted</strong> (contains PII) → sanctioned enterprise, no-train, need-to-know; strip identifiers if possible. Default caution.</li>
+        <li><strong>Confidential</strong> (proprietary + security-sensitive) → sanctioned enterprise no-train tool only; never a consumer tool. Auth code also warrants extra review (Module I).</li>
+        <li><strong>Confidential</strong> → sanctioned enterprise tool only; this is the company's competitive data.</li>
+        <li><strong>Restricted</strong> (PHI) → <strong>No</strong> without explicit approval, DPA, and legal sign-off. Default no.</li>
+        <li><strong>Public</strong> data — but it's <strong>untrusted external content</strong>: indirect-injection risk. Use a sanctioned tool and don't let it take actions based on the pasted content.</li>
+        <li><strong>Confidential/Restricted</strong> (material non-public) → sanctioned enterprise only, need-to-know.</li>
+        <li><strong>Stop</strong> — the transcriber is an unvetted tool and a data egress point. Route it through the approved-tool request process first.</li>
+      </ol>
+
+      <h3>Lab K.2 — Find the Shadow (team segment, 10 min)</h3>
+      <p>Each participant lists, anonymously, every AI tool/feature they've used for work in the last month. Aggregate on a whiteboard. Mark each: ✓ sanctioned · ◑ sanctioned-but-wrong-data · ✗ shadow. This single exercise typically surfaces 3–10 tools leadership didn't know were in use — and seeds the approved-tool catalog backlog.</p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>Artifact K-1 — One-Page "Safe AI Tool Use" Card</h3>
+      <pre><code>SAFE AI TOOL USE — keep this at your desk
+1. Use the COMPANY account (SSO), not a personal one.
+2. Use a SANCTIONED tool from the catalog: [link]
+3. Before you paste, ask: what's the data class?
+     Public ........ ok          Internal ...... sanctioned only
+     Confidential .. enterprise/no-train, need-to-know
+     Restricted .... NO without approval + legal sign-off
+4. External content (web pages, emails, docs) = untrusted. Don't let AI act on it.
+5. New tool you want? Request it: [link] — approvals are fast on purpose.
+6. Slipped up / found shadow AI? Report it, blameless: [link/contact]</code></pre>
+
+      <h3>Artifact K-2 — Approved-Tool Catalog (starter columns)</h3>
+      <table>
+        <thead><tr><th>Tool</th><th>Approved for data class up to</th><th>Access (SSO?)</th><th>No-train confirmed</th><th>DPA on file</th><th>Owner</th></tr></thead>
+        <tbody>
+          <tr><td><em>e.g., Copilot Enterprise</em></td><td>Confidential</td><td>Yes</td><td>Yes</td><td>Yes</td><td>IT</td></tr>
+          <tr><td><em>e.g., Claude Team</em></td><td>Confidential</td><td>Yes</td><td>Yes</td><td>Yes</td><td>IT</td></tr>
+          <tr><td><em>consumer free chatbots</em></td><td>Public only</td><td>No</td><td>No</td><td>No</td><td>—</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Artifact K-3 — New-Tool Request (intake fields)</h3>
+      <p><code>Tool name · Vendor · Use case · Highest data class it will touch · # of users · Does it train on input? · SSO available? · DPA available? · Requested by</code></p>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> Why are outright bans of AI tools usually counterproductive?<br>
+          a) They're illegal · b) They push usage to personal devices/accounts where there's no visibility · c) They slow down the model · d) They violate the EU AI Act</li>
+        <li><strong>(MCQ)</strong> What does an enterprise/managed AI tier typically provide that a consumer free tier does not? (choose all) — SSO · no-training-on-data · admin logs · a signed DPA · faster model</li>
+        <li><strong>(T/F)</strong> It's fine to paste a customer's PII into any AI tool as long as you delete the chat afterward.</li>
+        <li><strong>(Short answer)</strong> Name the two "keys" in the can-I-put-this-here decision.</li>
+        <li><strong>(MCQ)</strong> You want to use a new AI meeting-transcriber you found. What's the right first step?<br>
+          a) Use it for one meeting to test it · b) Submit it through the approved-tool request process · c) Use it only for internal meetings · d) Ask a colleague if they've used it</li>
+        <li><strong>(Short answer)</strong> What risk arises specifically from pasting <em>untrusted external content</em> (a webpage or email) into an AI tool?</li>
+        <li><strong>(Short answer)</strong> Why is a blameless reporting path essential to managing shadow AI?</li>
+        <li><strong>(MCQ)</strong> Which is the <em>most</em> dangerous because it doesn't feel like "AI use"? a) ChatGPT in a browser · b) An "AI summarize" button embedded in an app · c) Copilot in the IDE · d) A sanctioned enterprise chatbot</li>
+      </ol>
+
+      <h3>Answer key</h3>
+      <p>1-b · 2: SSO, no-training, admin logs, signed DPA (not "faster model") · 3-False (deleting the chat doesn't undo retention/training; restricted data needs approval + DPA) · 4: <em>what is the data (classification)</em> and <em>which tool/tier</em> · 5-b · 6: indirect prompt injection — hidden instructions in the content can hijack the model · 7: because fear of punishment makes people hide leaks; a hidden leak is far worse and unmanageable than a reported one · 8-b.</p>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist:</strong></p>
+      <ul>
+        <li>Have a <strong>real, current approved-tool catalog</strong> and request link ready — this module fails without a sanctioned alternative to point to.</li>
+        <li>Confirm the enterprise tiers you reference are actually provisioned (SSO, no-train) so claims are true.</li>
+        <li>Pull 2–3 <em>anonymized</em> real examples of shadow AI from your own org (from a discovery scan or survey) — local examples land harder than statistics.</li>
+      </ul>
+      <p><strong>Timing:</strong> Keep it to 45–60 min. This is Awareness-level; resist going deep into injection mechanics (that's Module J).</p>
+      <p><strong>Common pitfalls:</strong></p>
+      <ul>
+        <li>Delivering rules with no sanctioned path → teaches helplessness, entrenches shadow AI.</li>
+        <li>Shaming people for past shadow use → guarantees future hiding. Lead with "this is normal; here's the safe way."</li>
+        <li>Treating embedded "AI features" as out of scope → they're the biggest blind spot.</li>
+      </ul>
+      <p><strong>Discussion prompts:</strong></p>
+      <ul>
+        <li>"What's the AI tool you reach for when the sanctioned one is too slow — and what would make the sanctioned one win?"</li>
+        <li>"What's a piece of data you've been unsure whether you could put into an AI tool?"</li>
+      </ul>
+      <p><strong>Tailoring by audience:</strong> For managers and IT/security, add a 20-min appendix on discovery (SSO/IdP log analysis, prompt-level DLP, SASE integration) and on keeping approval turnaround fast. For GTM and ops, weight Lab K.1 toward customer-data and CRM scenarios.</p>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <p>This module worked if, within 60 days:</p>
+      <table>
+        <thead><tr><th>Indicator</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Completion + acknowledgment</strong></td><td>100% of staff (ties to Module B Article 4 log)</td></tr>
+          <tr><td><strong>Catalog adoption</strong></td><td>Measurable shift of usage from consumer to sanctioned tiers (SSO/usage logs)</td></tr>
+          <tr><td><strong>Shadow-tool discovery</strong></td><td>The "Find the Shadow" exercise + a discovery scan surface and triage the unknown-tool list</td></tr>
+          <tr><td><strong>Request-path use</strong></td><td>≥ 1 new-tool request submitted per team — proves people use the path instead of going dark</td></tr>
+          <tr><td><strong>Blameless reports</strong></td><td>At least one self-reported "I pasted something I shouldn't have" — evidence the safe-reporting culture is real</td></tr>
+          <tr><td><strong>Knowledge check</strong></td><td>≥ 80% pass rate</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <ul>
+        <li><strong>OWASP Top 10 for LLM Applications (2025)</strong> — LLM02 Sensitive Information Disclosure, LLM01 Prompt Injection (indirect) — context for the data-leakage and untrusted-content risks. (See Module J.)</li>
+        <li><strong>Shadow-AI prevalence &amp; cost</strong> — IDC (≈56% use unauthorized tools); IBM (shadow-AI breach-cost premium ≈ $670K); Harmonic Security (sensitive-data exposure on consumer tiers); Cybersecurity Dive (executives among heaviest unsanctioned users). <em>Vendor/survey-reported — directional for target-setting.</em></li>
+        <li><strong>Managing shadow AI by enablement</strong> — ISACA (auditing unauthorized AI tools); The Hacker News, "5 steps to managing shadow AI tools without slowing employees down" (2026).</li>
+        <li><strong>Enterprise vs. consumer tiers</strong> — vendor enterprise/admin documentation (no-training commitments, SSO, DPA, retention controls).</li>
+        <li><strong>Companion modules:</strong> B (AI Literacy Baseline — data classification), J (OWASP &amp; Red-Teaming — injection mechanics), H (Governance &amp; Operating Model — the catalog and approval process), L (Regulation &amp; Compliance).</li>
+      </ul>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-j-owasp-llm-red-teaming.html"><span class="dir">← Previous</span><span class="ttl">Module J: OWASP LLM Top 10 &amp; Red-Teaming</span></a>
+      <a class="next" href="module-l-ai-regulation-compliance.html"><span class="dir">Next →</span><span class="ttl">Module L: AI Regulation &amp; Compliance</span></a>
+    </nav>
+  </div>
+</div>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that compounds your moat — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../tech-driven-training.html">All Modules</a>
+      <a href="../index.html">About IIIBC</a>
+      <a href="mailto:hello@iiibc.com">hello@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — Beyond Cognition. All rights reserved.</span>
+    <span class="mono">Module K · Tech-Driven Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>

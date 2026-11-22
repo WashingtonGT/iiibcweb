@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module L: AI Regulation &amp; Compliance — IIIBC Tech-Driven AI Training</title>
+  <meta name="description" content="Regulation is no longer the thing that happens to other companies. Learn to risk-tier every AI system you run, map it to the regimes that bind you, and turn auditable governance into a reason enterprise buyers say yes.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../tech-driven-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../tech-driven-training.html">All Modules</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Tech-Driven AI Training · Module L</div>
+  <h1>AI Regulation &amp; Compliance</h1>
+  <p class="page-header__purpose">Regulation is no longer the thing that happens to other companies. Learn to risk-tier every AI system you run, map it to the regimes that bind you, and turn auditable governance into a reason enterprise buyers say yes.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Leader/Builder</span>
+    <span class="badge badge--section">Assessment §7 — Regulatory &amp; Compliance</span>
+    <span class="badge badge--audience">Sec / Legal / Leadership / PM</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content</a></li>
+    <li><a href="#lab">Hands-On Lab / Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module code</dt><dd>L</dd>
+          <dt>Maps to assessment section</dt><dd>7 — Regulatory &amp; Compliance Readiness</dd>
+          <dt>Primary audience</dt><dd>Security/Compliance/Legal (A5), Leadership (A1), Product Managers (A4 — product impact)</dd>
+          <dt>Competency level</dt><dd>Leader / Builder</dd>
+          <dt>Duration</dt><dd>Half-day workshop + per-system risk-tiering clinic</dd>
+          <dt>Format</dt><dd>Workshop + hands-on system-inventory and tiering exercise</dd>
+          <dt>Prerequisites</dt><dd>Module B (Literacy Baseline); helpful: Module H (Governance &amp; Operating Model)</dd>
+          <dt>Related modules</dt><dd>H (Governance &amp; Operating Model), J (OWASP &amp; Red-Teaming), A (Strategy for Leaders), M (Measuring AI)</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>For a growth-stage technology company, AI regulation has crossed from "watch this space" to "this is now on your roadmap." The <strong>EU AI Act</strong> carries penalties up to <strong>€35M or 7% of global turnover</strong> and binds any company that puts AI-touching products into the EU market, regardless of where it's headquartered. The <strong>NIST AI Risk Management Framework</strong> is the de facto US baseline, <strong>ISO/IEC 42001</strong> is now a certifiable AI management standard that enterprise buyers increasingly ask for, and a widening patchwork of US state laws (hiring, transparency, consequential decisions) plus sector regimes (fintech model risk, healthtech FDA/HIPAA, legaltech confidentiality) layer on top.</p>
+      <p>The trap is two-sided. Under-prepare, and a single high-risk use case — an AI hiring screen, a credit decision, an undisclosed chatbot — becomes a fine, a failed enterprise security review, or a blocked deal. Over-prepare, and you bolt enterprise bureaucracy onto a 120-person company and grind delivery to a halt. This module teaches the discipline that avoids both: <strong>know which AI systems you run, place each in the right risk tier, map it to the regimes that actually bind you, and adopt one internal framework calibrated to your strictest obligation.</strong></p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The compliant company and the company that wins enterprise deals are converging. ISO 42001 and a clean, auditable AI governance posture are becoming sales assets — the buyer's security questionnaire now asks about your AI model inventory and risk process. Treat compliance as a go-to-market advantage, not a tax.</p></div>
+      <div class="callout callout--risk"><span class="callout__label">Risk flag</span><p>The single most common failure is not knowing what you operate. You cannot tier, defend, or report on AI systems you haven't inventoried — and "we didn't know that counted as high-risk" is not a defense.</p></div>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><em>Calibration note (read before teaching):</em> Several 2026 items are genuinely in flux — the EU Digital Omnibus (adopted July 2026) moved the high-risk dates; Colorado's AI Act was repealed and replaced in 2026, and enforcement of the replacement is stayed in federal court; US federal posture and revised bank model-risk guidance changed in 2025–2026. <strong>Teach the <em>method</em> of staying current and verify the specifics for your markets at delivery time.</strong> Do not present moving dates as settled law.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this module, participants will be able to:</p>
+      <ol>
+        <li><strong>Inventory</strong> the AI systems the company operates — including third-party and product-embedded models — with purpose, owner, and data touched.</li>
+        <li><strong>Risk-tier</strong> each system using the EU AI Act four-tier model (unacceptable / high / limited / minimal) and recognize what each tier obligates.</li>
+        <li><strong>Read the enforcement timeline</strong> for the obligations that bind them and translate it into roadmap deadlines.</li>
+        <li><strong>Map practices to a recognized framework</strong> — NIST AI RMF (Govern/Map/Measure/Manage) and/or ISO/IEC 42001 — calibrated to the strictest applicable obligation.</li>
+        <li><strong>Meet transparency/labeling obligations</strong> for AI chatbots, deepfakes, and synthetic/AI-generated content.</li>
+        <li><strong>Apply the relevant sector overlay</strong>: model-risk management (fintech), HIPAA + FDA SaMD (healthtech), professional-responsibility/confidentiality (legaltech), and consequential-decision rules (e.g., NYC LL144 bias audits).</li>
+        <li><strong>Run vendor / GPAI due diligence</strong> so foundation-model obligations flow correctly through contracts.</li>
+        <li><strong>Use a "highest-common-denominator" cross-jurisdiction strategy</strong> instead of maintaining a separate posture per country.</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td>0:00–0:10</td><td>Why this is on your roadmap now (the two-sided trap)</td><td>Live</td></tr>
+          <tr><td>0:10–0:40</td><td>Part 1 — The EU AI Act: four tiers, obligations, timeline, penalties</td><td>Workshop</td></tr>
+          <tr><td>0:40–1:05</td><td>Part 2 — Frameworks: NIST AI RMF &amp; ISO/IEC 42001</td><td>Workshop</td></tr>
+          <tr><td>1:05–1:30</td><td>Part 3 — The US patchwork + transparency/labeling</td><td>Workshop</td></tr>
+          <tr><td>1:30–2:00</td><td>Part 4 — Sector overlays (fintech / healthtech / legaltech)</td><td>Workshop</td></tr>
+          <tr><td>2:00–2:20</td><td>Part 5 — Vendor / GPAI due diligence</td><td>Workshop</td></tr>
+          <tr><td>2:20–3:05</td><td>Hands-on clinic: inventory + tier your real AI systems</td><td>Lab</td></tr>
+          <tr><td>3:05–3:20</td><td>Knowledge check</td><td>Quiz</td></tr>
+          <tr><td>3:20–3:30</td><td>Build your 90-day compliance backlog</td><td>Working</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="content">
+      <h2>Core Content</h2>
+
+      <h3>Part 1 — The EU AI Act: Four Tiers, Obligations, Timeline</h3>
+      <p>The EU AI Act classifies AI by risk, and the obligations follow the tier — not the technology.</p>
+      <pre><code>  EU AI ACT — RISK TIERS (obligations follow the tier)
+  ┌────────────────┬───────────────────────────────────────────────┐
+  │ UNACCEPTABLE   │ Banned. Social scoring, manipulative/subliminal │
+  │                │ techniques, untargeted facial scraping, most    │
+  │                │ real-time public biometric ID, workplace/edu    │
+  │                │ emotion recognition.                            │
+  ├────────────────┼───────────────────────────────────────────────┤
+  │ HIGH-RISK      │ Heavy obligations: risk mgmt, data governance,  │
+  │                │ logging, human oversight, accuracy/robustness,  │
+  │                │ conformity assessment. e.g., hiring, credit,    │
+  │                │ biometrics, safety components.                  │
+  ├────────────────┼───────────────────────────────────────────────┤
+  │ LIMITED RISK   │ Transparency only (Art. 50): tell users it's    │
+  │                │ AI (chatbots), label deepfakes/synthetic media. │
+  ├────────────────┼───────────────────────────────────────────────┤
+  │ MINIMAL RISK   │ Largely unregulated (spam filters, most SaaS    │
+  │                │ features). The majority of use cases.           │
+  └────────────────┴───────────────────────────────────────────────┘</code></pre>
+      <p><strong>Penalties</strong> scale to the higher of a fixed amount or a percentage of global annual turnover: up to <strong>€35M / 7%</strong> for prohibited practices, <strong>€15M / 3%</strong> for most other breaches, <strong>€7.5M / 1%</strong> for supplying incorrect information.</p>
+      <p><strong>Timeline (verify at delivery — staggered):</strong> prohibited practices + the Article 4 AI-literacy duty in force from <strong>Feb 2025</strong>; general-purpose AI (GPAI) model obligations from <strong>Aug 2025</strong>; Art. 50 transparency and GPAI enforcement from <strong>Aug 2026</strong> (the watermarking grace period for generative systems already on the market ends <strong>2 Dec 2026</strong>); high-risk (Annex III) obligations from <strong>2 Dec 2027</strong>; product-embedded high-risk (Annex I) from <strong>2 Aug 2028</strong>. The later high-risk dates come from the Digital Omnibus, Regulation (EU) 2026/1744, in force 27 Jul 2026.</p>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Most growth-stage SaaS sits in <em>minimal</em> or <em>limited</em> risk for its core features — which is good news. The work is (1) proving that with a defensible tiering, and (2) catching the one or two use cases (a hiring tool, a credit/eligibility decision, an undisclosed chatbot) that jump to limited/high and carry real obligations.</p></div>
+
+      <h3>Part 2 — Frameworks: NIST AI RMF and ISO/IEC 42001</h3>
+      <p>You don't invent a control framework; you adopt one and map to it.</p>
+      <p><strong>NIST AI Risk Management Framework (AI RMF 1.0)</strong> — the voluntary US baseline, built on four functions:</p>
+      <pre><code>  GOVERN  → culture, accountability, policies, oversight of 3rd-party models (cross-cutting)
+  MAP     → context, stakeholders, system boundaries, potential harms
+  MEASURE → analyze, benchmark, monitor AI risk (quant + qual)
+  MANAGE  → prioritize, treat, and monitor risks over time</code></pre>
+      <p><strong>ISO/IEC 42001:2023</strong> — the first <em>certifiable</em> AI Management System (AIMS) standard. It certifies you run a structured, auditable management system across the AI lifecycle (design → deployment → monitoring → decommissioning): governance, AI-specific risk assessment (bias, drift, privacy, security, misuse), transparency/traceability, and competence/training. Its role is like SOC 2 / ISO 27001 — a third-party-audited signal of responsible-AI maturity that enterprise buyers and regulators trust.</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>Adopt <strong>one</strong> framework (NIST AI RMF mapped onto ISO 42001 structure is the common path), calibrated to your strictest obligation, and layer sector overlays on top. Running five jurisdiction-specific postures is how small teams drown.</p></div>
+
+      <h3>Part 3 — The US Patchwork + Transparency/Labeling</h3>
+      <p>There is no comprehensive US federal AI statute; companies navigate a patchwork plus existing regulators (FTC, CFPB, EEOC, FDA):</p>
+      <ul>
+        <li><strong>NYC Local Law 144</strong> (live since 2023): AI hiring tools (AEDTs) require an independent <strong>bias audit</strong> (annual), public posting of results, and candidate notice. Extraterritorial — applies to anyone hiring NYC-resident candidates.</li>
+        <li><strong>California</strong> (AI Transparency Act, SB 942 / AB 853): provenance and AI-content disclosure obligations for large GenAI providers, operative date aligned to the Aug 2026 window.</li>
+        <li><strong>Colorado AI Act</strong>: the first comprehensive state AI law — postponed, then <strong>repealed and replaced in 2026</strong> by SB 26-189: notice, adverse-decision explanation, and human review for consequential decisions made from <strong>1 Jan 2027</strong>. A federal court stay (xAI case) currently blocks AG enforcement; the duties still apply.</li>
+        <li><strong>California CCPA ADMT regulations</strong>: businesses already using automated decision-making technology for significant decisions must comply from <strong>1 Jan 2027</strong>; risk assessments due 31 Dec 2027. About two dozen further California AI laws signed in September 2026 also take effect 1 Jan 2027.</li>
+        <li><strong>Federal posture</strong> shifted toward deregulation in 2025; a Dec 2025 order (EO 14365) set up a DOJ task force to challenge state laws, but no federal preemption statute has passed. As of Nov 2026, state laws apply in full.</li>
+      </ul>
+      <p><strong>Transparency/labeling</strong> is becoming a cross-jurisdiction baseline: disclose AI chatbots, label AI-generated/synthetic content, and provide provenance (content credentials/watermarking) where required — in the EU, Art. 50 applies from Aug 2026, with marking required for pre-existing generative systems by 2 Dec 2026.</p>
+
+      <h3>Part 4 — Sector Overlays</h3>
+      <p>The base regime is the floor; your sector adds a ceiling.</p>
+      <table>
+        <thead><tr><th>Sector</th><th>Overlay you must teach</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Fintech</strong></td><td>Model-risk-management expectations (independent validation, model inventory, ongoing monitoring, "effective challenge"). US bank model-risk guidance was revised in 2026 (superseding SR 11-7) — verify scope; the validation/inventory/monitoring template still drives what fintechs and their bank partners expect for any decisioning model.</td></tr>
+          <tr><td><strong>Healthtech</strong></td><td><strong>HIPAA</strong> (PHI + Business Associate Agreements) for any AI touching patient data; <strong>FDA</strong> for AI/ML as Software as a Medical Device (SaMD) — Total Product Lifecycle management and Predetermined Change Control Plans (PCCPs) that pre-authorize defined model updates.</td></tr>
+          <tr><td><strong>Legaltech</strong></td><td>Professional-responsibility duties (ABA Formal Opinion 512): competence (verify outputs, no hallucinated citations), confidentiality (informed client consent before inputting confidences), supervision; unauthorized-practice-of-law (UPL) risk where AI advises consumers directly.</td></tr>
+          <tr><td><strong>Any with consequential decisions</strong></td><td>Hiring, credit, eligibility → bias audits (e.g., NYC LL144), impact assessments, candidate/consumer notice and appeal rights.</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Part 5 — Vendor / GPAI Due Diligence</h3>
+      <p>Most growth-stage companies <em>consume</em> foundation models rather than build them, so EU AI Act GPAI obligations flow practically through <strong>vendor contracts</strong>. Due diligence must confirm: the provider's AI Act compliance status, data-use and retention terms (training opt-out, zero-data-retention), data residency, indemnities, training-data/IP representations, SOC 2, a signed DPA, and whether you're using a non-training enterprise tier for confidential data. Tie this to Module K (safe tool use) and Module H (model inventory).</p>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Your model inventory (Module H) and your vendor diligence file are the two artifacts a buyer's security team and a regulator will both ask for. Build them once; reuse them in every deal and every audit.</p></div>
+    </section>
+
+    <section id="lab">
+      <h2>Hands-On Lab / Exercises</h2>
+
+      <h3>Lab L.1 — Inventory &amp; Tier Your Real AI Systems (45 min)</h3>
+      <p>Working from the company's actual systems, complete this row-by-row. Aim for 5–10 systems including product-embedded and third-party.</p>
+      <table>
+        <thead><tr><th>AI system</th><th>Purpose</th><th>Data touched</th><th>Build/Buy</th><th>EU AI Act tier</th><th>Sector overlay?</th><th>Transparency duty?</th><th>Owner</th></tr></thead>
+        <tbody>
+        </tbody>
+      </table>
+      <p><strong>Worked example (facilitator key) — a fintech SaaS:</strong></p>
+      <table>
+        <thead><tr><th>AI system</th><th>Purpose</th><th>Data touched</th><th>Build/Buy</th><th>Tier</th><th>Overlay</th><th>Transparency</th><th>Owner</th></tr></thead>
+        <tbody>
+          <tr><td>Support chatbot (vendor LLM)</td><td>Customer support</td><td>Customer PII</td><td>Buy</td><td><strong>Limited</strong> (must disclose it's AI)</td><td>—</td><td><strong>Yes</strong> (Art. 50)</td><td>Head of CS</td></tr>
+          <tr><td>Credit pre-screen model</td><td>Score loan applicants</td><td>Financial PII</td><td>Build</td><td><strong>High-risk</strong> (creditworthiness)</td><td><strong>Fintech model-risk</strong></td><td>Notice/appeal</td><td>Head of Risk</td></tr>
+          <tr><td>Marketing copy assistant</td><td>Draft content</td><td>Public/internal</td><td>Buy</td><td><strong>Minimal</strong></td><td>—</td><td>Label synthetic media</td><td>Mktg lead</td></tr>
+          <tr><td>Resume screener (HR)</td><td>Rank candidates</td><td>Candidate PII</td><td>Buy</td><td><strong>High-risk</strong></td><td><strong>NYC LL144 bias audit</strong></td><td>Candidate notice</td><td>People lead</td></tr>
+          <tr><td>Code assistant</td><td>Engineering</td><td>Source code</td><td>Buy</td><td><strong>Minimal</strong> (internal)</td><td>—</td><td>—</td><td>VP Eng</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Debrief:</strong> Which systems jumped to high-risk? Which lacked an owner? Which transparency duties are currently unmet? Each gap becomes a backlog item.</p>
+
+      <h3>Lab L.2 — Build the 90-Day Compliance Backlog (15 min)</h3>
+      <p>For every gap surfaced in L.1, write one backlog item: <code>[System] — [obligation] — [owner] — [target date]</code>. Sequence by the nearest enforcement deadline and the highest penalty exposure.</p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>Artifact L-1 — AI System Risk-Tiering Record (per system)</h3>
+      <pre><code>System: ____________________  Owner: ____________  Last reviewed: ______
+Purpose: ___________________________________________________________
+Data classes touched: ______________________________________________
+Build / Buy / Embedded: ____________________________________________
+EU AI Act tier: [ ] minimal [ ] limited [ ] high [ ] unacceptable
+Why this tier: _____________________________________________________
+Framework controls applied (NIST/ISO 42001): ______________________
+Transparency/labeling duty: [ ] none [ ] chatbot disclosure [ ] synthetic-media label [ ] provenance
+Sector overlay: [ ] none [ ] fintech MRM [ ] HIPAA/FDA [ ] legal/UPL [ ] LL144/consequential
+Vendor diligence on file (if Buy): [ ] DPA [ ] no-train [ ] residency [ ] SOC2 [ ] IP reps
+Open obligations / deadlines: ______________________________________</code></pre>
+
+      <h3>Artifact L-2 — Cross-Jurisdiction Strategy (one-pager)</h3>
+      <p><code>1. Adopt one framework: NIST AI RMF mapped to ISO 42001 structure. 2. Calibrate to strictest obligation (usually EU AI Act). 3. Layer sector overlay. 4. Maintain a living model inventory + vendor diligence file. 5. Assign each system an owner and a review cadence. 6. Track the enforcement calendar; re-tier on material change.</code></p>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> The EU AI Act's heaviest obligations attach based on: a) the model size · b) the <strong>risk tier of the use case</strong> · c) the company's revenue · d) where the company is headquartered</li>
+        <li><strong>(Short answer)</strong> Name the four NIST AI RMF functions.</li>
+        <li><strong>(MCQ)</strong> What is ISO/IEC 42001? a) A US state law · b) A certifiable <strong>AI management system</strong> standard · c) An EU penalty schedule · d) A model benchmark</li>
+        <li><strong>(T/F)</strong> A US-headquartered company with no EU office is automatically outside the EU AI Act.</li>
+        <li><strong>(Short answer)</strong> A resume-screening tool used on NYC candidates triggers which specific obligation?</li>
+        <li><strong>(MCQ)</strong> Most growth-stage SaaS core features fall into which EU AI Act tier? a) Unacceptable · b) High · c) <strong>Minimal/limited</strong> · d) They're exempt</li>
+        <li><strong>(Short answer)</strong> Because you consume rather than build foundation models, how do GPAI obligations practically reach you?</li>
+        <li><strong>(Short answer)</strong> Give one reason ISO 42001 / clean AI governance is a sales asset, not just a cost.</li>
+      </ol>
+
+      <h3>Answer key</h3>
+      <p>1-b · 2: Govern, Map, Measure, Manage · 3-b · 4-False (the Act applies to anyone placing AI-touching products on the EU market regardless of HQ) · 5: an independent bias audit + public posting + candidate notice (NYC Local Law 144) · 6-c · 7: through vendor contracts/diligence — confirm the provider's compliance status, data-use terms, documentation · 8: enterprise buyers' security reviews now ask for AI model inventory and risk process; auditable governance unblocks deals.</p>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist:</strong></p>
+      <ul>
+        <li><strong>Re-verify the regulatory specifics for the client's markets the week of delivery</strong> — dates and state laws are moving (Digital Omnibus, Colorado replacement, US bank guidance). Bring current sources, not these slides verbatim.</li>
+        <li>Pull the client's real AI systems (from Module H's inventory if it exists) so Lab L.1 uses live data.</li>
+        <li>Identify the client's sector overlay in advance and prepare 2–3 sector-specific examples.</li>
+      </ul>
+      <p><strong>Timing:</strong> Half-day. Parts 1–2 are the spine; compress Part 3 if the client has no US consequential-decision use cases.</p>
+      <p><strong>Common pitfalls:</strong></p>
+      <ul>
+        <li>Presenting moving dates as settled law → erodes credibility when they shift. Always frame timeline items as "verify."</li>
+        <li>Over-scoping a 120-person company into enterprise GRC bureaucracy → calibrate to stage and data sensitivity (echo Module H's "proportionate" principle).</li>
+        <li>Letting legal own this alone → product and engineering must be in the room; tiering depends on how systems actually work.</li>
+      </ul>
+      <p><strong>Discussion prompts:</strong></p>
+      <ul>
+        <li>"Which of our AI systems would we struggle to defend to a regulator or a buyer today?"</li>
+        <li>"What's the one use case that quietly jumped to high-risk without anyone deciding it should?"</li>
+      </ul>
+      <p><strong>Tailoring by audience:</strong> Leaders → weight Parts 1, 2, 5 and the strategy one-pager. Security/Legal → weight the tiering record and sector overlay. PMs → weight transparency duties and how tiering constrains product decisions.</p>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <p>This module worked if, within 90 days:</p>
+      <table>
+        <thead><tr><th>Indicator</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Model inventory</strong></td><td>100% of operated AI systems inventoried with owner + data class</td></tr>
+          <tr><td><strong>Risk tiering</strong></td><td>Every system assigned an EU AI Act tier with a documented rationale</td></tr>
+          <tr><td><strong>Framework adoption</strong></td><td>One framework (NIST AI RMF / ISO 42001) selected and mapped</td></tr>
+          <tr><td><strong>Transparency gaps</strong></td><td>All chatbot/synthetic-content disclosure gaps identified and on the backlog</td></tr>
+          <tr><td><strong>Sector overlay</strong></td><td>The applicable overlay (MRM / HIPAA-FDA / legal / LL144) documented per relevant system</td></tr>
+          <tr><td><strong>Vendor diligence</strong></td><td>DPA + no-train + residency confirmed for every "Buy" system touching confidential/restricted data</td></tr>
+          <tr><td><strong>Deadline tracking</strong></td><td>A living enforcement calendar exists with owners</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <ul>
+        <li><strong>EU AI Act</strong> — official implementation timeline and regulatory framework (European Commission); risk tiers and penalty schedule from the Act text. <em>Timeline as amended by the Digital Omnibus (Reg. (EU) 2026/1744); verify at delivery.</em></li>
+        <li><strong>NIST AI RMF 1.0</strong> (NIST AI 100-1) and the Generative AI Profile — the Govern/Map/Measure/Manage core.</li>
+        <li><strong>ISO/IEC 42001:2023</strong> — AI management system standard (certifiable).</li>
+        <li><strong>US patchwork</strong> — NYC Local Law 144 (AEDT bias audits); California AI Transparency Act (SB 942 / AB 853); Colorado SB 26-189 (replacement act, effective 1 Jan 2027; enforcement stayed); California CCPA ADMT regulations (1 Jan 2027); revised US bank model-risk guidance (2026, superseding SR 11-7).</li>
+        <li><strong>Sector</strong> — fintech model-risk management; HIPAA + FDA SaMD / PCCP guidance (healthtech); ABA Formal Opinion 512 (legaltech).</li>
+        <li><strong>Companion modules:</strong> H (Governance &amp; Operating Model — inventory, risk register, operating model), K (Shadow AI &amp; vendor tiers), J (OWASP &amp; Red-Teaming), A (Strategy &amp; board answers).</li>
+      </ul>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Calibration note.</strong> Penalty figures (€35M/7%, €15M/3%, €7.5M/1%) are from the Act text and stable. Several 2026 dates and state laws were in flux at publication — treat this module's timeline as a method to apply, not settled fact, and verify per market.</p></div>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-k-shadow-ai-safe-tool-use.html"><span class="dir">← Previous</span><span class="ttl">Module K: Shadow AI &amp; Safe Tool Use</span></a>
+      <a class="next" href="module-m-measuring-ai-roi.html"><span class="dir">Next →</span><span class="ttl">Module M: Measuring AI ROI</span></a>
+    </nav>
+  </div>
+</div>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that compounds your moat — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../tech-driven-training.html">All Modules</a>
+      <a href="../index.html">About IIIBC</a>
+      <a href="mailto:hello@iiibc.com">hello@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — Beyond Cognition. All rights reserved.</span>
+    <span class="mono">Module L · Tech-Driven Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>

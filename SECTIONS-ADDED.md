@@ -163,11 +163,11 @@ All new sections maintain IIIBC design system:
 
 ## Accessibility & Responsiveness
 
-✅ **Mobile Responsive** — All grids adapt to mobile viewports  
-✅ **Semantic HTML** — Proper heading hierarchy, ARIA labels  
-✅ **Color Contrast** — WCAG AA compliant across all sections  
-✅ **Touch Targets** — Buttons minimum 44px × 44px  
-✅ **Link Text** — Descriptive (not "click here")
+✓ **Mobile Responsive** — All grids adapt to mobile viewports  
+✓ **Semantic HTML** — Proper heading hierarchy, ARIA labels  
+✓ **Color Contrast** — WCAG AA compliant across all sections  
+✓ **Touch Targets** — Buttons minimum 44px × 44px  
+✓ **Link Text** — Descriptive (not "click here")
 
 ---
 

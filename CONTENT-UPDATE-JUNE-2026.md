@@ -148,11 +148,11 @@ All updates follow IIIBC editorial voice guidelines from `design/guides.md`:
 
 ## Technical Verification
 
-✅ **HTML Structure:** All tags properly closed, no `id` or `class` attributes altered  
-✅ **Content Length:** Urgency ticker text 144 chars (mobile-safe)  
-✅ **Mobile Friendliness:** No horizontal overflow, text wraps cleanly  
-✅ **Consistency:** All content cross-checked for factual alignment  
-✅ **Voice Consistency:** Content reviewed against design/guides.md editorial rules
+✓ **HTML Structure:** All tags properly closed, no `id` or `class` attributes altered  
+✓ **Content Length:** Urgency ticker text 144 chars (mobile-safe)  
+✓ **Mobile Friendliness:** No horizontal overflow, text wraps cleanly  
+✓ **Consistency:** All content cross-checked for factual alignment  
+✓ **Voice Consistency:** Content reviewed against design/guides.md editorial rules
 
 ---
 

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 6: AI in Fundraising &amp; Donor Trust — IIIBC Non-Profit AI Training</title>
+  <meta name="description" content="Teach the development team to use AI on real fundraising work while keeping every appeal, every number, and every donor record under human ownership.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../non-profit-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../non-profit-training.html">All Modules</a>
+    <a href="../non-profilt-assessment.html">Assessment</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Non-Profit AI Training · Module 6</div>
+  <h1>AI in Fundraising &amp; Donor Trust</h1>
+  <p class="page-header__purpose">AI can help you understand donors and write to them faster than ever — but donor trust is the one asset you cannot rebuild with a tool. This module teaches your development team to use AI on real fundraising work <em>and</em> to keep every appeal, every number, and every donor record under human ownership.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Practicing</span>
+    <span class="badge badge--section">Assessment §6 — Donor &amp; Stakeholder Communication</span>
+    <span class="badge badge--audience">A4 Development / Fundraising / Communications</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content</a></li>
+    <li><a href="#exercises">Hands-On Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module number</dt><dd>6 of 8</dd>
+          <dt>Maps to assessment</dt><dd>Section 6 — Donor &amp; Stakeholder Communication</dd>
+          <dt>Primary audience</dt><dd>A4 Development / Fundraising / Communications (also useful to A1 leadership and A5 ops who touch donor data)</dd>
+          <dt>Competency level</dt><dd>Practicing (assumes Module 4 fluency + Module 2 data basics)</dd>
+          <dt>Duration</dt><dd>Half-day applied workshop (~3.5 hrs) + an ongoing prompt-library build</dd>
+          <dt>Format</dt><dd>Applied workshop + prompt-pattern library build + disclosure decision guide + do/don't card</dd>
+          <dt>Prerequisites</dt><dd>Module 4 (4D fluency, do-not-use list, cardinal data rule); Module 2 data-sensitivity basics. Module 3 approved-tool catalog recommended.</dd>
+          <dt>Cost note</dt><dd>Deliverable with <strong>free / low-cost</strong> resources: Fundraising.AI framework, AFP Code of Ethical Standards, Anthropic + GivingTuesday, NTEN. Most CRMs you already own (Salesforce, Blackbaud, Bloomerang, Virtuous) ship AI features in existing tiers. IIIBC facilitation accelerates; it is not required to begin.</dd>
+          <dt>Related modules</dt><dd>Module 2 (donor-data governance) · Module 5 (funder/mission-ROI narrative) · Module 7 (beneficiary safeguards) · Module 8 (grant-report drafting).</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>Donor trust is a non-profit's most valuable and least replaceable asset. AI now sits in the middle of almost every fundraising task — scoring who is about to lapse, drafting the appeal, personalizing the ask, summarizing the major-donor file before a meeting. Done well, this frees fundraisers to spend more time with people and less time at a keyboard. Done carelessly, it quietly substitutes an algorithm for the human relationship donors are actually paying for — and one fabricated detail or one mishandled data record can cost trust that took years to build.</p>
+      <p>Donors have noticed. In the Fundraising.AI <em>Donor Perceptions of AI 2025</em> survey (~1,031 U.S. donors, August 2025), data stewardship was donors' top concern — roughly two-thirds feared privacy breaches or insecure data handling, and a majority (~55%) worried AI could bake in bias (directional). Sector reporting puts donor expectation of disclosure very high: a large majority of donors say it matters that non-profits plainly disclose <em>where and why</em> AI is used, <em>how humans stay in control</em>, and <em>what evidence</em> shows it works (directional, AFP). Yet the same period's adoption data shows nearly 80% of non-profits using AI in some form while only ~9% feel ready to use it responsibly and fewer than ~7% have an internal AI policy (directional). That is the gap this module closes for the development team.</p>
+      <p>The risk is not that fundraisers will use AI. They already do. The risk is <em>over-automation</em> — outsourcing empathy to a model — and <em>under-governance</em> — pasting a donor's name, capacity rating, or giving history into a public tool that may train on it. This module gives the team a disciplined way to get AI's speed without trading away the authenticity and the data stewardship that donors are now explicitly watching for.</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The fundraising win from AI is not "more emails per hour." It is <em>more fundraiser time with humans</em> because AI absorbed the drafting and research grunt-work — with every output passed through human Discernment and Diligence before it reaches a donor.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this module, participants will be able to:</p>
+      <ol>
+        <li>Use AI for <strong>donor segmentation, lapsed-donor / churn signals, and prospect insight</strong> — and state plainly what these scores can and cannot tell you.</li>
+        <li>Apply <strong>donor-data privacy rules</strong> to AI use: distinguish what is safe to put into a tool (segment descriptions, anonymized trends, draft copy) from what is never pasted into a public tool (donor PII, capacity ratings, giving history).</li>
+        <li>Draft <strong>appeals, thank-yous, newsletters, and grant narratives</strong> with a reusable prompt-pattern library — each pattern with a built-in human-review step.</li>
+        <li>Apply <strong>Discernment + Diligence</strong> before anything reaches a donor: catch hallucinated facts, fabricated donor details, off-voice tone, and bias.</li>
+        <li>Decide and apply an <strong>AI-content disclosure stance</strong> using a decision guide, and articulate <em>why</em> for any given piece.</li>
+        <li>Recognize and avoid <strong>over-automation</strong> that makes donor relationships feel transactional, using a human-touch rule of thumb.</li>
+        <li>Prepare <strong>leadership and board talking points</strong> for donor and public questions about how the organization uses AI.</li>
+        <li>Map the team's practice to a recognized <strong>responsible-fundraising-AI framework</strong> (Fundraising.AI's pillars; AFP ethics).</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <p>A half-day applied workshop built for a lean development shop. Bring real (de-identified) examples from your own pipeline.</p>
+      <table>
+        <thead><tr><th>Time block</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Pre-work (~20 min)</strong></td><td>Re-read the Module 4 cardinal data rule + the org do-not-use list; bring one real appeal, one thank-you, and one segment you want to understand</td><td>Individual</td></tr>
+          <tr><td><strong>0:00–0:15</strong></td><td>Mission frame + donor-trust stakes; the donor-perception data</td><td>Live</td></tr>
+          <tr><td><strong>0:15–0:50</strong></td><td>Part 1–2: AI in fundraising tasks + the donor-data privacy line</td><td>Mini-lecture + discussion</td></tr>
+          <tr><td><strong>0:50–1:35</strong></td><td>Part 3: build the <strong>prompt-pattern library</strong> (segmentation, appeal, thank-you, grant) — hands-on</td><td>Workshop (sandbox)</td></tr>
+          <tr><td><strong>1:35–1:45</strong></td><td>Break</td><td>—</td></tr>
+          <tr><td><strong>1:45–2:20</strong></td><td>Part 4: <strong>Discernment + Diligence</strong> before a donor sees it — red-team a draft</td><td>Hands-on exercise</td></tr>
+          <tr><td><strong>2:20–2:50</strong></td><td>Part 5: the <strong>AI-content disclosure</strong> decision guide — work real cases</td><td>Decision workshop</td></tr>
+          <tr><td><strong>2:50–3:20</strong></td><td>Part 6: over-automation + board/donor talking points</td><td>Discussion + drafting</td></tr>
+          <tr><td><strong>3:20–3:30</strong></td><td>Outcome scorecard, prompt-library ownership, next steps</td><td>Live wrap</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Do the hands-on parts in your <strong>approved</strong> tool tier with <strong>de-identified</strong> data only. The whole point of Part 2 is that the workshop itself never violates the data rule. If your only tool is consumer-grade, run every exercise with fictional or fully anonymized donor data.</p></div>
+    </section>
+
+    <section id="content">
+      <h2>Core Content</h2>
+
+      <h3>Part 1 — What AI actually does in fundraising (and what it can't)</h3>
+      <p>AI shows up in fundraising in two broad ways. The first is <strong>analysis</strong> — pattern-finding over your donor data, usually inside your CRM or a connected tool. The second is <strong>generation</strong> — drafting text. They fail differently and need different safeguards.</p>
+      <pre><code>FUNDRAISING AI — TWO JOBS, TWO RISK PROFILES
+┌──────────────────────────────┬──────────────────────────────────────────────┐
+│ ANALYSIS (scoring/predicting) │ GENERATION (drafting text)                    │
+│  • donor segmentation         │  • appeal / email drafts                      │
+│  • lapsed / churn risk score  │  • thank-you / acknowledgment                 │
+│  • giving-propensity score    │  • newsletters, social, case for support      │
+│  • prospect / wealth insight  │  • grant narratives, gift proposals           │
+│  • optimized ask amount       │                                               │
+│ MAIN RISK: biased / opaque    │ MAIN RISK: hallucinated facts, fabricated     │
+│ scores; over-trusting a number│ donor details, off-voice / transactional tone │
+└──────────────────────────────┴──────────────────────────────────────────────┘</code></pre>
+      <p><strong>Analysis use-cases, in plain terms.</strong> <em>Segmentation</em> groups donors by behavior so you stop sending everyone the same letter. <em>Churn / lapse prediction</em> flags regular givers who look likely to stop, early enough to intervene — one published vendor case (Greenpeace via Dataro) reported retaining 64 at-risk recurring donors, an estimated ~$23k saved (directional, single-org). <em>Propensity / wealth screening</em> estimates likelihood and capacity to give, to help prioritize a major-gifts officer's limited hours. <em>Optimized ask amounts</em> suggest a gift ask based on past behavior. Tools here include <strong>Blackbaud</strong> predictive analytics / ResearchPoint, <strong>Salesforce / Agentforce Nonprofit</strong> (prospect research, gift-proposal drafting, donor summaries — early-adopter claims of 4–6 hrs/week saved are directional), <strong>Virtuous</strong> Insights, <strong>DonorSearch Ai</strong>, and <strong>Dataro</strong>.</p>
+      <p><strong>What a score is — and is not.</strong> A propensity or churn score is a <em>probability based on past patterns</em>, not a verdict about a person. It can be wrong, it can be biased (capacity models can track wealth, race, and zip code together), and it is only as good as the messy donor data underneath it. Use it to <em>prioritize attention</em>, never to <em>write someone off</em> or to make an automated decision about a human.</p>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>A wealth/capacity rating is sensitive personal data and can feel invasive to the donor it describes. Keep capacity ratings, screening results, and giving history inside your secure CRM — they are exactly the kind of data Part 2 says never to paste into a public AI tool.</p></div>
+      <table>
+        <thead><tr><th>Do</th><th>Don't</th></tr></thead>
+        <tbody>
+          <tr><td>Use scores to decide <em>who to call first</em> and <em>what to test</em></td><td>Treat a score as a fact about a donor's worth or intentions</td></tr>
+          <tr><td>Ask the vendor how a model was built and what data it uses</td><td>Assume the model is neutral because it is "just math"</td></tr>
+          <tr><td>Re-check segments against what your team knows about real people</td><td>Let a segment label override a relationship you actually have</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Part 2 — The donor-data privacy line (the rule that protects trust)</h3>
+      <p>This is the most important page in the module. The cardinal rule from Module 4 applies with full force to donor data: <strong>never paste donor personal information into a public/consumer AI tool that may train on your inputs.</strong> Donor names, contact details, giving history, capacity/wealth ratings, health or family circumstances mentioned in moves-management notes — all of it is sensitive, and much of it is regulated (20+ U.S. states now have consumer-privacy laws; PCI DSS 4.0 applies to card processing — directional).</p>
+      <p>The practical question fundraisers ask is "then how do I use AI at all?" The answer is the <strong>safe/unsafe split</strong>:</p>
+      <pre><code>DONOR-DATA + AI — THE SPLIT
+SAFE to put in an AI tool          NEVER in a public AI tool
+──────────────────────────────     ──────────────────────────────────────
+• De-identified segment            • Donor names, emails, addresses, phone
+  DESCRIPTIONS ("lapsed monthly    • Specific giving history / amounts tied
+  donors who gave 2–3 yrs")          to a named person
+• High-level, aggregate trends     • Wealth / capacity / propensity ratings
+• Your own draft copy to improve   • Moves-management / relationship notes
+• Public info you'd publish        • Anything health, family, immigration,
+  anyway (mission, program facts)    or hardship-related about a person</code></pre>
+      <p>Two tiers of tool change what is allowed. <strong>Enterprise / managed AI</strong> (your CRM's built-in AI operating on your own data under contract, or a paid business tier that contractually does not train on your inputs) can work <em>with</em> real donor records because the data stays governed. <strong>Free consumer tools</strong> generally may store or learn from what you type — so they get <em>de-identified inputs only</em>. When in doubt, de-identify, or use the in-CRM feature instead of copy-pasting out.</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>"AI can hallucinate details about a donor" is a real reputational risk, not a hypothetical. A model asked to "personalize" a thank-you can invent a gift amount, a program, or a family detail. The fix is Part 4: a human who knows the donor verifies every personalized fact before send.</p></div>
+
+      <h3>Part 3 — The fundraising prompt-pattern library (with the human-review step built in)</h3>
+      <p>A <em>prompt pattern</em> is a reusable template: you keep the structure and swap in the specifics. The team's job in this module is to build a small shared library so good prompting survives turnover and everyone drafts to the same standard. Every pattern in the library ends with the same non-negotiable line: a <strong>human-review step</strong> before anything reaches a donor. (Patterns are provided in full under Templates &amp; Takeaway Artifacts.)</p>
+      <pre><code>THE 4D LOOP ON A FUNDRAISING DRAFT
+ DELEGATION   → Is this safe to hand to AI? (no donor PII in a public tool;
+                no automated decision about a person)
+ DESCRIPTION  → Give it role, audience, voice, length, must-include facts,
+                and what NOT to say
+ DISCERNMENT  → Check every fact/number/name; check the voice; check for bias
+ DILIGENCE    → Edit to the org's voice, verify, decide disclosure, OWN the send</code></pre>
+      <p>Good Description for fundraising always includes: <strong>who the donor is</strong> (segment, not PII), <strong>the organization's voice</strong> (warm, specific, never hype), <strong>the must-include facts</strong> (a real program outcome you can verify), <strong>length</strong>, and <strong>a "do not invent" instruction</strong> ("use only the facts I give you; do not add statistics, donor details, or quotes"). That last instruction is the single highest-value habit for reducing hallucinations in donor copy.</p>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Paste a paragraph of your <em>actual</em> best appeal into the tool as a voice sample and say "match this voice." It is the fastest way to stop AI drafts from sounding like a generic non-profit robot — and a generic, over-polished tone is exactly what donors and even funder reviewers now read as "AI wrote this."</p></div>
+
+      <h3>Part 4 — Discernment + Diligence before a donor sees it</h3>
+      <p>This is where trust is protected. AI generation has three failure modes that are especially dangerous in donor communication: <strong>hallucinated facts</strong> (invented stats, fake research, wrong program names), <strong>fabricated donor details</strong> (a personalized line that is simply not true of this donor), and <strong>off-voice / transactional tone</strong> (technically fine, emotionally hollow — the thing that makes donors feel processed by a machine).</p>
+      <p>The team's defense is a quick, repeatable review pass on every AI-assisted donor piece:</p>
+      <pre><code>THE "BEFORE A DONOR SEES IT" CHECK  (≤ 5 min)
+[ ] Every fact, number, name, date, and quote VERIFIED against a real source
+[ ] No fabricated donor detail — personalized claims checked by someone who
+    knows the donor or the record
+[ ] Reads in OUR voice, to a real person — not generic, not over-flattering
+[ ] No bias / no language that could alienate the communities we serve
+[ ] Disclosure decision made (see Part 5)
+[ ] A named human owns this send (Diligence — your name is on it, not the AI's)</code></pre>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>Treat AI as a fast, capable, occasionally-wrong intern who has never met your donors. You would never let an intern send a major-donor thank-you unread. Same rule.</p></div>
+
+      <h3>Part 5 — The AI-content disclosure decision</h3>
+      <p>Should you tell donors a piece was AI-assisted? The sector answer in 2025–2026 is converging on <strong>transparency about practice, proportionate to the piece</strong> — not a label on every email. AFP's ethics direction and the Fundraising.AI framework both point the same way: donors should be able to learn <em>where and why</em> you use AI and <em>how humans stay in control</em>; many donors will <em>reward</em> openness, and a meaningful minority say undisclosed AI use would make them less likely to give (directional). Disclosure is less about a footnote and more about an honest, discoverable stance.</p>
+      <p>A workable stance for a lean shop:</p>
+      <ul>
+        <li><strong>Always disclosable on request, and stated once publicly</strong> (e.g., a short line in your privacy/AI-use statement: "We sometimes use AI tools to help draft communications and analyze giving patterns; a staff member reviews and is accountable for everything we send, and we never share donor personal data with public AI tools").</li>
+        <li><strong>No per-message label needed</strong> for AI-<em>assisted</em> drafting that a human substantially edited and owns — this is like using spell-check or a template.</li>
+        <li><strong>Stronger disclosure</strong> when AI did something a donor would want to know about: an automated/agent reply with no human in the loop, AI-driven personalization of <em>content</em> (not just formatting), or AI used in something the donor would reasonably expect to be personal (a condolence note, a major-donor letter). The decision guide in the artifacts section walks this case by case.</li>
+      </ul>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The trust-destroyer is not "we used AI." It is "we used AI, hid it, and a donor found out." Decide your stance, write it down, and make it easy to find. Disclosure done well is a differentiator donors reward.</p></div>
+
+      <h3>Part 6 — Over-automation, authenticity, and board/donor talking points</h3>
+      <p>The deepest risk is cultural, not technical: automating so much that donors feel like records in a machine. A useful rule of thumb circulating in the sector is <strong>10-80-10</strong> — a human sets strategy for the first 10%, AI drafts the middle 80%, a human does the final 10% (verify, personalize, own). The human bookends are non-negotiable for anything relational. AI should buy fundraisers <em>more</em> time for calls, visits, and handwritten notes — not replace them.</p>
+      <p><strong>Board / leadership talking points.</strong> Development leadership should arm the board and ED to answer donor and public questions calmly and consistently:</p>
+      <table>
+        <thead><tr><th>If a donor / reporter asks…</th><th>Say (and be able to show)</th></tr></thead>
+        <tbody>
+          <tr><td>"Do you use AI on my donations / my data?"</td><td>"We use AI to help draft communications and spot giving patterns. We never put donor personal data into public AI tools, and a named staff member reviews and is accountable for everything you receive."</td></tr>
+          <tr><td>"Was this letter written by a robot?"</td><td>"A person on our team wrote and approved that letter. AI may have helped with a first draft, the same way we use templates and editors — but the words and the accountability are ours."</td></tr>
+          <tr><td>"Isn't this a waste of donor money?"</td><td>"It's the opposite: it frees our team from hours of admin so they spend more time with supporters and beneficiaries. We track that time saved."</td></tr>
+          <tr><td>"How do I know it's accurate / unbiased?"</td><td>"Every fact and number is human-verified before it goes out, and we review our donor models for bias. We can share our AI-use principles."</td></tr>
+          <tr><td>"Can I opt out of AI handling my data?"</td><td>"Yes — tell us and we'll note it. Here's our AI-use and privacy statement."</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Map your practice to a named framework so the board sees rigor, not improvisation. The <strong>Fundraising.AI</strong> framework's pillars — privacy &amp; security, data ethics, inclusiveness &amp; bias mitigation, accountability/transparency/explainability, continuous learning, collaboration, legal compliance, social impact, sustainability, and mission alignment — are a ready-made checklist, and AFP's Code of Ethical Standards is enforceable for members.</p></div>
+    </section>
+
+    <section id="exercises">
+      <h2>Hands-On Exercises</h2>
+
+      <h3>Exercise 1 — Build and red-team a lapsed-donor appeal (45 min)</h3>
+      <p><strong>Scenario.</strong> Your monthly-giving program has a cluster of donors who gave for 2–3 years and stopped ~8 months ago. You want a re-engagement email. You have a <em>de-identified</em> segment description and three <em>verifiable</em> program facts.</p>
+      <p><strong>Steps:</strong></p>
+      <ol>
+        <li><strong>Delegation check:</strong> Confirm you are using only the segment <em>description</em> (no names, no amounts tied to individuals) and an approved tool. (2 min)</li>
+        <li><strong>Description:</strong> Use the <strong>Appeal Draft</strong> pattern (artifacts). Include voice sample, the three real facts, length, and the "do not invent" instruction. Generate a draft. (10 min)</li>
+        <li><strong>Discernment red-team:</strong> Swap drafts with a partner. Hunt for: any invented statistic, any program/fact you cannot verify, any fabricated donor detail, generic/over-flattering tone, anything that could alienate the communities you serve. Mark every one. (12 min)</li>
+        <li><strong>Diligence:</strong> Rewrite to your voice, verify the three facts against a real source, decide disclosure (Part 5). (15 min)</li>
+        <li><strong>Debrief:</strong> How many hallucinations/fabrications did the room find collectively? (6 min)</li>
+      </ol>
+      <p><strong>Facilitator answer key — what teams typically catch:</strong></p>
+      <ul>
+        <li>A fabricated stat the model added on its own ("studies show monthly donors are 5x more loyal") — <em>delete; it was invented.</em></li>
+        <li>A made-up donor-specific line ("Since your first gift in 2019…") — <em>unverifiable per-donor in a segment send; cut or templatize safely.</em></li>
+        <li>Over-flattery / guilt-tripping that is off-voice — <em>rewrite warm and specific.</em></li>
+        <li>Tone that treats lapsing as the donor's failure — <em>bias toward respect; reframe.</em></li>
+        <li><strong>Teaching point:</strong> the "do not invent" instruction in step 2 should have prevented most fabrications; teams that skipped it find more. That is the lesson.</li>
+      </ul>
+
+      <h3>Exercise 2 — Disclosure decision sprint (20 min)</h3>
+      <p>Run each case through the <strong>Disclosure Decision Guide</strong> (artifacts) and decide: <em>no label needed / disclose / strengthen disclosure or add human step.</em></p>
+      <ol>
+        <li>AI helped draft a year-end appeal; a fundraiser heavily edited and signed it. → <em>No per-message label; covered by public AI-use statement.</em></li>
+        <li>An AI agent auto-replies to donor email inquiries with no human review. → <em>Disclose clearly that they're interacting with an automated assistant; add human escalation.</em></li>
+        <li>AI generated a "personalized" major-donor proposal grounded in CRM data; an officer reviewed it. → <em>No label, but officer must verify every personalized fact (Part 4); high-relationship piece.</em></li>
+        <li>A condolence note to a bereaved donor, AI-drafted. → <em>Strengthen the human step — this should be substantially human-written; authenticity matters most here.</em></li>
+        <li>Newsletter copy lightly AI-polished. → <em>No label; like spell-check.</em></li>
+      </ol>
+      <p><strong>Facilitator note:</strong> the throughline is <em>human-in-the-loop + proportionality.</em> Disclose more as (a) human involvement drops and (b) the donor's expectation of personal touch rises.</p>
+
+      <h3>Exercise 3 — Draft the board talking-points one-pager (15 min)</h3>
+      <p>In pairs, fill the talking-points table (Part 6) with your organization's <em>real</em> specifics: your actual tools, your actual data rule, one true time-saved example. Output is a one-pager the ED and board chair keep on hand.</p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>Artifact A — Fundraising Prompt-Pattern Library (each ends with a human-review step)</h3>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p>Use in your <strong>approved</strong> tool. De-identify donor data. Replace [brackets].</p></div>
+
+      <p><strong>Pattern 1 — Donor Segmentation (analysis helper).</strong></p>
+      <pre><code>You are helping a nonprofit fundraiser think about donor segments.
+Here is a DE-IDENTIFIED description of a group (no names, no individual amounts):
+[e.g., "monthly donors who gave $10–25/mo for 2–3 years, then stopped ~6–9 months ago"].
+Suggest: (1) 2–3 likely reasons this group lapses, (2) one re-engagement angle for each,
+(3) what data I should check in our CRM to test these.
+Do NOT invent statistics. Flag anything that would need verification.
+→ HUMAN STEP: validate against what we actually know; pull the real CRM data; do not act on a score alone.</code></pre>
+
+      <p><strong>Pattern 2 — Appeal / Re-engagement Draft.</strong></p>
+      <pre><code>You are a warm, specific nonprofit fundraiser. Match this voice sample: [paste 1 paragraph of our real copy].
+Write a [length] [email/letter] to [de-identified segment].
+Goal: [re-engage / annual ask / campaign].
+Use ONLY these verified facts: [fact 1; fact 2; fact 3].
+Do NOT invent statistics, donor details, quotes, or program facts. Plain language; no hype; no guilt.
+Suggested ask range: [from CRM], but write it as an invitation, not a demand.
+→ HUMAN STEP: verify every fact/number; remove any fabricated detail; edit to our voice; decide disclosure; a named person owns the send.</code></pre>
+
+      <p><strong>Pattern 3 — Thank-You / Acknowledgment.</strong></p>
+      <pre><code>Draft a thank-you for a gift to [program]. Voice sample: [paste].
+Make it specific to the impact of THIS gift using ONLY: [verified impact facts].
+Warm, brief, donor-centered (their generosity, not our need). No invented details. No flattery clichés.
+→ HUMAN STEP: confirm gift details against the record; verify the impact claim; personalize anything donor-specific only if true; human signs.</code></pre>
+
+      <p><strong>Pattern 4 — Grant Narrative / Case for Support.</strong></p>
+      <pre><code>You are drafting a section of a grant proposal for [funder/program]. Match our voice: [paste].
+Draft the [need statement / approach / outcomes] section using ONLY these verified facts and our logic model: [paste].
+Plain language. Do NOT invent statistics, citations, or outcomes. Where a citation or number is needed, write [VERIFY] instead of guessing.
+→ HUMAN STEP: replace every [VERIFY]; independently confirm all citations and numbers; check funder's AI-disclosure rules; subject-matter expert reviews; named human owns submission.</code></pre>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p>Funder note: major funders increasingly require AI-use disclosure (e.g., Horizon Europe, NIH for editing/language with disclosure; NSF). Check each funder's policy before submitting (directional). Never let AI invent citations — measured hallucination rates for AI citations run very high (directional).</p></div>
+
+      <h3>Artifact B — AI-Content Disclosure Decision Guide</h3>
+      <pre><code>START: A piece of donor/funder communication used AI. Disclose?
+
+Q1. Is there a HUMAN reviewing and owning the final content?
+    NO  → STOP. Add a human step OR clearly label it as an automated/AI assistant.
+    YES → go Q2.
+
+Q2. Did AI just help DRAFT/EDIT (like a template or spell-check), heavily human-edited?
+    YES → No per-message label needed. Cover it in your PUBLIC AI-use statement. → Q4.
+    NO/PARTLY → go Q3.
+
+Q3. Did AI generate PERSONALIZED CONTENT, or is this a piece a donor expects to be
+    deeply personal (condolence, major-donor letter, sensitive moment)?
+    YES → STRENGTHEN: make it substantially human-written; verify every personalized
+          fact; consider noting human authorship. → Q4.
+    NO  → No label needed; ensure public statement covers it. → Q4.
+
+Q4. ALWAYS true regardless:
+    • A public AI-use statement exists and is easy to find.
+    • Donors can ask and get a straight answer (and can opt out of AI data handling).
+    • No donor PII went into a public AI tool.
+    • Every fact is human-verified.
+DONE.</code></pre>
+      <p>Suggested public one-liner: <em>"We sometimes use AI tools to help draft communications and analyze giving patterns. A staff member reviews and is accountable for everything we send, and we never share donor personal information with public AI tools. Questions or opt-out: [contact]."</em></p>
+
+      <h3>Artifact C — "Donor-Data + AI" Do/Don't Card (print, pin at every dev desk)</h3>
+      <pre><code>┌──────────────────────────── DONOR DATA + AI ────────────────────────────┐
+│ DO                                   │ DON'T                              │
+│ • Use DE-IDENTIFIED segment          │ • Paste donor names, emails,       │
+│   descriptions &amp; aggregate trends    │   addresses, phone into a public   │
+│ • Use in-CRM / enterprise AI for     │   AI tool                          │
+│   real records (data stays governed) │ • Paste giving history, wealth/    │
+│ • Improve YOUR draft copy with AI    │   capacity ratings, or moves notes │
+│ • Verify every personalized fact     │ • Let AI invent donor details,     │
+│   against the real record            │   stats, quotes, or program facts  │
+│ • Use scores to PRIORITIZE attention │ • Make an automated decision about │
+│ • Add the "do not invent" line to    │   a person from a score            │
+│   every drafting prompt              │ • Send anything to a donor unread  │
+│ • Keep a named human owner on        │ • Assume "it reads well" = "it's   │
+│   every send                         │   true / on-voice / unbiased"      │
+│ CARDINAL RULE: No donor PII in a public AI tool. When unsure, de-identify  │
+│ or use the in-CRM feature. A human owns every donor send — not the AI.    │
+└───────────────────────────────────────────────────────────────────────────┘</code></pre>
+
+      <h3>Artifact D — Board / Leadership Donor-Question Talking Points</h3>
+      <p>Use the Part 6 table; fill with your real tools, your real data rule, and one verifiable time-saved figure. Keep it to one page; give it to the ED and board chair.</p>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> Which is safe to put into a <em>free, consumer</em> AI tool?<br>
+          a) A donor's name and last gift amount &nbsp; b) A de-identified segment description &nbsp; c) A capacity/wealth rating &nbsp; d) Moves-management notes</li>
+        <li><strong>(Short)</strong> A churn score flags a long-time donor as "high lapse risk." What should and should not happen?</li>
+        <li><strong>(MCQ)</strong> The single highest-value instruction to reduce hallucinations in a donor draft is:<br>
+          a) "Be creative" &nbsp; b) "Use only the facts I give you; do not invent statistics, donor details, or quotes" &nbsp; c) "Make it longer" &nbsp; d) "Add sources"</li>
+        <li><strong>(Short)</strong> A donor asks, "Was this thank-you written by a robot?" Give a good answer.</li>
+        <li><strong>(MCQ)</strong> Under the disclosure decision guide, which case needs the <em>strongest</em> handling?<br>
+          a) AI-polished newsletter &nbsp; b) Heavily-edited year-end appeal &nbsp; c) AI-drafted condolence note to a bereaved donor &nbsp; d) Internal segment analysis</li>
+        <li><strong>(Short)</strong> What is the 10-80-10 rule and why does it protect donor trust?</li>
+        <li><strong>(Short)</strong> Name three Fundraising.AI pillars relevant to this module.</li>
+        <li><strong>(MCQ)</strong> Before submitting an AI-assisted grant narrative, you must:<br>
+          a) Nothing extra &nbsp; b) Replace every [VERIFY], confirm all citations/numbers, check the funder's AI-disclosure policy, have an SME review &nbsp; c) Only check spelling &nbsp; d) Add more statistics</li>
+        <li><strong>(Short)</strong> Why is "we used AI and hid it" worse than "we used AI"?</li>
+        <li><strong>(Short)</strong> Which 4D habits matter most before a donor sees AI-assisted copy, and what do they require here?</li>
+      </ol>
+      <h3>Answer key</h3>
+      <ol>
+        <li><strong>b.</strong> Everything else is donor PII or sensitive and stays in a governed/enterprise environment.</li>
+        <li><em>Should:</em> prioritize a personal touch / call. <em>Should not:</em> write them off, downgrade them, or take any automated action based on the score alone.</li>
+        <li><strong>b.</strong></li>
+        <li>A person wrote and approved it; AI may have helped draft it like a template/editor would, but the words and accountability are ours. Offer the AI-use statement.</li>
+        <li><strong>c.</strong> Lowest human involvement-vs-expectation mismatch on a deeply personal moment; make it substantially human-written.</li>
+        <li>Human strategy (10%) → AI draft (80%) → human verify/personalize/own (10%). The human bookends keep relationships authentic and accountable, preventing over-automation.</li>
+        <li>Any of: privacy &amp; security; data ethics; inclusiveness &amp; bias mitigation; accountability/transparency/explainability; legal compliance; mission alignment (others acceptable).</li>
+        <li><strong>b.</strong></li>
+        <li>Donors reward openness and penalize concealment; the trust damage comes from the hiding, not the use. Decide a stance and make it discoverable.</li>
+        <li>Discernment (verify facts, catch fabricated details/bias/off-voice) + Diligence (edit to voice, decide disclosure, a named human owns the send).</li>
+      </ol>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist:</strong></p>
+      <ul>
+        <li>Confirm the org's <strong>approved tool tier</strong> and whether anyone may use real donor data in it (Module 3). If the only tool is consumer-grade, prepare fully fictional/anonymized donor examples for every exercise.</li>
+        <li>Pull a <strong>de-identified</strong> real segment, one real appeal (for the voice sample), and three <strong>verifiable</strong> program facts.</li>
+        <li>Print Artifacts C (do/don't card) and B (disclosure guide) for every participant.</li>
+        <li>Have the org's current donor-privacy statement on hand; if none exists, this session can draft the one-liner in Artifact B.</li>
+      </ul>
+      <p><strong>Free / low-cost materials:</strong> Fundraising.AI framework page; AFP Code of Ethical Standards; Anthropic + GivingTuesday <em>AI Fluency for Nonprofits</em>; your existing CRM's AI documentation (Blackbaud, Salesforce/Agentforce, Bloomerang, Virtuous, DonorSearch, Dataro).</p>
+      <p><strong>Timing:</strong> Protect Part 3 (library build) and Part 4 (red-team) — they carry the behavior change. If short on time, cut Part 1 lecture, not the hands-on.</p>
+      <p><strong>Common pitfalls:</strong></p>
+      <ul>
+        <li><em>Tool runs ahead of governance.</em> Fundraisers already paste donor data into ChatGPT. Name it without blame; redirect to the safe/unsafe split and in-CRM options.</li>
+        <li><em>Disclosure paralysis.</em> Teams over-rotate on labeling every email. Anchor on the decision guide: proportionate, human-in-the-loop, public statement.</li>
+        <li><em>AI-voice creep.</em> Drafts drift generic. Enforce the voice-sample habit; read drafts aloud.</li>
+        <li><em>Treating scores as truth.</em> Repeat: a score prioritizes attention, it never decides about a person.</li>
+      </ul>
+      <p><strong>Discussion prompts:</strong> "What do our biggest donors actually feel about AI — do we know, or are we guessing?" (ties to assessment 6.5) · "Where are we already over-automated and it shows?" · "What would we want disclosed if we were the donor?"</p>
+      <p><strong>Tailor by audience:</strong> A4 gets the full workshop. A1/board get Part 5–6 and Artifact D. A5 ops who handle gift data get Part 2 and Artifact C.</p>
+      <p><strong>Addressing fear/resistance:</strong> Two fears live here — fundraisers fearing AI makes their craft fake, and fundraisers fearing they'll break a data rule. Answer both: AI does the drafting grunt-work so they do <em>more</em> of the human relationship work they came into the field for; and the do/don't card makes the data rule simple enough that nobody has to guess. Celebrate the first "AI saved me an afternoon, so I made three donor calls instead" story publicly.</p>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <p>Tie to Kirkpatrick (weight L2–L4). Targets are directional; calibrate to your baseline.</p>
+      <table>
+        <thead><tr><th>Indicator</th><th>Level</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td>Confidence shift: "I can use AI on donor work without risking data or trust" (pre/post self-rating)</td><td>L2</td><td>+1.5 pts on a 5-pt scale</td></tr>
+          <tr><td>Knowledge check ≥ 8/10, including the cardinal data rule and the disclosure guide</td><td>L2</td><td>≥ 90% of participants</td></tr>
+          <tr><td>Shared <strong>prompt-pattern library</strong> exists, is used, and grows (count contributed patterns)</td><td>L3</td><td>≥ 4 patterns in use within 30 days; +1/month</td></tr>
+          <tr><td>Every AI-assisted donor send passes the "before a donor sees it" check (spot-audit)</td><td>L3</td><td>100% on audited sends; 0 donor-PII-in-public-tool incidents</td></tr>
+          <tr><td>Public <strong>AI-use / disclosure statement</strong> adopted and findable; board talking-points one-pager in hand</td><td>L3/L4</td><td>Adopted within 30 days</td></tr>
+          <tr><td>Fundraiser hours redirected from drafting/research to donor relationship time</td><td>L4</td><td>Track hrs/week saved; redeployed to calls/visits</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <p><strong>Named sector frameworks / resources:</strong></p>
+      <ul>
+        <li><strong>Fundraising.AI — Framework Toward Responsible AI for Fundraising</strong> (10 pillars): <a href="https://fundraising.ai/framework/">https://fundraising.ai/framework/</a> · About: <a href="https://fundraising.ai/about/">https://fundraising.ai/about/</a></li>
+        <li><strong>Fundraising.AI — <em>Donor Perceptions of AI 2025</em></strong> (donor trust/disclosure data; ~1,031 donors, Aug 2025): <a href="https://fundraising.ai/donor-perceptions-of-ai-2025/">https://fundraising.ai/donor-perceptions-of-ai-2025/</a></li>
+        <li><strong>AFP — <em>The New Currency of Fundraising: Trust in the Age of AI</em></strong>: <a href="https://afpglobal.org/new-currency-fundraising-trust-age-ai">https://afpglobal.org/new-currency-fundraising-trust-age-ai</a> · <strong>AFP Code of Ethical Standards</strong> (enforceable, Dec 2023): <a href="https://afpglobal.org/ethics/code-ethical-standards">https://afpglobal.org/ethics/code-ethical-standards</a></li>
+        <li><strong>National Council of Nonprofits — Embracing AI Responsibly with Fundraising.AI</strong>: <a href="https://www.councilofnonprofits.org/articles/future-nonprofits-embracing-ai-responsibly-fundraisingai">https://www.councilofnonprofits.org/articles/future-nonprofits-embracing-ai-responsibly-fundraisingai</a></li>
+        <li><strong>Anthropic + GivingTuesday — <em>AI Fluency for Nonprofits</em></strong> (4D framework): the foundational spine across all modules.</li>
+      </ul>
+      <p><strong>AI in fundraising — tools &amp; use-cases (treat vendor stats as directional):</strong></p>
+      <ul>
+        <li>Virtuous — <em>AI for Nonprofits in 2026: 7 Best Tools</em>: <a href="https://virtuous.org/blog/ai-for-nonprofits/">https://virtuous.org/blog/ai-for-nonprofits/</a></li>
+        <li>Salesforce — <em>Agentforce Nonprofit</em> (prospect research, gift proposals, donor summaries): <a href="https://www.salesforce.com/news/stories/agentforce-nonprofit-announcement/">https://www.salesforce.com/news/stories/agentforce-nonprofit-announcement/</a> · <a href="https://www.salesforce.com/nonprofit/artificial-intelligence/">https://www.salesforce.com/nonprofit/artificial-intelligence/</a></li>
+        <li>Blackbaud — predictive analytics / ResearchPoint: <a href="https://www.blackbaud.com/products/blackbaud-researchpoint">https://www.blackbaud.com/products/blackbaud-researchpoint</a> · <a href="https://www.blackbaud.com/solutions/analytics/modeling-and-prospect-research">https://www.blackbaud.com/solutions/analytics/modeling-and-prospect-research</a></li>
+        <li>Dataro — donor predictions / churn (Greenpeace retention example, directional): <a href="https://dataro.io/blog/artificial-intelligence-for-nonprofits-complete-explainer">https://dataro.io/blog/artificial-intelligence-for-nonprofits-complete-explainer</a></li>
+        <li>DonorSearch Ai — predictive modeling: <a href="https://www.donorsearch.net/donorsearch-ai/">https://www.donorsearch.net/donorsearch-ai/</a></li>
+      </ul>
+      <p><strong>Donor trust, disclosure &amp; over-automation:</strong></p>
+      <ul>
+        <li>SSIR — <em>How AI Can Deepen Nonprofit Relationships</em>: <a href="https://ssir.org/articles/entry/artificial-intelligence-donor-engagement">https://ssir.org/articles/entry/artificial-intelligence-donor-engagement</a></li>
+        <li>NonProfit PRO — <em>What AI Can — and Can't — Do for Donor Relationships</em>: <a href="https://www.nonprofitpro.com/article/what-ai-can-and-cant-do-for-donor-relationships/">https://www.nonprofitpro.com/article/what-ai-can-and-cant-do-for-donor-relationships/</a></li>
+        <li>The Class Consulting Group — <em>AI + Empathy</em> (10-80-10 framing): <a href="https://www.theclassconsultinggroup.org/post/beyond-automation-how-nonprofits-mix-ai-empathy-to-build-stronger-donor-relationships">https://www.theclassconsultinggroup.org/post/beyond-automation-how-nonprofits-mix-ai-empathy-to-build-stronger-donor-relationships</a></li>
+        <li>Fidelity Charitable — <em>Donor perceptions of AI</em>: <a href="https://www.fidelitycharitable.org/articles/donor-perceptions-of-ai.html">https://www.fidelitycharitable.org/articles/donor-perceptions-of-ai.html</a></li>
+      </ul>
+      <p><strong>Donor-data privacy + AI:</strong></p>
+      <ul>
+        <li>Bloomerang — <em>AI Security for Nonprofits: 7 Musts to Protect Donor Data</em>: <a href="https://bloomerang.com/blog/ai-security-for-nonprofits">https://bloomerang.com/blog/ai-security-for-nonprofits</a></li>
+        <li>StratusLIVE — <em>Nonprofit Donor Data Security Guide 2026</em> (state privacy laws, PCI DSS 4.0): <a href="https://stratuslive.com/blog/nonprofit-donor-data-security-guide/">https://stratuslive.com/blog/nonprofit-donor-data-security-guide/</a></li>
+      </ul>
+      <p><strong>AI grant writing / funder disclosure:</strong></p>
+      <ul>
+        <li>The Science Talk — <em>AI Grant Writing: What European Funders Now Require</em>: <a href="https://thesciencetalk.com/news/ai-grant-writing-european-funders-risks-disclosure/">https://thesciencetalk.com/news/ai-grant-writing-european-funders-risks-disclosure/</a></li>
+        <li>Univ. of Utah — <em>NIH Limits AI Use in Grant Proposals</em>: <a href="https://ai.utah.edu/blog/posts/2025/nih-ai-grant-proposals.php">https://ai.utah.edu/blog/posts/2025/nih-ai-grant-proposals.php</a></li>
+        <li>E.B. Howard Consulting — <em>Risks of Generative AI in Grant Proposal Preparation</em>: <a href="https://www.ebhoward.com/the-risks-of-generative-ai-in-grant-proposal-preparation/">https://www.ebhoward.com/the-risks-of-generative-ai-in-grant-proposal-preparation/</a></li>
+      </ul>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Calibration note.</strong> Donor-survey, vendor, and adoption statistics vary by methodology and source; treat all figures here as directional for target-setting, and verify current tool features, pricing, and funder AI policies before relying on them.</p></div>
+
+      <p>Companion: <a href="../non-profit-training.html">Non-Profit Training plan</a> · <a href="../non-profilt-assessment.html">assessment</a></p>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-5-funding-mission-roi.html"><span class="dir">← Previous</span><span class="ttl">Module 5: Funding, Mission &amp; ROI</span></a>
+      <a class="next" href="module-7-responsible-ai-beneficiary-safeguards.html"><span class="dir">Next →</span><span class="ttl">Module 7: Responsible AI &amp; Beneficiary Safeguards</span></a>
+    </nav>
+
+  </div>
+</div>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that amplifies your mission — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../non-profit-training.html">All Modules</a>
+      <a href="../non-profilt-assessment.html">Readiness Assessment</a>
+      <a href="mailto:hello@iiibc.com">hello@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — Beyond Cognition. All rights reserved.</span>
+    <span class="mono">Module 6 · Non-Profit Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>

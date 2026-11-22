@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 8: AI Across the Grant Lifecycle — IIIBC Non-Profit AI Training</title>
+  <meta name="description" content="Program, M&amp;E, and grants staff put AI to work at every stage of a project — proposal to close-out — with the human-review and disclosure steps that keep funders, beneficiaries, and the next grant cycle safe.">
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="training.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="nav"><div class="container nav__inner">
+  <a class="nav__logo" href="../non-profit-training.html"><img src="../assets/logo.svg" alt="IIIBC — Beyond Cognition" width="140" height="24"></a>
+  <nav class="nav__links">
+    <a href="../non-profit-training.html">All Modules</a>
+    <a href="../non-profilt-assessment.html">Assessment</a>
+    <a href="../index.html">IIIBC</a>
+  </nav>
+</div></header>
+
+<header class="page-header"><div class="container">
+  <div class="page-header__eyebrow">IIIBC Non-Profit AI Training · Module 8</div>
+  <h1>AI Across the Grant Lifecycle</h1>
+  <p class="page-header__purpose">Your work is organized in grants, not departments. This module teaches program, M&amp;E, and grants staff to put AI to work at every stage of a project — proposal to close-out — with the human-review and disclosure steps that keep funders, beneficiaries, and the next grant cycle safe.</p>
+  <div class="page-header__badges">
+    <span class="badge badge--level">Level: Practicing</span>
+    <span class="badge badge--section">Assessment §8 — Project-Based AI Integration</span>
+    <span class="badge badge--audience">A3 Program · M&amp;E/MEL · A5 Grants/Ops/Finance</span>
+  </div>
+</div></header>
+
+<main id="main" class="container"><div class="module-layout">
+
+  <aside class="toc"><div class="toc__title">On this page</div><ul>
+    <li><a href="#glance">At a Glance</a></li>
+    <li><a href="#why">Why This Module Exists</a></li>
+    <li><a href="#objectives">Learning Objectives</a></li>
+    <li><a href="#agenda">Session Agenda</a></li>
+    <li><a href="#content">Core Content</a></li>
+    <li><a href="#exercises">Hands-On Exercises</a></li>
+    <li><a href="#templates">Templates &amp; Takeaway Artifacts</a></li>
+    <li><a href="#knowledge-check">Knowledge Check</a></li>
+    <li><a href="#facilitator">Facilitator Guide</a></li>
+    <li><a href="#scorecard">Outcome Scorecard</a></li>
+    <li><a href="#sources">Further Resources &amp; Sources</a></li>
+  </ul></aside>
+
+  <div class="module-content">
+
+    <section id="glance">
+      <div class="glance">
+        <div class="glance__head">At a Glance</div>
+        <dl>
+          <dt>Module number</dt><dd>8 of 8</dd>
+          <dt>Maps to assessment</dt><dd>Section 8 — Project-Based AI Integration</dd>
+          <dt>Primary audience</dt><dd>A3 Program Directors · M&amp;E / MEL staff · A5 Grants / Operations / Finance</dd>
+          <dt>Competency level</dt><dd>Practicing</dd>
+          <dt>Duration</dt><dd>Half-day (3.5–4 hrs) applied workshop, tied to <strong>one live project</strong></dd>
+          <dt>Format</dt><dd>Applied workshop — participants bring a real, active grant and build artifacts against it</dd>
+          <dt>Prerequisites</dt><dd>Module 4 (4D fluency) for all; Module 2 (data hygiene) and Module 7 (beneficiary safeguards) strongly recommended — this module assumes the do-not-use list and cardinal data rule are already known.</dd>
+          <dt>Cost note</dt><dd>Deliverable on <strong>free / low-cost</strong> resources: your existing grant templates + a managed AI tool (Claude.ai, Microsoft Copilot, or ChatGPT Team — no-training-on-data tier). Sopact, Candid, NTEN, TechSoup offer free M&amp;E and grants guidance. IIIBC facilitation accelerates; it is not required to begin.</dd>
+          <dt>Related modules</dt><dd>Builds on 4 (fluency), 2 (data), 7 (safeguards). Feeds 5 (the AI budget line becomes the funder-ROI case) and 6 (grant proposal drafting overlaps with donor comms).</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="why">
+      <h2>Why This Module Exists</h2>
+      <p>Most non-profits do not run "departments" — they run <strong>projects</strong>, each with a start, an end, a funder, a budget, and a reporting calendar. That structure is the single biggest obstacle to sustaining AI. A tool adopted inside one grant disappears when the grant closes. The one person who learned it leaves. The data created never reaches the next proposal. The result is a sector that re-learns the same lessons every funding cycle — exactly the gap Assessment Section 8 measures.</p>
+      <p>At the same time, the project lifecycle is where AI's most concrete, low-risk wins live. <strong>Grant reporting is the clearest case.</strong> Section 5.6 of the assessment flags reporting that consumes more than 20% of a full-time role across active grants as a "critical burden / strong AI case." Synthesizing activity logs, outcome data, and financial summaries into a funder's format is repetitive, structured, deadline-driven work — and AI is good at exactly that, <em>when a human reviews and the use is disclosed.</em></p>
+      <p>But the lifecycle is also where AI can quietly cause real harm to your organization. In 2025, funders moved from informal guidance to enforceable policy. NIH's NOT-OD-25-132 (issued July 17, 2025; effective September 25, 2025) refuses applications "substantially developed by AI," caps each PI at six submissions per year, and routes post-award violations to the Office of Research Integrity (directional; NIH-specific). Horizon Europe now <em>requires</em> explicit disclosure of AI tool use. And AI fabricates: a 2025 study found hallucinated-citation rates ranging from roughly 14% to 95% across 13 large language models tested (directional). A fabricated citation in a funder document is not a typo — it is a research-integrity finding.</p>
+      <p>This module threads that needle. It maps where AI helps at each stage, builds the human-review and disclosure step <em>into the workflow</em> rather than bolting it on, and treats sustainability — budgeting, close-out knowledge capture, and tool sunsetting — as a first-class design problem, not an afterthought.</p>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The goal is not "use AI on this grant." It is to make AI a <strong>repeatable, governed, disclosed practice that survives the grant</strong> — embedded in your templates so the next project director inherits it instead of reinventing it.</p></div>
+    </section>
+
+    <section id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this module, participants will be able to:</p>
+      <ol>
+        <li>Map where AI helps — and where it must stay human — across all five grant-lifecycle stages (proposal, implementation, M&amp;E, reporting, close-out) using a <strong>grant-lifecycle AI map</strong>.</li>
+        <li>Build a credible <strong>technology / AI line</strong> into a project and grant-budget template, with cost basis and sustainability plan, defensible to a funder.</li>
+        <li>Run an <strong>AI-assisted grant report workflow</strong> that synthesizes activity logs, outcome data, and financial summaries into a funder's format — with a defined human-review checkpoint and a disclosure decision.</li>
+        <li>State the current funder landscape on AI disclosure and originality, and apply the rule: <em>never let AI generate the reasoning or fabricate a citation; disclose use you cannot defend without disclosing.</em></li>
+        <li>Structure an M&amp;E / MEL framework so it generates <strong>AI-ready outcome data</strong> (consistent indicators, structured fields, linked "why" text) and use AI to detect patterns and stress-test a theory of change — without overclaiming attribution.</li>
+        <li>Complete a <strong>project close-out AI knowledge-capture template</strong> so tools, prompts, data, and lessons survive turnover and the next funding cycle.</li>
+        <li>Decide how each AI tool will be <strong>transitioned, maintained, or sunset</strong> at project end, so the organization is never left with an unsupported dependency.</li>
+      </ol>
+    </section>
+
+    <section id="agenda">
+      <h2>Session Agenda</h2>
+      <p>A half-day, hands-on workshop. Every block produces something against a <strong>real, active grant</strong> participants bring with them.</p>
+      <table>
+        <thead><tr><th>Time block</th><th>Activity</th><th>Format</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Pre-work</strong></td><td>Each participant selects one live grant and brings: the proposal, the reporting template/schedule, and the most recent activity/outcome data.</td><td>Individual, before session</td></tr>
+          <tr><td><strong>0:00–0:15</strong></td><td>Welcome + the project-model problem: why AI dies at grant close-out</td><td>Live framing</td></tr>
+          <tr><td><strong>0:15–0:55</strong></td><td>Part 1 — Build your grant-lifecycle AI map (against your live grant)</td><td>Guided exercise</td></tr>
+          <tr><td><strong>0:55–1:25</strong></td><td>Part 2 — The AI / technology budget line + sustainability plan</td><td>Working block</td></tr>
+          <tr><td><strong>1:25–1:35</strong></td><td>Break</td><td>—</td></tr>
+          <tr><td><strong>1:35–2:25</strong></td><td>Part 3 — AI-assisted grant report workflow + the human-review/disclosure checkpoint (Exercise 1)</td><td>Hands-on</td></tr>
+          <tr><td><strong>2:25–3:05</strong></td><td>Part 4 — AI-ready M&amp;E: structuring outcome data; pattern detection &amp; theory-of-change check (Exercise 2)</td><td>Hands-on</td></tr>
+          <tr><td><strong>3:05–3:35</strong></td><td>Part 5 — Project close-out knowledge capture + tool sunsetting (Exercise 3)</td><td>Working block</td></tr>
+          <tr><td><strong>3:35–3:50</strong></td><td>Knowledge check + commitments</td><td>Live, individual</td></tr>
+          <tr><td><strong>3:50–4:00</strong></td><td>Outcome scorecard + next steps</td><td>Close</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>This module only works if it is anchored to a <em>real</em> grant. Generic exercises produce generic habits. Tell participants in the invite: "Bring an active grant and its reporting template — you will leave with that grant's AI map, report workflow, and close-out plan started."</p></div>
+    </section>
+
+    <section id="content">
+      <h2>Core Content</h2>
+
+      <h3>Part 1 — The grant lifecycle as an AI map (with the human gate at every stage)</h3>
+      <p>A grant moves through five stages. AI can help at each — but the <em>kind</em> of help, and the <em>risk</em>, changes stage to stage. The non-negotiable design rule, drawn from the 4D <strong>Diligence</strong> habit: <strong>every AI output that touches a funder, a beneficiary, or a compliance record passes through a human-review and disclosure gate before it leaves your hands.</strong></p>
+      <pre><code>THE GRANT-LIFECYCLE AI MAP
+                                                    ┌─ HUMAN GATE ─┐
+  ┌────────────┐   ┌────────────┐   ┌────────────┐  │ verify facts │   ┌────────────┐
+  │ 1.PROPOSAL │──►│2.IMPLEMENT │──►│ 3. M&amp;E /   │──►│ check bias   │──►│ 4.REPORTING│
+  │            │   │            │   │   MEL      │  │ disclose use │   │            │
+  └────────────┘   └────────────┘   └────────────┘  └──────────────┘   └─────┬──────┘
+        ▲                                                                     │
+        │                                                                     ▼
+        │                            ┌──────────────────────────────────────────────┐
+        └────────────────────────────┤ 5. CLOSE-OUT: capture tools, prompts, data,  │
+           feeds the next proposal    │    lessons → next cycle · sunset/transition  │
+                                      └──────────────────────────────────────────────┘</code></pre>
+      <table>
+        <thead><tr><th>Stage</th><th>Where AI helps (Delegation)</th><th>Stays human / high-risk</th><th>Human gate + disclosure</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Proposal</strong></td><td>Repurpose past proposals; draft boilerplate (org background, methodology scaffolding); summarize the RFP; build budget tables; check completeness against funder criteria</td><td>The <em>needs statement's core argument, theory of change, and specific aims</em> — your original reasoning. <strong>Never</strong> let AI generate citations.</td><td>Verify every fact, stat, and citation against a real source; rewrite AI scaffolding into your own voice; disclose per funder rules (Part 4).</td></tr>
+          <tr><td><strong>2. Implementation</strong></td><td>Meeting summaries; translating beneficiary-facing materials; drafting partner communications; first-pass document review</td><td>Decisions about real people (eligibility, service allocation, safety) — see Module 7's do-not-use list</td><td>Staff reviews summaries for accuracy before action; no sensitive beneficiary data in non-managed tools (Module 2).</td></tr>
+          <tr><td><strong>3. M&amp;E / MEL</strong></td><td>Theme open-text feedback; detect patterns across multi-year data; stress-test the theory of change; draft data-collection instruments</td><td><em>Causal/attribution claims</em>; final impact judgments; anything overstating evidence</td><td>M&amp;E lead validates every pattern against the raw data; AI suggests, humans conclude.</td></tr>
+          <tr><td><strong>4. Reporting</strong></td><td>Synthesize activity logs + outcome data + financial summaries into the funder's format; draft narrative sections from metrics</td><td>The numbers themselves (must come from your systems, not AI); claims of impact</td><td>The report workflow's review checkpoint (Part 3); disclosure decision.</td></tr>
+          <tr><td><strong>5. Close-out</strong></td><td>Draft the final/lessons-learned report; summarize what worked; compile the knowledge-capture record</td><td>Sign-off on accuracy; the decision to sustain/sunset each tool</td><td>Program director verifies; close-out template completed (Part 5).</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p>Two facts must <em>never</em> originate from AI in a grant document: <strong>(1) a number</strong> — every metric comes from your own activity logs, M&amp;E system, or finance records; and <strong>(2) a citation</strong> — AI fabricates references that look perfect. AI may <em>arrange and narrate</em> your verified numbers and real citations. It may not <em>produce</em> them.</p></div>
+      <p><strong>Non-profit example.</strong> A youth-employment nonprofit runs a 3-year, foundation-funded program. AI drafts the quarterly report's narrative <em>from</em> the M&amp;E team's verified placement numbers, themes the 240 open-text exit-survey comments into five recurring themes, and reformats it all into the funder's template. The program director verifies every number against the database, reads the themed quotes against a sample of raw comments, removes one AI-inferred causal claim ("the program <em>caused</em> a 30% wage increase" → "participants reported a median wage increase of 30%; see limitations"), and adds the org's standard AI-use disclosure line. Time on the report drops from two days to half a day. Nothing false reaches the funder.</p>
+
+      <h3>Part 2 — The AI / technology budget line and sustainability plan</h3>
+      <p>The reason AI dies at grant close-out is usually that it was never <em>funded as a line item</em> with a plan to outlive the grant. Fix this at the proposal stage. (This connects directly to Module 5's mission-ROI case and to Assessment 8.1 and 8.7.)</p>
+      <p><strong>What goes in the technology / AI budget line:</strong></p>
+      <pre><code>PROJECT BUDGET — TECHNOLOGY / AI LINE (illustrative structure)
+┌───────────────────────────────────────────────┬──────────────────────────┐
+│ Item                                           │ Basis                    │
+├───────────────────────────────────────────────┼──────────────────────────┤
+│ Managed AI tool seats (no-training-on-data)    │ # staff × monthly × mos. │
+│ M&amp;E / data platform or survey tool             │ annual license, prorated │
+│ Staff time: setup, prompt-library build        │ hours × loaded rate      │
+│ Staff time: AI fluency training (Module 4)     │ hours × loaded rate      │
+│ Allocated to indirect/admin where appropriate  │ per your NICRA/de minimis│
+└───────────────────────────────────────────────┴──────────────────────────┘</code></pre>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Many small non-profits with no negotiated indirect rate can use the <strong>10% de minimis</strong> indirect-cost rate on modified total direct costs under federal Uniform Guidance (2 CFR 200.414) — a place general technology and AI overhead can live. Confirm allowability with the specific funder; foundation rules differ from federal.</p></div>
+      <p><strong>The sustainability question funders actually ask:</strong> <em>"Who will manage this technology, and how will it be sustained after the grant period?"</em> You must answer it in the proposal. There are three honest answers, and naming one is required:</p>
+      <ol>
+        <li><strong>Absorb</strong> — the tool becomes part of core operations, funded from unrestricted/general operating after grant end.</li>
+        <li><strong>Re-fund</strong> — the tool is rebuilt into the next grant's budget (state the plan; do not assume).</li>
+        <li><strong>Sunset</strong> — the tool was project-specific and will be retired at close-out (then say so, and plan the data export — see Part 5).</li>
+      </ol>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>"We will figure it out later" is what creates unsupported dependencies. A funder respects "this tool sunsets at close-out and we export the data" far more than silence that becomes a stranded cost. Decide the path <em>in the proposal.</em></p></div>
+
+      <h3>Part 3 — AI-assisted grant reporting (the highest-value, lowest-risk win)</h3>
+      <p>Reporting is the single best place to start because the inputs already exist in your systems and the output format is fixed by the funder. The workflow below makes the human-review and disclosure steps <strong>mandatory stations</strong>, not optional reminders.</p>
+      <pre><code>AI-ASSISTED GRANT REPORT WORKFLOW
+ ┌──────────────┐
+ │ 0. GATHER    │  Activity logs · M&amp;E outcome data · financial summary ·
+ │  verified    │  funder's report template/format · prior report
+ │  inputs      │  (ALL numbers come from YOUR systems — never from AI)
+ └──────┬───────┘
+        ▼
+ ┌──────────────┐
+ │ 1. SCRUB     │  Remove sensitive beneficiary identifiers before any tool
+ │              │  (Module 2 cardinal rule). Use a managed tool only.
+ └──────┬───────┘
+        ▼
+ ┌──────────────┐
+ │ 2. DRAFT     │  Prompt AI to map YOUR verified data into the funder's
+ │  (Describe)  │  section structure; theme qualitative comments
+ └──────┬───────┘
+        ▼
+ ┌──────────────┐  ◄── MANDATORY HUMAN GATE (Discernment + Diligence)
+ │ 3. REVIEW    │  ✓ every number traced to source  ✓ no fabricated citations
+ │              │  ✓ no overstated/causal claims  ✓ bias toward served pop.
+ │              │  ✓ funder requirements met  ✓ rewritten into org voice
+ └──────┬───────┘
+        ▼
+ ┌──────────────┐
+ │ 4. DISCLOSE  │  Apply the org's AI-use disclosure stance per funder rules
+ └──────┬───────┘
+        ▼
+ ┌──────────────┐
+ │ 5. SIGN/SEND │  A named human owns and submits the report
+ └──────────────┘</code></pre>
+      <table>
+        <thead><tr><th>Do</th><th>Don't</th></tr></thead>
+        <tbody>
+          <tr><td>Paste <em>your own verified</em> metrics and ask AI to narrate them into the funder's format</td><td>Ask AI "what were our outcomes this quarter?" — it will invent plausible numbers</td></tr>
+          <tr><td>Ask AI to <em>theme</em> open-text comments, then read a sample of raw comments to confirm</td><td>Trust the themes without checking them against the actual responses</td></tr>
+          <tr><td>Keep a one-line log per report of what AI did and what you verified</td><td>Submit AI-assisted narrative no human has read line-by-line</td></tr>
+          <tr><td>Strip beneficiary identifiers before the tool sees anything</td><td>Paste case notes or PII into any tool, managed or not, beyond policy</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Part 4 — Funder rules on AI: disclosure, originality, and the fabrication trap</h3>
+      <p>The 2024–2026 funder landscape settled on a consistent ask: <strong>be honest about whether and how you used AI, keep the reasoning yours, and never fabricate.</strong> Specifics vary by funder, so the operating standard is simple — <em>use AI in a way you can defend if a program officer asks.</em></p>
+      <table>
+        <thead><tr><th>Funder type</th><th>Current stance (directional; verify per funder)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>NIH (federal)</strong></td><td>NOT-OD-25-132: refuses applications "substantially developed by AI"; AI as disclosed <em>assistant</em> (grammar, formatting, polishing non-native English) is acceptable, AI as undisclosed <em>ghostwriter</em> of scientific reasoning is not; six-application annual cap per PI; post-award violations → Office of Research Integrity.</td></tr>
+          <tr><td><strong>NSF (federal)</strong></td><td>Disclosure-based framework signaled for applicants; reviewers <strong>prohibited</strong> from uploading proposal content to non-approved AI tools (confidentiality).</td></tr>
+          <tr><td><strong>Horizon Europe (international)</strong></td><td>Explicit <strong>disclosure required</strong> if AI tools helped draft/develop the proposal.</td></tr>
+          <tr><td><strong>Most private foundations</strong></td><td>Few standalone AI policies yet; in practice deferring to the federal funder-of-record standard, and some program staff now flag proposals that "read like a language model wrote them."</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--safeguard"><span class="callout__label">Safeguard</span><p><strong>Fabricated citations are the fastest way to lose a funder's trust.</strong> AI invents references that look real — correct-looking authors, journals, years — that do not exist. In a grant document this is treated as an integrity violation, not a mistake. Verify every citation against the actual source. If you cannot find the real source, the claim does not go in.</p></div>
+      <p><strong>A defensible org disclosure stance (adopt and keep consistent):</strong></p>
+      <ul>
+        <li>Maintain a <strong>per-document AI-use log</strong>: which sections used AI, which tool, and what you verified.</li>
+        <li>Default to <strong>disclosing AI assistance</strong> to funders unless the funder's rules clearly make it unnecessary — disclosure you didn't strictly need costs nothing; undisclosed use you can't defend costs trust.</li>
+        <li>Keep all <em>reasoning, claims, numbers, and citations</em> human-owned and verified. AI assists with structure, language, and synthesis of <em>your</em> verified material.</li>
+      </ul>
+      <div class="callout callout--noise"><span class="callout__label">Noise</span><p>Vendor claims like "AI-written proposals see a 30% higher success rate" circulate widely (directional, vendor-sourced). Treat them with skepticism — and note that several funders now <em>penalize</em> proposals that read as AI-generated. The win is reduced burden and better structure on <em>your</em> argument, not outsourcing the argument.</p></div>
+
+      <h3>Part 5 — AI-ready M&amp;E and project close-out that survives the cycle</h3>
+      <p><strong>Make your M&amp;E generate AI-ready data.</strong> AI-assisted impact analysis is only as good as the structure of the data feeding it. Assessment 8.6 measures exactly this. The fixes are cheap and mostly about discipline at data-collection time:</p>
+      <pre><code>DESIGNING AI-READY OUTCOME DATA
+┌────────────────────────────────────────────────────────────────────────┐
+│ • Consistent indicators: same definition across cohorts, projects, time │
+│ • Structured fields: dropdowns/multiselect, NOT free text, for anything │
+│   you want to compare (avoids "same concept, ten spellings")            │
+│ • Pre/post self-reported rating on each core outcome (comparable)       │
+│ • ONE open-text "why" linked to each rating (AI themes it later)        │
+│ • 1–2 demographic fields for equity analysis (with consent)             │
+│ • A shared data dictionary: one definition of each metric, owned        │
+└────────────────────────────────────────────────────────────────────────┘</code></pre>
+      <p>With that structure, AI can do useful M&amp;E work: <strong>theme hundreds of open-text comments</strong> automatically, <strong>detect patterns across multi-year data</strong>, and <strong>stress-test a theory of change</strong> ("where does our outcome data support, or fail to support, each link in our logic model?"). The discipline that keeps this honest: AI <em>surfaces</em> patterns and <em>poses questions</em>; the M&amp;E lead <em>validates against the raw data</em> and owns every conclusion. AI must never make a causal or attribution claim your evidence can't support.</p>
+      <div class="callout callout--practitioner"><span class="callout__label">Practitioner note</span><p>Cross-project data architecture (Assessment 8.4) is powerful but <strong>consent-gated</strong>. Data collected in one project may inform future programming only if beneficiaries consented to that use. Re-using beneficiary data across grants without consent is a Module 7 violation, not an efficiency. When in doubt, the answer is no.</p></div>
+      <p><strong>Project close-out: capture knowledge before it walks out the door.</strong> Federal close-out under Uniform Guidance (2 CFR 200.344) requires final reports and liquidation within <strong>120 calendar days</strong> of the period of performance — start preparing about three months out. But the funder's close-out is about <em>their</em> accountability; <em>your</em> close-out must also preserve the AI capability for the organization. This is the step that defeats the project-model problem.</p>
+      <pre><code>WHAT CLOSE-OUT MUST CAPTURE (so the next cycle inherits it)
+  Tools used ──► seats, costs, who managed them, sunset/transition decision
+  Prompts ─────► the prompt library that worked (report, M&amp;E, comms)
+  Data ────────► what was created, where it lives, consent scope, exports
+  Lessons ─────► what AI helped with, what failed, what to do differently
+  People ──────► who knew what (the turnover insurance)</code></pre>
+      <p><strong>Tool sunsetting (Assessment 8.7).</strong> When a project ends, every AI/tech tool needs an explicit decision so the org isn't left paying for or depending on something orphaned:</p>
+      <table>
+        <thead><tr><th>Decision</th><th>Action at close-out</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Sunset</strong></td><td>Cancel subscription; <strong>export all data first</strong>; document what was lost/retained; remove access.</td></tr>
+          <tr><td><strong>Transition</strong></td><td>Move the seat/license into core operations or another active grant; reassign the owner.</td></tr>
+          <tr><td><strong>Re-fund</strong></td><td>Confirm it's in the next grant's budget before relying on it; otherwise treat as sunset.</td></tr>
+        </tbody>
+      </table>
+      <div class="callout callout--signal"><span class="callout__label">Signal</span><p>The test of whether this module worked is a year out: a new project director, on a new grant, opens the templates and finds an AI budget line, a working report workflow, a prompt library, and a close-out record from the last project — and does not start from zero. That is AI surviving the grant cycle.</p></div>
+    </section>
+
+    <section id="exercises">
+      <h2>Hands-On Exercises</h2>
+
+      <h3>Exercise 1 — Build and run your AI-assisted grant report (40 min)</h3>
+      <p><strong>Scenario:</strong> Use the live grant you brought. You have one quarter's verified activity data, outcome data, a financial summary, and the funder's report template.</p>
+      <p><strong>Steps:</strong></p>
+      <ol>
+        <li><strong>Gather &amp; scrub (5 min):</strong> Assemble your verified inputs. Remove every beneficiary identifier. Confirm you're in a managed tool.</li>
+        <li><strong>Draft (10 min):</strong> Prompt the AI. Use this pattern:
+          <div class="callout callout--note"><span class="callout__label">Note</span><p><em>"You are helping draft a grant progress report. Below are our VERIFIED figures and the funder's required section headings. Map our data into these sections and draft the narrative. Do not invent any numbers, statistics, or citations — use only what I provide. Flag anywhere you'd need data I haven't given you. [paste verified data] [paste funder template headings]"</em></p></div>
+        </li>
+        <li><strong>Review at the human gate (15 min):</strong> Run the checklist below. Trace each number to its source. Find and fix any overstated/causal claim. Confirm zero fabricated citations.</li>
+        <li><strong>Disclose &amp; sign (10 min):</strong> Write your org's one-line AI-use disclosure and your per-document log entry.</li>
+      </ol>
+      <p><strong>Facilitator answer key — what a good output shows:</strong></p>
+      <ul>
+        <li>Every number in the draft matches a source the participant can point to; no orphan figures.</li>
+        <li>At least one AI-inserted causal/overstated phrase was caught and softened (this almost always appears — use it to teach Discernment).</li>
+        <li>Qualitative themes were checked against a sample of raw comments.</li>
+        <li>A disclosure line and a log entry exist. Common miss: participants disclose nothing because "we only used it a little" — coach toward the defensible-default stance.</li>
+      </ul>
+
+      <h3>Exercise 2 — AI-ready M&amp;E and a theory-of-change stress test (40 min)</h3>
+      <p><strong>Scenario:</strong> Take your project's logic model / theory of change and a slice of your outcome data (anonymized).</p>
+      <p><strong>Steps:</strong></p>
+      <ol>
+        <li><strong>Audit data structure (10 min):</strong> Score your current M&amp;E against the "AI-ready outcome data" box. Where are you using free text for things you want to compare? Where are indicator definitions inconsistent? List two fixes.</li>
+        <li><strong>Theme open-text (10 min):</strong> Paste a set of anonymized open-text responses; ask AI to identify recurring themes and pull a representative quote for each.</li>
+        <li><strong>Stress-test the theory of change (15 min):</strong> Ask: <em>"Here is one link in our logic model: [link]. Here is the outcome data relevant to it: [data]. Where does the data support this link, and where is it weak or silent? Pose three questions our M&amp;E should answer next. Do not assert causation."</em></li>
+        <li><strong>Validate (5 min):</strong> Check the themes against a sample of raw responses; mark any AI claim that overstated the evidence.</li>
+      </ol>
+      <p><strong>Facilitator answer key:</strong></p>
+      <ul>
+        <li>Strong answers identify <em>gaps</em> ("we have output data but no outcome data for this link") rather than accepting AI's confident narrative.</li>
+        <li>At least one over-attribution by the AI is caught ("data shows the program <em>works</em>" → "data is consistent with, but does not prove, the link").</li>
+        <li>Two concrete, cheap data-structure fixes are named (e.g., convert a free-text field to a dropdown; write one shared definition for a contested metric).</li>
+      </ul>
+
+      <h3>Exercise 3 — Project close-out AI knowledge-capture (25 min)</h3>
+      <p><strong>Scenario:</strong> Imagine your live grant closes in 90 days. Complete the close-out capture template (in Templates section) for it now.</p>
+      <p><strong>Steps:</strong></p>
+      <ol>
+        <li>List every AI/tech tool the project used, its cost, and its owner (10 min).</li>
+        <li>For each tool, choose <strong>sunset / transition / re-fund</strong> and write the one action that decision requires (5 min).</li>
+        <li>Paste your two or three best working prompts into the prompt-library section (5 min).</li>
+        <li>Write three lessons: one thing AI helped with, one thing it failed at, one change for next time (5 min).</li>
+      </ol>
+      <p><strong>Facilitator answer key:</strong> A complete template names a <em>person</em> against each tool and a <em>data export</em> step against every "sunset." The most common gap is a tool with no named owner — flag it: "unowned tool = stranded cost or lost capability at close-out."</p>
+    </section>
+
+    <section id="templates">
+      <h2>Templates &amp; Takeaway Artifacts</h2>
+
+      <h3>A. Grant-Lifecycle AI Map (one-pager — fill in per project)</h3>
+      <table>
+        <thead><tr><th>Stage</th><th>AI helps with (our project)</th><th>Stays human</th><th>Human gate / disclosure step</th><th>Owner</th></tr></thead>
+        <tbody>
+          <tr><td>1. Proposal</td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>2. Implementation</td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>3. M&amp;E / MEL</td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>4. Reporting</td><td></td><td></td><td></td><td></td></tr>
+          <tr><td>5. Close-out</td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+
+      <h3>B. AI-Assisted Grant Report Checklist (staple to every report)</h3>
+      <pre><code>BEFORE DRAFTING
+[ ] Inputs are VERIFIED and from our own systems (no numbers from AI)
+[ ] Beneficiary identifiers removed; using a managed (no-train) tool only
+[ ] Funder's exact format/headings on hand
+
+HUMAN-REVIEW GATE (do not skip)
+[ ] Every number traced to its source document
+[ ] ZERO fabricated citations — each reference verified against the real source
+[ ] No overstated or causal claims beyond what the data supports
+[ ] Checked for bias / mischaracterization of the population served
+[ ] All funder-required sections present and answered
+[ ] Rewritten into our organization's voice (not AI boilerplate)
+
+DISCLOSE &amp; OWN
+[ ] AI-use disclosure applied per this funder's rules (default: disclose)
+[ ] Per-document AI log entry written (sections, tool, verification done)
+[ ] A named person owns and signs the report before it is sent</code></pre>
+
+      <h3>C. AI / Technology Budget Line + Sustainability Statement (proposal snippet)</h3>
+      <pre><code>TECHNOLOGY / AI LINE
+ Managed AI tool seats: ___ staff × $___/mo × ___ months   = $______
+ M&amp;E / data / survey platform (prorated to grant period)   = $______
+ Staff time — setup + prompt-library build (___ hrs)       = $______
+ Staff time — AI fluency training (___ hrs)                = $______
+ Indirect/admin allocation (per NICRA or 10% de minimis)   = $______
+
+SUSTAINABILITY STATEMENT (choose one, state plainly to the funder)
+ [ ] ABSORB — moves to core operations, funded from general operating after close-out
+ [ ] RE-FUND — built into the next grant budget (plan: __________________)
+ [ ] SUNSET — project-specific; retired at close-out; data exported (see close-out plan)
+ Who will manage it: __________________   How sustained: __________________</code></pre>
+
+      <h3>D. Project Close-Out AI Knowledge-Capture Template</h3>
+      <pre><code>PROJECT: ______________________  FUNDER: ____________  CLOSE DATE: ________
+Federal? If yes: final reports + liquidation due within 120 days (2 CFR 200.344)
+
+1) TOOLS USED
+ Tool | Purpose | Cost/seats | Owner | Decision (sunset/transition/re-fund) | Action
+ -----|---------|------------|-------|--------------------------------------|--------
+ ...  |         |            |       |                                      |
+
+2) DATA CREATED
+ Dataset | Where it lives | Consent scope (who can reuse it) | Export done? (Y/N)
+ --------|----------------|----------------------------------|-------------------
+
+3) PROMPT LIBRARY (what actually worked)
+ - Reporting prompt: ______________________________________________
+ - M&amp;E / theming prompt: __________________________________________
+ - Comms / translation prompt: ____________________________________
+
+4) LESSONS
+ - AI helped most with: ___________________________________________
+ - AI failed / risked harm at: ____________________________________
+ - Next time we will: _____________________________________________
+
+5) PEOPLE (turnover insurance)
+ - Who knew how to run each tool/workflow: ________________________
+ - Where this record is stored (org-owned, not personal drive): ___</code></pre>
+
+      <h3>E. Per-Document AI-Use Log (one line per deliverable)</h3>
+      <pre><code>Date | Document | Sections AI assisted | Tool used | Verification performed | Disclosed? (Y/N)
+-----|----------|----------------------|-----------|------------------------|-----------------</code></pre>
+    </section>
+
+    <section id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <ol>
+        <li><strong>(MCQ)</strong> In an AI-assisted grant report, where must the <em>numbers</em> come from? a) The AI tool's best estimate · b) The funder's prior report · c) Your own verified systems (activity logs, M&amp;E, finance) · d) A web search</li>
+        <li><strong>(MCQ)</strong> A funder asks whether you used AI on a proposal. The safest default org stance is to: a) Deny it to avoid suspicion · b) Disclose AI assistance and keep a per-document log · c) Only disclose if directly required in writing · d) Let the AI write the disclosure</li>
+        <li><strong>(Short answer)</strong> Name the two things that must <em>never</em> originate from AI in a grant document, and why.</li>
+        <li><strong>(Short answer)</strong> Your project ends in 90 days and used a paid AI tool funded only by that grant. List the three sustainability options and what each requires at close-out.</li>
+        <li><strong>(MCQ)</strong> Which M&amp;E design choice best produces AI-ready outcome data? a) Free-text fields for everything · b) Dropdowns/multiselect for anything you want to compare, plus one linked open-text "why" · c) Collecting more demographic data without consent · d) Letting AI define the indicators</li>
+        <li><strong>(Short answer)</strong> Why is re-using beneficiary data collected in one project to inform a future project not automatically allowed?</li>
+        <li><strong>(MCQ)</strong> AI proposes a clear causal claim from your M&amp;E data ("the program <em>caused</em> a 30% gain"). The M&amp;E lead should: a) Use it — it sounds strong · b) Validate against raw data and soften to a defensible, non-causal statement · c) Ask AI to find a citation supporting it · d) Submit and add a disclaimer later</li>
+        <li><strong>(Short answer)</strong> What is the difference between the funder's close-out and your organization's close-out, and why does the org's matter for AI?</li>
+      </ol>
+      <h3>Answer key</h3>
+      <ol>
+        <li><strong>c.</strong> Numbers come from your own verified systems; AI invents plausible figures if asked to produce them.</li>
+        <li><strong>b.</strong> Disclose-by-default plus a per-document log is defensible; denial and after-the-fact disclosure are not.</li>
+        <li><strong>Numbers and citations.</strong> AI fabricates both convincingly; in a funder document a fabricated citation is treated as an integrity violation, and an invented number is a false statement. AI may arrange/narrate verified numbers and real citations only.</li>
+        <li><strong>Absorb</strong> (fund from general operating after grant end), <strong>Re-fund</strong> (build into next grant budget — confirm, don't assume), <strong>Sunset</strong> (retire at close-out; export all data first). Each needs a named owner.</li>
+        <li><strong>b.</strong> Structured fields enable comparison; one linked "why" gives AI text to theme; equity fields require consent.</li>
+        <li>Because consent is use-specific — beneficiaries consented to the original project's use, not a future one. Cross-project reuse without consent is a beneficiary-safeguard violation (Module 7), not an efficiency.</li>
+        <li><strong>b.</strong> AI surfaces patterns; humans validate against raw data and never overstate attribution.</li>
+        <li>The funder's close-out (e.g., 2 CFR 200.344's 120-day reports/liquidation) serves the funder's accountability. The org's close-out captures tools, prompts, data, lessons, and people so AI capability survives turnover and the next cycle — defeating the project-model problem that kills AI adoption.</li>
+      </ol>
+    </section>
+
+    <section id="facilitator">
+      <h2>Facilitator Guide</h2>
+      <p><strong>Prep checklist (free / low-cost):</strong></p>
+      <ul>
+        <li>Confirm every participant brings a <strong>real, active grant</strong> with its reporting template and recent data. Without this the workshop falls flat.</li>
+        <li>Have one managed AI tool available (Claude.ai, Microsoft Copilot, or ChatGPT Team — no-training-on-data). Confirm it's on the org's approved-tool catalog (Module 3).</li>
+        <li>Pre-anonymize a sample outcome dataset and a sample of open-text comments as a fallback for anyone whose data isn't ready.</li>
+        <li>Print Templates A–E.</li>
+        <li>Have the org's AI policy and do-not-use list (Module 7) and cardinal data rule (Module 2) on hand.</li>
+      </ul>
+      <p><strong>Timing:</strong> The two hands-on exercises (1 and 2) are the heart; protect their time. If running long, compress Part 5 lecture and push Exercise 3 to a follow-up — but never cut the human-review gate teaching in Exercise 1.</p>
+      <p><strong>Common pitfalls:</strong></p>
+      <ul>
+        <li><em>Pasting real PII into the tool mid-exercise.</em> Stop immediately; reinforce the cardinal rule. Use this as a teachable moment, not a gotcha.</li>
+        <li><em>Accepting AI numbers.</em> Watch for participants who let AI "fill in" a missing figure. This is the highest-risk habit; catch it live.</li>
+        <li><em>Skipping disclosure as "too small to matter."</em> Coach the defensible-default stance.</li>
+        <li><em>Treating sustainability as optional.</em> If a team can't name who manages a tool after grant end, they've found their gap.</li>
+      </ul>
+      <p><strong>Discussion prompts:</strong></p>
+      <ul>
+        <li>"Which of our active grants has the heaviest reporting burden? What would half that time buy us in program delivery?"</li>
+        <li>"Name one tool we adopted in a past grant that we lost when the grant closed. What did that cost us?"</li>
+        <li>"Where in our M&amp;E are we collecting data in a way AI can't use — and what's the cheapest fix?"</li>
+      </ul>
+      <p><strong>Tailoring by audience:</strong></p>
+      <ul>
+        <li><strong>Program Directors (A3):</strong> emphasize the lifecycle map, the human gate, and overstated-claim risk.</li>
+        <li><strong>M&amp;E / MEL staff:</strong> weight Part 5 and Exercise 2 (AI-ready data, theory-of-change stress test).</li>
+        <li><strong>Grants / Operations / Finance (A5):</strong> weight Part 2 (budget line, indirect costs, sustainability) and the financial-summary inputs to reporting.</li>
+      </ul>
+      <p><strong>Addressing fear/resistance:</strong> The honest fear here is "AI will fabricate something and our funder relationship will pay for it." Validate it — that fear is <em>correct</em>, and it's exactly why the human-review and disclosure gate exists. Frame AI as cutting the reporting drudgery so staff get hours back for the mission, while the gate keeps the organization safe. Celebrate the first report that ships in half the time <em>with zero errors caught downstream</em>.</p>
+    </section>
+
+    <section id="scorecard">
+      <h2>Outcome Scorecard</h2>
+      <p>Measurable proof the module worked (Kirkpatrick L2–L4 weighted):</p>
+      <table>
+        <thead><tr><th>#</th><th>Indicator</th><th>Level</th><th>Target</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>% of participants who can correctly state the two things AI must never originate (numbers, citations) and the disclosure default</td><td>L2 Learning</td><td>≥ 90% on post-check</td></tr>
+          <tr><td>2</td><td>Confidence shift (pre/post self-rating) on running an AI-assisted report with the review gate</td><td>L2 Confidence</td><td>+1.5 points (5-pt scale), directional</td></tr>
+          <tr><td>3</td><td># of active grants with a completed grant-lifecycle AI map within 30 days</td><td>L3 Behavior</td><td>≥ 1 per participating project</td></tr>
+          <tr><td>4</td><td>Grant-budget / project template now includes an AI/technology line + sustainability statement</td><td>L3 Behavior</td><td>Template updated within 60 days</td></tr>
+          <tr><td>5</td><td>Measured reduction in staff hours per funder report (baseline vs. post)</td><td>L4 Impact</td><td>≥ 30% time reduction, directional; <strong>zero</strong> fabricated facts/citations downstream</td></tr>
+          <tr><td>6</td><td># of project close-outs completing the AI knowledge-capture template</td><td>L4 Impact</td><td>100% of close-outs in the next cycle</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="sources">
+      <h2>Further Resources &amp; Sources</h2>
+      <p><strong>Named sector frameworks &amp; resources (free / low-cost):</strong></p>
+      <ul>
+        <li>Anthropic + GivingTuesday — <em>AI Fluency for Nonprofits</em> (4D: Delegation, Description, Discernment, Diligence) — the spine of the human-gate discipline.</li>
+        <li>Sopact — nonprofit impact measurement, theory of change in M&amp;E, and AI-ready outcome-data design: <a href="https://www.sopact.com/use-case/theory-of-change-in-monitoring-and-evaluation">https://www.sopact.com/use-case/theory-of-change-in-monitoring-and-evaluation</a> · <a href="https://www.sopact.com/use-case/nonprofit-impact-measurement">https://www.sopact.com/use-case/nonprofit-impact-measurement</a></li>
+        <li>NonProfit PRO — <em>5 Steps to Build an AI-Ready Data Foundation</em>: <a href="https://www.nonprofitpro.com/post/5-practical-steps-to-build-an-ai-ready-data-foundation-for-your-nonprofit/">https://www.nonprofitpro.com/post/5-practical-steps-to-build-an-ai-ready-data-foundation-for-your-nonprofit/</a></li>
+        <li>Candid, NTEN, TechSoup — free grants-management and AI-readiness guidance.</li>
+        <li>fundsforNGOs — <em>Closure Phase in the Grant Project Lifecycle</em>: <a href="https://www.fundsforngos.org/proposals/a-detailed-guide-to-the-closure-phase-in-the-grant-project-lifecycle/">https://www.fundsforngos.org/proposals/a-detailed-guide-to-the-closure-phase-in-the-grant-project-lifecycle/</a></li>
+      </ul>
+      <p><strong>Funder rules on AI use / disclosure (verify per funder; directional):</strong></p>
+      <ul>
+        <li>NIH — NOT-OD-25-132, "Supporting Fairness and Originality in NIH Research Applications" (issued July 17, 2025; effective Sept 25, 2025); analysis: <a href="https://grantedai.com/blog/nih-ai-grant-policy-substantially-developed-by-ai">https://grantedai.com/blog/nih-ai-grant-policy-substantially-developed-by-ai</a></li>
+        <li>NSF — Notice on generative AI in the merit-review process: <a href="https://www.nsf.gov/news/notice-to-the-research-community-on-ai">https://www.nsf.gov/news/notice-to-the-research-community-on-ai</a></li>
+        <li>Funding-agency AI policy overview (NSF/NIH/DOE/ED): <a href="https://www.thesify.ai/blog/ai-grant-application-policies">https://www.thesify.ai/blog/ai-grant-application-policies</a></li>
+        <li>SRA International — <em>Use of Generative AI in Research Grant Applications</em>: <a href="https://www.srainternational.org/blogs/srai-news/2025/10/09/the-use-of-ai-in-research-grant-applications">https://www.srainternational.org/blogs/srai-news/2025/10/09/the-use-of-ai-in-research-grant-applications</a></li>
+        <li><em>AI in Grant Writing — what European funders now require</em> (Horizon Europe disclosure): <a href="https://thesciencetalk.com/news/ai-grant-writing-european-funders-risks-disclosure/">https://thesciencetalk.com/news/ai-grant-writing-european-funders-risks-disclosure/</a></li>
+        <li>E.B. Howard Consulting — <em>Risks of Generative AI in Grant Proposal Preparation</em>: <a href="https://www.ebhoward.com/the-risks-of-generative-ai-in-grant-proposal-preparation/">https://www.ebhoward.com/the-risks-of-generative-ai-in-grant-proposal-preparation/</a></li>
+      </ul>
+      <p><strong>Federal close-out &amp; budget compliance:</strong></p>
+      <ul>
+        <li>2 CFR 200.344 — Closeout (120-day reports/liquidation): <a href="https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-D/subject-group-ECFR682eb6fbfabcde2/section-200.344">https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-D/subject-group-ECFR682eb6fbfabcde2/section-200.344</a></li>
+        <li>2 CFR 200.414 — Indirect costs / 10% de minimis: <a href="https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-E/subject-group-ECFRd93f2a98b1f6455/section-200.414">https://www.ecfr.gov/current/title-2/subtitle-A/chapter-II/part-200/subpart-E/subject-group-ECFRd93f2a98b1f6455/section-200.414</a></li>
+        <li>SAMHSA — Grant Closeout: <a href="https://www.samhsa.gov/grants/grants-management/grant-closeout">https://www.samhsa.gov/grants/grants-management/grant-closeout</a></li>
+      </ul>
+      <p><strong>AI in grant reporting / management (mostly vendor — treat stats as directional):</strong></p>
+      <ul>
+        <li>Wiss — <em>AI for Nonprofits: Where Automation Actually Makes a Difference</em>: <a href="https://wiss.com/ai-for-nonprofits-automation/">https://wiss.com/ai-for-nonprofits-automation/</a></li>
+        <li>Grassi Advisors — <em>AI in Nonprofit Finance</em>: <a href="https://www.grassiadvisors.com/blog/ai-in-nonprofit-finance-exploring-practical-high-impact-use-cases/">https://www.grassiadvisors.com/blog/ai-in-nonprofit-finance-exploring-practical-high-impact-use-cases/</a></li>
+        <li>Virtuous — <em>AI for Nonprofits in 2026</em>: <a href="https://virtuous.org/blog/ai-for-nonprofits/">https://virtuous.org/blog/ai-for-nonprofits/</a></li>
+        <li>Grantable — <em>Can Funders Tell When a Grant Was Written With AI?</em>: <a href="https://grantable.co/blog/can-funders-tell-ai-wrote-your-grant">https://grantable.co/blog/can-funders-tell-ai-wrote-your-grant</a></li>
+      </ul>
+      <div class="callout callout--note"><span class="callout__label">Note</span><p><strong>Calibration note.</strong> Productivity figures (e.g., "30% time reduction," "30% higher success rate") and citation-hallucination ranges (≈14–95%) are vendor- or study-reported and vary by methodology — treat them as directional for target-setting, not promises. Funder AI policies are changing quickly; <strong>verify the current rule for each specific funder before relying on it.</strong></p></div>
+
+      <p>Companion: <a href="../non-profit-training.html">Non-Profit Training plan</a> · <a href="../non-profilt-assessment.html">assessment</a></p>
+    </section>
+
+    <nav class="module-foot-nav">
+      <a class="prev" href="module-7-responsible-ai-beneficiary-safeguards.html"><span class="dir">← Previous</span><span class="ttl">Module 7: Responsible AI &amp; Beneficiary Safeguards</span></a>
+      <a class="next" href="../non-profit-training.html"><span class="dir">Next →</span><span class="ttl">All Modules</span></a>
+    </nav>
+
+  </div>
+</div>
+</main>
+
+<footer class="footer"><div class="container">
+  <div class="footer__top">
+    <div>
+      <img src="../assets/logo-white.svg" alt="IIIBC — Beyond Cognition" width="150" height="24">
+      <p class="footer__tag"><strong>Beyond Cognition. Built for Business.</strong><br>AI training that amplifies your mission — not your risk.</p>
+      <p class="footer__pillars">INTELLIGENT · INNOVATION · INTERCONNECT</p>
+    </div>
+    <div class="footer__links">
+      <a href="../non-profit-training.html">All Modules</a>
+      <a href="../non-profilt-assessment.html">Readiness Assessment</a>
+      <a href="mailto:hello@iiibc.com">hello@iiibc.com</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© 2026 IIIBC — Beyond Cognition. All rights reserved.</span>
+    <span class="mono">Module 8 · Non-Profit Training Kit v1.0</span>
+  </div>
+</div></footer>
+</body>
+</html>

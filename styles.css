@@ -1,5 +1,5 @@
 /* ============================================================
-   IIIBC — AI Strategy Institute
+   IIIBC — Beyond Cognition
    Stylesheet v1.0 | May 2026
    Design system: design/guides.md
    ============================================================ */
@@ -2061,3 +2061,6 @@ html, body { overflow-x: hidden; max-width: 100%; }
   .segment-card__desc     { font-size: 13.5px; }
   .risk-item              { font-size: 13px; }
 }
+
+/* Section-level callout placed after a grid (services, segments) */
+.callout--spaced { margin-top: var(--space-6); }
